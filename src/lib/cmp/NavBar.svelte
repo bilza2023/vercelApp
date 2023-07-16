@@ -4,6 +4,6 @@ export let bgColor = 'bg-gray-700';
 
 
 
-  <div class={`flex   items-center ${bgColor} px-2`}>
+  <div class={`${bgColor} p-0  px-1 m-0`}>
 <slot></slot>
 </div>
