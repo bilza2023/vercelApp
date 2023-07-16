@@ -1,3 +1,6 @@
+This is the 10th time am sending you the code to check a simple problem of the showTest does not working correctly .
+
+here is +page.svelte
 <script>
 // @ts-nocheck
 import {PageWrapper,HdgWithIcon,Centre,SectionHead,FormRow,Tf,InputForm,ShowIfTrue} from '$lib/cmp';
@@ -92,6 +95,7 @@ onMount(async ()=>{
 
         <!-- ********** The dialogue box **************** -->
           {#if showTest }
+              <h1>showTest</h1>
             <InputForm clk={() => showTestStore.set(false)  } />
           {/if}
         <!-- ********** The dialogue box Ends *********** -->
@@ -134,4 +138,42 @@ onMount(async ()=>{
 <br/>
 <br/>
 </PageWrapper>
+
+Toolbar.svelte
+<script>
+// @ts-nocheck
+import {PageNav,PageNavBtn} from '$lib/cmp';
+import {showTestStore,showCloneStore,showDeleteStore} from './store';
+
+$: showTest = showTestStore;
+$: showClone = showCloneStore;
+$: showDelete = showDeleteStore
+
+
+</script>
+
+<PageNav>
+<PageNavBtn icon={"💾"} title="Save" tf={true} trueColor={"text-white"} />
+
+<PageNavBtn icon={"🧪"} title="Test"  tf={false} trueColor={"text-white"}  
+ falseColor={"text-gray-600"}
+clk={()=>showTest.set(true)}  />
+
+<PageNavBtn icon={"🐑"} title="Clone" tf={false} trueColor={"text-white"}  falseColor={"text-gray-600"}  
+/>
+<PageNavBtn icon={"🗑️"} title="Delete" tf={false} trueColor={"text-white"}  falseColor={"text-gray-600"}  
+/>
+
+</PageNav>    
+
+
+store.js
+
+
+import { writable } from 'svelte/store';
+
+export const showTestStore     = writable(false);
+export const showCloneStore    = writable(false);
+export const showDeleteStore   = writable(false);
+
 
