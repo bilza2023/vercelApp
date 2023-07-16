@@ -12,6 +12,7 @@ export { default as Footer } from './Footer.svelte';
 export { default as FormRow } from './FormRow.svelte';
 export { default as HdgWithIcon } from './HdgWithIcon.svelte';
 export { default as Img } from './Img.svelte';
+export { default as InputForm } from './InputForm.svelte';
 export { default as Li } from './Li.svelte';
 export { default as Loading } from './Loading.svelte';
 export { default as NavBar } from './NavBar.svelte';

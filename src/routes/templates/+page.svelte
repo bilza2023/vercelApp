@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 
-import {PageWrapper,HdgWithIcon,Centre,Range,Card,CardBtn,BtnIconOval} from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue} from '$lib/cmp';
 import {onMount,toast} from '$lib/util';
 
   const cardsData = [
@@ -21,13 +21,16 @@ import {onMount,toast} from '$lib/util';
     { title: 'The Title14', url: 'https://google.com' },
     { title: 'The Title15', url: 'https://google.com' }
   ];
-
+  const state = {
+      showNewDialogue : false
+  }
+//----------
 onMount(async ()=>{
-  try {
-//   toast.push("ok");
-  } catch (e) {
-  
-  }   
+    try {
+    //   toast.push("ok");
+    } catch (e) {
+    
+    }   
 });
 
 </script>
@@ -39,16 +42,19 @@ onMount(async ()=>{
     <Centre>
     <HdgWithIcon icon='📜'>Templates</HdgWithIcon>
     </Centre>
+        <ShowIfTrue ifTrue={state.showNewDialogue} >
+          <InputForm  clk={()=>{state.showNewDialogue = false} }/>
+        </ShowIfTrue>
     
         <Centre>
         <!-- THE MAIN CODE -->
         <div class="flex justify-center gap-2 flex-wrap">
-        
+         
         <!-- New Template -->
         <div class={`w-3/12`}>
         <CardBtn
                 title={'New Template'}
-                clk={()=>{console.log('New Template')}}
+                clk={()=>{state.showNewDialogue = !state.showNewDialogue}}
                 icon="💡"
                 titleCharsCount={15}
         />
