@@ -3,12 +3,10 @@
 
 export let icon = '📜';
 export let bgColor = 'bg-blue-800';
+export let size = 2; //1-4
 </script>
  
-
-<div class="flex justify-center">
-  <div class={`inline-flex ${bgColor} text-white rounded-md p-3 m-2 px-14 mt-4`}>
-    <span class="text-3xl">{icon}</span>&nbsp;
-    <span class="text-3xl"><slot></slot></span>
+  <div class={`inline-flex  justify-center ${bgColor} text-white rounded-md p-2  px-8 m-2`}>
+    <span class={`text-${size}xl`}>{icon}</span>&nbsp;
+    <span class={`text-${size}xl`}><slot></slot></span>
   </div>
- </div>
