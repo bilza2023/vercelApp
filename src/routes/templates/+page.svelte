@@ -37,7 +37,7 @@ onMount(async ()=>{
 
 <br/>
     <Centre>
-    <HdgWithIcon icon='🧪'>Tests</HdgWithIcon>
+    <HdgWithIcon icon='📜'>Templates</HdgWithIcon>
     </Centre>
     
         <Centre>
@@ -49,12 +49,11 @@ onMount(async ()=>{
             <Card
                 title={cardData.title}
                 url={cardData.url}
-                icon="🧪"
+                icon="📜"
                 titleCharsCount={15}
             >
                 <!-- card slots -->
-                <BtnIconOval  on:click={() => true}  />
-                <BtnIconOval icon='📈'  on:click={() => true}  />
+                <!-- it has no slots if required this is the place -->
             </Card>
             </div>
         {/each}
