@@ -6,9 +6,11 @@ import Toolbar from './Toolbar.svelte'
 import {onMount,toast,get} from '$lib/util';
 import {showTestStore,showCloneStore,showDeleteStore} from './store';
 
-$: showTest = showTestStore;
-$: showClone = showCloneStore;
-$: showDelete = showDeleteStore
+
+$: showTest = $showTestStore;
+$: showClone = $showCloneStore;
+$: showDelete = $showDeleteStore;
+
 
 //--keep it here
 const item = {
@@ -92,7 +94,15 @@ onMount(async ()=>{
 
         <!-- ********** The dialogue box **************** -->
           {#if showTest }
-            <InputForm clk={() => showTestStore.set(false)  } />
+            <InputForm clk={() => showTestStore.set(false)  } title='Create New Test' btnTitle='Create'/>
+          {/if}
+
+          {#if showClone }
+            <InputForm clk={() => showCloneStore.set(false)  } title='Clone Template' btnTitle='Clone' btnColor='bg-orange-800'/>
+          {/if}
+          
+          {#if showDelete }
+            <InputForm clk={() => showDeleteStore.set(false)  } title='Delete Template' btnTitle='Delete'/>
           {/if}
         <!-- ********** The dialogue box Ends *********** -->
 

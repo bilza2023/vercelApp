@@ -1,9 +1,10 @@
 <script>
 // @ts-nocheck
 let newTitle = "";
-export let clk;
+export let clk=()=>true;
 export let title='Create New';
 export let btnTitle=  'New';
+export let btnColor=  'bg-green-800';
 export let icon=  '📝';
 </script>
 
@@ -16,9 +17,14 @@ export let icon=  '📝';
     <input class="bg-gray-700 text-white  w-10/12 m-1 rounded-lg p-2"  type="text" bind:value={newTitle} >
 
 <div class="flex flex-col sm:flex-row justify-center w-full">
-  <button class="bg-gradient-to-r from-green-700 to-green-900 hover:from-green-600 hover:to-green-700 active:from-green-700 active:to-green-800 text-white font-bold py-2 px-4 rounded w-full sm:w-4/12 m-1" on:click={()=>clk(newTitle)}>
+
+  <button class= {` ${btnColor}  hover:bg-green-600  active:bg-green-300   text-white font-bold py-2 px-4 rounded w-full sm:w-4/12 m-1 `} 
+  on:click={()=>clk(newTitle)} >
+  
     <span class="text-2xl">{icon}<span class="hidden md:inline text-sm"> {btnTitle}</span></span>
+
   </button>
+  
 </div>
 
 </div>

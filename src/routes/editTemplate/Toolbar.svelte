@@ -3,9 +3,9 @@
 import {PageNav,PageNavBtn} from '$lib/cmp';
 import {showTestStore,showCloneStore,showDeleteStore} from './store';
 
-$: showTest = showTestStore;
-$: showClone = showCloneStore;
-$: showDelete = showDeleteStore
+$: showTest = $showTestStore;
+$: showClone = $showCloneStore;
+$: showDelete = $showDeleteStore
 
 
 </script>
@@ -15,11 +15,14 @@ $: showDelete = showDeleteStore
 
 <PageNavBtn icon={"🧪"} title="Test"  tf={false} trueColor={"text-white"}  
  falseColor={"text-gray-600"}
-clk={()=>showTest.set(true)}  />
+clk={()=>showTestStore.set(!showTest)}  />
 
 <PageNavBtn icon={"🐑"} title="Clone" tf={false} trueColor={"text-white"}  falseColor={"text-gray-600"}  
+clk={()=>showCloneStore.set(!showClone)}
 />
-<PageNavBtn icon={"🗑️"} title="Delete" tf={false} trueColor={"text-white"}  falseColor={"text-gray-600"}  
+
+<PageNavBtn icon={"🗑️"} title="Delete" tf={false} trueColor={"text-white"}  falseColor={"text-gray-600"}   
+clk={()=>showDeleteStore.set(!showDelete)}
 />
 
 </PageNav>    
