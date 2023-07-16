@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 
-import {PageWrapper,HdgWithIcon,Centre,Range,Card,BtnIconOval} from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,Centre,Range,Card,CardBtn,BtnIconOval} from '$lib/cmp';
 import {onMount,toast} from '$lib/util';
 
   const cardsData = [
@@ -43,12 +43,23 @@ onMount(async ()=>{
         <Centre>
         <!-- THE MAIN CODE -->
         <div class="flex justify-center gap-2 flex-wrap">
+        
+        <!-- New Template -->
+        <div class={`w-3/12`}>
+        <CardBtn
+                title={'New Template'}
+                clk={()=>{console.log('New Template')}}
+                icon="💡"
+                titleCharsCount={15}
+        />
+        </div>
+
         {#each cardsData as cardData, index}
             <div class={`w-3/12`}>
             <!-- <CardTemplate -->
             <Card
                 title={cardData.title}
-                url={cardData.url}
+                url={'/editTemplate'}
                 icon="📜"
                 titleCharsCount={15}
             >
