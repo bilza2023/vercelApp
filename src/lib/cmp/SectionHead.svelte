@@ -3,12 +3,15 @@
 export let title;
 export let icon = "\u2699";
 export let visible = false;
+import { fade } from 'svelte/transition';
 
 const  toggleVisibility = ()=> visible = !visible;
 </script>
 
 
-<div class="flex  rounded-t-lg border border-gray-400 p-0 ">
+<div class="flex  rounded-t-lg border border-gray-400 p-0 "
+in:fade={{ delay: 300 }} out:fade={{ delay: 300 }}
+>
 
     <div class="flex items-center justify-center    w-3/12  p-0 bg-gray-900 text-xl rounded-t-lg border border-gray-400 ">
         {icon}
@@ -33,5 +36,8 @@ const  toggleVisibility = ()=> visible = !visible;
 
 
 {#if visible==true}
+
+<div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} >
 <slot></slot>
+</div>
 {/if}

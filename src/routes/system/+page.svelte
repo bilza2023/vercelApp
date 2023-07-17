@@ -5,15 +5,16 @@ import {PageWrapper,HdgWithIcon,Centre,Range,Card,BtnIconOval} from '$lib/cmp';
 import {onMount,toast} from '$lib/util';
 
   const cardsData = [
+    //-once user is logged in this is his home page
     { title: 'Dashboard', url: '/dashboard' ,icon :'📺'},
     { title: 'Admissions', url: '/admissions',icon :'🗃️' },
-    { title: 'New Class', url: '/' ,icon :'🎓'},
-    { title: 'Students', url: '' ,icon :'👨‍🎓'},
-    { title: 'Classes', url: '' ,icon :'🧑‍🤝‍🧑'},
-    { title: 'Tags', url: '' ,icon :'🏷️'},
-    { title: 'Template', url: '' ,icon :'📜'},
-    { title: 'Tests', url: '' ,icon :'🧪'},
-    { title: 'Running', url: '' , icon:'🏃‍♂️' },
+    { title: 'New Class', url: '/classes' ,icon :'🎓'},
+    { title: 'Students', url: '/students' ,icon :'👨‍🎓'},
+    { title: 'Classes', url: '/classes' ,icon :'🧑‍🤝‍🧑'},
+    { title: 'Tags', url: '/tags' ,icon :'🏷️'},
+    { title: 'Template', url: '/templates' ,icon :'📜'},
+    { title: 'Tests', url: '/tests' ,icon :'🧪'},
+    { title: 'Running', url: '/running' , icon:'🏃‍♂️' },
 
 
   ];

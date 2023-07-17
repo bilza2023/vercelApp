@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 
-import {PageWrapper,HdgWithIcon,Centre,Range,Card,BtnIconOval,AnchorIconOval} from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,Centre,Range,Card,BtnIconOval} from '$lib/cmp';
 import {onMount,toast} from '$lib/util';
 
   const cardsData = [
@@ -37,7 +37,7 @@ onMount(async ()=>{
 
 <br/>
     <Centre>
-    <HdgWithIcon icon='🧪'>Tests</HdgWithIcon>
+    <HdgWithIcon icon='📜'>Templates</HdgWithIcon>
     </Centre>
     
         <Centre>
@@ -49,12 +49,11 @@ onMount(async ()=>{
             <Card
                 title={cardData.title}
                 url={cardData.url}
-                icon="🧪"
+                icon="📜"
                 titleCharsCount={15}
             >
                 <!-- card slots -->
-                <AnchorIconOval   href='/editTest' />
-                <AnchorIconOval icon='📈' />
+                <!-- it has no slots if required this is the place -->
             </Card>
             </div>
         {/each}

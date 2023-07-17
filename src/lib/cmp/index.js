@@ -1,4 +1,5 @@
 export { default as Anchor } from './Anchor.svelte';
+export { default as AnchorIconOval } from './AnchorIconOval.svelte';
 export { default as AreYouSure } from './AreYouSure.svelte';
 export { default as BtnWIcon } from './BtnWIcon.svelte';
 export { default as BtnWIconSm } from './BtnWIconSm.svelte';
