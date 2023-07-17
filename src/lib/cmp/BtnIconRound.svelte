@@ -10,6 +10,6 @@ export let clk = ()=>console.log('clicked');
 
 
 
-<button class={`${bgColor} ${borderColor} ${borderWidth} inline-block  rounded-md p-1 m-1  `} on:click={clk}>
+<button class={`${bgColor} ${borderColor} ${borderWidth} inline-block  rounded-md p-1 m-1  hover:bg-gray-900 `} on:click={clk}>
 <span class={`text-${size}xl`}>{icon}</span>
 </button>

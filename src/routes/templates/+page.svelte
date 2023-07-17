@@ -32,12 +32,10 @@ onMount(async ()=>{
     
     }   
 });
-
 </script>
 
 <!-- ************** -->
 <PageWrapper>
-
 <br/>
     <Centre>
     <HdgWithIcon icon='📜'>Templates</HdgWithIcon>

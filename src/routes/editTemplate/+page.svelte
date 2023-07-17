@@ -1,18 +1,18 @@
 <script>
 // @ts-nocheck
-import {PageWrapper,HdgWithIcon,Centre,SectionHead,FormRow,Tf,InputForm,ShowIfTrue} from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,Centre,SectionHead,FormRow,Tf,InputForm,InputElm,InputTextArea} from '$lib/cmp';
 
+import Questions from './questions/Questions.svelte'
 import Toolbar from './Toolbar.svelte'
 import {onMount,toast,get} from '$lib/util';
 import {showTestStore,showCloneStore,showDeleteStore} from './store';
-
+import AddQuestionBar from './AddQuestionBar.svelte';
 
 $: showTest = $showTestStore;
 $: showClone = $showCloneStore;
 $: showDelete = $showDeleteStore;
 
-
-//--keep it here
+//--Fake Data ::keep it here
 const item = {
   "title": "The Demo Quiz",
   "userId": "64202224fd8518cb214bd138",
@@ -106,24 +106,22 @@ onMount(async ()=>{
           {/if}
         <!-- ********** The dialogue box Ends *********** -->
 
+        <!-- ********** Main Settings  *********** -->
 
         <div class='px-8'>
         <br/>
           <SectionHead  title={item.title}>
                           
               <FormRow title="Quiz Title">
-              <input type="text" class="w-full bg-gray-700 color-white"
-              bind:value={item.title} 
-              >
+              <InputElm value={item.title} />
               </FormRow>
 
               <FormRow title="Intro Text">
-              <textarea class="w-full bg-gray-700 color-white"
-              bind:value={item.introText}></textarea>
+              <InputTextArea  value={item.introText}/>
               </FormRow>
 
               <FormRow title="Farewell Text">
-              <textarea class="w-full bg-gray-700 color-white" bind:value={item.farewellText}></textarea>
+              <InputTextArea  value={item.farewellText}/>
               </FormRow>
 
               <FormRow title="Save Responses">
@@ -141,7 +139,13 @@ onMount(async ()=>{
           </SectionHead>
         </div>
         <!-- THE MAIN CODE ENDS -->
+        <!-- THE Question -->
+        <br/>
+        
+        <div class='px-8'>
+        <Questions questions={item.questions} />
+        </div>
 <br/>
+<AddQuestionBar/>
 <br/>
 </PageWrapper>
-
