@@ -8,7 +8,7 @@ import {onMount,toast} from '$lib/util';
     //-once user is logged in this is his home page
     { title: 'Dashboard', url: '/dashboard' ,icon :'📺'},
     { title: 'Admissions', url: '/admissions',icon :'🗃️' },
-    { title: 'New Class', url: '/classes' ,icon :'🎓'},
+    { title: 'New Class', url: '/newClass' ,icon :'🎓'},
     { title: 'Students', url: '/students' ,icon :'👨‍🎓'},
     { title: 'Classes', url: '/classes' ,icon :'🧑‍🤝‍🧑'},
     { title: 'Tags', url: '/tags' ,icon :'🏷️'},
