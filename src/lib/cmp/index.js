@@ -10,6 +10,7 @@ export { default as Card } from './Card.svelte';
 export { default as CardBtn } from './CardBtn.svelte';
 export { default as Centre } from './Centre.svelte';
 export { default as Comment } from './Comment.svelte';
+export { default as DDDivs } from './DDDivs.svelte';
 export { default as Footer } from './Footer.svelte';
 export { default as FormRow } from './FormRow.svelte';
 export { default as HdgWithIcon } from './HdgWithIcon.svelte';

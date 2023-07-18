@@ -1,8 +1,9 @@
 <script>
 // @ts-nocheck
-import {PageWrapper,HdgWithIcon,Centre,SectionHead,FormRow,Tf,InputForm,InputElm,InputTextArea} from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,Centre,InputForm} from '$lib/cmp';
 
 import Questions from './questions/Questions.svelte'
+import SettingsMain from '$lib/appComp/SettingsMain.svelte';
 import Toolbar from './Toolbar.svelte'
 import {onMount,toast,get} from '$lib/util';
 import {showTestStore,showCloneStore,showDeleteStore} from './store';
@@ -110,33 +111,7 @@ onMount(async ()=>{
 
         <div class='px-8'>
         <br/>
-          <SectionHead  title={item.title}>
-                          
-              <FormRow title="Quiz Title">
-              <InputElm value={item.title} />
-              </FormRow>
-
-              <FormRow title="Intro Text">
-              <InputTextArea  value={item.introText}/>
-              </FormRow>
-
-              <FormRow title="Farewell Text">
-              <InputTextArea  value={item.farewellText}/>
-              </FormRow>
-
-              <FormRow title="Save Responses">
-              <Tf obj={item} bool_prop="saveResponse" />
-              </FormRow>
-
-              <FormRow title="Show Intro">
-              <Tf obj={item} bool_prop="showIntro" />
-              </FormRow>
-     
-              <FormRow title="Show Results to user">
-              <Tf obj={item} bool_prop="showResult" />
-              </FormRow>
-                      
-          </SectionHead>
+          <SettingsMain {item} />
         </div>
         <!-- THE MAIN CODE ENDS -->
         <!-- THE Question -->
