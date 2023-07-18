@@ -10,7 +10,7 @@ function hasToken() {
     // const parts = token.split('.');
 //   if (parts.length !== 3) return false;
   // return token && token !== '';
-  return true; ///remove 
+  return true; ///remove after testing
 }
 
 </script>
