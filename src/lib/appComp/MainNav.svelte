@@ -9,7 +9,8 @@ function hasToken() {
   const token = localStorage.getItem('token');
     // const parts = token.split('.');
 //   if (parts.length !== 3) return false;
-  return token && token !== '';
+  // return token && token !== '';
+  return true; ///remove 
 }
 
 </script>
