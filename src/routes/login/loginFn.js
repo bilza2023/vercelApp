@@ -6,6 +6,7 @@ import { goto } from "$app/navigation";
 import {isLoginStore} from '$lib/cmn/appStore';
 import validateString from "./validateString"
 import validateEmail from "./validateEmail"
+import {loadApp} from '$lib/ajax';
 /**
  * @param {string} email
  * @param {string} password
@@ -31,6 +32,7 @@ const response = await ajaxPost( `${BASE_URL}/login` , {email,password});
         const data = await response.json();
         console.log("data",data);
         localStorage.setItem("token", data.token);
+            loadApp();
         isLoginStore.set(true);
         goto("/");
   } else {

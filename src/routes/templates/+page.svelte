@@ -1,8 +1,9 @@
 <script>
 // @ts-nocheck
-
 import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue} from '$lib/cmp';
 import {onMount,toast} from '$lib/util';
+import {templatesStore} from '../../lib/cmn/appStore';
+$: templates = $templatesStore;
 
   const cardsData = [
     { title: 'Titlex', url: 'https://google.com' },
@@ -49,7 +50,7 @@ onMount(async ()=>{
         <div class="flex justify-center gap-2 flex-wrap">
          
         <!-- New Template -->
-        <div class={`w-3/12`}>
+        <div class={`w-5/12`}>
         <CardBtn
                 title={'New Template'}
                 clk={()=>{state.showNewDialogue = !state.showNewDialogue}}
@@ -58,14 +59,15 @@ onMount(async ()=>{
         />
         </div>
 
-        {#each cardsData as cardData, index}
-            <div class={`w-3/12`}>
+        {#each templates as cardData, index}
+        <!-- {#each cardsData as cardData, index} -->
+            <div class={`w-5/12`}>
             <!-- <CardTemplate -->
             <Card
                 title={cardData.title}
                 url={'/editTemplate'}
                 icon="📜"
-                titleCharsCount={15}
+                titleCharsCount={10}
             >
                 <!-- card slots -->
                 <!-- it has no slots if required this is the place -->
