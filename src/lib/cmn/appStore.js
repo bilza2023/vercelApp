@@ -8,10 +8,11 @@ export const runsStore = writable([]);
 export const studentsStore = writable([]);
 export const classStore = writable([]);
 export const resultsStore = writable([]);
+export const isLoginStore = writable(false);
 
 /////////////////////////////////////////////
-export const appStateStore = writable({
-    isLogin : false
-});
+// export const appStateStore = writable({
+//     isLogin : false
+// });
 
 

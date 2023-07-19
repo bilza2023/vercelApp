@@ -25,6 +25,7 @@ export { default as Lbl } from './Lbl.svelte';
 export { default as Loading } from './Loading.svelte';
 export { default as NavBar } from './NavBar.svelte';
 export { default as NavBtn } from './NavBtn.svelte';
+export { default as NavBtn2 } from './NavBtn2.svelte';
 export { default as NavSec } from './NavSec.svelte';
 export { default as NumberElm } from './NumberElm.svelte';
 export { default as PageNav } from './PageNav.svelte';

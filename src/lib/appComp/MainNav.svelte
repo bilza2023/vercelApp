@@ -1,17 +1,20 @@
 <script>
 // @ts-nocheck
-import {NavBar,NavBtn,Centre,Range,Card,BtnIconOval} from '$lib/cmp';
-import {onMount,toast} from '$lib/util';
+import {NavBar,NavBtn,NavBtn2,Centre,Range,Card,BtnIconOval} from '$lib/cmp';
+// import {onMount,toast} from '$lib/util';
 import Logo from './Logo.svelte';
+import { isLoginStore } from '$lib/cmn/appStore';
+import logout from './fn/logout';
+$: isLogin = $isLoginStore;
 
-function hasToken() {
-   if (typeof window === 'undefined') return false;
-  const token = localStorage.getItem('token');
-    // const parts = token.split('.');
+// function hasToken() {
+//   if (typeof window === 'undefined') return false;
+//   const token = localStorage.getItem('token');
+//   if (!token) return false;
+//   const parts = token.split('.');
 //   if (parts.length !== 3) return false;
-  // return token && token !== '';
-  return true; ///remove after testing
-}
+//   return token && token !== '';
+// }
 
 </script>
             <!-- ******************************** -->
@@ -21,23 +24,25 @@ function hasToken() {
     <div class='flex'>
     
     <Logo />
-    {#if hasToken()}
+    {#if isLogin}
     <NavBtn title='Sync' icon='♻️'/>
     {/if}
     </div>
             <!-- ******************************** -->
             <!-- ******************************** -->
     <div class='flex'>
-    {#if hasToken()}
+    {#if isLogin}
     <NavBtn title='Templates' icon ='📜' url='/templates'/>
     <NavBtn title='Tests' icon ='🧪' url='/tests'/>
     <NavBtn title='Running' icon ='🏃‍♂️' url='/running'/>
     <NavBtn title='System' icon ='🔧' url='/system'/>
     <NavBtn title='Help' icon ='📘' url='/help'/>
-    <NavBtn title='Logout' icon ='🚪' url='/logout'/>
+
+      <NavBtn2 title='Logout' icon ='🚪' clk={logout}/>
+    
     {:else}
     <NavBtn title='Login' icon ='🔑'  url='/login'/>
-    <NavBtn title='Signin' icon ='🔓'  url='/signin'/>
+    <NavBtn title='Signin' icon ='🔓'  url='/register'/>
     {/if}
     </div>
 </div><!--outer most div-->
