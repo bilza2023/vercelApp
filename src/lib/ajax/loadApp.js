@@ -1,14 +1,13 @@
 // @ts-nocheck
 import { templatesStore,testsStore,runsStore,studentsStore ,classStore} from '$lib/cmn/appStore';
 
-
 import {Agent,LocalStorage} from '$lib/ajax';
 ///////////////////////////////////////////////
 ///////////////////////////////////////////////
 
 export default async function loadApp(){
       try {
-    
+   // debugger;    
    await uploadStore( 'template' , 'templates', templatesStore, 
       LocalStorage.updateTemplates  );
 
@@ -26,7 +25,7 @@ export default async function loadApp(){
 
  
     } catch(err){
-      //   throw err;
+        throw err;
     
     }
 

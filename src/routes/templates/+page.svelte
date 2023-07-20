@@ -1,34 +1,44 @@
 <script>
 // @ts-nocheck
-import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue} from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue,Loading} from '$lib/cmp';
 import {onMount,toast} from '$lib/util';
-import {templatesStore} from '../../lib/cmn/appStore';
-$: templates = $templatesStore;
+import { Agent } from '$lib/ajax';
+// import {templatesStore} from '../../lib/cmn/appStore';
+// $: items = $templatesStore;
 
-  const cardsData = [
-    { title: 'Titlex', url: 'https://google.com' },
-    { title: 'The Title2w', url: 'https://google.com' },
-    { title: 'The Title32', url: 'https://google.com' },
-    { title: 'The Title48', url: 'https://google.com' },
-    { title: 'The Title52', url: 'https://google.com' },
-    { title: 'The Title6', url: 'https://google.com' },
-    { title: 'The Title7', url: 'https://google.com' },
-    { title: 'The Title8', url: 'https://google.com' },
-    { title: 'The Title9', url: 'https://google.com' },
-    { title: 'The Title10', url: 'https://google.com' },
-    { title: 'The Title11', url: 'https://google.com' },
-    { title: 'The Title12', url: 'https://google.com' },
-    { title: 'The Title13', url: 'https://google.com' },
-    { title: 'The Title14', url: 'https://google.com' },
-    { title: 'The Title15', url: 'https://google.com' }
-  ];
+  // const cardsData = [
+  //   { title: 'Titlex', url: 'https://google.com' },
+  //   { title: 'The Title2w', url: 'https://google.com' },
+  //   { title: 'The Title32', url: 'https://google.com' },
+  //   { title: 'The Title48', url: 'https://google.com' },
+  //   { title: 'The Title52', url: 'https://google.com' },
+  //   { title: 'The Title6', url: 'https://google.com' },
+  //   { title: 'The Title7', url: 'https://google.com' },
+  //   { title: 'The Title8', url: 'https://google.com' },
+  //   { title: 'The Title9', url: 'https://google.com' },
+  //   { title: 'The Title10', url: 'https://google.com' },
+  //   { title: 'The Title11', url: 'https://google.com' },
+  //   { title: 'The Title12', url: 'https://google.com' },
+  //   { title: 'The Title13', url: 'https://google.com' },
+  //   { title: 'The Title14', url: 'https://google.com' },
+  //   { title: 'The Title15', url: 'https://google.com' }
+  // ];
   const state = {
       showNewDialogue : false
   }
 //----------
+let  items;
 onMount(async ()=>{
     try {
-    //   toast.push("ok");
+
+        const resp = await Agent.read('template');
+        if (resp.ok){
+            const data = await resp.json();
+            items = data.items;
+            console.log("items" , items);
+        }else {
+            toast.push('failed to load');
+        }
     } catch (e) {
     
     }   
@@ -37,6 +47,7 @@ onMount(async ()=>{
 
 <!-- ************** -->
 <PageWrapper>
+{#if items}
 <br/>
     <Centre>
     <HdgWithIcon icon='📜'>Templates</HdgWithIcon>
@@ -59,13 +70,13 @@ onMount(async ()=>{
         />
         </div>
 
-        {#each templates as cardData, index}
+        {#each items as cardData, index}
         <!-- {#each cardsData as cardData, index} -->
             <div class={`w-5/12`}>
             <!-- <CardTemplate -->
             <Card
                 title={cardData.title}
-                url={'/editTemplate'}
+                url={`/editTemplate?quizId=${cardData._id}` }
                 icon="📜"
                 titleCharsCount={10}
             >
@@ -80,5 +91,8 @@ onMount(async ()=>{
 
 <br/>
 <br/>
+{:else}
+<Loading />
+{/if}
 </PageWrapper>
 

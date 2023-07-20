@@ -7,10 +7,14 @@ import {SectionHeadIcon} from '$lib/cmp';
 import Options from './Options.svelte';
 
 export let questions;
+export let deleteQuestion;
 </script>
 
-        {#each questions as question }  
-        <SectionHeadIcon title={question.content}>
+        {#if  questions }  
+        {#each questions as question, index }  
+        <SectionHeadIcon title={question.content}  ser={index+1} 
+        deleteFn ={()=>deleteQuestion(question.id)}
+         >
           
           <!-- ****************************************** -->
           <!-- ****************************************** -->
@@ -19,7 +23,7 @@ export let questions;
 
 
           <FormRow title="Question">
-          <InputElm value={question.content} />
+          <input type="text" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={question.content} />
           </FormRow>
           
           <FormRow title="Multi Select">
@@ -27,7 +31,8 @@ export let questions;
           </FormRow>
 
           <FormRow title="Explanation">
-          <InputTextArea value={question.explanation} />
+          <textarea class="w-full bg-gray-700 color-white p-2 m-1 rounded-md"
+              bind:value={question.explanation}></textarea>
           </FormRow>
 
           <br/>
@@ -42,7 +47,8 @@ export let questions;
 
           <!-- ****************************************** -->
           <!-- ****************************************** -->
-
         </SectionHeadIcon>
+        <br/>
         {/each}
+        {/if}
 

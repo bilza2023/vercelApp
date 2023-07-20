@@ -16,10 +16,13 @@ export let title;
 <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
  class="border-2 border-gray-500 p-1 m-0 mt-0" >
 
+   {#if questions.length > 0} 
    {#each questions as question,index}
 
     <div class="bg-gray-900 m-2 p-2 text-xl rounded-md mx-4">{`${index+1}`} : {question.content}</div>
         {#if question.questionType == "SurveyMCQ"}
+            
+            {#if question.options && question.options.length > 0} 
             {#each question.options as option,optIndex}  
                     <div class=" bg-gray-700 m-1 p-1 text-md rounded-md mx-14">
                        {#if question.correctOptions.includes(option.id)}
@@ -29,9 +32,11 @@ export let title;
                         {/if}
                     {option.content}</div>
             {/each}
+            {/if}
         {/if}
         
   {/each}
+  {/if}
  
 
 <br/>

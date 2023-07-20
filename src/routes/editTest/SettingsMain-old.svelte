@@ -1,23 +1,26 @@
 <script>
 // @ts-nocheck
 import {SectionHead,FormRow,Tf,InputElm,InputTextArea} from '$lib/cmp';
+import { templateLocalStore,questionsStore } from './store';
+$:item = $templateLocalStore;
 
-export let item;
 </script>
 
 
+{#if item}                          
  <SectionHead  title={item.title}>
-                          
     <FormRow title="Quiz Title">
-    <InputElm value={item.title} />
+    <input type="text" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.title} />
     </FormRow>
 
     <FormRow title="Intro Text">
-    <InputTextArea  value={item.introText}/>
+    <textarea class="w-full bg-gray-700 color-white p-2 m-1 rounded-md"
+              bind:value={item.introText}></textarea>
     </FormRow>
 
     <FormRow title="Farewell Text">
-    <InputTextArea  value={item.farewellText}/>
+    <textarea class="w-full bg-gray-700 color-white p-2 m-1 rounded-md"
+              bind:value={item.farewellText}></textarea>
     </FormRow>
 
     <FormRow title="Save Responses">
@@ -31,5 +34,5 @@ export let item;
     <FormRow title="Show Results to user">
     <Tf obj={item} bool_prop="showResult" />
     </FormRow>
-            
 </SectionHead>
+{/if}            

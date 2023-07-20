@@ -2,7 +2,7 @@
  import { SvelteToast } from '@zerodevx/svelte-toast'
  import MainNav from '$lib/appComp/MainNav.svelte';
 import {isLoginStore} from '../lib/cmn/appStore';
-import {loadApp} from '$lib/ajax';
+// import {loadApp} from '$lib/ajax';
 // $: isLogin = $isLoginStore;
 
   import "../app.postcss";
@@ -18,7 +18,8 @@ function checkLogin(){
 }
   if (checkLogin() ) {
     isLoginStore.set(true);
-    loadApp();
+    // debugger;
+    // loadApp();
   }
 </script>
 
