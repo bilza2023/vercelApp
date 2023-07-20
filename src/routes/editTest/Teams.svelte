@@ -23,9 +23,10 @@
 
   function update(event) {
   debugger;
-    const selectedIndex = event.target.selectedIndex;
-    const selectedOption = classes[selectedIndex];
-    item.classId = selectedOption._id 
+  const selectedValue = event.target.value;
+  item.classId = selectedValue;
+  console.log(item);
+    console.log(item);
     // console.log(selectedOption._id);
   }
 </script>
@@ -34,8 +35,9 @@
   <br />
   <Centre>
     <select class='bg-gray-700 text-white w-10/12' on:change={update}>
+        <option class='text-center w-full mx-4' value='null'>None</option>
       {#each classes as classObj}
-        <option class='text-center w-full mx-4'>
+        <option class='text-center w-full mx-4' value={classObj._id}>
           {classObj.name}
         </option>
       {/each}

@@ -13,7 +13,7 @@ import { Agent } from '$lib/ajax';
 let item;
 onMount(async ()=>{
   try {
-//   toast.push("ok");
+ //   toast.push("ok");
   // debugger;
    const quizId = new URLSearchParams(location.search).get("quizId");
    const resp = await Agent.readone('test' , {id: quizId });
@@ -36,7 +36,7 @@ onMount(async ()=>{
 <PageWrapper>
 {#if  item != null}
 <!-- ************** -->
-<Toolbar />
+<Toolbar {item}/>
 
         <!-- ************** -->
         <!-- THE MAIN CODE ENDS -->
