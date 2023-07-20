@@ -4,18 +4,21 @@ import {PageWrapper,HdgWithIcon,Centre,InputForm,Loading} from '$lib/cmp';
 
 import Questions from './questions/Questions.svelte'
 import SettingsMain from '../editTest/SettingsMain.svelte';
-import Toolbar from './Toolbar.svelte'
+import Toolbar from './Toolbar.svelte';
 import {onMount,toast,get} from '$lib/util';
 import { Agent } from '$lib/ajax';
-
+import makeTestFn from './fn/makeTestFn';
 import {showTestStore,showCloneStore,showDeleteStore} from './store';
 import AddQuestionBar from './AddQuestionBar.svelte';
+import cloneFn from './fn/cloneFn';
+import deleteFn from './fn/deleteFn';
 
 $: showTest = $showTestStore;
 $: showClone = $showCloneStore;
 $: showDelete = $showDeleteStore;
 
-let item;
+let item = {};
+
 function addQuestion(q){
   const questions = [... item.questions, q];
   item.questions = questions; 
@@ -42,6 +45,24 @@ onMount(async ()=>{
   }   
 });
 
+async function clone (newTitle ){
+  await cloneFn(newTitle,item);
+}////function
+
+async function deleteItem (title){
+  if (title !== item.title){
+  toast.push('Title does not match');
+  return;
+  }
+  // it has _id since its template not a question which may or may not have _id
+  await deleteFn(item._id);
+ 
+}//del fn
+
+async function makeTest (newTitle ){
+  await makeTestFn(newTitle,item);
+}
+
 </script>
 
 <!-- ************** -->
@@ -56,20 +77,21 @@ onMount(async ()=>{
         <HdgWithIcon icon='📜'>Edit Tempalte</HdgWithIcon>
         </Centre>
 
-        <!-- ********** The dialogue box **************** -->
+        <!-- ********** The Hidden Dialogue box **************** -->
           {#if showTest }
-            <InputForm clk={() => showTestStore.set(false)  } title='Create New Test' btnTitle='Create'/>
+            <InputForm clk={ makeTest  } title='Create New Test' btnTitle='Create'/>
           {/if}
 
           {#if showClone }
-            <InputForm clk={() => showCloneStore.set(false)  } title='Clone Template' btnTitle='Clone' btnColor='bg-orange-800'/>
+            <InputForm clk={clone  } title='Clone Template' btnTitle='Clone' btnColor='bg-orange-800'/>
           {/if}
           
           {#if showDelete }
-            <InputForm clk={() => showDeleteStore.set(false)  } title='Delete Template' btnTitle='Delete'/>
+            <InputForm clk={ deleteItem  } title='Delete Template' btnTitle='Delete' comment='Type in the title'/>
           {/if}
 
-        <!-- ********** The Dialogue Box Ends *********** -->
+        <!-- ********** The Hidden Dialogue Box Ends *********** -->
+
              <!-- ********** Main Settings  *********** -->
 
         <div class='px-8'>
@@ -77,6 +99,7 @@ onMount(async ()=>{
           <SettingsMain {item} />
         </div>
         <!-- THE MAIN CODE ENDS -->
+        
         <!-- THE Question -->
         <br/>
         
