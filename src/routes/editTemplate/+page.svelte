@@ -12,7 +12,7 @@ import {showTestStore,showCloneStore,showDeleteStore} from './store';
 import AddQuestionBar from './AddQuestionBar.svelte';
 import cloneFn from './fn/cloneFn';
 import deleteFn from './fn/deleteFn';
-
+import HiddenDivs from './HiddenDivs.svelte';
 $: showTest = $showTestStore;
 $: showClone = $showCloneStore;
 $: showDelete = $showDeleteStore;
@@ -64,8 +64,9 @@ async function makeTest (newTitle ){
 }
 
 </script>
-
-<!-- ************** -->
+<!-- ****************************************** -->
+<!-- ****************************************** -->
+<!-- ****************************************** -->
 <PageWrapper>
 {#if  item}
 <!-- ************** -->
@@ -74,42 +75,29 @@ async function makeTest (newTitle ){
         <!-- ************** -->
         <!-- THE MAIN CODE ENDS -->
         <Centre>
-        <HdgWithIcon icon='📜'>Edit Tempalte</HdgWithIcon>
+        <HdgWithIcon icon='📜'>Edit Template</HdgWithIcon>
         </Centre>
 
         <!-- ********** The Hidden Dialogue box **************** -->
-          {#if showTest }
-            <InputForm clk={ makeTest  } title='Create New Test' btnTitle='Create'/>
-          {/if}
+            <HiddenDivs
+              {showTest} {showClone} {showDelete} {makeTest} {clone} {deleteItem} 
+            />
 
-          {#if showClone }
-            <InputForm clk={clone  } title='Clone Template' btnTitle='Clone' btnColor='bg-orange-800'/>
-          {/if}
-          
-          {#if showDelete }
-            <InputForm clk={ deleteItem  } title='Delete Template' btnTitle='Delete' comment='Type in the title'/>
-          {/if}
-
-        <!-- ********** The Hidden Dialogue Box Ends *********** -->
-
-             <!-- ********** Main Settings  *********** -->
-
+        <!-- ********** Main Settings  *********** -->
         <div class='px-8'>
-        <br/>
+          <br/>
           <SettingsMain {item} />
         </div>
-        <!-- THE MAIN CODE ENDS -->
         
-        <!-- THE Question -->
+        <!-- ********** THE Questions   *********** -->
         <br/>
-        
         <div class='px-8'>
         <Questions questions={item.questions} {deleteQuestion}/>
         </div>
-<br/>
-<AddQuestionBar  {addQuestion}/>
-<br/>
 
+        <br/>
+        <AddQuestionBar  {addQuestion}/>
+        <br/>
 {:else}
 <Loading />
 {/if}

@@ -1,11 +1,10 @@
 <script>
 // @ts-nocheck
-
-import {PageWrapper,HdgWithIcon,Centre,Range,Card,BtnIconOval,AnchorIconOval} from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue,Loading} from '$lib/cmp';
 import {onMount,toast} from '$lib/util';
-
-import { testsStore  } from './store.js';
-$: tests= $testsStore;
+import { Agent } from '$lib/ajax';
+// import {templatesStore} from '../../lib/cmn/appStore';
+// $: items = $templatesStore;
 
   // const cardsData = [
   //   { title: 'Titlex', url: 'https://google.com' },
@@ -24,42 +23,67 @@ $: tests= $testsStore;
   //   { title: 'The Title14', url: 'https://google.com' },
   //   { title: 'The Title15', url: 'https://google.com' }
   // ];
-
+  const state = {
+      showNewDialogue : false
+  }
+//----------
+let  items;
 onMount(async ()=>{
-  try {
-//   toast.push("ok");
-  } catch (e) {
-  
-  }   
-});
+    try {
 
+        const resp = await Agent.read('test');
+        if (resp.ok){
+            const data = await resp.json();
+            items = data.items;
+            console.log("items" , items);
+        }else {
+            toast.push('failed to load');
+        }
+    } catch (e) {
+    
+    }   
+});
 </script>
 
 <!-- ************** -->
 <PageWrapper>
-
+{#if items}
 <br/>
     <Centre>
-    <HdgWithIcon icon='🧪'>Tests</HdgWithIcon>
+    <HdgWithIcon icon='📜'>Tests</HdgWithIcon>
     </Centre>
+        <ShowIfTrue ifTrue={state.showNewDialogue} >
+          <InputForm  clk={()=>{state.showNewDialogue = false} }/>
+        </ShowIfTrue>
     
         <Centre>
         <!-- THE MAIN CODE -->
         <div class="flex justify-center gap-2 flex-wrap">
-        {#each tests as cardData, index}
-            <!-- <div class={`w-6/12`}> -->
+         
+        <!-- New Template -->
+        <div class={`w-5/12`}>
+        <CardBtn
+                title={'New Template'}
+                clk={()=>{state.showNewDialogue = !state.showNewDialogue}}
+                icon="💡"
+                titleCharsCount={15}
+        />
+        </div>
+
+        {#each items as cardData, index}
+        <!-- {#each cardsData as cardData, index} -->
+            <div class={`w-5/12`}>
             <!-- <CardTemplate -->
             <Card
                 title={cardData.title}
-                url={''}
-                icon="🧪"
-                titleCharsCount={15}
+                url={`/editTest?quizId=${cardData._id}` }
+                icon="📜"
+                titleCharsCount={10}
             >
                 <!-- card slots -->
-                <AnchorIconOval   href='/editTest' />
-                <AnchorIconOval icon='📈' />
+                <!-- it has no slots if required this is the place -->
             </Card>
-            <!-- </div> -->
+            </div>
         {/each}
         </div>
         <!-- THE MAIN CODE ENDS -->
@@ -67,5 +91,8 @@ onMount(async ()=>{
 
 <br/>
 <br/>
+{:else}
+<Loading />
+{/if}
 </PageWrapper>
 
