@@ -22,9 +22,9 @@ hover:border-blue-200"><!--outer -div-->
 
 <div class="flex flex-col" ><!--inner -div-->
     <!-- //icon -->
-    <div class="mb-2"><span class="text-4xl">{firstXChars(icon)}</span></div>
+    <div class="mb-2"><span class="text-4xl">{icon}</span></div>
    <!-- title -->
-   <div class="p-1 m-1 bg-gray-700 text-sm rounded-md">{title}</div>
+   <div class="p-1 m-1 bg-gray-700 text-sm rounded-md">{firstXChars(title)}</div>
    <!-- buttons -->
    
    <div class='flex justify-center m-0 p-0'>

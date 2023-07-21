@@ -61,7 +61,7 @@ onMount(async ()=>{
         <div class="flex justify-center gap-2 flex-wrap">
          
         <!-- New Template -->
-        <div class={`w-5/12`}>
+        <div class={''}>
         <CardBtn
                 title={'New Template'}
                 clk={()=>{state.showNewDialogue = !state.showNewDialogue}}
@@ -72,7 +72,7 @@ onMount(async ()=>{
 
         {#each items as cardData, index}
         <!-- {#each cardsData as cardData, index} -->
-            <div class={`w-5/12`}>
+            <div class=''>
             <!-- <CardTemplate -->
             <Card
                 title={cardData.title}

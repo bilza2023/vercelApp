@@ -37,7 +37,7 @@ onMount(async ()=>{
 
         {#each items as cardData, index}
         <!-- {#each cardsData as cardData, index} -->
-            <div class={`w-5/12`}>
+            <div class={''}>
             <!-- <CardTemplate -->
             <Card
                 title={cardData.title}
