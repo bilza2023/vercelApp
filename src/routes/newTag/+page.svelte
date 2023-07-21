@@ -1,0 +1,34 @@
+<script>
+// @ts-nocheck
+
+import {PageWrapper,HdgWithIcon,Centre,BtnWIconSm} from '$lib/cmp';
+import { Icons,onMount} from '$lib/util';
+import save from './fn/save';
+import BasicDetails from './BasicDetails.svelte';
+
+//====================
+import {itemStore} from './store';
+$: item = $itemStore;
+
+//====================
+</script>
+
+<PageWrapper>
+<br/>
+    <Centre>
+        <HdgWithIcon icon={Icons.TAG }>Create Tag</HdgWithIcon>
+    </Centre>
+    <br/>
+
+    <div class='mx-10'>
+        <BasicDetails  {item} />
+    </div>
+    <br/>
+
+    <div class='flex justify-center w-full'>
+        <BtnWIconSm 
+        clk={save}
+        icon={Icons.SAVE}>Save</BtnWIconSm>
+    </div>
+
+</PageWrapper>

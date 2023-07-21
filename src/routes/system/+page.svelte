@@ -2,19 +2,23 @@
 // @ts-nocheck
 
 import {PageWrapper,HdgWithIcon,Centre,Range,Card,BtnIconOval} from '$lib/cmp';
-import {onMount,toast} from '$lib/util';
+import {onMount,Icons} from '$lib/util';
 
   const cardsData = [
     //-once user is logged in this is his home page
-    { title: 'Dashboard', url: '/dashboard' ,icon :'📺'},
-    { title: 'Admissions', url: '/admissions',icon :'🗃️' },
-    { title: 'New Class', url: '/newClass' ,icon :'🎓'},
+    { title: 'Add Student', url: '/admissions',icon :'👨‍🎓' },
+    { title: 'Add Class', url: '/newClass' ,icon :'🧑‍🤝‍🧑'},
+    { title: 'Add Tag', url: '/newTag' ,icon :'🏷️'},
+
     { title: 'Students', url: '/students' ,icon :'👨‍🎓'},
     { title: 'Classes', url: '/classes' ,icon :'🧑‍🤝‍🧑'},
     { title: 'Tags', url: '/tags' ,icon :'🏷️'},
+    
     { title: 'Template', url: '/templates' ,icon :'📜'},
     { title: 'Tests', url: '/tests' ,icon :'🧪'},
     { title: 'Running', url: '/running' , icon:'🏃‍♂️' },
+    
+    { title: 'Dashboard', url: '/dashboard' ,icon :'📺'},
 
 
   ];
