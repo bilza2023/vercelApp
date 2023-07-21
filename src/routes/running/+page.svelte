@@ -37,17 +37,17 @@ onMount(async ()=>{
 
         {#each items as cardData, index}
         <!-- {#each cardsData as cardData, index} -->
-            <div class={''}>
+            <div class={'w-3/12'}>
             <!-- <CardTemplate -->
             <Card
                 title={cardData.title}
                 url={`/show?quizId=${cardData._id}` }
-                icon="📜"
+                icon= {Icons.RUN}
                 titleCharsCount={10}
             >
                 <!-- card slots -->
                 <BtnIconOval icon={Icons.DEL}  />
-                <BtnIconOval icon={Icons.BUS} />
+                <BtnIconOval icon={Icons.ROCKET} />
             </Card>
             </div>
         {/each}

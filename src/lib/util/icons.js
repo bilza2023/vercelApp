@@ -33,6 +33,7 @@ export default class Icons {
   static QUESTIONMARK = '❓';
   static RULER = '📏';
   static RUN = '🏃';
+  static ROCKET = '🚀';
   static SAVE = '💾';
   static SMILEY_FACE = '😊';
   static SPEAKER = '📢';

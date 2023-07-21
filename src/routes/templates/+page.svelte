@@ -45,7 +45,7 @@ onMount(async ()=>{
         <div class="flex justify-center gap-2 flex-wrap">
          
         <!-- New Template -->
-        <div class='min-w-128'>
+        <div class='w-3/12'>
         <CardBtn
                 title={'New Template'}
                 clk={()=>{ showNewDialogueStore.set(true)}}
@@ -56,13 +56,13 @@ onMount(async ()=>{
 
         {#each items as cardData, index}
         <!-- {#each cardsData as cardData, index} -->
-            <div class='min-w-64'>
+            <div class='w-3/12'>
             <!-- <CardTemplate -->
             <Card
                 title={cardData.title}
                 url={`/editTemplate?quizId=${cardData._id}` }
                 icon="📜"
-                titleCharsCount={10}
+                titleCharsCount={20}
             >
                 <!-- card slots -->
                 <!-- it has no slots if required this is the place -->
