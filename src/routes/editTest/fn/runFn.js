@@ -1,15 +1,16 @@
 // @ts-nocheck
-import {toast} from '$lib/util';
+import {toast,get} from '$lib/util';
 import {Agent} from '$lib/ajax';
+import {showRunDlgStore,itemStore} from '../store';
 
 
-export default async function  runFn(incomming,newName) {
+export default async function  runFn(title) {
     try{
-    debugger;
-    const item = {...incomming };
+    // debugger;
+    const item = {... get(itemStore) };
     item.testId = item._id;
     item._id = null;
-    item.title = newName;
+    item.title = title;
     item.published = true; //changed
     item.createdAt =  new Date();
     //////////////////////////////////////
@@ -17,6 +18,7 @@ export default async function  runFn(incomming,newName) {
     const resp = await Agent.create('run',{item});
     if (resp.ok) {
         // const data = await resp.json();
+        showRunDlgStore.set(false);
         toast.push( "Test is Running now" );
     }else {
         toast.push( "Failed to Run test" );

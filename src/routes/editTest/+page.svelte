@@ -1,6 +1,6 @@
 <script>
 // @ts-nocheck
-import {PageWrapper,HdgWithIcon,Centre,Loading} from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,Centre,Loading,InputForm} from '$lib/cmp';
 import SettingsMain from './SettingsMain.svelte';
 import Toolbar from './Toolbar.svelte'
 import QuestionsROM from './QuestionsROM.svelte';
@@ -9,8 +9,13 @@ import Teams from './Teams.svelte';
 import UnPublishTimings from './UnPublishTimings.svelte';
 import {onMount,toast,get} from '$lib/util';
 import { Agent } from '$lib/ajax';
+import {showRunDlgStore,itemStore} from './store';
+$: showRunDlg = $showRunDlgStore;
+$: item = $itemStore;
 
-let item;
+import runFn from './fn/runFn';
+
+// let item;
 onMount(async ()=>{
   try {
  //   toast.push("ok");
@@ -20,7 +25,7 @@ onMount(async ()=>{
     //  console.log(item);
     if (resp.ok){
       const data = await resp.json();
-      item = data.item;
+        itemStore.set(data.item);
     //   console.log('item',item);
     }else {
     toast.push('failed to load');
@@ -38,6 +43,9 @@ onMount(async ()=>{
 <!-- ************** -->
 <Toolbar {item}/>
 
+{#if showRunDlg}
+<InputForm clk={ runFn  } title='Run Test' btnTitle='Run' btnColor='bg-orange-800'/>
+{/if}
         <!-- ************** -->
         <!-- THE MAIN CODE ENDS -->
         <Centre>
