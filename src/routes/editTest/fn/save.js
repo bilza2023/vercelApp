@@ -4,6 +4,7 @@ import { toast,get  } from '$lib/util';
 
 
 export default async function save  (item){
+// console.log(item);
 debugger;
  const resp = await Agent.update('test',{ item});
 

@@ -1,7 +1,5 @@
 <script>
 // @ts-nocheck
-
-
 import Loading from '$lib/cmp/Loading.svelte';
 import { onMount } from 'svelte';
 import { BASE_URL } from '$lib/cmn/config.js';

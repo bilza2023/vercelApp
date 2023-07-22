@@ -1,11 +1,9 @@
 <script>
   //@ts-nocheck
-  import { SectionHead, DDDivs, FormRow, Comment } from "$lib/cmp";
-  import { Icons, onMount, toast } from '$lib/util';
+  import { Centre } from "$lib/cmp";
+  import { onMount, toast } from '$lib/util';
   import { Agent } from '$lib/ajax';
-  import Centre from "$lib/cmp/Centre.svelte";
-
-  export let item;
+export let item;
   let classes;
   onMount(async () => {
     try {
@@ -22,17 +20,16 @@
   });
 
   function update(event) {
-  debugger;
+  // debugger;
   const selectedValue = event.target.value;
   item.classId = selectedValue;
-  console.log(item);
-    console.log(item);
-    // console.log(selectedOption._id);
+  // console.log(item);
   }
+
 </script>
 
-<SectionHead title={"Select Class"} icon={Icons.MANAGER}>
-  <br />
+
+{#if classes}
   <Centre>
     <select class='bg-gray-700 text-white w-10/12' on:change={update}>
         <option class='text-center w-full mx-4' value='null'>None</option>
@@ -43,5 +40,4 @@
       {/each}
     </select>
   </Centre>
-  <br />
-</SectionHead>
+  {/if}

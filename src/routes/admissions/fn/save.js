@@ -6,7 +6,7 @@ import {itemStore} from '../store';
 export default async function save(){
     try {
     // console.log("itemStore" , get(itemStore));
-    debugger;
+    // debugger;
     const resp = await Agent.create('student',{item : get(itemStore)});
 
         if (resp.ok){

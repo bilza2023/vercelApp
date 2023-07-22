@@ -1,14 +1,14 @@
 <script>
 // @ts-nocheck
-import {PageWrapper,HdgWithIcon,Centre,Loading,InputForm} from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,Centre,Loading,InputForm,SectionHead} from '$lib/cmp';
 import SettingsMain from './SettingsMain.svelte';
 import Toolbar from './Toolbar.svelte'
 import QuestionsROM from './QuestionsROM.svelte';
 import PublishTimings from './PublishTimings.svelte';
-import Teams from './Teams.svelte';
 import UnPublishTimings from './UnPublishTimings.svelte';
-import {onMount,toast,get} from '$lib/util';
+import {onMount,toast,Icons} from '$lib/util';
 import { Agent } from '$lib/ajax';
+import ClassesDd from "../../lib/appComp/ClassesDD.svelte";
 import {showRunDlgStore,itemStore} from './store';
 $: showRunDlg = $showRunDlgStore;
 $: item = $itemStore;
@@ -61,7 +61,12 @@ onMount(async ()=>{
         <!-- Teams -->
         <br/>
         <div class='px-8'>
-            <Teams {item} />
+        <SectionHead title={"Select Class"} icon={Icons.MANAGER}>
+            <br />
+              <ClassesDd {item}/>
+            <br />
+        </SectionHead>
+
         </div>
         
         <!-- PublishTimings -->

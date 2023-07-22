@@ -2,34 +2,20 @@
 // @ts-nocheck
 
 import { v4 as uuid } from 'uuid';
-import transformQ2R from "./transformQ2R";
-export let questions;
-/**
-     * @type {any}
-     */
- export let next;
-/**
-     * @type {any}
-     */
- export let prev;
-/**
-     * @type {{ userId: any; _id: any; title: any; testId: any; }}
-     */
- export let quiz;
 import { toast } from '@zerodevx/svelte-toast';
-// export let setWaiting;
+import transformQ2R from "./transformQ2R";
 
-/**
-     * @type {number}
-     */
+export let questions;
+export let next;
+export let prev;
+export let quiz;
+
+
  export let cq;
-/**
-     * @type {boolean}
-     */
  export let saveResponse;
 
-import {pageStateStore, emailStore } from '../store.js';
-$: email = $emailStore;
+import {pageStateStore, studentIdStore } from '../store.js';
+$: studentId = $studentIdStore;
 
 import {Agent} from "$lib/ajax";
 
@@ -49,7 +35,7 @@ async function saveResults  (){
     quizResult.runId = quiz._id; 
     quizResult.runTitle = quiz.title; 
     quizResult.testId = quiz.testId; //importantay 
-    quizResult.email = email;
+    quizResult.studentId = studentId; //here
     
     console.log("quizResult after check before save" ,quizResult);
     // const resp = await ajaxPost(`${BASE_URL}/result/save`,{ quizResult, quiz } ); 

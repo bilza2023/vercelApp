@@ -1,6 +1,7 @@
 export default class Icons {
   static BALANCE = '⚖️';
   static BARCHART = '📊';
+  static BOOK = '📘';
   static BOOKS = '📚';
   static BUS = '🚌';
   static CAR = '🚗';
@@ -9,6 +10,7 @@ export default class Icons {
   static COG = '⚙';
   static COMPUTER = '💻';
   static DEL = '🗑️';
+  static DOOR = '🚪';
   static EMAIL = '📧';
   static EXPLOSION = '💥';
   static FILESBOX = '🗃️';
@@ -32,6 +34,7 @@ export default class Icons {
   static PHONE = '📱';
   static QUESTIONMARK = '❓';
   static RULER = '📏';
+  static RECYCLE = '♻️';
   static RUN = '🏃';
   static ROCKET = '🚀';
   static SAVE = '💾';

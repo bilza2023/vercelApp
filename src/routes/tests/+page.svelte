@@ -40,11 +40,12 @@ onMount(async ()=>{
             <!-- <CardTemplate -->
             <Card
                 title={cardData.title}
-                url={`/show?quizId=${cardData._id}` }
+                url={`/editTest?quizId=${cardData._id}` }
                 icon={Icons.TEST}
                 titleCharsCount={20}
             >
                 <!-- card slots -->
+                
                 <!-- it has no slots if required this is the place -->
             </Card>
             </div>

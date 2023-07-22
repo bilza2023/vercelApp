@@ -24,9 +24,9 @@ $: isLogin = $isLoginStore;
     <div class='flex'>
     
     <Logo />
-    {#if isLogin}
-    <NavBtn title='Sync' icon='♻️'/>
-    {/if}
+    <!-- {#if isLogin} -->
+    <!-- <NavBtn title='Sync' icon='♻️'/> -->
+    <!-- {/if} -->
     </div>
             <!-- ******************************** -->
             <!-- ******************************** -->

@@ -1,18 +1,21 @@
 <script>
 // @ts-nocheck
-
 import { goto } from '$app/navigation';
 import { toast } from "@zerodevx/svelte-toast";
 import { onMount } from 'svelte';
 import Title from "./Title.svelte";
 import IntroText from "./IntroText.svelte";
+
 //////////////////////////////////////////////////////
-import { emailStore , pageStateStore } from "../store.js";
+import { studentIdStore , pageStateStore } from "../store.js";
+$: studentId = $studentIdStore;
+
+//-- I am using student id now prev it was email,
 //////////////////////////////////////////////////////
+
 export let quiz;
 export let students;
 
-let email;
 let password;
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
@@ -21,9 +24,9 @@ const checklogin = ()=>{
   // debugger;
   for (let i = 0; i < students.length; i++) {
     const student = students[i];
-      if (student.email == email){
+      if (student.id == studentId){
         if (student.password == password){
-          emailStore.set(email); 
+          studentIdStore.set(studentId); 
           pageStateStore.set("showQuiz");
           return;
         }  
@@ -47,8 +50,8 @@ text-white  p-4 m-8  ">
 <div class="flex flex-col md:flex-row justify-center bg-gray-800 border border-gray-500 p-2 m-1 rounded-md w-full">
   <!-- <div class="flex flex-col md:flex-row bg-gray-800 border border-gray-500 p-2 m-1 rounded-md w-full"> -->
     <div class="flex flex-col items-center">
-      <label for="" class="p-1 m-1">Email</label>
-      <input class="bg-gray-600 text-white rounded-md m-1 p-1 border border-white" type="text" bind:value={email} on:input|preventDefault={()=> true}>
+      <label for="" class="p-1 m-1">Student Id</label>
+      <input class="bg-gray-600 text-white rounded-md m-1 p-1 border border-white" type="number" bind:value={studentId} on:input|preventDefault={()=> true}>
     </div>
     <div class="flex flex-col items-center">
       <label for="" class="p-1 m-1">Password</label>
