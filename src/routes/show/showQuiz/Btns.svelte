@@ -3,7 +3,7 @@
 
 import { v4 as uuid } from 'uuid';
 import { toast } from '@zerodevx/svelte-toast';
-import transformQ2R from "./transformQ2R";
+import transformQ2R from "../fn/transformQ2R";
 
 export let questions;
 export let next;
@@ -22,8 +22,9 @@ import {Agent} from "$lib/ajax";
 let hideSaveBtn = false;
 
 async function saveResults  (){
+  try{
   // console.log('Save results');
-    // debugger;
+    debugger;
   //  setWaiting();
     hideSaveBtn = true;  
     let quizResult = {};
@@ -52,6 +53,9 @@ async function saveResults  (){
           pageStateStore.set('goodbye');
    }
   // pageStateStore.set('goodbye');
+  }catch (e) {
+  
+  }
 }
 </script>
 
