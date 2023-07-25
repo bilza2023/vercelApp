@@ -16,47 +16,11 @@ export let quiz;
 
 import {pageStateStore, studentIdStore } from '../store.js';
 $: studentId = $studentIdStore;
-
+import saveResults from '../fn/saveResults';
 import {Agent} from "$lib/ajax";
 
 let hideSaveBtn = false;
 
-async function saveResults  (){
-  try{
-  // console.log('Save results');
-    debugger;
-  //  setWaiting();
-    hideSaveBtn = true;  
-    let quizResult = {};
-    quizResult.answers = await transformQ2R(quiz);
-    quizResult.userId = quiz.userId;
-    
-    quizResult.id = uuid(); 
-    // quizResult.quizId = quiz._id; 
-    quizResult.runId = quiz._id; 
-    quizResult.runTitle = quiz.title; 
-    quizResult.testId = quiz.testId; //importantay 
-    quizResult.studentId = studentId; //here
-    
-    console.log("quizResult after check before save" ,quizResult);
-    // const resp = await ajaxPost(`${BASE_URL}/result/save`,{ quizResult, quiz } ); 
-    const resp = await Agent.create('result', {item :quizResult});
-      if (resp.ok){
-          // console.log("resp",resp)
-            pageStateStore.set('goodbye');
-          // console.log("outro",$pageStateStore)
-          toast.push("results saved");
-      }else {
-        const data = await resp.json();
-          hideSaveBtn = false;
-          toast.push(data.errormsg);
-          pageStateStore.set('goodbye');
-   }
-  // pageStateStore.set('goodbye');
-  }catch (e) {
-  
-  }
-}
 </script>
 
 
@@ -74,7 +38,7 @@ async function saveResults  (){
       {#if (hideSaveBtn == false)}
         <button 
           class=""
-          on:click={ saveResults  }   > 
+          on:click={ ()=>saveResults(quiz)  }   > 
           {#if saveResponse == true}
           <span class="text-2xl">💾 Submit & Save</span>
           {:else}
