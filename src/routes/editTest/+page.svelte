@@ -12,14 +12,11 @@ import ClassesDd from "../../lib/appComp/ClassesDD.svelte";
 import {showRunDlgStore,itemStore} from './store';
 $: showRunDlg = $showRunDlgStore;
 $: item = $itemStore;
-
+import HiddenDivs from './HiddenDivs.svelte';
 import runFn from './fn/runFn';
-
 // let item;
 onMount(async ()=>{
   try {
- //   toast.push("ok");
-  // debugger;
    const quizId = new URLSearchParams(location.search).get("quizId");
    const resp = await Agent.readone('test' , {id: quizId });
     //  console.log(item);
@@ -53,6 +50,8 @@ onMount(async ()=>{
         </Centre>
         <br/>
             
+        <!-- ********** The Hidden Dialogue box **************** -->
+            <HiddenDivs  {item} />
         <!-- ********** Main Settings  *********** -->
         <div class='px-8'>
             <SettingsMain {item} />
