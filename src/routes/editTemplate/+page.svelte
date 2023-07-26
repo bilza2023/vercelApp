@@ -8,14 +8,18 @@ import Toolbar from './Toolbar.svelte';
 import {onMount,toast,get} from '$lib/util';
 import { Agent } from '$lib/ajax';
 import makeTestFn from './fn/makeTestFn';
-import {showTestStore,showCloneStore,showDeleteStore} from './store';
 import AddQuestionBar from './AddQuestionBar.svelte';
 import cloneFn from './fn/cloneFn';
 import deleteFn from './fn/deleteFn';
 import HiddenDivs from './HiddenDivs.svelte';
+import PublishErrors from './PublishErrors.svelte';
+
+import {showTestStore,showCloneStore,showDeleteStore,errorsArrayStore} from './store';
+
 $: showTest = $showTestStore;
 $: showClone = $showCloneStore;
 $: showDelete = $showDeleteStore;
+$: errorsArray = $errorsArrayStore;
 
 let item = {};
 
@@ -78,6 +82,7 @@ async function makeTest (newTitle ){
         <HdgWithIcon icon='📜'>Edit Template</HdgWithIcon>
         </Centre>
 
+        <PublishErrors />
         <!-- ********** The Hidden Dialogue box **************** -->
             <HiddenDivs
               {showTest} {showClone} {showDelete} {makeTest} {clone} {deleteItem} 

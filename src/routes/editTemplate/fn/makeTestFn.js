@@ -1,20 +1,19 @@
 // @ts-nocheck
 import { toast } from "@zerodevx/svelte-toast";
-import { Agent } from "$lib/ajax";
-import {showTestStore,showCloneStore,showDeleteStore} from '../store';
-/**
- * @param {string} title
- * @param {object} item
- */
+import { Agent } from "$lib/util";
+import checkBeforePub from './check/checkBeforePub.js';
+import {showTestStore , errorsArrayStore } from '../store';
+//////////////////////////////////////////////////////
+
 export default async function makeTest(title,item){
- // showTestStore.set(false);return;
-  // const errorsArray = checkBeforePub(template);
-  // if (errorsArray.length > 0){
-  // errorsArrayStore.set(errorsArray);
-  // showErrorsStore.set(true);
-  // showTestStore.set(false);
-  // return;
-  // }
+// debugger;
+// showTestStore.set(false);return;
+    const errorsArray = checkBeforePub(item);
+      if (errorsArray.length > 0){
+          errorsArrayStore.set(errorsArray);
+          showTestStore.set(false);
+          return;
+      }
   
   //  // userId is already set
   const newitem = {...item}; 
