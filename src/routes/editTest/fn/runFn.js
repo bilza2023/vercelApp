@@ -8,6 +8,7 @@ import {showRunDlgStore,itemStore} from '../store';
  
 export default async function  runFn(title) {
     try{
+    const errs = await checkTest();
     // debugger;
     const item = {... get(itemStore) };
     item.testId = item._id;

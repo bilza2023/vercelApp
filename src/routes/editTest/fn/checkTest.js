@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 
-export default async function checkBeforePub(quiz){
+export default async function checkTest(quiz){
 const errorsArray = [];
 // errorsArray.push("Test");
     await checkQuiz(quiz,errorsArray);
