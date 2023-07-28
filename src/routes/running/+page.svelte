@@ -3,7 +3,7 @@
 import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue,Loading , BtnIconOval } from '$lib/cmp';
 import {Icons, onMount,toast} from '$lib/util';
 import { Agent } from '$lib/ajax';
-
+import deleteFn from './fn/deleteFn';
 //----------
 let  items;
 onMount(async ()=>{
@@ -35,18 +35,18 @@ onMount(async ()=>{
         <!-- THE MAIN CODE -->
         <div class="flex justify-center gap-2 flex-wrap">
 
-        {#each items as cardData, index}
-        <!-- {#each cardsData as cardData, index} -->
+        {#each items as item, index}
+        <!-- {#each cardsData as item, index} -->
             <div class={'w-3/12'}>
             <!-- <CardTemplate -->
             <Card
-                title={cardData.title}
-                url={`/show?quizId=${cardData._id}` }
+                title={item.title}
+                url={`/show?quizId=${item._id}` }
                 icon= {Icons.RUN}
                 titleCharsCount={10}
             >
                 <!-- card slots -->
-                <BtnIconOval icon={Icons.DEL}  />
+                <BtnIconOval icon={Icons.DEL} clk={()=> deleteFn(item._id)}  />
                 <BtnIconOval icon={Icons.ROCKET} />
             </Card>
             </div>
