@@ -9,24 +9,24 @@ import UnPublishTimings from './UnPublishTimings.svelte';
 import {onMount,toast,Icons} from '$lib/util';
 import { Agent } from '$lib/ajax';
 import ClassesDd from "../../lib/appComp/ClassesDD.svelte";
+import HiddenDivs from './HiddenDivs.svelte';
+import RunDiv from './RunDiv.svelte';
+
+
 import {showRunDlgStore,itemStore} from './store';
 $: showRunDlg = $showRunDlgStore;
 $: item = $itemStore;
-import HiddenDivs from './HiddenDivs.svelte';
-import runFn from './fn/runFn';
-// let item;
+
 onMount(async ()=>{
   try {
    const quizId = new URLSearchParams(location.search).get("quizId");
    const resp = await Agent.readone('test' , {id: quizId });
-    //  console.log(item);
-    if (resp.ok){
-      const data = await resp.json();
-        itemStore.set(data.item);
-    //   console.log('item',item);
-    }else {
-    toast.push('failed to load');
-    }
+      if (resp.ok){
+        const data = await resp.json();
+          itemStore.set(data.item);
+      }else {
+      toast.push('failed to load');
+      }
   }catch(e) {
     toast.push('failed to load');
   }
@@ -41,7 +41,7 @@ onMount(async ()=>{
 <Toolbar {item}/>
 
 {#if showRunDlg}
-<InputForm clk={ runFn  } title='Run Test' btnTitle='Run' btnColor='bg-orange-800'/>
+<RunDiv />
 {/if}
         <!-- ************** -->
         <!-- THE MAIN CODE ENDS -->

@@ -1,33 +1,41 @@
 // @ts-nocheck
-import {toast,get} from '$lib/util';
-import {Agent} from '$lib/ajax';
+import {Agent,toast,get} from '$lib/util';
 import {showRunDlgStore,itemStore} from '../store';
-
+// import checkTest from './checkTest'; 
 ///////////////////////////////////////////////// 
 /////////////////////////////////////////////////
  
-export default async function  runFn(title) {
+export default async function  runFn( ) {
     try{
-    const errs = await checkTest();
-    // debugger;
+
     const item = {... get(itemStore) };
+////////////========== Test
+ if (item.title === ''){
+    toast.push('Missing title');
+    return;
+ }    
+////////////========== Test
+ if (item.classId  === ''){
+    toast.push('Assign a Class to the test');
+    return;
+ }    
+    
+    
     item.testId = item._id;
     item._id = null;
-    item.title = title;
-    item.published = true; //changed
+    // item.title = title;
+    item.published = true; //changed ??????
     item.createdAt =  new Date();
     //////////////////////////////////////
     // const resp = await ajaxPost(`${BASE_URL}/survey/save` ,{survey});
-    const resp = await Agent.create('run',{item});
-    if (resp.ok) {
-        // const data = await resp.json();
-        showRunDlgStore.set(false);
-        toast.push( "Test is Running now" );
-    }else {
-        toast.push( "Failed to Run test" );
-    }
-        // showErrorsStore.set(false);
-        // showRunStore.set(false);
+        const resp = await Agent.create('run',{item});
+        if (resp.ok) {
+            // const data = await resp.json();
+            showRunDlgStore.set(false);
+            toast.push( "Test is Running now" );
+        }else {
+            toast.push( "Failed to Run test" );
+        }
     
     }catch(e){
         toast.push(e.message);

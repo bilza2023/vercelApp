@@ -1,6 +1,5 @@
 // @ts-nocheck
 
-
 export default async function checkTest(quiz){
 const errorsArray = [];
 // errorsArray.push("Test");
@@ -10,6 +9,7 @@ return errorsArray;
 }
 
 async function checkQuiz(quiz ,errorsArray){
+
     checkTitle(quiz,errorsArray);
     checkQuestionsNo(quiz ,errorsArray);
     mustHaveOneMember(quiz ,errorsArray);
@@ -30,10 +30,13 @@ if (quiz.title == ""){
     }
 
 }
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+//////////////////////////////////////////////
 function checkQuestionsNo(quiz ,errorsArray){
-
-
     if (quiz.questions.length == 0){
         errorsArray.push("Quiz must have at least one question");
     }
 }
+//////////////////////////////////////////////
