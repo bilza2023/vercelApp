@@ -30,6 +30,7 @@ export { default as NavSec } from './NavSec.svelte';
 export { default as NumberElm } from './NumberElm.svelte';
 export { default as PageNav } from './PageNav.svelte';
 export { default as PageNavBtn } from './PageNavBtn.svelte';
+export { default as PageNavLink } from './PageNavLink.svelte';
 export { default as P } from './P.svelte';
 export { default as PageWrapper } from './PageWrapper.svelte';
 export { default as ProgressBar } from './ProgressBar.svelte';

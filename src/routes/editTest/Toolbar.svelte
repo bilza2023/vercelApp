@@ -1,7 +1,7 @@
 <script>
 
 // @ts-nocheck
-import {PageNav,PageNavBtn} from '$lib/cmp';
+import {PageNav,PageNavBtn,PageNavLink} from '$lib/cmp';
 import {Icons,get} from '$lib/util';
 export let item;
 import save from './fn/save';
@@ -21,7 +21,9 @@ clk={()=>showDeleteStore.set(!get(showDeleteStore) )}
 <PageNavBtn icon={Icons.RUN} title="Run" tf={true} trueColor={"text-white"} 
 clk={()=>showRunDlgStore.set(!get(showRunDlgStore))}
 />
-<PageNavBtn icon={Icons.CHARTUP} title="Analytics" tf={true} trueColor={"text-white"} />
+<PageNavLink icon={Icons.CHARTUP} title="Analytics" tf={true} trueColor={"text-white"} 
+href={ `/analytics?quizId=${item._id}` }
+/>
 
 
 </PageNav>    

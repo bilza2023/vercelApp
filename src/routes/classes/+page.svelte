@@ -1,8 +1,7 @@
 <script>
 // @ts-nocheck
 import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue,Loading} from '$lib/cmp';
-import {Icons, onMount,toast} from '$lib/util';
-import { Agent } from '$lib/ajax';
+import {Agent , Icons, onMount,toast} from '$lib/util';
 
 //----------
 let  items;
