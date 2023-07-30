@@ -2,13 +2,34 @@
 // @ts-nocheck
 
 import {PageWrapper,HdgWithIcon,Centre,BtnWIconSm} from '$lib/cmp';
-import { Icons} from '$lib/util';
+import { Icons , onMount , Agent } from '$lib/util';
 import AdditionalDetails from './AdditionalDetails.svelte';
-import save from './fn/save';
+import save from './fn/update';
 import BasicDetails from './BasicDetails.svelte';
+
 import {itemStore} from './store';
 $: item = $itemStore;
-    
+
+onMount(async ()=>{
+  try {
+    // debugger;
+    const id = new URLSearchParams(location.search).get("quizId");
+    const resp = await Agent.readone('student' , { id });
+    if (resp.ok){
+      
+      const data = await resp.json();
+      // item = (data.item);
+      itemStore.set(data.item);  
+
+    }else {
+    toast.push('failed to load');
+    }
+  } catch (e) {
+    console.error(e);
+  }   
+});
+
+
 </script>
 
 <PageWrapper>
