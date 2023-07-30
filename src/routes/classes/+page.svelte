@@ -42,7 +42,7 @@ onMount(async ()=>{
             <!-- <CardTemplate -->
             <Card
                 title={cardData.name}
-                url={`/editStudent?quizId=${cardData._id}` }
+                url={`/editClass?quizId=${cardData._id}` }
                 icon={Icons.TEAM}
                 titleCharsCount={10}
             >
