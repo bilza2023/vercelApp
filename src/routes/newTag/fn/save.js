@@ -11,14 +11,14 @@ export default async function save(){
 
         if (resp.ok){
             itemStore.set({});
-            toast.push('Tag saved');
+            toast.push('Class saved');
         }else {
             const data = await resp.json();
             toast.push( data.message);
         }
 
     } catch (error) {
-            toast.push( 'Unknown Error');
+        console.log(error);        
     }
 
 }

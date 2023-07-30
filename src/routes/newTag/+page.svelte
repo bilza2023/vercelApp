@@ -2,21 +2,18 @@
 // @ts-nocheck
 
 import {PageWrapper,HdgWithIcon,Centre,BtnWIconSm} from '$lib/cmp';
-import { Icons,onMount} from '$lib/util';
+import { Icons} from '$lib/util';
 import save from './fn/save';
 import BasicDetails from './BasicDetails.svelte';
-
-//====================
 import {itemStore} from './store';
 $: item = $itemStore;
-
-//====================
+    
 </script>
 
 <PageWrapper>
 <br/>
     <Centre>
-        <HdgWithIcon icon={Icons.TAG }>Create Tag</HdgWithIcon>
+        <HdgWithIcon icon={Icons.TEAM}>Create Tag</HdgWithIcon>
     </Centre>
     <br/>
 

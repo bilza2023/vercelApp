@@ -9,7 +9,7 @@ export let item;
 
     <FormRow title='Class Name' >
         <InputElm {item}  value='name'/>
-        <Comment>The Class Name must be unique, do not repeat a class name.</Comment>
+        <Comment>The Tag Name must be unique, do not repeat a tag name.</Comment>
     </FormRow>
     
     <FormRow title='Description'  >
