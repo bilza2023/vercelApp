@@ -36,7 +36,7 @@ $: isLogin = $isLoginStore;
     <NavBtn title='Tests' icon ='🧪' url='/tests'/>
     <NavBtn title='Running' icon ='🏃‍♂️' url='/running'/>
     <NavBtn title='System' icon ='🔧' url='/system'/>
-    <NavBtn title='Help' icon ='📘' url='/help'/>
+    <NavBtn title='Help' icon ='📘' url='/docs'/>
 
       <NavBtn2 title='Logout' icon ='🚪' clk={logout}/>
     
