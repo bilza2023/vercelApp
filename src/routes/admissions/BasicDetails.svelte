@@ -6,6 +6,7 @@ import {Icons} from '$lib/util';
 export let item;
 </script>
 
+{#if item}
 <SectionHead title='Basic Details' icon={ Icons.PENCIL  } visible={true} >
 
     <FormRow title='Registeration Number' >
@@ -32,3 +33,4 @@ export let item;
     </FormRow>
 
 </SectionHead>
+{/if}

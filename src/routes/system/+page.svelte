@@ -16,9 +16,9 @@ import {onMount,Icons} from '$lib/util';
     
     { title: 'Template', url: '/templates' ,icon :'📜'},
     { title: 'Tests', url: '/tests' ,icon :'🧪'},
-    { title: 'Running', url: '/running' , icon:'🏃‍♂️' },
+    { title: 'Running', url: '/running' , icon:'🏃‍♂️' }
     
-    { title: 'Dashboard', url: '/dashboard' ,icon :'📺'},
+    // { title: 'Dashboard', url: '/dashboard' ,icon :'📺'},
 
 
   ];
