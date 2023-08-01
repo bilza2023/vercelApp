@@ -2,11 +2,15 @@
 import {Agent} from '$lib/ajax';
 import { toast,get  } from '$lib/util';
 
+// import { templateLocalStore } from '../store.js';
+// $:item = $templateLocalStore;
+// $:questions = $questionsStore;
+
 
 export default async function save  (item){
-// console.log(item);
-debugger;
- const resp = await Agent.update('test',{ item});
+  // console.log(item);
+    // return;
+ const resp = await Agent.update('template',{ item});
 
   if (resp.ok) {
     //   const data = await resp.json();

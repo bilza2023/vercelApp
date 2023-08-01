@@ -9,7 +9,7 @@ export default async function create(title){
         try {
         // debugger;
         // const item = getSurvey(title);
-        const resp = await Agent.create('template', {title});
+        const resp = await Agent.create('test', {title});
         if (resp.ok){
             const data = await resp.json();
             const item = data.item;

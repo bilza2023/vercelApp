@@ -1,17 +1,31 @@
 <script>
 // @ts-nocheck
-import {InputForm} from '$lib/cmp';
-import deleteFn from './fn/deleteFn';
-//==================================================
-import {showDeleteStore} from './store';
-$:showDelete = $showDeleteStore;
 
+import { InputForm } from '$lib/cmp';
+
+  
+export let showTest;
+export let showClone;
+export let showDelete;
+export let makeTest;
+export let clone;
+export let deleteItem;
 </script>
 
-<!-- ********** The Hidden Dialogue box **************** -->
+  <!-- ********** The Hidden Dialogue box **************** -->
+
+{#if showTest }
+<InputForm clk={ makeTest  } title='Create New Test' btnTitle='Create'/>
+{/if}
+
+
+{#if showClone }
+<InputForm clk={ clone  } title='Clone Template' btnTitle='Clone' btnColor='bg-orange-800'/>
+{/if}
+
 
 {#if showDelete }
-<InputForm clk={ deleteFn } title='Delete Template' btnTitle='Delete' comment='Type in the title' />
+<InputForm clk={ deleteItem  } title='Delete Template' btnTitle='Delete' comment='Type in the title'/>
 {/if}
 
 <!-- ********** The Hidden Dialogue Box Ends *********** -->

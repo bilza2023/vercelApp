@@ -2,4 +2,6 @@
  
 import { writable } from 'svelte/store';
 
-export const testsStore = writable([]);
+export const templatesStore = writable([]);
+export const showNewDialogueStore = writable(false);
+

@@ -1,93 +1,120 @@
 <script>
 // @ts-nocheck
-import {PageWrapper,HdgWithIcon,Centre,Loading,InputForm,SectionHead} from '$lib/cmp';
-import SettingsMain from './SettingsMain.svelte';
-import Toolbar from './Toolbar.svelte'
-import QuestionsROM from './QuestionsROM.svelte';
-import PublishTimings from './PublishTimings.svelte';
-import UnPublishTimings from './UnPublishTimings.svelte';
-import {onMount,toast,Icons} from '$lib/util';
+import {PageWrapper,HdgWithIcon,Centre,InputForm,Loading} from '$lib/cmp';
+
+import Questions from './questions/Questions.svelte'
+import SettingMain from './settings/SettingsMain.svelte';
+import Toolbar from './Toolbar.svelte';
+import {onMount,toast,get} from '$lib/util';
 import { Agent } from '$lib/ajax';
-import ClassesDd from "../../lib/appComp/ClassesDD.svelte";
+import makeTestFn from './fn/makeTestFn';
+import AddQuestionBar from './AddQuestionBar.svelte';
+import cloneFn from './fn/cloneFn';
+import deleteFn from './fn/deleteFn';
 import HiddenDivs from './HiddenDivs.svelte';
-import RunDiv from './RunDiv.svelte';
+import PublishErrors from './PublishErrors.svelte';
+import PageSeparator from './PageSeparator.svelte';
 
+import {showTestStore,showCloneStore,showDeleteStore,errorsArrayStore,showQuestionsStore} from './store';
 
-import {showRunDlgStore,itemStore} from './store';
-$: showRunDlg = $showRunDlgStore;
-$: item = $itemStore;
+$: showTest = $showTestStore;
+$: showClone = $showCloneStore;
+$: showDelete = $showDeleteStore;
+$: errorsArray = $errorsArrayStore;
+$: showQuestions = $showQuestionsStore;
+
+let item = {};
+
+function addQuestion(q){
+  const questions = [... item.questions, q];
+  item.questions = questions; 
+}
+function deleteQuestion(id) {
+  // Use the filter method to create a new array excluding the question with the matching id
+  const updatedQuestions = item.questions.filter(question => question.id !== id);
+  item.questions = updatedQuestions;
+}
+
 
 onMount(async ()=>{
   try {
-   const quizId = new URLSearchParams(location.search).get("quizId");
-   const resp = await Agent.readone('test' , {id: quizId });
-      if (resp.ok){
-        const data = await resp.json();
-          itemStore.set(data.item);
-      }else {
-      toast.push('failed to load');
-      }
-  }catch(e) {
+    const quizId = new URLSearchParams(location.search).get("quizId");
+    const resp = await Agent.readone('template' , {id: quizId });
+    if (resp.ok){
+      
+      const data = await resp.json();
+      item = (data.item);
+
+    }else {
     toast.push('failed to load');
-  }
+    }
+  } catch (e) {
+    console.error(e);
+  }   
 });
 
-</script>
+async function clone (newTitle ){
+  await cloneFn(newTitle,item);
+}////function
 
-<!-- ************** -->
+async function deleteItem (title){
+  if (title !== item.title){
+  toast.push('Title does not match');
+  return;
+  }
+  // it has _id since its template not a question which may or may not have _id
+  await deleteFn(item._id);
+ 
+}//del fn
+
+async function makeTest (newTitle ){
+  await makeTestFn(newTitle,item);
+}
+
+</script>
+<!-- ****************************************** -->
+<!-- ****************************************** -->
 <PageWrapper>
-{#if  item != null}
+{#if  item}
 <!-- ************** -->
 <Toolbar {item}/>
 
-{#if showRunDlg}
-<RunDiv />
-{/if}
+
         <!-- ************** -->
         <!-- THE MAIN CODE ENDS -->
         <Centre>
-            <HdgWithIcon icon='📜'>Edit Test</HdgWithIcon>
+        <HdgWithIcon icon='📜'>Edit Test</HdgWithIcon>
         </Centre>
-        <br/>
-            
+
+        <PageSeparator />
+
+        <PublishErrors />
         <!-- ********** The Hidden Dialogue box **************** -->
-            <HiddenDivs  {item} />
+            <HiddenDivs
+              {showTest} {showClone} {showDelete} {makeTest} {clone} {deleteItem} 
+            />
+
         <!-- ********** Main Settings  *********** -->
         <div class='px-8'>
-            <SettingsMain {item} />
-        </div>
-       
-        <!-- Teams -->
-        <br/>
-        <div class='px-8'>
-        <SectionHead title={"Select Class"} icon={Icons.MANAGER}>
-            <br />
-              <ClassesDd {item}/>
-            <br />
-        </SectionHead>
-
+          <br/>          
+            {#if  showQuestions}
+            <Questions questions={item.questions} {deleteQuestion}/>
+             <br/>
+            <AddQuestionBar  {addQuestion}/>
+            <br/>
+            {:else}
+            <SettingMain {item}/>
+            {/if}
         </div>
         
-        <!-- PublishTimings -->
-        <br/>
-        <div class='px-8'>
-            <PublishTimings {item} />
-        </div>
-        
-        <!-- UnPublishTimings -->
-        <br/>
-        <div class='px-8'>
-            <UnPublishTimings {item} />
-        </div>
-       
-        <!-- THE Question -->
-        <br/>
-        <div class='px-8'>
-            <QuestionsROM questions= {item.questions} title={'Questions (Read Only)'} />
-        </div>
-<br/>
-<br/>
 {:else}
 <Loading />
 {/if}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </PageWrapper>
