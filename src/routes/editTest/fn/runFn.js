@@ -7,18 +7,18 @@ import {showRunDlgStore } from '../store';
  
 export default async function  runFn(item ) {
     try{
-
+    debugger;
 //     const item = {... get(itemStore) };
 // ////////////========== Test
-//  if (item.title === ''){
-//     toast.push('Missing title');
-//     return;
-//  }    
+ if (item.title === ''){
+    toast.push('Missing title');
+    return;
+ }    
 // ////////////========== Test
-//  if (item.classId  === ''){
-//     toast.push('Assign a Class to the test');
-//     return;
-//  }    
+ if (item.classId  === ''){
+    toast.push('Assign a Class to the test');
+    return;
+ }    
     
     
     item.testId = item._id;

@@ -13,7 +13,7 @@ $: showNewDialogue = $showNewDialogueStore;
 // let  items;
 onMount(async ()=>{
     try {
-    debugger;
+    // debugger;
         const resp = await Agent.read('test');
         if (resp.ok){
             const data = await resp.json();

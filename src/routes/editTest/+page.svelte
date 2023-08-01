@@ -24,6 +24,7 @@ $: showDelete = $showDeleteStore;
 $: errorsArray = $errorsArrayStore;
 $: showQuestions = $showQuestionsStore;
 $: showRunDlg = $showRunDlgStore;
+
 let item = {};
 
 function addQuestion(q){
@@ -79,10 +80,10 @@ async function makeTest (newTitle ){
 <PageWrapper>
 {#if  item}
 <!-- ************** -->
-<Toolbar {item}/>
+<Toolbar {item} />
 
 {#if showRunDlg}
-<RunDiv />
+<RunDiv  {item} />
 {/if}
         <!-- ************** -->
         <!-- THE MAIN CODE ENDS -->

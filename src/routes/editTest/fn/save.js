@@ -10,7 +10,7 @@ import { toast,get  } from '$lib/util';
 export default async function save  (item){
   // console.log(item);
     // return;
- const resp = await Agent.update('template',{ item});
+ const resp = await Agent.update('test',{ item});
 
   if (resp.ok) {
     //   const data = await resp.json();
