@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue,Loading} from '$lib/cmp';
-import {onMount,toast} from '$lib/util';
+import {onMount,toast , Icons} from '$lib/util';
 import { Agent } from '$lib/ajax';
 import create from './fn/create';
 import {templatesStore,showNewDialogueStore} from './store';
@@ -13,7 +13,7 @@ $: showNewDialogue = $showNewDialogueStore;
 // let  items;
 onMount(async ()=>{
     try {
-    // debugger;
+    debugger;
         const resp = await Agent.read('test');
         if (resp.ok){
             const data = await resp.json();
@@ -36,7 +36,7 @@ onMount(async ()=>{
     <HdgWithIcon icon='📜'>Tests</HdgWithIcon>
     </Centre>
         <ShowIfTrue ifTrue={showNewDialogue} >
-          <InputForm  clk={create }/>
+          <InputForm  clk={ create }/>
           <!-- <InputForm  clk={()=>{state.showNewDialogue = false} }/> -->
         </ShowIfTrue>
     
@@ -60,8 +60,8 @@ onMount(async ()=>{
             <!-- <CardTemplate -->
             <Card
                 title={cardData.title}
-                url={`/editTemplate?quizId=${cardData._id}` }
-                icon="📜"
+                url={`/editTest?quizId=${cardData._id}` }
+                icon= { Icons.TEST}
                 titleCharsCount={20}
             >
                 <!-- card slots -->

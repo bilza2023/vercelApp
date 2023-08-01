@@ -1,6 +1,6 @@
 <script>
 import {Comment , BtnWIconSm , HdgWithIcon} from '$lib/cmp';
-    import { Icons } from '$lib/util';
+import { Icons } from '$lib/util';
 import runFn from './fn/runFn';
 </script>
 

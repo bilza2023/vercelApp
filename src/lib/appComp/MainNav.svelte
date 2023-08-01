@@ -32,7 +32,7 @@ $: isLogin = $isLoginStore;
             <!-- ******************************** -->
     <div class='flex'>
     {#if isLogin}
-    <NavBtn title='Templates' icon ='📜' url='/templates'/>
+    <!-- <NavBtn title='Templates' icon ='📜' url='/templates'/> -->
     <NavBtn title='Tests' icon ='🧪' url='/tests'/>
     <NavBtn title='Running' icon ='🏃‍♂️' url='/running'/>
     <NavBtn title='System' icon ='🔧' url='/system'/>

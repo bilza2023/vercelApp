@@ -1,24 +1,24 @@
 // @ts-nocheck
 import {Agent,toast,get} from '$lib/util';
-import {showRunDlgStore,itemStore} from '../store';
+import {showRunDlgStore } from '../store';
 // import checkTest from './checkTest'; 
 ///////////////////////////////////////////////// 
 /////////////////////////////////////////////////
  
-export default async function  runFn( ) {
+export default async function  runFn(item ) {
     try{
 
-    const item = {... get(itemStore) };
-////////////========== Test
- if (item.title === ''){
-    toast.push('Missing title');
-    return;
- }    
-////////////========== Test
- if (item.classId  === ''){
-    toast.push('Assign a Class to the test');
-    return;
- }    
+//     const item = {... get(itemStore) };
+// ////////////========== Test
+//  if (item.title === ''){
+//     toast.push('Missing title');
+//     return;
+//  }    
+// ////////////========== Test
+//  if (item.classId  === ''){
+//     toast.push('Assign a Class to the test');
+//     return;
+//  }    
     
     
     item.testId = item._id;

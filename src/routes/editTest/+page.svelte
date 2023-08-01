@@ -14,15 +14,16 @@ import deleteFn from './fn/deleteFn';
 import HiddenDivs from './HiddenDivs.svelte';
 import PublishErrors from './PublishErrors.svelte';
 import PageSeparator from './PageSeparator.svelte';
+import RunDiv from './RunDiv.svelte';
 
-import {showTestStore,showCloneStore,showDeleteStore,errorsArrayStore,showQuestionsStore} from './store';
+import {showTestStore,showCloneStore,showDeleteStore,errorsArrayStore,showQuestionsStore,showRunDlgStore} from './store';
 
 $: showTest = $showTestStore;
 $: showClone = $showCloneStore;
 $: showDelete = $showDeleteStore;
 $: errorsArray = $errorsArrayStore;
 $: showQuestions = $showQuestionsStore;
-
+$: showRunDlg = $showRunDlgStore;
 let item = {};
 
 function addQuestion(q){
@@ -38,8 +39,9 @@ function deleteQuestion(id) {
 
 onMount(async ()=>{
   try {
+    // debugger;
     const quizId = new URLSearchParams(location.search).get("quizId");
-    const resp = await Agent.readone('template' , {id: quizId });
+    const resp = await Agent.readone('test' , {id: quizId });
     if (resp.ok){
       
       const data = await resp.json();
@@ -79,7 +81,9 @@ async function makeTest (newTitle ){
 <!-- ************** -->
 <Toolbar {item}/>
 
-
+{#if showRunDlg}
+<RunDiv />
+{/if}
         <!-- ************** -->
         <!-- THE MAIN CODE ENDS -->
         <Centre>
