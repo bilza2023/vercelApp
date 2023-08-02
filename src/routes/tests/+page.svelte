@@ -45,18 +45,19 @@ onMount(async ()=>{
         <div class="flex justify-center gap-2 flex-wrap">
          
         <!-- New Template -->
-        <div class='w-3/12'>
+        <!-- <div class='w-3/12'> -->
         <CardBtn
-                title={'New Template'}
+                title={'New Test'}
                 clk={()=>{ showNewDialogueStore.set(true)}}
                 icon="💡"
+                bgColor = 'bg-green-900'
                 titleCharsCount={15}
         />
-        </div>
+        <!-- </div> -->
 
         {#each items as cardData, index}
         <!-- {#each cardsData as cardData, index} -->
-            <div class='w-3/12'>
+            <!-- <div class='w-3/12'> -->
             <!-- <CardTemplate -->
             <Card
                 title={cardData.title}
@@ -67,7 +68,7 @@ onMount(async ()=>{
                 <!-- card slots -->
                 <!-- it has no slots if required this is the place -->
             </Card>
-            </div>
+            <!-- </div> -->
         {/each}
         </div>
         <!-- THE MAIN CODE ENDS -->

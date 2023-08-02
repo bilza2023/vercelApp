@@ -3,6 +3,7 @@
 //@ts-nocheck
 export let icon="📜";
 export let title='The Title';
+export let bgColor ='bg-gray-600';
 export let clk = ()=>true;
 export let titleCharsCount = 20;
 //------------------
@@ -13,9 +14,9 @@ function firstXChars(string) {
 </script>
 
  
-<div class="w-full bg-gray-600 rounded-md p-2 m-1 
+<div class= {`min-w-[150px]  ${bgColor} rounded-md p-2 m-1 
 border-4  border-blue-700 text-center 
-hover:border-blue-200"><!--outer -div-->
+hover:border-blue-200`}><!--outer -div-->
 
 <button  class="  rounded-lg" 
  on:click={clk} >

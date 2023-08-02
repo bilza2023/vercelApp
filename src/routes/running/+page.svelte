@@ -1,14 +1,14 @@
 <script>
 // @ts-nocheck
 import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue,Loading , BtnIconOval } from '$lib/cmp';
-import {Icons, onMount,toast} from '$lib/util';
+import {Icons, onMount,toast,goto} from '$lib/util';
 import { Agent } from '$lib/ajax';
 import deleteFn from './fn/deleteFn';
 //----------
 let  items;
 onMount(async ()=>{
     try {
-
+        debugger;
         const resp = await Agent.read('run');
         if (resp.ok){
             const data = await resp.json();
@@ -33,7 +33,7 @@ onMount(async ()=>{
     </Centre>
     
         <!-- THE MAIN CODE -->
-        <div class="flex justify-center gap-2 flex-wrap">
+        <div class="flex justify-center gap-2 flex-wrap w-full">
 
         {#each items as item, index}
         <!-- {#each cardsData as item, index} -->
@@ -41,12 +41,12 @@ onMount(async ()=>{
             <!-- <CardTemplate -->
             <Card
                 title={item.title}
-                url={`/show?quizId=${item._id}` }
+                url={`/analytics?quizId=${item._id}` }
                 icon= {Icons.RUN}
-                titleCharsCount={10}
+                titleCharsCount={15}
             >
                 <!-- card slots -->
-                <BtnIconOval icon={Icons.DEL} clk={()=> deleteFn(item._id)}  />
+                <BtnIconOval icon={Icons.CHARTUP } clk={()=> goto(`/analytics?quizId=${item._id}` )}  />
                 <BtnIconOval icon={Icons.ROCKET} />
             </Card>
             </div>

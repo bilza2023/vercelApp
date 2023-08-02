@@ -39,7 +39,7 @@ onMount(async ()=>{
          
         {#each items as cardData, index}
         <!-- {#each cardsData as cardData, index} -->
-            <div class={`w-5/12`}>
+            <!-- <div class={`w-5/12`}> -->
             <!-- <CardTemplate -->
             <Card
                 title={cardData.name}
@@ -50,7 +50,7 @@ onMount(async ()=>{
                 <!-- card slots -->
                 <!-- it has no slots if required this is the place -->
             </Card>
-            </div>
+            <!-- </div> -->
         {/each}
         </div>
         <!-- THE MAIN CODE ENDS -->

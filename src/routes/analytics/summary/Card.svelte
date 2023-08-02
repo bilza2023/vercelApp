@@ -1,4 +1,5 @@
 <script>
+//@ts-nocheck
 export let title;
 export let count;
 </script>

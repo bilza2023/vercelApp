@@ -13,7 +13,7 @@ function firstXChars(string) {
 </script>
 
  
-<div class="w-full bg-gray-600 rounded-md p-2 m-1 
+<div class="min-w-[150px] bg-gray-600 rounded-md p-2 m-1 
 border-4  border-blue-700 text-center 
 hover:border-blue-200"><!--outer -div-->
 

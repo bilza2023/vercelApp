@@ -27,7 +27,7 @@ onMount(async () => {
   try {
   const  quizId = new URLSearchParams(location.search).get("quizId");
   // const resp = await ajaxPost(`${BASE_URL}/result/analytics`,{quizId});
-  const resp = await Agent.where('result' , {whereItem : 'testId' , whereValue : quizId });
+  const resp = await Agent.where('result' , {whereItem : 'runId' , whereValue : quizId });
 
           debugger;
           if (resp.ok){
