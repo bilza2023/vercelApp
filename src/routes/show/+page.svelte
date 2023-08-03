@@ -35,7 +35,6 @@ onMount(async () => {
         const data = await resp.json();
         quiz = data.quiz;
         students = data.students;
-        console.log(data);
     } else {
       const data = await resp.json();
       toast.push(data.message);

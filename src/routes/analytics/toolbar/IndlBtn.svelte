@@ -1,7 +1,7 @@
 <script>
+//@ts-nocheck
 export let setPageState;
 </script>
-
 
 
 <div class="w-20">

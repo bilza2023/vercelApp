@@ -3,12 +3,13 @@ import { v4 as uuid } from 'uuid';
 import { toast } from '@zerodevx/svelte-toast';
 import transformQ2R from "./transformQ2R";
 
-import {pageStateStore, studentIdStore } from '../store.js';
+import {pageStateStore, studentIdStore,studentNameStore } from '../store.js';
 
 import {Agent,get} from "$lib/util";
 
 export default async function saveResults  (quiz){
   try{
+    // debugger;
     let quizResult = {};
     quizResult.answers = await transformQ2R(quiz);
     quizResult.userId = quiz.userId;
@@ -17,8 +18,9 @@ export default async function saveResults  (quiz){
     // quizResult.quizId = quiz._id; 
     quizResult.runId = quiz._id; 
     quizResult.runTitle = quiz.title; 
-    quizResult.testId = quiz.testId; //importantay 
+    quizResult.classId = quiz.classId; //importantay 
     quizResult.studentId = get(studentIdStore) ; //here
+    quizResult.studentName = get(studentNameStore) ; //here
     
     // console.log("quizResult after check before save" ,quizResult);
     // const resp = await ajaxPost(`${BASE_URL}/result/save`,{ quizResult, quiz } ); 

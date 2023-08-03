@@ -3,13 +3,11 @@
 import {Agent , Icons, onMount,toast} from '$lib/util';
 
 import { BASE_URL } from '$lib/cmn/config.js';
-// import Nav from '$lib/cmp/Nav.svelte';
-import Loading from '$lib/cmp/Loading.svelte';
+import {Loading,PageWrapper} from '$lib/cmp';
 import Indl from './indl/Indl.svelte';
 import Summary from './summary/Summary.svelte';
 import Combined from './combined/Combined.svelte';
 import ToolBar from './toolbar/ToolBar.svelte';
-import ajaxPost from "$lib/ajax/ajaxPost.js";
 import check from './check/check.js';
 
 // import StudentResportsTable from "./individual/StudentResportsTable.svelte"; 
@@ -29,12 +27,12 @@ onMount(async () => {
   // const resp = await ajaxPost(`${BASE_URL}/result/analytics`,{quizId});
   const resp = await Agent.where('result' , {whereItem : 'runId' , whereValue : quizId });
 
-          debugger;
+          // debugger;
           if (resp.ok){
             const data = await resp.json();
             results = data.items;
 
-            const resp2 = await Agent.readone('test' , {id: quizId });
+            const resp2 = await Agent.readone('run' , {id: quizId });
               if (resp2.ok){
                   const data2 = await resp2.json();    
                   quiz = data2.item;
@@ -56,7 +54,9 @@ onMount(async () => {
 </script>
 
 <!-- <Nav /> -->
+<PageWrapper>
 <ToolBar {setPageState} />
+{#if quiz}
 <div class="wrapper bg-gray-800 text-white w-full min-h-screen p-6 ">
 
 {#if pageState == "loading" }
@@ -85,3 +85,7 @@ onMount(async () => {
 
 </div>
 
+{:else}
+<Loading />
+{/if} 
+</PageWrapper>

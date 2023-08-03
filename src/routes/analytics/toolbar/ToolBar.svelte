@@ -1,4 +1,6 @@
 <script>
+//@ts-nocheck
+
 import SummaryBtn from "./SummaryBtn.svelte";
 import CombinedBtn from "./CombinedBtn.svelte";
 import IndlBtn from "./IndlBtn.svelte";

@@ -1,4 +1,5 @@
 <script>
+//@ts-nocheck
 import { onMount } from 'svelte';
 import NavBtns from "./NavBtns.svelte"; 
 import Details from "./Details.svelte";
@@ -16,6 +17,7 @@ function inc(){
         count = results.length - 1;
     }
 }
+
 function dec(){
     count -= 1;
     if (count < 0 ){count = 0;}
@@ -23,6 +25,7 @@ function dec(){
 
 onMount(async () => {
   try {
+    // debugger;
     testTotalMarks = await getTestTotalMarks(quiz);
   }catch(e) {
   

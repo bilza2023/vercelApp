@@ -7,7 +7,7 @@ import Title from "./Title.svelte";
 import IntroText from "./IntroText.svelte";
 
 //////////////////////////////////////////////////////
-import { studentIdStore , pageStateStore } from "../store.js";
+import { studentIdStore , studentNameStore  , pageStateStore  } from "../store.js";
 $: studentId = $studentIdStore;
 
 //-- I am using student id now prev it was email,
@@ -27,6 +27,7 @@ const checklogin = ()=>{
       if (student.id == studentId){
         if (student.password == password){
           studentIdStore.set(studentId); 
+          studentNameStore.set(student.name); 
           pageStateStore.set("showQuiz");
           return;
         }  

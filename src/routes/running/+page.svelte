@@ -8,7 +8,7 @@ import deleteFn from './fn/deleteFn';
 let  items;
 onMount(async ()=>{
     try {
-        debugger;
+        // debugger;
         const resp = await Agent.read('run');
         if (resp.ok){
             const data = await resp.json();
@@ -45,9 +45,11 @@ onMount(async ()=>{
                 icon= {Icons.RUN}
                 titleCharsCount={15}
             >
-                <!-- card slots -->
+                <!------------ card slots ------------------->
                 <BtnIconOval icon={Icons.CHARTUP } clk={()=> goto(`/analytics?quizId=${item._id}` )}  />
-                <BtnIconOval icon={Icons.ROCKET} />
+                
+                <BtnIconOval icon={Icons.ROCKET } clk={()=> goto(`/show?quizId=${item._id}` )}  />
+
             </Card>
             </div>
         {/each}
