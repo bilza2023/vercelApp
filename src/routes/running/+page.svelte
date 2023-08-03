@@ -1,6 +1,6 @@
 <script>
 // @ts-nocheck
-import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue,Loading , BtnIconOval } from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue,Loading , LinkIconOval } from '$lib/cmp';
 import {Icons, onMount,toast,goto} from '$lib/util';
 import { Agent } from '$lib/ajax';
 import deleteFn from './fn/deleteFn';
@@ -46,9 +46,9 @@ onMount(async ()=>{
                 titleCharsCount={15}
             >
                 <!------------ card slots ------------------->
-                <BtnIconOval icon={Icons.CHARTUP } clk={()=> goto(`/analytics?quizId=${item._id}` )}  />
+                <LinkIconOval icon={Icons.CHARTUP } href={`/analytics?quizId=${item._id}`}  />
                 
-                <BtnIconOval icon={Icons.ROCKET } clk={()=> goto(`/show?quizId=${item._id}` )}  />
+                <LinkIconOval icon={Icons.ROCKET } href={`/show?quizId=${item._id}`}  />
 
             </Card>
             </div>
