@@ -1,6 +1,6 @@
 <script>
 // @ts-nocheck
-import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue,Loading} from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue,Loading , LinkIconOval } from '$lib/cmp';
 import {Icons, onMount,toast} from '$lib/util';
 import { Agent } from '$lib/ajax';
 
@@ -8,7 +8,7 @@ import { Agent } from '$lib/ajax';
 let  items;
 onMount(async ()=>{
     try {
-
+        // debugger;
         const resp = await Agent.read('student');
         if (resp.ok){
             const data = await resp.json();
@@ -37,18 +37,19 @@ onMount(async ()=>{
         <!-- THE MAIN CODE -->
         <div class="flex justify-center gap-2 flex-wrap">
          
-        {#each items as cardData, index}
-        <!-- {#each cardsData as cardData, index} -->
+        {#each items as item, index}
+        <!-- {#each cardsData as item, index} -->
             <!-- <div class={`w-5/12`}> -->
             <!-- <CardTemplate -->
             <Card
-                title={cardData.name}
-                url={`/editStudent?quizId=${cardData._id}` }
+                title={item.name}
+                url={`/studentResult?quizId=${item._id}` }
                 icon={Icons.STUDENT}
                 titleCharsCount={10}
             >
                 <!-- card slots -->
                 <!-- it has no slots if required this is the place -->
+                <LinkIconOval icon={Icons.CHARTUP } href={`/studentResult?quizId=${item._id}`}  />
             </Card>
             <!-- </div> -->
         {/each}

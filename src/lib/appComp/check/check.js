@@ -1,3 +1,5 @@
+
+//@ts-nocheck
 import gradeMCQ from "./gradeMCQ.js";
 
 // import getExtraData from "./getExtraData.js";

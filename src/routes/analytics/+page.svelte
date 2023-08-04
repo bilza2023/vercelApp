@@ -8,7 +8,7 @@ import Indl from './indl/Indl.svelte';
 import Summary from './summary/Summary.svelte';
 import Combined from './combined/Combined.svelte';
 import ToolBar from './toolbar/ToolBar.svelte';
-import check from './check/check.js';
+import check from '$lib/appComp/check/check.js';
 
 // import StudentResportsTable from "./individual/StudentResportsTable.svelte"; 
 // import getStudentReports from "./individual/getStudentReports.js"; 
@@ -27,7 +27,6 @@ onMount(async () => {
   // const resp = await ajaxPost(`${BASE_URL}/result/analytics`,{quizId});
   const resp = await Agent.where('result' , {whereItem : 'runId' , whereValue : quizId });
 
-          // debugger;
           if (resp.ok){
             const data = await resp.json();
             results = data.items;
@@ -37,8 +36,8 @@ onMount(async () => {
                   const data2 = await resp2.json();    
                   quiz = data2.item;
               }
-            console.log('results' ,  results);
-            console.log('quiz' ,  quiz);
+            // console.log('results' ,  results);
+            // console.log('quiz' ,  quiz);
               // debugger;
               await check(results,quiz);
             pageState = "indl";

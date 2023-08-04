@@ -1,5 +1,5 @@
 
-import getQuestionCorrectOptions from "../pure/getQuestionCorrectOptions";
+import getQuestionCorrectOptions from "../../../routes/analytics/pure/getQuestionCorrectOptions";
 
 export default function gradeMCQ(answer,quiz) {
     const correctOptions = getQuestionCorrectOptions(quiz,answer.questionId);

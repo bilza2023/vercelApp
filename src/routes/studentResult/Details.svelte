@@ -1,9 +1,31 @@
 <script>
 //@ts-nocheck
-export let count;
-export let results;
+import { onMount, Agent , toast } from '$lib/util';
+export let result;
+import check from '$lib/appComp/check/check.js';
+import StudentReportHead from './StudentReportHead.svelte';
+let run;
 
+onMount(async () => {
+try {
+ 
+  const resp = await Agent.readone('run' , {id : result.runId });
+          if (resp.ok){
+            const data = await resp.json();
+            run = data.item;
+            // const result = 
+            await check([result],run);
+            // console.log('run' , run);
+          }
+  } catch (error) {
+    toast.push("page load error");
+ }
+});
 </script>
+
+{#if run}
+
+<StudentReportHead {result}  {run} />
 
 <div class="w-3/4 mx-auto">
     <table class="w-full   bg-gray-900 border-separate 
@@ -18,7 +40,7 @@ export let results;
             </tr>
         </thead>
 
-        {#each results[count].answers as answer, index}
+        {#each result.answers as answer, index}
             <tr>
                 <td class="py-1 px-3 border border-white">{index + 1}</td>
                 <td class="py-1 px-3 border border-white">10</td>
@@ -38,3 +60,5 @@ export let results;
         {/each}
     </table>
 </div>
+
+{/if}

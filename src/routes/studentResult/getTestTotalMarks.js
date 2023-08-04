@@ -1,7 +1,6 @@
-
 //@ts-nocheck
 
-export default async function getTestTotalMarks(quiz){
+export default  function getTestTotalMarks(quiz){
     let ttl = 0;
     for (let i = 0; i < quiz.questions.length; i++) {
         const question = quiz.questions[i];
