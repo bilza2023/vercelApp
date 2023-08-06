@@ -5,6 +5,7 @@ import {NavBar,NavBtn,NavBtn2,Centre,Range,Card,BtnIconOval} from '$lib/cmp';
 import Logo from './Logo.svelte';
 import { isLoginStore } from '$lib/cmn/appStore';
 import logout from './fn/logout';
+import {Icons} from '$lib/util';
 $: isLogin = $isLoginStore;
 
 // function hasToken() {
@@ -35,8 +36,10 @@ $: isLogin = $isLoginStore;
     <!-- <NavBtn title='Templates' icon ='📜' url='/templates'/> -->
     <NavBtn title='Tests' icon ='🧪' url='/tests'/>
     <NavBtn title='Running' icon ='🏃‍♂️' url='/running'/>
-    <NavBtn title='System' icon ='🔧' url='/system'/>
-    <NavBtn title='Help' icon ='📘' url='/docs'/>
+    <NavBtn title='Students' icon ={Icons.STUDENT} url='/students'/>
+    <NavBtn title='Classes' icon ={Icons.TEAM} url='/classes'/>
+    <NavBtn title='System' icon ={Icons.WRENCH} url='/system'/>
+    <NavBtn title='Help' icon ={Icons.BOOK} url='/docs'/>
 
       <NavBtn2 title='Logout' icon ='🚪' clk={logout}/>
     

@@ -7,12 +7,12 @@ import {showDeleteStore} from '../store';
 export default async function deleteFn(id){
     try{
     // debugger;
-     const resp = await Agent.del('template',{id });
+     const resp = await Agent.del('test',{ id });
 
       if (resp.ok == true){
 
         showDeleteStore.set(false);
-        goto("/templates");
+        goto("/tests");
         toast.push('deleted');
       }else {
       const data = await resp.json();

@@ -1,4 +1,5 @@
 <script>
+//@ts-nocheck
 export let  questions;
 
 export let cq;
@@ -8,7 +9,6 @@ const isSelected = (option_id) => {
 }
 //yahan correctOptions ka koi kaam nahi
 const mark_selected = (option_id) => {
-// debugger;
         //singleselect
       if (questions[cq].multiSelect == false) {
         questions[cq].selectedOptions= [];
@@ -33,7 +33,7 @@ const mark_selected = (option_id) => {
   {#each questions[cq].options as option }
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div 
-      on:click={()=>mark_selected( option.id)}
+      on:click={()=>mark_selected( option.id )}
       class="p-2 m-2  hover:rounded-2xl  hover:cursor-pointer  text-black  rounded-sm border-gray-900
         {isSelected(option.id) ? 'bg-blue-700' : 'bg-gray-300'}
         "

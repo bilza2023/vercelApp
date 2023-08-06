@@ -17,6 +17,7 @@ export { default as FormElm } from './FormElm.svelte';
 export { default as HdgWithIcon } from './HdgWithIcon.svelte';
 export { default as Img } from './Img.svelte';
 export { default as InputForm } from './InputForm.svelte';
+export { default as InputFormCancel } from './InputFormCancel.svelte';
 export { default as InputElm } from './InputElm.svelte';
 export { default as InputEmail } from './InputEmail.svelte';
 export { default as InputTextArea } from './InputTextArea.svelte';

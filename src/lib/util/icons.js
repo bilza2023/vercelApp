@@ -4,6 +4,7 @@ export default class Icons {
   static BOOK = '📘';
   static BOOKS = '📚';
   static BUS = '🚌';
+  static BULB = '💡'; 
   static CAR = '🚗';
   static CHARTUP = '📈';
   static CLOCK = '⏱️';
@@ -20,6 +21,7 @@ export default class Icons {
   static FROWNFACE = '☹️';
   static HAMMER_AND_WRENCH = '🛠️';
   static HEART = '❤️';
+  static HIDE = '🙈';
   static HOT = '🔥';
   static HOURGLASS = '⌛';
   static HOUSE = '🏠';

@@ -1,12 +1,11 @@
 <script>
 // @ts-nocheck
-import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue,Loading} from '$lib/cmp';
-import {onMount,toast , Icons} from '$lib/util';
-import { Agent } from '$lib/ajax';
+import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputFormCancel,ShowIfTrue,Loading} from '$lib/cmp';
+import {onMount,toast , Icons,Agent} from '$lib/util';
 import create from './fn/create';
-import {templatesStore,showNewDialogueStore} from './store';
+import {itemsStore,showNewDialogueStore} from './store';
 
-$: items = $templatesStore;
+$: items = $itemsStore;
 $: showNewDialogue = $showNewDialogueStore;
 
 //----------
@@ -17,7 +16,7 @@ onMount(async ()=>{
         const resp = await Agent.read('test');
         if (resp.ok){
             const data = await resp.json();
-            templatesStore.set(data.items);
+            itemsStore.set(data.items);
             // console.log("items" , items);
         }else {
             toast.push('failed to load');
@@ -36,7 +35,7 @@ onMount(async ()=>{
     <HdgWithIcon icon='📜'>Tests</HdgWithIcon>
     </Centre>
         <ShowIfTrue ifTrue={showNewDialogue} >
-          <InputForm  clk={ create }/>
+          <InputFormCancel  clk={ create } clk2={()=>showNewDialogueStore.set(false)}/>
           <!-- <InputForm  clk={()=>{state.showNewDialogue = false} }/> -->
         </ShowIfTrue>
     
@@ -50,7 +49,7 @@ onMount(async ()=>{
                 title={'New Test'}
                 clk={()=>{ showNewDialogueStore.set(true)}}
                 icon="💡"
-                bgColor = 'bg-green-900'
+                bgColor = 'bg-gray-500'
                 titleCharsCount={15}
         />
         <!-- </div> -->

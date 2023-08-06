@@ -1,7 +1,6 @@
 // @ts-nocheck
-import { toast,get } from '$lib/util';
-import { Agent } from '$lib/ajax';
-import {templatesStore,showNewDialogueStore} from '../store';
+import { toast,goto,Agent } from '$lib/util';
+import {itemsStore,showNewDialogueStore} from '../store';
 
 
 
@@ -14,12 +13,14 @@ export default async function create(title){
             const data = await resp.json();
             const item = data.item;
             
-                templatesStore.update(cur  => {
+                itemsStore.update(cur  => {
                     // manipulate data
                 return cur.concat(item);
                 });
-            showNewDialogueStore.set(false)
-            toast.push('New item created');
+            showNewDialogueStore.set(false);
+            goto(`/editTest?quizId=${item._id}`);
+            toast.push('New Test created');
+
             // console.log("items" , items);
         }else {
             toast.push('failed to load');
