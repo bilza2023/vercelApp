@@ -1,6 +1,6 @@
 <script>
 // @ts-nocheck
-import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue,Loading} from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,Centre,Card,LinkIconOval,Loading} from '$lib/cmp';
 import {Agent , Icons, onMount,toast} from '$lib/util';
 
 //----------
@@ -36,18 +36,19 @@ onMount(async ()=>{
         <!-- THE MAIN CODE -->
         <div class="flex justify-center gap-2 flex-wrap">
          
-        {#each items as cardData, index}
-        <!-- {#each cardsData as cardData, index} -->
+        {#each items as item, index}
+        <!-- {#each cardsData as item, index} -->
             <div class={`w-5/12`}>
             <!-- <CardTemplate -->
             <Card
-                title={cardData.name}
-                url={`/editClass?quizId=${cardData._id}` }
+                title={item.name}
+                url={`/resultClass?quizId=${item._id}` }
                 icon={Icons.TEAM}
                 titleCharsCount={10}
             >
-                <!-- card slots -->
+                 <!-- card slots -->
                 <!-- it has no slots if required this is the place -->
+                <LinkIconOval icon={Icons.CHARTUP } href={`/resultClass?quizId=${item._id}`}  />
             </Card>
             </div>
         {/each}

@@ -43,13 +43,13 @@ onMount(async ()=>{
             <!-- <CardTemplate -->
             <Card
                 title={item.name}
-                url={`/studentResult?quizId=${item._id}` }
+                url={`/resultStudent?quizId=${item._id}` }
                 icon={Icons.STUDENT}
                 titleCharsCount={10}
             >
                 <!-- card slots -->
                 <!-- it has no slots if required this is the place -->
-                <LinkIconOval icon={Icons.CHARTUP } href={`/studentResult?quizId=${item._id}`}  />
+                <LinkIconOval icon={Icons.CHARTUP } href={`/resultStudent?quizId=${item._id}`}  />
             </Card>
             <!-- </div> -->
         {/each}
