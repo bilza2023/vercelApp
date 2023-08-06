@@ -1,6 +1,6 @@
 <script>
 // @ts-nocheck
-import {PageWrapper,HdgWithIcon,Centre,InputForm,Loading} from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,Centre,Loading} from '$lib/cmp';
 
 import Questions from './questions/Questions.svelte'
 import SettingMain from './settings/SettingsMain.svelte';

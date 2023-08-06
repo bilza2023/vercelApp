@@ -2,7 +2,7 @@
 // @ts-nocheck
 import {PageWrapper,HdgWithIcon,P,Centre,Card,CardBtn,InputForm,ShowIfTrue,Loading} from '$lib/cmp';
 import {Agent , Icons, onMount,toast} from '$lib/util';
-
+import MainLink from './MainLink.svelte';
 
 </script>
 
@@ -13,36 +13,35 @@ import {Agent , Icons, onMount,toast} from '$lib/util';
   <HdgWithIcon icon ={Icons.BOOKS} bgColor='bg-green-800'>Skillzaa.com Help</HdgWithIcon>
   </div>
 
-<P>Skillzaa.com is an exam automation tool for online and offline educational instutions.</P>
+<P>Skillzaa.com is an "Exam Automation Tool for online and offline educational instutions". It is used for online teaching , classes and assesment.</P>
 
-<P>The main features of this App are:</P>
-<P>1: Creating Students.</P>
-<P>2: Creating Classes.</P>
-<P>3: Creating Temapltes.</P>
-<P>4: Creating Tests.</P>
-<P>5: Running Tests.</P>
-<P>6: Analytics / Result.</P>
+<P> It allow teachers to create classes, add students and then create tests for these classes. Students can access these tests using the provided credeantials finally the results are stored and graded.</P>
+
+<div class="mx-8 bg-gray-600  text-white p-4 rounded-md shadow-md">
+  Skillzaa.com ::  An Exam Automation Tool for online and offline educational instutions"
+</div>
 
 
-<P>Lets explain the difference between Template , Test and Running Test.</P>
+<br>
 
-<P><b>Template</b> : A template is a collection / set of questions and answers. We need to seperate questions answers sets from Tests since once a test is attempted by students we can not (must not) change its questions and answers or it will un-validate the results submitted by students.</P>
+<P>Lets look at each step one by one:</P>
 
-<P>We can create as many tests from a template as we want.</P>
-
-<P><b>Test</b> : The main purpose of this App is to have a Test that can collect student results. Once a test is created we can "Run" it many times with different class and timings. The results of a Test are saved in the Test and not in the "Run".</P>
-
-<P><b>Test</b> : Once we have created a Test we can Run it many times. Each time we run it we need to give it Timings (start / publish time and stop /unpublish time) and a class which will take this test. So a "Run" is a copy of a Test for a specific Class at a specif time.</P>
-
-<P>Once a Run (Test run) has been unpublished (compelted its time) we can delete it since the student results are stored in the Test and not in its copy (the Test run).</P>
+<br>
 
 
+<div class='p-2 m-1 bg-gray-600 mx-16 pt-12 pb-12 rounded-md'>
 
+<MainLink href='/docs/creatingClasses'>{Icons.TEAM} Creating Classes</MainLink>
+<br>
+<MainLink href='/docs/creatingStudents'>{Icons.STUDENT} Creating Students</MainLink>
+<br>
+<MainLink href='/docs/creatingTests'>{Icons.TEST} Creating Tests</MainLink>
+<br>
+<MainLink href='/docs/runningTests'>{Icons.RUN} Running Tests</MainLink>
+<br>
+<MainLink href='/docs/analytics'>{Icons.CHARTUP} Analytics / Result</MainLink>
 
-
-
-
-
+</div>
 
 <br/>
 <br/>

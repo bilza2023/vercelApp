@@ -6,15 +6,15 @@ import {onMount,Icons} from '$lib/util';
 
   const cardsData = [
     //-once user is logged in this is his home page
-    { title: 'Add Student', url: '/admissions',icon :'👨‍🎓' },
-    { title: 'Add Class', url: '/newClass' ,icon :'🧑‍🤝‍🧑'},
-    { title: 'Add Tag', url: '/newTag' ,icon :'🏷️'},
-
     { title: 'Students', url: '/students' ,icon :'👨‍🎓'},
+    { title: 'Add Student', url: '/admissions',icon :'👨‍🎓' },
+    // { title: 'Add Tag', url: '/newTag' ,icon :'🏷️'},
+
     { title: 'Classes', url: '/classes' ,icon :'🧑‍🤝‍🧑'},
-    { title: 'Tags', url: '/tags' ,icon :'🏷️'},
+    { title: 'Add Class', url: '/newClass' ,icon :'🧑‍🤝‍🧑'},
+    // { title: 'Tags', url: '/tags' ,icon :'🏷️'},
     
-    { title: 'Template', url: '/templates' ,icon :'📜'},
+    // { title: 'Template', url: '/templates' ,icon :'📜'},
     { title: 'Tests', url: '/tests' ,icon :'🧪'},
     { title: 'Running', url: '/running' , icon:'🏃‍♂️' }
     
@@ -45,7 +45,7 @@ onMount(async ()=>{
         <!-- THE MAIN CODE -->
         <div class="flex justify-center gap-2 flex-wrap">
         {#each cardsData as cardData, index}
-            <div class={`w-3/12`}>
+            <div class={`w-5/12`}>
             <!-- <CardTemplate -->
             <Card
                 title={cardData.title}

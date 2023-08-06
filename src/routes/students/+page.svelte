@@ -36,7 +36,20 @@ onMount(async ()=>{
         <Centre>
         <!-- THE MAIN CODE -->
         <div class="flex justify-center gap-2 flex-wrap">
-         
+
+          <!-- <div class={`w-5/12`}> -->
+          <Card
+                title= 'New'
+                url= '/admissions'
+                icon={Icons.BULB}
+                titleCharsCount={10}
+            >
+                 <!-- card slots -->
+                <!-- it has no slots if required this is the place -->
+                <LinkIconOval icon={Icons.BULB } href= '/admissions'  />
+            </Card>
+        <!-- </div> -->
+
         {#each items as item, index}
         <!-- {#each cardsData as item, index} -->
             <!-- <div class={`w-5/12`}> -->

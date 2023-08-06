@@ -1,11 +1,12 @@
 <script>
   //@ts-nocheck
   import { Centre } from "$lib/cmp";
-  import { onMount, toast } from '$lib/util';
-  import { Agent } from '$lib/ajax';
+  import { onMount, toast , Agent  } from '$lib/util';
+
 export let item;
-  let classes;
-  onMount(async () => {
+let classes;
+
+onMount(async () => {
     try {
       const resp = await Agent.read('class');
       if (resp.ok) {
@@ -17,7 +18,7 @@ export let item;
     } catch (e) {
       toast.push('failed to load');
     }
-  });
+});
 
   function update(event) {
   // debugger;

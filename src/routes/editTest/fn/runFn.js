@@ -15,7 +15,7 @@ export default async function  runFn(item ) {
     return;
  }    
 // ////////////========== Test
- if (item.classId  === ''){
+ if (item.classId  === '' || item.classId  === null ){
     toast.push('Assign a Class to the test');
     return;
  }    
