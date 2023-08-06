@@ -6,8 +6,9 @@ import {PageWrapper,Centre,HdgWithIcon,SectionHead} from '$lib/cmp';
 import getClass from './fn/getClass';
 import getStudents from './fn/getStudents';
 import getTests from './fn/getTests';
-
-let results;
+import getResults from './fn/getResults';
+import TestResults from './TestResults.svelte';
+let loaded = false;
 let tests;
 let classObj;
 let students;
@@ -20,9 +21,10 @@ onMount(async () => {
 
   classObj = await getClass(id);
   students = await getStudents(id);
-  tests = await getTests(id);
-  // console.log(id);
-  
+  tests =    await getTests(id);
+             await getResults(tests);
+  console.log('tests with results' , tests);
+  loaded = true;
   } catch (error) {
     toast.push("page load error");
  }
@@ -32,7 +34,7 @@ onMount(async () => {
 
 <!-- <Nav /> -->
 <PageWrapper>
-{#if classObj}
+{#if loaded}
 <br/>
   <Centre>
     <HdgWithIcon icon={Icons.TEAM }>{classObj.name} (Result)</HdgWithIcon>
@@ -40,18 +42,21 @@ onMount(async () => {
 <br/>
 <br/>
         
-<!-- {#each results as result} -->
-  <!-- <div class='flex justify-center'>
+{#each tests as test}
+  <div class='flex justify-center'>
   <div class='w-10/12'>
-    <SectionHead title={result.runTitle} >
+   
+    <SectionHead title={test.title} >
     <div class='bg-gray-700 p-2 m-2 border-1 border-white'>
-      
-      <Details  {result}/>
+
+      <TestResults results={test.results} />
+    
     </div>
     </SectionHead>
-  < /div>
-  </div> -->
-<!-- {/each} -->
+
+  </div>
+  </div>
+{/each}
 
 {/if}
 
