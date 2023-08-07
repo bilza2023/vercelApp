@@ -45,7 +45,7 @@ $: isLogin = $isLoginStore;
     
     {:else}
     <NavBtn title='Login' icon ='🔑'  url='/login'/>
-    <NavBtn title='Signin' icon ='🔓'  url='/register'/>
+    <NavBtn title='Signup' icon ='🔓'  url='/register'/>
     {/if}
     </div>
 </div><!--outer most div-->

@@ -1,7 +1,20 @@
 <script>
-import {PageWrapper,HdgWithIcon,Centre,SectionHead,FormRow,InputElm,NumberElm,Comment,BtnWIcon,FormElm,Lbl} from '$lib/cmp';
-    import BtnWIconSm from '$lib/cmp/BtnWIconSm.svelte';
-    import { Icons } from '$lib/util';
+import {PageWrapper,HdgWithIcon,Centre,SectionHead,FormRow,InputElm,NumberElm,Comment,BtnWIconSm,BtnWIcon,FormElm,Lbl} from '$lib/cmp';
+import { Icons } from '$lib/util';
+import register from './register';
+
+let item = {
+    email : '',
+    password : '',
+    password2 : ''
+
+}
+
+async function handleRegisterClick() {
+    await register(item); // Wait for the register function to complete
+}
+
+
 </script>
 
 
@@ -10,7 +23,7 @@ import {PageWrapper,HdgWithIcon,Centre,SectionHead,FormRow,InputElm,NumberElm,Co
 <br/>
 <br/>
 
-<div class='flex justify-center w-full'>
+<div class='flex justify-center w-full py-8'>
     <div class='w-10/12 '>
         <FormElm>
             <div class='flex justify-center'>
@@ -24,7 +37,7 @@ import {PageWrapper,HdgWithIcon,Centre,SectionHead,FormRow,InputElm,NumberElm,Co
 
             <div class='flex justify-center pt-1'>
                 <div class='w-6/12 text-center'>
-                    <InputElm value={""} />
+                    <InputElm {item}  value={"email"} />
                 </div>
             </div>
             
@@ -34,7 +47,7 @@ import {PageWrapper,HdgWithIcon,Centre,SectionHead,FormRow,InputElm,NumberElm,Co
 
             <div class='flex justify-center pt-1'>
                 <div class='w-6/12 text-center'>
-                    <InputElm value={""} />
+                    <InputElm  {item} value={"password"} />
                 </div>
             </div>
            
@@ -44,13 +57,15 @@ import {PageWrapper,HdgWithIcon,Centre,SectionHead,FormRow,InputElm,NumberElm,Co
 
             <div class='flex justify-center pt-1'>
                 <div class='w-6/12 text-center'>
-                    <InputElm value={""} />
+                    <InputElm {item}  value={"password2"} />
                 </div>
             </div>
 
 
             <div class='flex justify-center'>
-            <BtnWIconSm icon={Icons.SAVE} title='Register' />
+            <BtnWIconSm icon={Icons.SAVE}
+            clk={handleRegisterClick}
+            >Register</BtnWIconSm>
             </div>
         </FormElm>
     </div>
