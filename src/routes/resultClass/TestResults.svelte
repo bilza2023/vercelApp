@@ -1,6 +1,18 @@
 <script>
   //@ts-nocheck
-  export let results;
+import {onMount} from '$lib/util';
+
+import totalMksByStudInTest from '$lib/appComp/checking/totalMksByStudInTest';
+import getTestTotalMarks from '$lib/appComp/checking/getTestTotalMarks';
+
+export let test;
+let testTotalMarks;
+onMount(()=>{
+   testTotalMarks = getTestTotalMarks(test);
+   console.log('testTotalMarks' ,  testTotalMarks)
+});
+
+
 </script>
 
 <div class='flex justify-center '>
@@ -9,15 +21,17 @@
         <!-- Apply the custom-td class to all td elements -->
         <td class='custom-td'>Student Id</td>
         <td class='custom-td'>Student Name</td>
+        <td class='custom-td'>Marks</td>
         <td class='custom-td'>Percentage</td>
       </tr>
-{#each results as result }
+{#each test.results as result }
   
       <tr class='border-separate'>
         <!-- Apply the custom-td class to all td elements -->
         <td class='custom-td'>{result.studentId}</td>
         <td class='custom-td'>{result.studentName}</td>
-        <td class='custom-td'>{(Math.random() * 100).toFixed(2)} %</td>
+        <td class='custom-td'>{totalMksByStudInTest(result)}</td>
+        <td class='custom-td'>{(totalMksByStudInTest(result)/testTotalMarks)*100} %</td>
       </tr>
 {/each}
     </table>

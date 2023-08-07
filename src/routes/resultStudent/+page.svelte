@@ -59,6 +59,7 @@ onMount(async () => {
     </SectionHead>
   </div>
   </div>
+  <br/>
 {/each}
 
 {/if}
