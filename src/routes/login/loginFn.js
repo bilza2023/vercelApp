@@ -34,7 +34,7 @@ const response = await ajaxPost( `${BASE_URL}/login` , {email,password});
         localStorage.setItem("token", data.token);
             loadApp();
         isLoginStore.set(true);
-        goto("/");
+        goto("/dashboard");
   } else {
     isLoginStore.set(false);
     const data = await response.json();

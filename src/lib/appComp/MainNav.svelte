@@ -1,7 +1,6 @@
 <script>
 // @ts-nocheck
-import {NavBar,NavBtn,NavBtn2,Centre,Range,Card,BtnIconOval} from '$lib/cmp';
-// import {onMount,toast} from '$lib/util';
+import {NavBtn,NavBtn2} from '$lib/cmp';
 import Logo from './Logo.svelte';
 import { isLoginStore } from '$lib/cmn/appStore';
 import logout from './fn/logout';
@@ -24,10 +23,12 @@ $: isLogin = $isLoginStore;
 
     <div class='flex'>
     
-    <Logo />
-    <!-- {#if isLogin} -->
+    {#if isLogin}
+    <Logo url='/dashboard' />
     <!-- <NavBtn title='Sync' icon='♻️'/> -->
-    <!-- {/if} -->
+    {:else}
+    <Logo url='/' />
+    {/if}
     </div>
             <!-- ******************************** -->
             <!-- ******************************** -->
