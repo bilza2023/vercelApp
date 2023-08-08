@@ -4,6 +4,7 @@
 import { PageWrapper , HdgWithIcon , Centre , BtnWIconSm ,SectionHead,FormRow,InputElm,Comment,InputTextArea } from '$lib/cmp';
 import { Agent , onMount , Icons } from '$lib/util'; 
 import update from './fn/update';
+import deleteFn from './fn/deleteFn';
 // import {itemStore} from './store';
 // $: item = $itemStore;
 let item;
@@ -54,10 +55,15 @@ onMount(async ()=>{
     </div>
     <br/>
 
-    <div class='flex justify-center w-full'>
+    <div class='flex justify-center gap-2  w-full'>
         <BtnWIconSm 
         clk={()=>update(item)}
         icon={Icons.SAVE}>Update</BtnWIconSm>
+        
+        <BtnWIconSm 
+        bgColor ="bg-red-800"
+        clk={()=>deleteFn(item)}
+        icon={Icons.DEL}>Delete</BtnWIconSm>
     </div>
 
 </PageWrapper>

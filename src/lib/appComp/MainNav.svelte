@@ -36,7 +36,7 @@ $: isLogin = $isLoginStore;
     {#if isLogin}
     <!-- <NavBtn title='Templates' icon ='📜' url='/templates'/> -->
     <NavBtn title='Tests' icon ='🧪' url='/tests'/>
-    <NavBtn title='Running' icon ='🏃‍♂️' url='/running'/>
+    <NavBtn title='Run' icon ='🏃‍♂️' url='/run'/>
     <NavBtn title='Students' icon ={Icons.STUDENT} url='/students'/>
     <NavBtn title='Classes' icon ={Icons.TEAM} url='/classes'/>
     <NavBtn title='System' icon ={Icons.WRENCH} url='/system'/>

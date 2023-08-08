@@ -6,6 +6,7 @@ export { default as BtnWIconSm } from './BtnWIconSm.svelte';
 export { default as BtnIconRound } from './BtnIconRound.svelte';
 export { default as BtnIconOval } from './BtnIconOval.svelte';
 export { default as CodeComp } from './CodeComp.svelte';
+export { default as CardOnly } from './CardOnly.svelte';
 export { default as Card } from './Card.svelte';
 export { default as CardBtn } from './CardBtn.svelte';
 export { default as Centre } from './Centre.svelte';

@@ -1,23 +1,24 @@
 <script>
 // @ts-nocheck
-import {PageWrapper,HdgWithIcon,Centre,Card,CardBtn,InputForm,ShowIfTrue,Loading , LinkIconOval } from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,Centre,Card,CardOnly,CardBtn,InputForm,ShowIfTrue,Loading , LinkIconOval , BtnIconOval } from '$lib/cmp';
 import {Icons, onMount,toast,goto} from '$lib/util';
 import { Agent } from '$lib/ajax';
+import getItems from './fn/getItems';
 import deleteFn from './fn/deleteFn';
 //----------
-let  items;
+import {itemsStore} from './store';
+$: items = $itemsStore;
+
 onMount(async ()=>{
     try {
-        // debugger;
-        const resp = await Agent.read('run');
-        if (resp.ok){
-            const data = await resp.json();
-            items = data.items;
-            // templatesStore.set(data.items);
-            // console.log("items" , items);
-        }else {
-            toast.push('failed to load');
-        }
+    // debugger;
+    const returnItems = await getItems();
+    if (returnItems){
+        itemsStore.set(returnItems);
+    }else {
+        toast.push('failed to load');
+    }
+
     } catch (e) {
         toast.push( e.message);
     }   
@@ -29,7 +30,7 @@ onMount(async ()=>{
 {#if items}
 <br/>
     <Centre>
-    <HdgWithIcon icon={Icons.RUN}>Running</HdgWithIcon>
+    <HdgWithIcon icon={Icons.RUN}>Test Runs</HdgWithIcon>
     </Centre>
     
         <!-- THE MAIN CODE -->
@@ -39,18 +40,19 @@ onMount(async ()=>{
         <!-- {#each cardsData as item, index} -->
             <div class={'w-3/12'}>
             <!-- <CardTemplate -->
-            <Card
+            <CardOnly
                 title={item.title}
                 url={`/analytics?quizId=${item._id}` }
                 icon= {Icons.RUN}
                 titleCharsCount={15}
             >
                 <!------------ card slots ------------------->
+                <BtnIconOval icon={Icons.DEL } clk={()=>deleteFn(item._id)}  />
                 <LinkIconOval icon={Icons.CHARTUP } href={`/analytics?quizId=${item._id}`}  />
                 
                 <LinkIconOval icon={Icons.ROCKET } href={`/show?quizId=${item._id}`}  />
 
-            </Card>
+            </CardOnly>
             </div>
         {/each}
         </div>

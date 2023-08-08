@@ -5,6 +5,7 @@ import {PageWrapper,HdgWithIcon,Centre,BtnWIconSm} from '$lib/cmp';
 import { Icons , onMount , Agent } from '$lib/util';
 import AdditionalDetails from './AdditionalDetails.svelte';
 import save from './fn/update';
+import deleteFn from './fn/deleteFn';
 import BasicDetails from './BasicDetails.svelte';
 
 import {itemStore} from './store';
@@ -55,6 +56,12 @@ onMount(async ()=>{
         <BtnWIconSm 
         clk={save}
         icon={Icons.SAVE}>Update</BtnWIconSm>
+
+         <BtnWIconSm 
+        bgColor ="bg-red-800"
+        clk={()=>deleteFn(item)}
+        icon={Icons.DEL}>Delete</BtnWIconSm>
+
     </div>
 
 
