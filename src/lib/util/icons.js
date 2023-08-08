@@ -35,7 +35,7 @@ export default class Icons {
   static MICROSCOPE = '🔬';
   static NET = '🌐';
   static NOTES = '📋';
-  static NUMBER = '❶';
+  static NUMBER = '❶'; 
   static PALETTE = '🎨';
   static PENCIL = ' ✏️';
   static PHONE = '📱';

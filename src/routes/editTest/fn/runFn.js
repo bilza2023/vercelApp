@@ -7,7 +7,7 @@ import {showRunDlgStore } from '../store';
  
 export default async function  runFn(item ) {
     try{
-    debugger;
+    // debugger;
 //     const item = {... get(itemStore) };
 // ////////////========== Test
  if (item.title === ''){

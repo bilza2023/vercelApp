@@ -20,7 +20,7 @@ let students;
 
 onMount(async () => {
   try {
-    debugger;
+    // debugger;
     pageStateStore.set('loading');
     let  quizId = new URLSearchParams(location.search).get("quizId"); 
       const resp = await fetch( `${BASE_URL}/show/${quizId}`, {

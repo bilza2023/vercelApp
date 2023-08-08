@@ -61,6 +61,9 @@ onMount(async ()=>{
             >
                  <!-- card slots -->
                 <!-- it has no slots if required this is the place -->
+                
+                <LinkIconOval icon={Icons.WRENCH } href={`/editClass?quizId=${item._id}`}  />
+
                 <LinkIconOval icon={Icons.CHARTUP } href={`/resultClass?quizId=${item._id}`}  />
             </Card>
             </div>
