@@ -1,26 +1,7 @@
 <script>
-// import DivControls from "./DivControls.svelte";
-  export let content = 'content...';  
-
-  export let item = {
-    paddingX: 20,
-    paddingY: 20,
-    bgColor: 'green',
-    opacity: 1,
-    borderColor: 'blue',
-    fontStyle: 'italic',
-    fontWeight: 'bold',
-    fontColor: 'white',
-    borderWidth: 5,
-    fontSize: 16,
-    borderRadius: 10,
-    marginX: 10,
-    marginY: 10,
-    borderStyle: 'solid',
-    textAlign: 'left'
-  };
+//@ts-nocheck
+export let item;
 </script>
-
 <div
   style:padding="{item.paddingY}px {item.paddingX}px"
   style:margin="{item.marginY}px {item.marginX}px"
@@ -34,6 +15,6 @@
   style:font-weight="{item.fontWeight}"
   style:text-align="{item.textAlign}"
 >
-{content}
+{item.content}
 </div>
 

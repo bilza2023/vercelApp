@@ -1,0 +1,227 @@
+i have problems in svelte reactivity
+
+i am creating a svelte component that display a stack of child components.
+
+parent component is SkillEditor.svelte
+with child components as 
+DivComp.svelte
+and
+DivDsiplay.svelte
+
+i have a variable displayEdit is SkillEditor.svelte which will either show the 
+DivComp.svelte stack or the DivDsiplay.svelte stack
+
+the DivComp.svelte also contain internally DivDsiplay.svelte
+
+The data is an array of objects in a svelte store
+
+The problem is that when ever I change from displayEdit from true ot false or wise versa all the items display the same last color set by me onto any one of the component in the stack.
+
+SkillEditor.svelte
+<script>
+//@ts-nocheck
+import { divItem } from "./div/divItem";
+import DivComp from "./div/DivComp.svelte";
+import DivDsiplay from "./div/DivDsiplay.svelte";
+import {toast,onMount} from '$lib/util';
+
+import {itemsStore} from './div/store'
+$: items = $itemsStore;
+
+let displayEdit = true;
+
+
+onMount  (async ()=>{
+
+
+});
+
+
+function addDiv(){
+    if (items.length < 10){
+        const temp = [...items, { type: 'div', data: divItem }];
+        itemsStore.set(temp);
+    }else {
+        toast.push('Max number of items reached as question content')
+    }
+}
+</script>
+
+<div class='flex gap-2 bg-gray-600 mx-10 rounded-md'>
+    <button 
+    class='rounded-md bg-stone-400 p-2 m-2'
+    on:click={()=>displayEdit = !displayEdit}>Edit Mode</button>
+    </div>
+
+
+<div class='bg-gray-900 p-4 m-10 rounded-md border-2 border-gray-600'>
+
+{#if displayEdit}
+    {#each items as item }
+    <DivComp item={item.data} />
+    {/each}
+
+{:else}
+    {#each items as item }
+    <DivDsiplay item={item.data} />
+    {/each}
+{/if}
+  
+
+</div>
+
+  <div class='flex gap-2 bg-gray-600 mx-10 rounded-md'>
+    <button 
+    class='rounded-md bg-stone-400 p-2 m-2'
+    on:click={addDiv}>Add Div</button>
+    </div>\
+
+DivComp.svelte
+<script>
+//@ts-nocheck
+export let item;
+let show = false;
+import {FormRow} from '$lib/cmp';
+import DivDsiplay from "./DivDsiplay.svelte";
+
+
+</script>
+
+
+<DivDsiplay  {item}/>
+
+<div><button on:click={()=> show = !show} class='text-2xl'>...</button></div>
+
+{#if show }
+<!-- <div class='flex flex-col justify-center bg-stone-600 overflow-y-auto pb-4' style="max-height: 300px;"> -->
+<div class='flex flex-col justify-center bg-stone-600'>
+<div class="overflow-y-auto pb-4" style="max-height: 300px;">
+
+
+<FormRow title="Content">
+<input type="text" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.content} />
+</FormRow>
+
+
+<FormRow title="Background Color">
+<input type="color" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.bgColor} />
+</FormRow>
+
+<FormRow title="Font Color">
+<input type="color" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.fontColor} />
+</FormRow>
+
+
+<FormRow title="Border Color">
+<input type="color" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.borderColor} />
+</FormRow>
+
+<FormRow title= {`Border Width: ${item.borderWidth}`}>
+<input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.borderWidth} min=0 max=100/>
+</FormRow>
+
+<FormRow title= {`Font Size: ${item.fontSize}`}>
+<input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.fontSize} min=0 max=200/>
+</FormRow>
+
+<FormRow title= 'Text Alignment'>
+<select type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.textAlign} >
+  <option value="justify">justify</option>
+  <option value="left" selected>Left</option>
+  <option value="right">Right</option>
+  <option value="center">Center</option>
+</select>
+</FormRow>
+
+<!-- marginX & Y -->
+
+<FormRow title= {`Margin X: ${item.marginX}`}>
+<input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.marginX} min=0 max= 500/>
+</FormRow>
+
+<FormRow title= {`Margin Y: ${item.marginY}`}>
+<input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.marginY} min=0 max= 50/>
+</FormRow>
+
+<!-- paddingX & Y -->
+
+<FormRow title= {`Padding X: ${item.paddingX}`}>
+<input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.paddingX} min=0 max= 300/>
+</FormRow>
+
+<FormRow title= {`Padding Y: ${item.paddingY}`}>
+<input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.paddingY} min=0 max= 300 step=0.1 />
+</FormRow>
+
+<FormRow title= {`Opacity: ${item.opacity}`}>
+<input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.opacity} min=0 max= 1 step=0.1/>
+</FormRow>
+
+<FormRow title= {`Border Radius: ${item.borderRadius}`}>
+<input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.borderRadius} min=0 max=100 step=1/>
+</FormRow>
+
+
+
+</div>
+</div>
+{/if}
+
+divItem.js
+
+
+export const divItem = {
+content : 'content',
+
+            bgColor : 'red',
+            fontColor : 'white',
+            borderColor : 'green',
+
+            borderWidth : 5,
+            fontSize : 16,
+
+            textAlign: 'left',
+            
+            marginX : 10,
+            marginY : 10,
+
+// not implemented
+            paddingX : 20,
+            paddingY : 20,
+
+            opacity : 1,
+            borderRadius : 10,
+            
+            fontStyle : 'italic',
+            fontWeight : 'bold',
+            borderStyle : 'solid',
+            
+}
+
+DivDsiplay.svelte
+<script>
+//@ts-nocheck
+  export let item;
+</script>
+
+<div
+  style:padding="{item.paddingY}px {item.paddingX}px"
+  style:margin="{item.marginY}px {item.marginX}px"
+  style:opacity="{item.opacity}"
+  style:border="{item.borderWidth}px {item.borderStyle} {item.borderColor}"
+  style:border-radius="{item.borderRadius}px"
+  style:background-color="{item.bgColor}"
+  style:color="{item.fontColor}"
+  style:font-style="{item.fontStyle}"
+  style:font-size="{item.fontSize}px"
+  style:font-weight="{item.fontWeight}"
+  style:text-align="{item.textAlign}"
+>
+{item.content}
+</div>
+
+store.js
+
+import { writable } from 'svelte/store';
+
+export const itemsStore     = writable([] );
