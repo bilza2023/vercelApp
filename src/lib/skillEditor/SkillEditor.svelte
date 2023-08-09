@@ -1,30 +1,25 @@
 <script>
 //@ts-nocheck
 import getDivItem  from "./div/getDivItem";
-
+export let content = '';
 import DivComp from "./div/DivComp.svelte";
 import DivDsiplay from "./div/DivDsiplay.svelte";
 import {toast,onMount} from '$lib/util';
-
-// import {itemsStore} from './div/store'
-// $: items = $itemsStore;
 
 let displayEdit = true;
 let items = [];
 
 onMount  (async ()=>{
- items = [...items, getDivItem() ];
+//  items = [...items, getDivItem() ];
 });
 
-
-function returnContent(content){
-console.log("content",content)
-}
 function addDiv(){
     // debugger;
     if (items.length < 10){
         items = [...items, getDivItem() ];
-        console.log(items);
+        content = JSON.stringify(items);
+        console.log("items" ,  items);
+        console.log("content" ,  content);
     }else {
         toast.push('Max number of items reached as question content')
     }
@@ -44,7 +39,7 @@ function addDiv(){
 
 {#if displayEdit}
     {#each items as item,index }
-    <DivComp {item} {returnContent}/>
+    <DivComp {item}/>
     {/each}
 
 {:else}

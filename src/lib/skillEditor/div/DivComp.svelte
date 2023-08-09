@@ -1,7 +1,6 @@
 <script>
 //@ts-nocheck
 let show = false;
-let returnContent;
 import {FormRow} from '$lib/cmp';
 import DivDsiplay from "./DivDsiplay.svelte";
 export let item;
