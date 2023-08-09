@@ -11,14 +11,29 @@ export let questions;
 export let deleteQuestion;
 
 function updateContent(index, content){
-questions[index].content = content;
+questions[index].content = JSON.stringify(content);
 console.log("content" ,  questions[index].content);
+}
+
+function getTitle(content){
+ // debugger;
+ try{
+ const items = JSON.parse(content);
+    if (items.length > 0){
+        return items[0].content;
+    }else {
+        return 'No Content Yet';
+    }
+ }catch(e){
+        return 'No Content Yet';
+    }
 }
 </script>
 
         {#if  questions }  
         {#each questions as question, index }  
-        <SectionHeadIcon title={question.content}  ser={index+1} 
+
+        <SectionHeadIcon title={getTitle(question.content)}  ser={index+1} 
         deleteFn ={()=>deleteQuestion(question.id)}
          >
           

@@ -2,17 +2,18 @@
 //@ts-nocheck
 import {onMount} from '$lib/util';
 // export let data;
-export let data;
-let items
+// export let data;
+export let item
+
 onMount(async ()=>{
-  debugger;
-  items = await JSON.parse(data);
-  console.log("from comp:items" ,items);
+  // debugger;
+  // items = await JSON.parse(data);
+  // console.log("from comp:items" ,items);
 });
 
 </script>
-{#if items}
-{#each items as item}
+{#if item}
+<!-- {#each items as item} -->
 <div
   style:padding="{item.paddingY}px {item.paddingX}px"
   style:margin="{item.marginY}px {item.marginX}px"
@@ -29,6 +30,6 @@ onMount(async ()=>{
 {item.content}
 </div>
 
-{/each}
+<!-- {/each} -->
 {/if}
 
