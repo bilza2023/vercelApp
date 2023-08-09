@@ -5,7 +5,7 @@ export const itemStore     = writable( {} );
 export const showRunDlgStore     = writable(false);
 
 export const templateLocalStore     = writable({});
-export const questionsStore         = writable({});
+export const questionsStore         = writable([]);
 export const showQuestionsStore     = writable(false);
 
 export const showTestStore          = writable(false);

@@ -5,22 +5,21 @@ import {FormRow,Tf,InputElm,InputTextArea} from '$lib/cmp';
 import SkillEditor from '../../../lib/skillEditor/SkillEditor.svelte';
 import {SectionHeadIcon} from '$lib/cmp';
 import Options from './Options.svelte';
+// import stringToArray from '../fn/stringToArray';
+import {questionsStore,itemStore} from '../store';
 
-let useEditor = false;
-export let questions;
+$:questions = $questionsStore;
+// $:item = $itemStore;
+
 export let deleteQuestion;
 
-function updateContent(index, content){
-questions[index].content = JSON.stringify(content);
-console.log("content" ,  questions[index].content);
-}
+
 
 function getTitle(content){
  // debugger;
  try{
- const items = JSON.parse(content);
-    if (items.length > 0){
-        return items[0].content;
+    if (content.length > 0){
+        return content[0].content;
     }else {
         return 'No Content Yet';
     }
@@ -28,6 +27,7 @@ function getTitle(content){
         return 'No Content Yet';
     }
 }
+
 </script>
 
         {#if  questions }  
@@ -44,18 +44,9 @@ function getTitle(content){
 
 
           <!-- ****************************************** -->
-          {#if useEditor}
-          <SkillEditor  {index} {updateContent} />  
-          {:else}
-          <FormRow title="Question">
-          <input type="text" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={question.content} />
-          </FormRow>
-          {/if}
-          
 
-          <FormRow title="Use Editor">
-          <button on:click={()=>useEditor = !useEditor}>Use Editor</button>
-          </FormRow>
+          <SkillEditor  {index}   />  
+          
           
           <FormRow title="Multi Select">
           <Tf obj={question} bool_prop="multiSelect"  />

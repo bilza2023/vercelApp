@@ -1,15 +1,9 @@
 <script>
 //@ts-nocheck
-import {onMount} from '$lib/util';
 // export let data;
 // export let data;
 export let item
 
-onMount(async ()=>{
-  // debugger;
-  // items = await JSON.parse(data);
-  // console.log("from comp:items" ,items);
-});
 
 </script>
 {#if item}

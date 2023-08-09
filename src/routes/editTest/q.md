@@ -1,3 +1,19 @@
+Look at this svelte component. SkillEditor.svelte
+
+it has a svelte store variable "questionsStore" which has question objects each question object has a field "content" which again is an array of objects.
+
+The SkillEditor.svelte gets "index" which is the index of the question it is responsible for its question.content array of objects.
+
+It gets the second array of objects (questions[index].content) and give each item to a group of inputs in 
+    {#each questionContent as item,innerIndex }
+
+
+The problem is that this group of inputs does not edit the content fields properly. The main issue seems to be in bind:value
+instead of bind:value={item.borderWidth}
+it should be something like
+bind:value={questionsStore[index].content[innerIndex].borderWidth}
+
+SkillEditor.svelte
 <script>
 //@ts-nocheck
 import {FormRow} from '$lib/cmp';
@@ -56,11 +72,11 @@ function addDiv(){
     <DivDsiplay {item} />
     <!-- <DivComp {item}/> -->
     <FormRow title="Content">
-    <input type="text" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[index].content[innerIndex].content}  />
+    <input type="text" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.content}  />
     </FormRow>
     
     <FormRow title="Background Color">
-    <input type="color" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[index].content[innerIndex].bgColor} />
+    <input type="color" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={item.bgColor} />
     </FormRow>
 
 <FormRow title="Font Color">

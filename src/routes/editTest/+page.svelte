@@ -15,8 +15,11 @@ import HiddenDivs from './HiddenDivs.svelte';
 import PublishErrors from './PublishErrors.svelte';
 import PageSeparator from './PageSeparator.svelte';
 import RunDiv from './RunDiv.svelte';
+import stringToArray from './fn/stringToArray';
 
-import {showTestStore,showCloneStore,showDeleteStore,errorsArrayStore,showQuestionsStore,showRunDlgStore} from './store';
+import {showTestStore,showCloneStore,showDeleteStore,errorsArrayStore,showQuestionsStore,showRunDlgStore,questionsStore,itemStore} from './store';
+
+$:item = $itemStore;
 
 $: showTest = $showTestStore;
 $: showClone = $showCloneStore;
@@ -24,8 +27,6 @@ $: showDelete = $showDeleteStore;
 $: errorsArray = $errorsArrayStore;
 $: showQuestions = $showQuestionsStore;
 $: showRunDlg = $showRunDlgStore;
-
-let item = {};
 
 function addQuestion(q){
   const questions = [... item.questions, q];
@@ -46,15 +47,22 @@ onMount(async ()=>{
     if (resp.ok){
       
       const data = await resp.json();
-      item = (data.item);
+      const item = (data.item);
+      for (let i = 0; i < item.questions.length; i++) {
+        item.questions[i].content = stringToArray(item.questions[i].content);
+      }
+      itemStore.set(item); //important
+      questionsStore.set(item.questions);//important
 
     }else {
     toast.push('failed to load');
     }
   } catch (e) {
-    console.error(e);
+    toast.push('failed to load');
+    // console.error(e);
   }   
 });
+
 
 async function clone (newTitle ){
   await cloneFn(newTitle,item);
@@ -103,7 +111,7 @@ async function makeTest (newTitle ){
         <div class='px-8'>
           <br/>          
             {#if  showQuestions}
-            <Questions questions={item.questions} {deleteQuestion}/>
+            <Questions  {deleteQuestion}/>
              <br/>
             <AddQuestionBar  {addQuestion}/>
             <br/>
