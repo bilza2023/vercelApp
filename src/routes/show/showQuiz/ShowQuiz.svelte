@@ -1,13 +1,11 @@
 <script>
 // @ts-nocheck
 
-// import {pageState} from "./showQuizStore";
 import Btns from "./Btns.svelte";
 import ShowQuestions from "./showQuestions/ShowQuestions.svelte";
 import ProgressBar from "$lib/cmp/ProgressBar.svelte";
 import Loading from '$lib/cmp/Loading.svelte';
-// import ShowMcq from "./showQuestions/ShowMcq.svelte";
-
+import DivDsiplay from '../../../lib/skillEditor/div/DivDsiplay.svelte';
 //--we need these only if we want to react to them
 export let quiz;
 
@@ -28,7 +26,10 @@ const prev = ()=>{
     cq= 0;
   }
 }
-
+async function getContentArray(cont){
+  const r = await JSON.parse(cont);
+  return r;
+}
 </script>
 
 <br>
@@ -43,10 +44,17 @@ const prev = ()=>{
 
 <ProgressBar total={quiz.questions.length} current={cq}/>
 
-  <h1 
+  <!-- <h1 
     class="bg-red-900 rounded-md p-4 m-3  text-center text-xl">
     {quiz.questions[cq].content}
-  </h1>
+  </h1> -->
+<!-- {console.log("ok" ,quiz.questions[cq].content)} -->
+
+  <div
+  class="bg-red-900 rounded-md p-4 m-3  text-center text-xl">
+
+    <DivDsiplay  data= {quiz.questions[cq].content} />  
+  </div>
 <br>
       <ShowQuestions  questions={quiz.questions} {cq} />
   

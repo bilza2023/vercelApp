@@ -1,5 +1,5 @@
  <script>
-
+//@ts-nocheck
 import ShowMcq from "./ShowMcq.svelte";
 // import ShowInputText from "./ShowInputText.svelte";
 // import ShowInputEmail from "./ShowInputEmail.svelte";

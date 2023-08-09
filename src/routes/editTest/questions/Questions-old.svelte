@@ -2,18 +2,17 @@
 // @ts-nocheck
 import {fade} from '$lib/util';
 import {FormRow,Tf,InputElm,InputTextArea} from '$lib/cmp';
-import SkillEditor from '../../../lib/skillEditor/SkillEditor.svelte';
+// import SkillEditor from '../../../lib/skillEditor/SkillEditor.svelte';
 import {SectionHeadIcon} from '$lib/cmp';
 import Options from './Options.svelte';
 
-let useEditor = false;
 export let questions;
 export let deleteQuestion;
 
-function updateContent(index, content){
-questions[index].content = content;
-console.log("content" ,  questions[index].content);
-}
+// function updateContent(index, content){
+// questions[index].content = content;
+// console.log("content" ,  questions[index].content);
+// }
 </script>
 
         {#if  questions }  
@@ -27,19 +26,9 @@ console.log("content" ,  questions[index].content);
           <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
           class="border-2 border-gray-500 p-1 m-0 mt-0" >
 
-
-          <!-- ****************************************** -->
-          {#if useEditor}
-          <SkillEditor  {index} {updateContent} />  
-          {:else}
+          <!-- <SkillEditor  {index} {updateContent} />   -->
           <FormRow title="Question">
           <input type="text" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={question.content} />
-          </FormRow>
-          {/if}
-          
-
-          <FormRow title="Use Editor">
-          <button on:click={()=>useEditor = !useEditor}>Use Editor</button>
           </FormRow>
           
           <FormRow title="Multi Select">

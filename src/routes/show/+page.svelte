@@ -31,7 +31,8 @@ onMount(async () => {
       });
   
     if (resp.ok) {
-        pageStateStore.set('loaded');
+        // pageStateStore.set('loaded');
+        pageStateStore.set('showQuiz'); //change
         const data = await resp.json();
         quiz = data.quiz;
         students = data.students;

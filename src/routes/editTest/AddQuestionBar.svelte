@@ -2,7 +2,7 @@
 // @ts-nocheck
 export let addQuestion;
 import { BtnIconRound } from '$lib/cmp';
-
+ 
 import { getDataUrl,getDataPassword,getDataParagraph,getDataNumber,getDataInput,getDataEmail,getDataMCQ,getDataBaseMCQ, getMcqWOption, getSurvey} from "./fn/questionTypesData.js";
 </script>
 

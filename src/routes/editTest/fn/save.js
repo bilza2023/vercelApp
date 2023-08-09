@@ -10,6 +10,9 @@ import { toast,get  } from '$lib/util';
 export default async function save  (item){
 // item.classId = ''; since the test does not have a class id just the "run" has it. This will help us to keep the classId  = none and we will not save new runs with faluty classId. it needs to be set every time.
   // item.classId = '';
+
+// console.log(item);return;  
+
  const resp = await Agent.update('test',{ item});
 
   if (resp.ok) {

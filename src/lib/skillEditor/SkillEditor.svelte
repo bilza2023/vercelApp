@@ -1,7 +1,9 @@
 <script>
 //@ts-nocheck
+export let updateContent;
+export let index;
+
 import getDivItem  from "./div/getDivItem";
-export let content = '';
 import DivComp from "./div/DivComp.svelte";
 import DivDsiplay from "./div/DivDsiplay.svelte";
 import {toast,onMount} from '$lib/util';
@@ -17,9 +19,10 @@ function addDiv(){
     // debugger;
     if (items.length < 10){
         items = [...items, getDivItem() ];
-        content = JSON.stringify(items);
-        console.log("items" ,  items);
-        console.log("content" ,  content);
+        updateContent(index,JSON.stringify(items));
+        // content = JSON.stringify(items);
+        // console.log("items" ,  items);
+        
     }else {
         toast.push('Max number of items reached as question content')
     }
