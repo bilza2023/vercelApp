@@ -1,4 +1,5 @@
 export default class Icons {
+  static ADD = ' ➕';
   static BALANCE = '⚖️';
   static BARCHART = '📊';
   static BOOK = '📘';
@@ -11,10 +12,13 @@ export default class Icons {
   static COG = '⚙';
   static COMPUTER = '💻';
   static COLD = '🥶';
+  static CROSS = '❌';
   static DARK = '🌃';
   static DEL = '🗑️';
   static DOOR = '🚪';
+  static DOWN = '↓';
   static EMAIL = '📧';
+  static EYE = '👁️';
   static EXPLOSION = '💥';
   static FILESBOX = '🗃️';
   static FLOWER = '🌸';
@@ -28,6 +32,7 @@ export default class Icons {
   static ICE = '🧊';
   static KEY = '🔑';
   static LOCK = '🔒';
+  static LEFT = '←';
   static MAGNIFYING_GLASS = '🔍';
   static MANAGER = '💼';
   static MCQ = '🔱';
@@ -41,6 +46,7 @@ export default class Icons {
   static PHONE = '📱';
   static QUESTIONMARK = '❓';
   static RULER = '📏';
+  static RIGHT = '→';
   static RECYCLE = '♻️';
   static RUN = '🏃';
   static ROCKET = '🚀';
@@ -52,8 +58,10 @@ export default class Icons {
   static STUDENT = '👨‍🎓';
   static STUDENTCAP = '🎓';
   static SUN = '☀️';
+  static SUBTRACT = '➖';
   static TAG = '🏷️';
   static TEAM = '🧑‍🤝‍🧑';
+  static TICK = '✔️';
   static TEMPRATURE = '🌡️';
   static TEMPLATE = '📜';
   static TEST = '🧪';
@@ -63,6 +71,7 @@ export default class Icons {
   static TREE = '🌳';
   static TV = '📺';
   static WRENCH = '🔧';
+  static UP = '↑';
 
   // add more icons here
 }

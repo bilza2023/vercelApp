@@ -1,15 +1,13 @@
 <script>
 // @ts-nocheck
-import {fade} from '$lib/util';
-import {FormRow,Tf,InputElm,InputTextArea} from '$lib/cmp';
-import SkillEditor from '../../../lib/skillEditor/SkillEditor.svelte';
-import {SectionHeadIcon} from '$lib/cmp';
+import {Icons, fade} from '$lib/util';
+import { FormRow , Tf , BtnWIconSm } from '$lib/cmp';
+import SkillEditor from './SkillEditor/SkillEditor.svelte';
+import { SectionHeadIcon } from '$lib/cmp';
 import Options from './Options.svelte';
-// import stringToArray from '../fn/stringToArray';
-import {questionsStore,itemStore} from '../store';
+import { questionsStore } from '../store';
 
 $:questions = $questionsStore;
-// $:item = $itemStore;
 
 export let deleteQuestion;
 
@@ -31,9 +29,9 @@ function getTitle(content){
 </script>
 
         {#if  questions }  
-        {#each questions as question, index }  
+        {#each questions as question, questionIndex }  
 
-        <SectionHeadIcon title={getTitle(question.content)}  ser={index+1} 
+        <SectionHeadIcon title={getTitle(question.content)}  ser={questionIndex+1} 
         deleteFn ={()=>deleteQuestion(question.id)}
          >
           
@@ -44,10 +42,13 @@ function getTitle(content){
 
 
           <!-- ****************************************** -->
+          <BtnWIconSm icon={Icons.NOTES}>Content Editor</BtnWIconSm>  
 
-          <SkillEditor  {index}   />  
+          <SkillEditor  {questionIndex}   />  
           
           
+          <BtnWIconSm icon={Icons.QUESTIONMARK}>Question Settings</BtnWIconSm>
+
           <FormRow title="Multi Select">
           <Tf obj={question} bool_prop="multiSelect"  />
           </FormRow>

@@ -5,24 +5,24 @@ export default function getDivItem (){
     const divItem = {
 content : 'content',
 
-            bgColor : 'red',
+            bgColor : 'gray',
             fontColor : 'white',
-            borderColor : 'green',
+            borderColor : 'white',
 
-            borderWidth : 5,
+            borderWidth : 0,
             fontSize : 16,
 
             textAlign: 'left',
             
-            marginX : 10,
+            marginX : 0,
             marginY : 0,
 
 // not implemented
-            paddingX : 20,
-            paddingY : 15,
+            paddingX : 2,
+            paddingY : 2,
 
             opacity : 1,
-            borderRadius : 10,
+            borderRadius : 0,
             
             fontStyle : 'italic',
             fontWeight : 'bold',
