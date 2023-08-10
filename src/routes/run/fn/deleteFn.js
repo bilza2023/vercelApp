@@ -9,7 +9,7 @@ import getItems from './getItems';
 
 export default async function deleteFn(id ){
     try{
-  debugger;
+//   debugger;
      const resp = await Agent.del('run',{ id  });
 
       if ( resp.ok == true ){

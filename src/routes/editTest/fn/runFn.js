@@ -1,13 +1,17 @@
 // @ts-nocheck
 import {Agent,toast,get} from '$lib/util';
-import {showRunDlgStore } from '../store';
+import {showRunDlgStore  , questionsStore} from '../store';
+import questionContentStringify from './questionContentStringify';
 // import checkTest from './checkTest'; 
 ///////////////////////////////////////////////// 
 /////////////////////////////////////////////////
  
 export default async function  runFn(item ) {
     try{
-    // debugger;
+    debugger;
+// const item = get(itemStore);
+const questions = await questionContentStringify(get(questionsStore));
+item.questions = questions;    
 //     const item = {... get(itemStore) };
 // ////////////========== Test
  if (item.title === ''){

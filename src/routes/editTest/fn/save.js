@@ -3,17 +3,12 @@ import {Agent} from '$lib/ajax';
 import { toast,get  } from '$lib/util';
 
 import { questionsStore,itemStore } from '../store';
-// $:item = $templateLocalStore;
-// $:questions = $questionsStore;
-async function questionContentStringify(questions){
-  for (let i = 0; i < questions.length; i++) {
-    questions[i].content = JSON.stringify(questions[i].content);
-  }
-  return questions;
-}
+import questionContentStringify from './questionContentStringify';
+
 
 export default async function save  ( ){
 try{
+debugger;
 // console.log("questionsStore" , get(questionsStore));
 // console.log("itemStore" , get(itemStore));
 const item = get(itemStore);

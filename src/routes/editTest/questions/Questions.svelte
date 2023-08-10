@@ -9,7 +9,13 @@ import { questionsStore } from '../store';
 
 $:questions = $questionsStore;
 
-export let deleteQuestion;
+function deleteQuestion(id) {
+    // debugger;
+    questionsStore.update(questions => {
+    const updatedQuestions = questions.filter(question => question.id !== id);
+        return updatedQuestions;
+    });
+}
 
 
 

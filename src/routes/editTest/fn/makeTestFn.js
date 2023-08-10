@@ -6,7 +6,7 @@ import {showTestStore , errorsArrayStore } from '../store';
 //////////////////////////////////////////////////////
 
 export default async function makeTest(title,item){
-// debugger;
+debugger;
 // showTestStore.set(false);return;
     const errorsArray = checkBeforePub(item);
       if (errorsArray.length > 0){

@@ -17,6 +17,7 @@ import PageSeparator from './PageSeparator.svelte';
 import RunDiv from './RunDiv.svelte';
 import stringToArray from './fn/stringToArray';
 
+
 import {showTestStore,showCloneStore,showDeleteStore,errorsArrayStore,showQuestionsStore,showRunDlgStore,questionsStore,itemStore} from './store';
 
 $:item = $itemStore;
@@ -28,20 +29,11 @@ $: errorsArray = $errorsArrayStore;
 $: showQuestions = $showQuestionsStore;
 $: showRunDlg = $showRunDlgStore;
 
-function addQuestion(q){
-  const questions = [... item.questions, q];
-  item.questions = questions; 
-}
-function deleteQuestion(id) {
-  // Use the filter method to create a new array excluding the question with the matching id
-  const updatedQuestions = item.questions.filter(question => question.id !== id);
-  item.questions = updatedQuestions;
-}
 
 
 onMount(async ()=>{
   try {
-    // debugger;
+      // debugger;
     const quizId = new URLSearchParams(location.search).get("quizId");
     const resp = await Agent.readone('test' , {id: quizId });
     if (resp.ok){
@@ -49,7 +41,7 @@ onMount(async ()=>{
       const data = await resp.json();
       const item = (data.item);
       for (let i = 0; i < item.questions.length; i++) {
-        item.questions[i].content = stringToArray(item.questions[i].content);
+        item.questions[i].content = await stringToArray(item.questions[i].content);
       }
       itemStore.set(item); //important
       questionsStore.set(item.questions);//important
@@ -78,9 +70,6 @@ async function deleteItem (title){
  
 }//del fn
 
-async function makeTest (newTitle ){
-  await makeTestFn(newTitle,item);
-}
 
 </script>
 <!-- ****************************************** -->
@@ -104,16 +93,16 @@ async function makeTest (newTitle ){
         <PublishErrors />
         <!-- ********** The Hidden Dialogue box **************** -->
             <HiddenDivs
-              {showTest} {showClone} {showDelete} {makeTest} {clone} {deleteItem} 
+              {showTest} {showClone} {showDelete} {clone} {deleteItem} 
             />
 
         <!-- ********** Main Settings  *********** -->
         <div class='px-8'>
           <br/>          
             {#if  showQuestions}
-            <Questions  {deleteQuestion}/>
+            <Questions />
              <br/>
-            <AddQuestionBar  {addQuestion}/>
+            <AddQuestionBar />
             <br/>
             {:else}
             <SettingMain {item}/>

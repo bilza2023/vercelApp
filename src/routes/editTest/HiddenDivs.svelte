@@ -7,9 +7,14 @@ import { InputForm } from '$lib/cmp';
 export let showTest;
 export let showClone;
 export let showDelete;
-export let makeTest;
 export let clone;
 export let deleteItem;
+
+async function makeTest (newTitle ){
+  debugger;
+  await makeTestFn(newTitle,get(itemStore) );
+}
+
 </script>
 
   <!-- ********** The Hidden Dialogue box **************** -->
