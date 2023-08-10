@@ -41,7 +41,7 @@ onMount(async () => {
             incomming.questions[i].contentArray = await stringToArray(incomming.questions[i].content);
             }
         quiz = incomming;
-        console.log(quiz);
+        console.log("item before SHOW" , quiz);
         //  debugger;    
         students = data.students;
 

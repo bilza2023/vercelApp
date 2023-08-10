@@ -8,7 +8,7 @@ import questionContentStringify from './questionContentStringify';
  
 export default async function  runFn(item ) {
     try{
-    debugger;
+    // debugger;
 // const item = get(itemStore);
 const questions = await questionContentStringify(get(questionsStore));
 item.questions = questions;    
@@ -24,7 +24,7 @@ item.questions = questions;
     return;
  }    
     
-    
+console.log("item before Run" , item);    
     item.testId = item._id;
     item._id = null;
     // item.title = title;

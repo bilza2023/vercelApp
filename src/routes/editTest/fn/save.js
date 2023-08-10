@@ -8,14 +8,14 @@ import questionContentStringify from './questionContentStringify';
 
 export default async function save  ( ){
 try{
-debugger;
+// debugger;
 // console.log("questionsStore" , get(questionsStore));
 // console.log("itemStore" , get(itemStore));
 const item = get(itemStore);
 const questions = await questionContentStringify(get(questionsStore));
 item.questions = questions;
-item.classId = '';
-console.log("item" , item);
+// item.classId = ''; ---for now not required
+console.log("item before save" , item);
 // item.classId = ''; since the test does not have a class id just the "run" has it. This will help us to keep the classId  = none and we will not save new runs with faluty classId. it needs to be set every time.
 // return;  
 

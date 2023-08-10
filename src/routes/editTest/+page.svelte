@@ -5,12 +5,12 @@ import {PageWrapper,HdgWithIcon,Centre,Loading} from '$lib/cmp';
 import Questions from './questions/Questions.svelte'
 import SettingMain from './settings/SettingsMain.svelte';
 import Toolbar from './Toolbar.svelte';
-import {onMount,toast,get} from '$lib/util';
-import { Agent } from '$lib/ajax';
-import makeTestFn from './fn/makeTestFn';
+import {onMount,toast,get,Agent} from '$lib/util';
 import AddQuestionBar from './AddQuestionBar.svelte';
-import cloneFn from './fn/cloneFn';
-import deleteFn from './fn/deleteFn';
+
+import cloneFn from './fn/cloneFn'; //??
+import deleteFn from './fn/deleteFn'; //??
+
 import HiddenDivs from './HiddenDivs.svelte';
 import PublishErrors from './PublishErrors.svelte';
 import PageSeparator from './PageSeparator.svelte';
@@ -27,7 +27,7 @@ $: showClone = $showCloneStore;
 $: showDelete = $showDeleteStore;
 $: errorsArray = $errorsArrayStore;
 $: showQuestions = $showQuestionsStore;
-$: showRunDlg = $showRunDlgStore;
+$: showRunDlg = $showRunDlgStore; //it is in store since RunDlg will use it
 
 
 
@@ -56,11 +56,11 @@ onMount(async ()=>{
 });
 
 
-async function clone (newTitle ){
+async function clone (newTitle ){ //??
   await cloneFn(newTitle,item);
 }////function
 
-async function deleteItem (title){
+async function deleteItem (title){//??
   if (title !== item.title){
   toast.push('Title does not match');
   return;

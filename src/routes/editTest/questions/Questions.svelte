@@ -1,10 +1,10 @@
 <script>
 // @ts-nocheck
 import {Icons, fade} from '$lib/util';
-import { FormRow , Tf , BtnWIconSm } from '$lib/cmp';
+import { SectionHeadIcon,FormRow , Tf , BtnWIconSm } from '$lib/cmp';
 import SkillEditor from './SkillEditor/SkillEditor.svelte';
-import { SectionHeadIcon } from '$lib/cmp';
 import Options from './Options.svelte';
+
 import { questionsStore } from '../store';
 
 $:questions = $questionsStore;
@@ -16,8 +16,6 @@ function deleteQuestion(id) {
         return updatedQuestions;
     });
 }
-
-
 
 function getTitle(content){
  // debugger;
@@ -37,17 +35,16 @@ function getTitle(content){
         {#if  questions }  
         {#each questions as question, questionIndex }  
 
-        <SectionHeadIcon title={getTitle(question.content)}  ser={questionIndex+1} 
-        deleteFn ={()=>deleteQuestion(question.id)}
+        <SectionHeadIcon title={getTitle(question.content)}  ser={questionIndex+1}  deleteFn ={()=>deleteQuestion(question.id)}
          >
           
           <!-- ****************************************** -->
           <!-- ****************************************** -->
-          <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
+        <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
           class="border-2 border-gray-500 p-1 m-0 mt-0" >
 
 
-          <!-- ****************************************** -->
+        <!-- ****************************************** -->
           <BtnWIconSm icon={Icons.NOTES} bgColor ="bg-gray-900">Content Editor</BtnWIconSm>  
 
           <SkillEditor  {questionIndex}   />  

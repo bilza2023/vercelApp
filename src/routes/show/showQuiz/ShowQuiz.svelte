@@ -50,8 +50,7 @@ async function getContentArray(cont){
 </div>
   <br>
 
-<div class="flex flex-col justify-center bg-gray-700 p-1 
- text-white rounded-md w-10/12 mx-auto border-2 border-gray-100">
+<div class=" bg-gray-700 p-1  text-white rounded-md w-10/12 mx-auto border-2 border-gray-400">
 
 <ProgressBar total={quiz.questions.length} current={cq}/>
 
@@ -61,7 +60,7 @@ async function getContentArray(cont){
   </h1> -->
 <!-- {console.log("ok" ,quiz.questions[cq].content)} -->
 
-  <div class="bg-red-900 rounded-md p-4 m-3  text-center text-xl">
+  <div class="bg-gray-900 rounded-md p-1 m-1  ">
 
     {#each quiz.questions[cq].contentArray as item}
     <!-- DivDsiplay will show EACH item of content array one by one -->
