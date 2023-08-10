@@ -29,7 +29,7 @@ export let comment = '';
   on:click={()=>clk(newTitle)} >
   
  
-    <span class="text-2xl">{icon}<span class="hidden md:inline text-sm"> {btnTitle}</span></span>
+  <span class="text-2xl">{icon}<span class="hidden md:inline text-sm"> {btnTitle}</span></span>
 
   </button>
   

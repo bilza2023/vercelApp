@@ -1,37 +1,36 @@
 // @ts-nocheck
-import {toast} from '$lib/util';
-import {Agent} from '$lib/ajax';
-import { showCloneStore } from '../store';
+import { Agent,toast} from '$lib/util';
+import stringifyContent from './stringifyContent';
+import combQnQdeep from './combQnQdeep';
 
-/**
- * @param {any} newTitle
- */
+///////////////////////////////////////////////////////
 
-export default async function cloneFn(newTitle,item) {  
-    try{
-const resp = await Agent.create('template' , {title : newTitle});
-//   debugger;
-  if (resp.ok){
-  const data  = await resp.json();
-  const newItem = data.item;
+export default async function cloneFn(newTitle) {  
+  try{
+    // debugger;
+  let  item = combQnQdeep();
+  item  = await stringifyContent(item);
 
-  item._id = data.item._id;
-  item.title = newTitle;
+  const resp = await Agent.create('test' , {title : newTitle});
+    //   debugger;
+      if (resp.ok) {
+      const data  = await resp.json();
+      const newItem = data.item;
+
+      item._id = newItem._id;
+      item.title = newTitle;
   // newItem.isNew = true;
 
-  const resp2 = await Agent.update('template' , {item : item});
+    const resp2 = await Agent.update('test',{ item });
   
       if (resp2.ok){
-
-        const data = await resp2.json();
         toast.push( "Cloned" );
         showCloneStore.set(false);
-
+        // const data = await resp2.json();
       }else {
-
-      toast.push( "failed to clone" );        
-
+        toast.push( "failed to clone" );        
       }
+
   }else {
     toast.push( "failed to clone" );        
   }

@@ -1,13 +1,19 @@
 // @ts-nocheck
-import { toast , goto } from '$lib/util';
+import { toast , goto,get } from '$lib/util';
 import {Agent} from '$lib/ajax';
-import {showDeleteStore} from '../store';
+import {showDeleteStore , itemStore} from '../store';
 
 
-export default async function deleteFn(id){
+export default async function deleteFn(title){
     try{
-    // debugger;
-     const resp = await Agent.del('test',{ id });
+     // debugger;
+     const item = get(itemStore); 
+     if (title !== item.title){
+      toast.push('Title does not match');
+      return;
+     }
+
+     const resp = await Agent.del('test',{ id : item._id });
 
       if (resp.ok == true){
 

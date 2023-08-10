@@ -1,30 +1,29 @@
 // @ts-nocheck
-import {Agent,toast,get} from '$lib/util';
-import {showRunDlgStore  , questionsStore} from '../store';
-import questionContentStringify from './questionContentStringify';
-// import checkTest from './checkTest'; 
+import { Agent,toast} from '$lib/util';
+import stringifyContent from './stringifyContent';
+import combQnQdeep from './combQnQdeep';
+import {showRunDlgStore} from '../store';
 ///////////////////////////////////////////////// 
 /////////////////////////////////////////////////
  
-export default async function  runFn(item ) {
+export default async function  runFn(  ) {
     try{
     // debugger;
-// const item = get(itemStore);
-const questions = await questionContentStringify(get(questionsStore));
-item.questions = questions;    
-//     const item = {... get(itemStore) };
-// ////////////========== Test
- if (item.title === ''){
-    toast.push('Missing title');
-    return;
- }    
+    let  item = combQnQdeep();
+    item  = await stringifyContent(item);
+
+    // ////////////========== Test
+    if (item.title === ''){
+        toast.push('Missing title');
+        return;
+    }    
 // ////////////========== Test
  if (item.classId  === '' || item.classId  === null ){
     toast.push('Assign a Class to the test');
     return;
  }    
     
-console.log("item before Run" , item);    
+// console.log("item before Run" , item);    
     item.testId = item._id;
     item._id = null;
     // item.title = title;

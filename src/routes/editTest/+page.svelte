@@ -2,18 +2,19 @@
 // @ts-nocheck
 import {PageWrapper,HdgWithIcon,Centre,Loading} from '$lib/cmp';
 
+import {onMount,toast,get,Agent} from '$lib/util';
+
 import Questions from './questions/Questions.svelte'
 import SettingMain from './settings/SettingsMain.svelte';
 import Toolbar from './Toolbar.svelte';
-import {onMount,toast,get,Agent} from '$lib/util';
 import AddQuestionBar from './AddQuestionBar.svelte';
 
 import cloneFn from './fn/cloneFn'; //??
-import deleteFn from './fn/deleteFn'; //??
 
 import HiddenDivs from './HiddenDivs.svelte';
 import PublishErrors from './PublishErrors.svelte';
 import PageSeparator from './PageSeparator.svelte';
+
 import RunDiv from './RunDiv.svelte';
 import stringToArray from './fn/stringToArray';
 
@@ -28,7 +29,6 @@ $: showDelete = $showDeleteStore;
 $: errorsArray = $errorsArrayStore;
 $: showQuestions = $showQuestionsStore;
 $: showRunDlg = $showRunDlgStore; //it is in store since RunDlg will use it
-
 
 
 onMount(async ()=>{
@@ -60,19 +60,9 @@ async function clone (newTitle ){ //??
   await cloneFn(newTitle,item);
 }////function
 
-async function deleteItem (title){//??
-  if (title !== item.title){
-  toast.push('Title does not match');
-  return;
-  }
-  // it has _id since its template not a question which may or may not have _id
-  await deleteFn(item._id);
- 
-}//del fn
 
 
 </script>
-<!-- ****************************************** -->
 <!-- ****************************************** -->
 <PageWrapper>
 {#if  item}
@@ -93,8 +83,7 @@ async function deleteItem (title){//??
         <PublishErrors />
         <!-- ********** The Hidden Dialogue box **************** -->
             <HiddenDivs
-              {showTest} {showClone} {showDelete} {clone} {deleteItem} 
-            />
+              {showTest} {showClone} {showDelete} {clone} {item} />
 
         <!-- ********** Main Settings  *********** -->
         <div class='px-8'>
