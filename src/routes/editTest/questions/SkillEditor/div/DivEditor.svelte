@@ -1,9 +1,9 @@
 <script>
 //@ts-nocheck
 import {FormRow} from '$lib/cmp';
-import getDivItem  from "./div/getDivItem";
+import getDivItem  from "./getDivItem";
 import {toast,Icons} from '$lib/util';
-import {questionsStore} from '../../store';
+import {questionsStore} from '../../../store';
 
 
 

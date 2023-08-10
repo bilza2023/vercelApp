@@ -42,12 +42,12 @@ function getTitle(content){
 
 
           <!-- ****************************************** -->
-          <BtnWIconSm icon={Icons.NOTES}>Content Editor</BtnWIconSm>  
+          <BtnWIconSm icon={Icons.NOTES} bgColor ="bg-gray-900">Content Editor</BtnWIconSm>  
 
           <SkillEditor  {questionIndex}   />  
           
           
-          <BtnWIconSm icon={Icons.QUESTIONMARK}>Question Settings</BtnWIconSm>
+          <BtnWIconSm bgColor ="bg-gray-900" icon={Icons.QUESTIONMARK}>Question Settings</BtnWIconSm>
 
           <FormRow title="Multi Select">
           <Tf obj={question} bool_prop="multiSelect"  />

@@ -5,10 +5,20 @@ import Btns from "./Btns.svelte";
 import ShowQuestions from "./showQuestions/ShowQuestions.svelte";
 import ProgressBar from "$lib/cmp/ProgressBar.svelte";
 import Loading from '$lib/cmp/Loading.svelte';
-import DivDsiplay from '../../../lib/skillEditor/div/DivDsiplay.svelte';
+import DivDsiplay from '../../editTest/questions/SkillEditor/div/DivDsiplay.svelte';
+import {onMount} from '$lib/util';
+
 //--we need these only if we want to react to them
 export let quiz;
 
+onMount(async () => {
+  try {
+  // debugger
+  // console.log("quiz to show" ,quiz);  
+  }catch(e) {
+
+  }
+});
 
 let cq = 0;
 
@@ -32,6 +42,7 @@ async function getContentArray(cont){
 }
 </script>
 
+
 <br>
 <div class="flex justify-center">
   <h1 class="bg-blue-900  p-2 m-1  mt-0  w-full text-center text-2xl rounded-md">{quiz.title}
@@ -50,10 +61,14 @@ async function getContentArray(cont){
   </h1> -->
 <!-- {console.log("ok" ,quiz.questions[cq].content)} -->
 
-  <div
-  class="bg-red-900 rounded-md p-4 m-3  text-center text-xl">
+  <div class="bg-red-900 rounded-md p-4 m-3  text-center text-xl">
 
-    <DivDsiplay  data= {quiz.questions[cq].content} />  
+    {#each quiz.questions[cq].contentArray as item}
+    <!-- DivDsiplay will show EACH item of content array one by one -->
+    <!-- This is where we inser if item.type == div then -->
+    <DivDsiplay  {item} />  
+    {/each}
+
   </div>
 <br>
       <ShowQuestions  questions={quiz.questions} {cq} />

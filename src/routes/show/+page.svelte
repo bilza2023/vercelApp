@@ -10,6 +10,7 @@ import LoginForm from './loginForm/LoginForm.svelte';
 import Goodbye from './goodbye/Goodbye.svelte';
 import ShowQuiz from './showQuiz/ShowQuiz.svelte';
 // import Result from './result/Result.svelte';
+import stringToArray from '../editTest/fn/stringToArray';
 
 $: pageState = $pageStateStore;
 
@@ -34,15 +35,23 @@ onMount(async () => {
         // pageStateStore.set('loaded');
         pageStateStore.set('showQuiz'); //change
         const data = await resp.json();
-        quiz = data.quiz;
+        const incomming = {...data.quiz};
+            for (let i = 0; i < incomming.questions.length; i++) {
+            incomming.questions[i].contentArray = [];
+            incomming.questions[i].contentArray = await stringToArray(incomming.questions[i].content);
+            }
+        quiz = incomming;
+        console.log(quiz);
+        //  debugger;    
         students = data.students;
+
     } else {
       const data = await resp.json();
       toast.push(data.message);
     }
   
   } catch (error) {
-    // console.error(error);
+    console.error(error);
   }
 }); 
 
@@ -59,7 +68,6 @@ onMount(async () => {
           <!-- //==showQuiz======-->    
             {#if pageState == 'showQuiz'}
               <ShowQuiz {quiz} />
-              <!-- <h1>ShowQuiz</h1> -->
             {/if}
 
             <!-- //==result======-->  
@@ -72,8 +80,8 @@ onMount(async () => {
               <Goodbye  {quiz}/>
             {/if}
 
-{:else}
-<Loading />
+<!-- {:else} -->
+<!-- <Loading /> -->
 {/if}
 </div>
 

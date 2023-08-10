@@ -1,10 +1,11 @@
 //@ts-nocheck
 
 
-export default function stringToArray(content){
+export default async function stringToArray(content){
  // debugger;
  try{
- const items = JSON.parse(content);
+ const items1 = await JSON.parse(content);
+ const items = await JSON.parse(items1);
     if (items.length > 0){
         return items;
     }else {

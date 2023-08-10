@@ -3,12 +3,12 @@
 import {FormRow} from '$lib/cmp';
 import getDivItem  from "./div/getDivItem";
 import DivDsiplay from "./div/DivDsiplay.svelte";
-import Editor from "./Editor.svelte";
+import DivEditor from "./div/DivEditor.svelte";
 import {toast,onMount,Icons} from '$lib/util';
 import {questionsStore,itemStore} from '../../store';
 
 
-let displayEdit = true;
+let displayEdit = false;
 
 export let questionIndex;
 $:questionContent = $questionsStore[questionIndex].content;
@@ -87,7 +87,7 @@ function addDiv(){
     <DivDsiplay {item} />
             
             {#if displayEdit}
-            <Editor  {questionIndex} {contentIndex} {moveDown} {moveUp} {deleteDiv}/>
+            <DivEditor  {questionIndex} {contentIndex} {moveDown} {moveUp} {deleteDiv}/>
             {/if}
 
     {/each}
