@@ -4,7 +4,11 @@
 // export let data;
 export let contentItem
 
-
+function contentToList(contentItem){
+  const temp = contentItem.content;
+   const list = temp.split('\n');
+  return list;
+}
 </script>
 {#if contentItem}
 <!-- {#each items as contentItem} -->
@@ -21,8 +25,12 @@ export let contentItem
   style:font-weight="{contentItem.fontWeight}"
   style:text-align="{contentItem.textAlign}"
 >
-{contentItem.content}
+    <!-- <ol class="list-decimal"> -->
+    <ol >
+    {#each contentToList(contentItem) as li}
+        <li>{li}</li>
+    {/each}
+    </ol>
 </div>
-
 {/if}
 

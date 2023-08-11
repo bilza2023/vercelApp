@@ -54,12 +54,12 @@ $:content =  $questionsStore[questionIndex].content;
  <!-- Edit Control -->
 <div class='bg-gray-800 p-4 m-10 mt-0 mb-2  rounded-md border-2 border-gray-600' style="max-height: 200px; overflow-y: auto;">
 
-<!-- this is not each just an if--why??? -->
+<!-- this is not each just an if -->
   {#if content.length > 0}
 
 
     <FormRow title="Content">
-    <input type="text" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].content[contentIndex].content}  />
+    <textarea  class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].content[contentIndex].content}  />
     </FormRow>
     
     <FormRow title="Background Color">
@@ -83,14 +83,15 @@ $:content =  $questionsStore[questionIndex].content;
     <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].content[contentIndex].fontSize} min=0 max=200/>
     </FormRow>
 
-    <FormRow title= 'Text Alignment'>
+<!-- reomved since its pre  -->
+    <!-- <FormRow title= 'Text Alignment'>
     <select type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].content[contentIndex].textAlign} >
     <option value="justify">justify</option>
     <option value="left" selected>Left</option>
     <option value="right">Right</option>
     <option value="center">Center</option>
     </select>
-    </FormRow>
+    </FormRow> -->
 
  <!-- marginX & Y -->
 

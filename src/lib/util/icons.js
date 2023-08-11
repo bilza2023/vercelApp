@@ -8,9 +8,11 @@ export default class Icons {
   static BULB = '💡'; 
   static CAR = '🚗';
   static CHARTUP = '📈';
+  static CHARTDOWN = '📉';
   static CLOCK = '⏱️';
   static COG = '⚙';
   static COMPUTER = '💻';
+  static CODE = '📟';
   static COLD = '🥶';
   static CROSS = '❌';
   static DARK = '🌃';
@@ -19,6 +21,7 @@ export default class Icons {
   static DOWN = '↓';
   static EMAIL = '📧';
   static EYE = '👁️';
+  static EYES = '👀';
   static EXPLOSION = '💥';
   static FILESBOX = '🗃️';
   static FLOWER = '🌸';
@@ -67,6 +70,7 @@ export default class Icons {
   static TEST = '🧪';
   static TEXT  = '📃';
   static THUMBSUP = '👍';
+  static THUMBSDOWN = '👎';
   static TRIANGULAR_RULER = '📐';
   static TREE = '🌳';
   static TV = '📺';

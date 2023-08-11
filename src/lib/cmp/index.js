@@ -3,6 +3,7 @@ export { default as AnchorIconOval } from './AnchorIconOval.svelte';
 export { default as AreYouSure } from './AreYouSure.svelte';
 export { default as BtnWIcon } from './BtnWIcon.svelte';
 export { default as BtnWIconSm } from './BtnWIconSm.svelte';
+export { default as BtnWIconXs } from './BtnWIconXs.svelte';
 export { default as BtnIconRound } from './BtnIconRound.svelte';
 export { default as BtnIconOval } from './BtnIconOval.svelte';
 export { default as CodeComp } from './CodeComp.svelte';

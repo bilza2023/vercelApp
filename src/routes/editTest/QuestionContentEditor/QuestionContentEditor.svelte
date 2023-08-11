@@ -2,7 +2,7 @@
 //@ts-nocheck
 // -8/Aug-2023 QuestionContentEditor : This is just one of the many possible wiringup of Displays and Editors. We can have many such arragements. This is specifically for creating content for Questions. We can have a different such arrangement for "Web Page Builder" but the base components like DivEditor or DivDisplay remains the same.
 
-import {divData,DivDisplay,DivEditor} from '$lib/SkillEditor';
+import {divData,listData,tableData,preData,Display,Editor} from '$lib/SkillEditor';
 import {Icons} from '$lib/util';
 import { questionsStore } from '../store';
 
@@ -53,6 +53,36 @@ function addDiv(){
         toast.push('Max number of items reached as question content');
     }
 }
+function addList(){
+     if ( content.length < MaxNumberOfItems) {
+        questionsStore.update(questions => {
+            questions[questionIndex].content = [...questions[questionIndex].content, listData()];
+            return questions;
+        });
+    } else {
+        toast.push('Max number of items reached as question content');
+    }
+}
+function addTable(){
+     if ( content.length < MaxNumberOfItems) {
+        questionsStore.update(questions => {
+            questions[questionIndex].content = [...questions[questionIndex].content, tableData()];
+            return questions;
+        });
+    } else {
+        toast.push('Max number of items reached as question content');
+    }
+}
+function addPre(){
+     if ( content.length < MaxNumberOfItems) {
+        questionsStore.update(questions => {
+            questions[questionIndex].content = [...questions[questionIndex].content, preData()];
+            return questions;
+        });
+    } else {
+        toast.push('Max number of items reached as question content');
+    }
+}
 
 </script>
  <!-- top bar -->
@@ -69,6 +99,21 @@ function addDiv(){
         on:click={addDiv}>
         {Icons.NOTES}
     </button>
+    <button 
+        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
+        on:click={addList}>
+        {'■'}
+    </button>
+    <button 
+        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
+        on:click={addTable}>
+        {Icons.CHARTDOWN}
+    </button>
+    <button 
+        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
+        on:click={addPre}>
+        {Icons.CODE}
+    </button>
 
 </div>
 
@@ -81,10 +126,10 @@ function addDiv(){
 {#if content.length > 0}
 
     {#each content as contentItem , contentIndex }
-    <DivDisplay {contentItem} />
+    <Display {contentItem} />
             
     {#if displayEdit}
-    <DivEditor  {questionIndex}  {contentIndex} {moveDown} {moveUp} {deleteDiv}/>
+    <Editor {contentItem}  {questionIndex}  {contentIndex} {moveDown} {moveUp} {deleteDiv}/>
     {/if}
 
     {/each}

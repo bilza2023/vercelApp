@@ -21,7 +21,9 @@ export let contentItem
   style:font-weight="{contentItem.fontWeight}"
   style:text-align="{contentItem.textAlign}"
 >
-{contentItem.content}
+    <pre>
+        {contentItem.content}
+    </pre>
 </div>
 
 {/if}

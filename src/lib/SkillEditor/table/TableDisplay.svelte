@@ -1,13 +1,9 @@
 <script>
-//@ts-nocheck
-// export let data;
-// export let data;
-export let contentItem
-
-
+  //@ts-nocheck
+  export let contentItem;
 </script>
+
 {#if contentItem}
-<!-- {#each items as contentItem} -->
 <div
   style:padding="{contentItem.paddingY}px {contentItem.paddingX}px"
   style:margin="{contentItem.marginY}px {contentItem.marginX}px"
@@ -21,8 +17,17 @@ export let contentItem
   style:font-weight="{contentItem.fontWeight}"
   style:text-align="{contentItem.textAlign}"
 >
-{contentItem.content}
+
+<!-- {#if typeof contentItem } -->
+  {#each contentItem.content as row, rowIndex}
+    <div style="display: flex; justify-content: space-between;">
+      {#each row as cell, cellIndex}
+        <div
+          style="flex: 1; padding: 5px; border: 1px solid black;"
+
+        >{cell}</div>
+      {/each}
+    </div>
+  {/each}
 </div>
-
 {/if}
-
