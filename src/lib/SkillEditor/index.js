@@ -1,4 +1,4 @@
-import QuestionContentEditor from "./QuestionContentEditor/QuestionContentEditor.svelte";
+import QuestionContentEditor from "../../routes/editTest/QuestionContentEditor/QuestionContentEditor.svelte";
 import Editor from "./Editor.svelte";
 import Display from "./Display.svelte";
 
