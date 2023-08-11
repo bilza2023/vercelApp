@@ -2,7 +2,7 @@
 // @ts-nocheck
 import {Icons, fade} from '$lib/util';
 import { SectionHeadIcon,FormRow , Tf , BtnWIconSm } from '$lib/cmp';
-import SkillEditor from './SkillEditor/SkillEditor.svelte';
+import {QuestionContentEditor} from '../../../lib/SkillEditor';
 import Options from './Options.svelte';
 
 import { questionsStore } from '../store';
@@ -47,7 +47,7 @@ function getTitle(content){
         <!-- ****************************************** -->
           <BtnWIconSm icon={Icons.NOTES} bgColor ="bg-gray-900">Content Editor</BtnWIconSm>  
 
-          <SkillEditor  {questionIndex}   />  
+          <QuestionContentEditor  content={question.content}   />  
           
           
           <BtnWIconSm bgColor ="bg-gray-900" icon={Icons.QUESTIONMARK}>Question Settings</BtnWIconSm>

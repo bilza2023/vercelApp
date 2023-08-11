@@ -1,9 +1,10 @@
 
 
-export default function getDivItem (){ 
+export default function divData (){ 
     
     const divItem = {
-content : 'content',
+content : 'Content',
+type : 'div',
 
             bgColor : 'gray',
             fontColor : 'white',
