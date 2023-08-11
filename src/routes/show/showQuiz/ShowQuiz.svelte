@@ -5,7 +5,7 @@ import Btns from "./Btns.svelte";
 import ShowQuestions from "./showQuestions/ShowQuestions.svelte";
 import ProgressBar from "$lib/cmp/ProgressBar.svelte";
 import Loading from '$lib/cmp/Loading.svelte';
-import DivDsiplay from '../../editTest/questions/SkillEditor/div/DivDsiplay.svelte';
+import {DivDisplay} from '../../../lib/SkillEditor';
 import {onMount} from '$lib/util';
 
 //--we need these only if we want to react to them
@@ -62,10 +62,10 @@ async function getContentArray(cont){
 
   <div class="bg-gray-900 rounded-md p-1 m-1  ">
 
-    {#each quiz.questions[cq].contentArray as item}
-    <!-- DivDsiplay will show EACH item of content array one by one -->
-    <!-- This is where we inser if item.type == div then -->
-    <DivDsiplay  {item} />  
+    {#each quiz.questions[cq].contentArray as contentItem}
+    <!-- DivDsiplay will show EACH contentItem of content array one by one -->
+    <!-- This is where we inser if contentItem.type == div then -->
+    <DivDisplay  {contentItem} />  
     {/each}
 
   </div>
