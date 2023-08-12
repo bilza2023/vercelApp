@@ -3,25 +3,25 @@
 export let  question;
 
 const isSelected = (option_id) => {
-  // return questions[cq].selectedOptions.includes(option_id);
+  return question.selectedOptions.includes(option_id);
 }
 //yahan correctOptions ka koi kaam nahi
 const mark_selected = (option_id) => {
         //singleselect
-    //   if (questions[cq].multiSelect == false) {
-    //     questions[cq].selectedOptions= [];
-    //     questions[cq].selectedOptions[0] = option_id;
-    //   } 
-    //   else {
-    //     // Multi select
-    //     let index = questions[cq].selectedOptions.indexOf(option_id);
-    //     if (index > -1) {
-    //       //--remove the option if already exists
-    //       questions[cq].selectedOptions.splice(index, 1);
-    //     } else {
-    //       questions[cq].selectedOptions.push(option_id);
-    //     }
-    // }
+      if (question.multiSelect == false) {
+        question.selectedOptions= [];
+        question.selectedOptions[0] = option_id;
+      } 
+      else {
+        // Multi select
+        let index = question.selectedOptions.indexOf(option_id);
+        if (index > -1) {
+          //--remove the option if already exists
+          question.selectedOptions.splice(index, 1);
+        } else {
+          question.selectedOptions.push(option_id);
+        }
+    }
 } 
 
 

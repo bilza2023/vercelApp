@@ -6,7 +6,7 @@ import ShowQuestions from "./ShowQuestions.svelte";
 import ProgressBar from "$lib/cmp/ProgressBar.svelte";
 import Loading from '$lib/cmp/Loading.svelte';
 import {Display} from '../../../lib/SkillEditor';
-import ShowMcq from "./ShowMcq.svelte";
+import ShowMcq from "../questionControls/ShowMcq.svelte";
 
 //--we need these only if we want to react to them
 export let quiz;

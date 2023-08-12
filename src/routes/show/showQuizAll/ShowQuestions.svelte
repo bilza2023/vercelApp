@@ -1,6 +1,6 @@
  <script>
 //@ts-nocheck
-import ShowMcq from "./ShowMcq.svelte";
+import ShowMcq from "../questionControls/ShowMcq.svelte";
 
 export let questions;
 export let cq;

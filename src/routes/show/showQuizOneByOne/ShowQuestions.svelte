@@ -1,6 +1,6 @@
  <script>
 //@ts-nocheck
-import ShowMcq from "./ShowMcq.svelte";
+import ShowMcq from "../questionControls/ShowMcq.svelte";
 
 export let questions;
 export let cq;
@@ -9,7 +9,7 @@ export let cq;
 </script>
 
     {#if questions[cq].questionType == "SurveyMCQ"}
-      <ShowMcq {questions} {cq}/>
+      <ShowMcq question={questions[cq]} />
     {/if}
     
     
