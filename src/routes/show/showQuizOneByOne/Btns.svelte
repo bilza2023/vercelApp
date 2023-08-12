@@ -37,7 +37,7 @@ let hideSaveBtn = false;
     {#if (cq == questions.length-1)} 
       {#if (hideSaveBtn == false)}
         <button 
-          class=""
+          class="p-1 m-0"
           on:click={ ()=>saveResults(quiz)  }   > 
           {#if saveResponse == true}
           <span class="text-2xl">💾 Submit & Save</span>

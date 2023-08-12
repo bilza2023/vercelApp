@@ -8,7 +8,8 @@ import {toast} from '$lib/util';
 ///////////////////////////////////////////////////
 import LoginForm from './loginForm/LoginForm.svelte';
 import Goodbye from './goodbye/Goodbye.svelte';
-import ShowQuiz from './showQuiz/ShowQuiz.svelte';
+import ShowQuizOneByOne from './showQuizOneByOne/ShowQuizOneByOne.svelte';
+import ShowQuizAll from './showQuizAll/ShowQuizAll.svelte';
 // import Result from './result/Result.svelte';
 import stringToArray from '../editTest/fn/stringToArray';
 
@@ -41,7 +42,8 @@ onMount(async () => {
             incomming.questions[i].contentArray = await stringToArray(incomming.questions[i].content);
             }
         quiz = incomming;
-        console.log("item before SHOW" , quiz);
+        // quiz.displayQOneByOne = true; //for testing
+        // console.log("item before SHOW" , quiz);
         //  debugger;    
         students = data.students;
 
@@ -67,7 +69,11 @@ onMount(async () => {
           
           <!-- //==showQuiz======-->    
             {#if pageState == 'showQuiz'}
-              <ShowQuiz {quiz} />
+                {#if quiz.displayQOneByOne}
+                <ShowQuizOneByOne {quiz} />
+                {:else}
+                <ShowQuizAll {quiz} />
+                {/if}
             {/if}
 
             <!-- //==result======-->  

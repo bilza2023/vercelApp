@@ -2,7 +2,7 @@
 // @ts-nocheck
 
 import Btns from "./Btns.svelte";
-import ShowQuestions from "./showQuestions/ShowQuestions.svelte";
+import ShowQuestions from "./ShowQuestions.svelte";
 import ProgressBar from "$lib/cmp/ProgressBar.svelte";
 import Loading from '$lib/cmp/Loading.svelte';
 import {Display} from '../../../lib/SkillEditor';
@@ -14,6 +14,7 @@ export let quiz;
 onMount(async () => {
   try {
   // debugger
+  console.log("quiz",quiz)
   // console.log("quiz to show" ,quiz);  
   }catch(e) {
 
@@ -62,7 +63,7 @@ async function getContentArray(cont){
 
   <div class="bg-gray-900 rounded-md p-1 m-1  ">
 
-    {#each quiz.questions[cq].contentArray as contentItem}
+{#each quiz.questions[cq].contentArray as contentItem}
     <!-- DivDsiplay will show EACH contentItem of content array one by one -->
     <!-- This is where we inser if contentItem.type == div then -->
     <Display  {contentItem} />  
@@ -70,7 +71,7 @@ async function getContentArray(cont){
 
   </div>
 <br>
-      <ShowQuestions  questions={quiz.questions} {cq} />
+<ShowQuestions  questions={quiz.questions} {cq} />
   
 <Btns   questions={quiz.questions} {cq}  {quiz}  saveResponse={quiz.saveResponse} {next} {prev} />
 </div><!--flex box ends--->
