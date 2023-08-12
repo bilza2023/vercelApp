@@ -2,7 +2,7 @@
 //@ts-nocheck
 // -8/Aug-2023 QuestionContentEditor : This is just one of the many possible wiringup of Displays and Editors. We can have many such arragements. This is specifically for creating content for Questions. We can have a different such arrangement for "Web Page Builder" but the base components like DivEditor or DivDisplay remains the same.
 
-import {divData,listData,tableData,preData,Display,Editor} from '$lib/SkillEditor';
+import {divData,listData,tableData,preData,youtubeData,imageData,Display,Editor} from '$lib/SkillEditor';
 import {Icons} from '$lib/util';
 import { questionsStore } from '../store';
 
@@ -83,6 +83,26 @@ function addPre(){
         toast.push('Max number of items reached as question content');
     }
 }
+function addYoutube(){
+     if ( content.length < MaxNumberOfItems) {
+        questionsStore.update(questions => {
+            questions[questionIndex].content = [...questions[questionIndex].content, youtubeData()];
+            return questions;
+        });
+    } else {
+        toast.push('Max number of items reached as question content');
+    }
+}
+function addImage(){
+     if ( content.length < MaxNumberOfItems) {
+        questionsStore.update(questions => {
+            questions[questionIndex].content = [...questions[questionIndex].content, imageData()];
+            return questions;
+        });
+    } else {
+        toast.push('Max number of items reached as question content');
+    }
+}
 
 </script>
  <!-- top bar -->
@@ -113,6 +133,16 @@ function addPre(){
         class='rounded-md bg-stone-400 p-1 m-1 text-xs'
         on:click={addPre}>
         {Icons.CODE}
+    </button>
+    <button 
+        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
+        on:click={addYoutube}>
+        {Icons.NET}
+    </button>
+    <button 
+        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
+        on:click={addImage}>
+        {Icons.PALETTE}
     </button>
 
 </div>

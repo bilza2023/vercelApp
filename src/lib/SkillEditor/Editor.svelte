@@ -7,7 +7,7 @@ export let moveDown;
 export let moveUp;
 export let deleteDiv;
 
-import {ListEditor,DivEditor , TableEditor ,PreEditor} from './index';
+import {ListEditor,DivEditor , TableEditor ,PreEditor , YoutubeEditor ,ImageEditor} from './index';
 </script>
 
 {#if contentItem.type == 'div'}
@@ -24,4 +24,12 @@ import {ListEditor,DivEditor , TableEditor ,PreEditor} from './index';
 
 {#if contentItem.type == 'pre'}
 <PreEditor {questionIndex}  {contentIndex} {moveDown} {moveUp} {deleteDiv} />
+{/if}
+
+{#if contentItem.type == 'youtube'}
+<YoutubeEditor {questionIndex}  {contentIndex} {moveDown} {moveUp} {deleteDiv} />
+{/if}
+
+{#if contentItem.type == 'image'}
+<ImageEditor {questionIndex}  {contentIndex} {moveDown} {moveUp} {deleteDiv} />
 {/if}

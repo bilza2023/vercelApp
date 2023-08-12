@@ -1,7 +1,7 @@
 <script>
 //@ts-nocheck
 export let contentItem;
-import {ListDisplay,DivDisplay,TableDisplay,PreDisplay} from './index';
+import {ListDisplay,DivDisplay,TableDisplay,PreDisplay,YoutubeDisplay,ImageDisplay} from './index';
 </script>
 
 {#if contentItem.type === 'div'}
@@ -18,6 +18,14 @@ import {ListDisplay,DivDisplay,TableDisplay,PreDisplay} from './index';
 
 {#if contentItem.type === 'pre'}
 <PreDisplay {contentItem} />
+{/if}
+
+{#if contentItem.type === 'youtube'}
+<YoutubeDisplay {contentItem} />
+{/if}
+
+{#if contentItem.type === 'image'}
+<ImageDisplay {contentItem} />
 {/if}
 
 

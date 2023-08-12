@@ -22,6 +22,16 @@ import PreEditor from "./pre/PreEditor.svelte";
 import PreDisplay from "./pre/PreDisplay.svelte";
 import preData from "./pre/preData";
 
+// Youtube  Component
+import YoutubeEditor from "./youtube/YoutubeEditor.svelte";
+import YoutubeDisplay from "./youtube/YoutubeDisplay.svelte";
+import youtubeData from "./youtube/youtubeData";
+
+// image  Component
+import ImageEditor from "./image/ImageEditor.svelte";
+import ImageDisplay from "./image/ImageDisplay.svelte";
+import imageData from "./image/imageData";
+
 
 
 
@@ -45,5 +55,13 @@ tableData,
 PreEditor,
 PreDisplay,
 preData,
+
+YoutubeEditor,
+YoutubeDisplay,
+youtubeData,
+
+ImageEditor,
+ImageDisplay,
+imageData,
 
 }
