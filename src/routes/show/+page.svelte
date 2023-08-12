@@ -33,7 +33,7 @@ onMount(async () => {
   
     if (resp.ok) {
         // pageStateStore.set('loaded');
-        pageStateStore.set('showQuiz'); //change
+        pageStateStore.set('showQuiz'); //remove for prod
         const data = await resp.json();
         const incomming = {...data.quiz};
             for (let i = 0; i < incomming.questions.length; i++) {

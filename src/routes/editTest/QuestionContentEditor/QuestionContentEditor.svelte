@@ -11,7 +11,7 @@ export let questionIndex; //Main
 
 export let MaxNumberOfItems = 10;
 export let displayEdit = false;
-
+ 
 $:content  = $questionsStore[questionIndex].content;
 
 function deleteDiv(contentIndex) {
