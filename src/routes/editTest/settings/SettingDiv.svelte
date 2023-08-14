@@ -3,6 +3,7 @@
 import { SectionHead, FormRow, Tf } from '$lib/cmp';
 import ClassesDd from "$lib/appComp/ClassesDD.svelte";
 import {itemStore} from '../store';
+    import Access from './Access.svelte';
 $:item = $itemStore;
 export let visible;
 
@@ -35,7 +36,9 @@ export let visible;
     </FormRow>
    
     <FormRow title="Show Questions">
-       <select class='bg-gray-700 text-white w-10/12 m-1 p-1 min-h-[40px]'
+    <div class='flex justify-center  w-full'>
+       <select class='bg-gray-700 text-white w-10/12 rounded-md  
+       m-1 p-1 min-h-[50px]'
          bind:value={item.displayQOneByOne} >
         <option class='text-center w-full mx-4' value={true} 
         selected={item.displayQOneByOne === true}
@@ -44,20 +47,11 @@ export let visible;
         selected={item.displayQOneByOne === false}
         >Show All</option>
        </select>
+    </div>
     </FormRow>
     
     <FormRow title="Access">
-       <select class='bg-gray-700 text-white w-10/12 m-1 p-1 min-h-[40px]'
-         bind:value={item.private} 
-         >
-        <option class='text-center w-full mx-4' value={true} 
-        selected={item.private === true}
-        >Private</option>
-        <option class='text-center w-full mx-4' value={false}
-        selected={item.private === false}
-        >Public</option>
-       </select>
-       <ClassesDd {item}/>
+      <Access {item}/>
     </FormRow>
 
 

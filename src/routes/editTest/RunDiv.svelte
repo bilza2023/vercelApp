@@ -17,9 +17,6 @@ export let item;
     </div> 
     <Comment>Run a copy of this test. You can run as many copies as you want of each test with different titles , settings and timings. You can assign each copy to different classes.</Comment>
 
-    <Comment>
-    Once a Test is Run we can not edit the Run (Running Test)
-    </Comment>
 <div class='flex justify-center w-full'>
     <BtnWIconSm icon= {Icons.RUN} clk={()=>runFn(item)}>Run</BtnWIconSm>
 </div>

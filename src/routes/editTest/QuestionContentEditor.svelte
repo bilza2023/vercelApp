@@ -4,7 +4,7 @@
 
 import {BtnWIconSm } from '$lib/cmp';
 import {divData,listData,tableData,preData,youtubeData,imageData,Display,Editor} from '$lib/SkillEditor';
-import {Icons} from '$lib/util';
+import {Icons,fade} from '$lib/util';
 import { questionsStore } from './store';
 
 
@@ -115,7 +115,7 @@ clk={()=>show = !show} >Content Editor</BtnWIconSm>
 
 { #if show }
 
-<div class='flex  bg-stone-700 mx-10  p-1 m-1  mt-0'>
+<div class='flex  bg-stone-700 mx-10  p-1 m-1  mt-0' in:fade={{ delay: 300 }} out:fade={{ delay: 300 }}>
   
     <button 
         class='rounded-md bg-stone-400 p-1 m-1 text-xs'
