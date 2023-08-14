@@ -1,36 +1,25 @@
 <script>
 // @ts-nocheck
 import {PageWrapper,HdgWithIcon,Centre,Loading} from '$lib/cmp';
-
 import {onMount,toast,get,Agent} from '$lib/util';
 
 import Questions from './questions/Questions.svelte'
 import SettingMain from './settings/SettingsMain.svelte';
 import Toolbar from './Toolbar.svelte';
 import AddQuestionBar from './AddQuestionBar.svelte';
-
-import cloneFn from './fn/cloneFn'; //??
-
 import HiddenDivs from './HiddenDivs.svelte';
 import PublishErrors from './PublishErrors.svelte';
 import PageSeparator from './PageSeparator.svelte';
 
-import RunDiv from './RunDiv.svelte';
-import stringToArray from './fn/stringToArray';
+import quizStringifiedQsToArray from '$lib/appComp/fn/quizStringifiedQsToArray';
 
-
-import {showTestStore,showCloneStore,showDeleteStore,errorsArrayStore,showQuestionsStore,showRunDlgStore,questionsStore,itemStore} from './store';
+import {itemStore,questionsStore,showQuestionsStore} from './store';
 
 $:item = $itemStore;
 
-$: showTest = $showTestStore;
-$: showClone = $showCloneStore;
-$: showDelete = $showDeleteStore;
-$: errorsArray = $errorsArrayStore;
 $: showQuestions = $showQuestionsStore;
-$: showRunDlg = $showRunDlgStore; //it is in store since RunDlg will use it
 
-
+//-14-aug-2023 other than error handling everything is ok
 onMount(async ()=>{
   try {
       // debugger;
@@ -39,26 +28,22 @@ onMount(async ()=>{
     if (resp.ok){
       
       const data = await resp.json();
-      const item = (data.item);
-      for (let i = 0; i < item.questions.length; i++) {
-        item.questions[i].content = await stringToArray(item.questions[i].content);
-      }
-      itemStore.set(item); //important
-      questionsStore.set(item.questions);//important
+      let incomming = data.item;
+      //
+      incomming = await quizStringifiedQsToArray(incomming);
+      
+      //--Quiz and Question are seperate from here but must be united before saving / clone or run.
+      itemStore.set(incomming); //important
+      questionsStore.set(incomming.questions);//important
 
     }else {
-    toast.push('failed to load');
+        toast.push('failed to load');
     }
   } catch (e) {
-    toast.push('failed to load');
+       toast.push('failed to load');
     // console.error(e);
   }   
 });
-
-
-async function clone (newTitle ){ //??
-  await cloneFn(newTitle,item);
-}////function
 
 
 import MainNav from '$lib/appComp/MainNav.svelte';
@@ -70,9 +55,6 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 <!-- ************** -->
 <Toolbar {item} />
 
-{#if showRunDlg}
-<RunDiv  {item} />
-{/if}
         <!-- ************** -->
         <!-- THE MAIN CODE ENDS -->
         <Centre>
@@ -83,8 +65,8 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 
         <PublishErrors />
         <!-- ********** The Hidden Dialogue box **************** -->
-            <HiddenDivs
-              {showTest} {showClone} {showDelete} {clone} {item} />
+                        
+            <HiddenDivs {item} />
 
         <!-- ********** Main Settings  *********** -->
         <div class='px-8'>

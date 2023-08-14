@@ -60,12 +60,16 @@ function getTitle(content){
           <textarea class="w-full bg-gray-700 color-white p-2 m-1 rounded-md"
               bind:value={question.explanation}></textarea>
           </FormRow>
+         
+          <FormRow title="Options">
+            <Options {question} />
+          </FormRow>
 
           <br/>
 
 
           <div class="text-center">
-                  <Options {question} />
+                  
               <br/>
           </div>
 

@@ -2,7 +2,7 @@
 // @ts-nocheck
 import Option from "./Option.svelte";
 import { v4 as uuid } from 'uuid';
-import {BtnWIconSm} from '$lib/cmp';
+import {BtnWIconXs} from '$lib/cmp';
 export let question;
 
 const deleteOption = (option_id )=>{
@@ -32,9 +32,7 @@ const mark_correct = (option_id) => {
 
 
 </script>
-<div class='flex justify-start'>
-<BtnWIconSm icon='+' clk={()=>addOption(question.id)}>Option</BtnWIconSm>
-</div>
+<BtnWIconXs icon='+' clk={()=>addOption(question.id)}>Option</BtnWIconXs>
 <br/>
 
     <div class="text-center">

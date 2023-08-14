@@ -1,5 +1,8 @@
 <script>
 //@ts-nocheck
+//14-Aug-2023 : A good example of using store variable to communicate and also when there is no data in the array it does not show.
+//To make it disappear clk={()=>errorsArrayStore.set([]) -->waoo
+
 import {BtnWIconSm} from '$lib/cmp';
 import {Icons} from '$lib/util';
 import {errorsArrayStore} from './store';
@@ -15,7 +18,7 @@ $: errorsArray = $errorsArrayStore;
     <ol class="">
     {#each errorsArray as err }
 
-        <li class="bg-orange-900 p-2 m-2 rounded-lg border-red-900">{err}</li>
+    <li class="bg-orange-900 p-2 m-2 rounded-lg border-red-900">{err}</li>
     {/each}
     </ol>
     <BtnWIconSm   icon={Icons.SAVE} clk={()=>errorsArrayStore.set([])} />

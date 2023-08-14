@@ -1,4 +1,7 @@
 <script>
+//14-Aug-2023 : This is an example where I am editing a store variable and the change show effect in the page.svelte.
+//14-Aug-2023 : I may add Theme into it later
+
 import {showQuestionsStore} from './store';
 
 $:showQuestions = $showQuestionsStore;

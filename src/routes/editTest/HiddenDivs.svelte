@@ -2,11 +2,15 @@
 // @ts-nocheck
 
 import { InputForm } from '$lib/cmp';
+import RunDiv from './RunDiv.svelte';
 
   
-export let showClone;
-export let showDelete;
-export let clone;
+export let item;
+import {showCloneStore,showDeleteStore,showRunDlgStore} from './store';
+$: showClone = $showCloneStore;
+$: showDelete = $showDeleteStore
+$: showRunDlg = $showRunDlgStore
+
 
 import deleteFn from './fn/deleteFn';
 import cloneFn from './fn/cloneFn';
@@ -20,6 +24,10 @@ import cloneFn from './fn/cloneFn';
 
 {#if showClone }
 <InputForm clk={ cloneFn  } title='Clone Template' btnTitle='Clone' btnColor='bg-orange-800'/>
+{/if}
+
+{#if showRunDlg }
+<RunDiv {item} />
 {/if}
 
 
