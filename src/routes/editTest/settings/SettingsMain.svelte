@@ -11,22 +11,19 @@ import ClassesDd from "$lib/appComp/ClassesDD.svelte";
 // let toggle = true;
 import {itemStore} from '../store';
 $:item = $itemStore;
-$: toggle = $itemStore.private;
 
 </script>
 
 <br/>
-<SettingDiv />
+<SettingDiv visible={true}/>
 <br/>
-{#if toggle}
         <SectionHead title={"Select Class"} icon={Icons.MANAGER}>
             <br />
               <ClassesDd {item}/>
             <br />
         </SectionHead>
-{/if}        
 <br/>
-<PublishTimings {item} />
-<br/>
-<UnPublishTimings {item} />
+<!-- <PublishTimings {item} /> -->
+<!-- <br/> -->
+<!-- <UnPublishTimings {item} /> -->
 <br/>

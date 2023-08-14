@@ -18,7 +18,7 @@ function addMCQ(){
 </script>
 
 
-<div class='flex justify-center  mx-10 w-full'>
+<div class='flex justify-center  w-full'>
 <BtnIconRound  icon='🔱' clk={addMCQ}   />
 <!-- <BtnIconRound  icon='&#x1F4E7;' />
 <BtnIconRound  icon='❶' />

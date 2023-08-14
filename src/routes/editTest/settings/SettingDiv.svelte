@@ -4,14 +4,14 @@ import { SectionHead, FormRow, Tf } from '$lib/cmp';
 
 import {itemStore} from '../store';
 $:item = $itemStore;
-
+export let visible;
 
 
 </script>
 
 
 
-  <SectionHead title={item.title}>
+  <SectionHead title={item.title} {visible}>
     <FormRow title="Quiz Title">
       <input
         type="text"
