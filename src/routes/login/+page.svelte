@@ -5,12 +5,13 @@ import { Icons } from '$lib/util';
 
 import loginFn from './loginFn';
 
-let email ="bilza2023@gmail.com";
-let password ="123456"; 
+let email ="";
+let password =""; 
 
-
+import MainNav from '$lib/appComp/MainNav.svelte';
 </script>
 
+<MainNav/>
 <PageWrapper>
 <br/><br/>
 
@@ -50,7 +51,7 @@ let password ="123456";
            <div class='flex justify-center '>
                 <BtnWIconSm icons={ Icons.SAVE }
                 clk = {()=>loginFn(email,password)}
-                >Save</BtnWIconSm>
+                >Login</BtnWIconSm>
            </div>
 
                 <!-- <button class= {`bg-blue-800 p-2 m-2 rounded-md px-8 hover:bg-gray-500`}

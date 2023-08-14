@@ -7,6 +7,7 @@ import { get } from 'svelte/store';
 import { goto } from '$app/navigation';
 import Icons from './icons';
 import ajaxPost from './ajaxPost';
+import ajaxGet from './ajaxGet';
 import Agent from './Agent';
 
             export {
@@ -17,6 +18,7 @@ import Agent from './Agent';
                     goto,
                     Icons,
                     ajaxPost,
+                    ajaxGet,
                     Agent
             }
 

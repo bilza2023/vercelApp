@@ -41,9 +41,10 @@ onMount(async () => {
     toast.push("page load error");
  }
 });
-
+import MainNav from '$lib/appComp/MainNav.svelte';
 </script>
 
+<MainNav/>
 <!-- <Nav /> -->
 <PageWrapper>
 {#if loaded}

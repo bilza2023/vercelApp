@@ -26,7 +26,7 @@ export let quiz;
 
 {#each quiz.questions as question}
 
-    {#each question.contentArray as contentItem}
+    {#each question.content as contentItem}
     <!-- DivDsiplay will show EACH contentItem of content array one by one -->
     <!-- This is where we inser if contentItem.type == div then -->
     <Display  {contentItem} />  

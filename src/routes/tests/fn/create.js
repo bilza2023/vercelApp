@@ -12,6 +12,7 @@ export default async function create(title){
         if (resp.ok){
             const data = await resp.json();
             const item = data.item;
+            // console.log("new test" , item);
             
                 itemsStore.update(cur  => {
                     // manipulate data

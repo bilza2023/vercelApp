@@ -4,8 +4,8 @@ export default function tableData (){
     
     const divItem = {
 content : [
-[ "R-0**Item-0" , "R-0**Item-1" , "R-0**Item-2" ],
-[ "R-1**Item-0" , "R-1**Item-1" , "R-1**Item-2" ]
+[ "1" , "2" , "3" ],
+[ "4" , "5" , "6" ]
 ],
 type : 'table',
 

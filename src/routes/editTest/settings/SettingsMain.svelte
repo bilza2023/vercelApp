@@ -7,18 +7,24 @@ import SettingDiv from './SettingDiv.svelte';
 import PublishTimings from './PublishTimings.svelte';  
 import UnPublishTimings from './UnPublishTimings.svelte';  
 import ClassesDd from "$lib/appComp/ClassesDD.svelte";
-export let item;
+
+// let toggle = true;
+import {itemStore} from '../store';
+$:item = $itemStore;
+$: toggle = $itemStore.private;
 
 </script>
 
 <br/>
-<SettingDiv {item} />
+<SettingDiv />
 <br/>
+{#if toggle}
         <SectionHead title={"Select Class"} icon={Icons.MANAGER}>
             <br />
               <ClassesDd {item}/>
             <br />
         </SectionHead>
+{/if}        
 <br/>
 <PublishTimings {item} />
 <br/>

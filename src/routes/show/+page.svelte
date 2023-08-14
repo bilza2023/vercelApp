@@ -10,9 +10,8 @@ import LoginForm from './loginForm/LoginForm.svelte';
 import Goodbye from './goodbye/Goodbye.svelte';
 import ShowQuizOneByOne from './showQuizOneByOne/ShowQuizOneByOne.svelte';
 import ShowQuizAll from './showQuizAll/ShowQuizAll.svelte';
-// import Result from './result/Result.svelte';
-import stringToArray from '../editTest/fn/stringToArray';
-
+import Result from './result/Result.svelte';
+import quizStringifiedQsToArray from '$lib/appComp/fn/quizStringifiedQsToArray';
 $: pageState = $pageStateStore;
 
 ///////////////////////////////////////////////////
@@ -36,11 +35,7 @@ onMount(async () => {
         pageStateStore.set('loaded');
         const data = await resp.json();
         const incomming = {...data.quiz};
-            for (let i = 0; i < incomming.questions.length; i++) {
-            incomming.questions[i].contentArray = [];
-            incomming.questions[i].contentArray = await stringToArray(incomming.questions[i].content);
-            }
-        quiz = incomming;
+        quiz = await quizStringifiedQsToArray(incomming);
         // quiz.displayQOneByOne = true; //for testing
         // console.log("item before SHOW" , quiz);
         //  debugger;    
@@ -77,7 +72,7 @@ onMount(async () => {
 
             <!-- //==result======-->  
             {#if pageState == 'result'}
-              <!-- <Result {quiz} /> -->
+              <Result {quiz} />
             {/if}
 
             <!-- //=goodbye======-->

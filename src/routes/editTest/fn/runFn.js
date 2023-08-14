@@ -18,10 +18,12 @@ export default async function  runFn(  ) {
         return;
     }    
 // ////////////========== Test
+ if (item.private === true){ // if private only then needs classId
  if (item.classId  === '' || item.classId  === null ){
     toast.push('Assign a Class to the test');
     return;
  }    
+ }
     
 // console.log("item before Run" , item);    
     item.testId = item._id;

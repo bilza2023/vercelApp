@@ -1,10 +1,10 @@
-import QuestionContentEditor from "../../routes/editTest/QuestionContentEditor/QuestionContentEditor.svelte";
+import QuestionContentEditor from "../../routes/editTest/QuestionContentEditor.svelte";
 import Editor from "./Editor.svelte";
 import Display from "./Display.svelte";
 
 // Div Component
 import DivEditor from "./div/DivEditor.svelte";
-import DivDisplay from "./list/ListDisplay.svelte";
+import DivDisplay from "./div/DivDisplay.svelte";
 import divData from "./div/divData.js";
 
 // List  Component

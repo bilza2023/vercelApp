@@ -14,9 +14,10 @@ async function handleRegisterClick() {
     await register(item); // Wait for the register function to complete
 }
 
-
+import MainNav from '$lib/appComp/MainNav.svelte';
 </script>
 
+<MainNav/>
 
 <PageWrapper>
 

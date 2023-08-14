@@ -4,7 +4,7 @@
 
 import {divData,listData,tableData,preData,youtubeData,imageData,Display,Editor} from '$lib/SkillEditor';
 import {Icons} from '$lib/util';
-import { questionsStore } from '../store';
+import { questionsStore } from './store';
 
 
 export let questionIndex; //Main 

@@ -7,7 +7,7 @@ export let icon;
 export let title;
 export let slug;
 
-let count;
+let count=0;
 
 onMount(async ()=>{
   try {
@@ -19,7 +19,7 @@ onMount(async ()=>{
 
 </script>
 
-{#if count}
+<!-- {#if count} -->
   <div class='flex flex-col bg-stone-600 text-white rounded-md p-1 m-1'>
             <div>
               <div class='flex justify-center items-center  text-5xl p-1'>
@@ -39,4 +39,4 @@ onMount(async ()=>{
               </div>
             </div>
 </div>
-{/if}
+<!-- {/if} -->

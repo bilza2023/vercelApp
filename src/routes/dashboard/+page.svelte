@@ -26,9 +26,10 @@ onMount(async ()=>{
   
   }   
 });
-
+import MainNav from '$lib/appComp/MainNav.svelte';
 </script>
 
+<MainNav/>
 <!-- ************** -->
 <PageWrapper>
 <br/>

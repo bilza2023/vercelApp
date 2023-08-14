@@ -10,6 +10,9 @@ import {Agent,get} from "$lib/util";
 export default async function saveResults  (quiz){
   try{
     // debugger;
+    if (quiz.private === false){
+        return false;
+    }
     let quizResult = {};
     quizResult.answers = await transformQ2R(quiz);
     quizResult.userId = quiz.userId;

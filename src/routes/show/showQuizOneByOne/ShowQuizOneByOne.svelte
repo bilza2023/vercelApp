@@ -14,7 +14,7 @@ export let quiz;
 onMount(async () => {
   try {
   // debugger
-  console.log("quiz",quiz)
+  // console.log("quiz",quiz)
   // console.log("quiz to show" ,quiz);  
   }catch(e) {
 
@@ -37,7 +37,7 @@ const prev = ()=>{
     cq= 0;
   }
 }
-async function getContentArray(cont){
+async function getcontent(cont){
   const r = await JSON.parse(cont);
   return r;
 }
@@ -63,7 +63,7 @@ async function getContentArray(cont){
 
   <div class="bg-gray-900 rounded-md p-1 m-1  ">
 
-{#each quiz.questions[cq].contentArray as contentItem}
+{#each quiz.questions[cq].content as contentItem}
     <!-- DivDsiplay will show EACH contentItem of content array one by one -->
     <!-- This is where we inser if contentItem.type == div then -->
     <Display  {contentItem} />  

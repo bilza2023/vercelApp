@@ -1,6 +1,6 @@
 <script>
  import { SvelteToast } from '@zerodevx/svelte-toast'
- import MainNav from '$lib/appComp/MainNav.svelte';
+ 
 import {isLoginStore} from '../lib/cmn/appStore';
 // import {loadApp} from '$lib/ajax';
 // $: isLogin = $isLoginStore;
@@ -28,5 +28,4 @@ function checkLogin(){
 
 <SvelteToast {options} />
 
-<MainNav/>
 <slot />

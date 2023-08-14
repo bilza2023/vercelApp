@@ -20,6 +20,10 @@ let password;
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
 
+const allowPublicAccess = ()=>{
+pageStateStore.set("showQuiz");
+          return;
+}
 const checklogin = ()=>{
   // debugger;
   for (let i = 0; i < students.length; i++) {
@@ -39,15 +43,16 @@ const checklogin = ()=>{
 </script>
 
 
-<div class="flex flex-col justify-center   border-2 border-white rounded-md bg-gray-700 
-text-white  p-4 m-8  ">
+<div class="flex flex-col justify-center   border-2 border-white rounded-md bg-gray-700 text-white  p-4 m-8  ">
 
 <Title title ={quiz.title} />
 
 <IntroText introText= {quiz.introText} />
 
-<!--button-->
+{#if quiz.private}
+
 <div class="flex justify-center w-full">
+<!--button-->
 <div class="flex flex-col md:flex-row justify-center bg-gray-800 border border-gray-500 p-2 m-1 rounded-md w-full">
   <!-- <div class="flex flex-col md:flex-row bg-gray-800 border border-gray-500 p-2 m-1 rounded-md w-full"> -->
     <div class="flex flex-col items-center">
@@ -71,5 +76,14 @@ text-white  p-4 m-8  ">
  </button>
  
 </div>          
+{:else}
+<div class="flex justify-center w-full ">
+
+ <button class="bg-green-500 text-white m-3 p-3 rounded-lg w-4/12"
+    on:click={allowPublicAccess}>
+    Start
+ </button>
+</div>
+{/if}
 
 </div><!--form intro ends-->

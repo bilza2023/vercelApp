@@ -9,9 +9,10 @@ import BasicDetails from './BasicDetails.svelte';
 
 import {itemStore} from './store';
 $: item = $itemStore;
-    
+import MainNav from '$lib/appComp/MainNav.svelte';
 </script>
 
+<MainNav/>    
 <PageWrapper>
 <br/>
     <Centre>

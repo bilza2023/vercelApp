@@ -61,9 +61,10 @@ async function clone (newTitle ){ //??
 }////function
 
 
-
+import MainNav from '$lib/appComp/MainNav.svelte';
 </script>
 <!-- ****************************************** -->
+<MainNav/>
 <PageWrapper>
 {#if  item}
 <!-- ************** -->
