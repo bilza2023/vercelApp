@@ -2,6 +2,7 @@
 //@ts-nocheck
 // -8/Aug-2023 QuestionContentEditor : This is just one of the many possible wiringup of Displays and Editors. We can have many such arragements. This is specifically for creating content for Questions. We can have a different such arrangement for "Web Page Builder" but the base components like DivEditor or DivDisplay remains the same.
 
+import {BtnWIconSm } from '$lib/cmp';
 import {divData,listData,tableData,preData,youtubeData,imageData,Display,Editor} from '$lib/SkillEditor';
 import {Icons} from '$lib/util';
 import { questionsStore } from './store';
@@ -11,6 +12,7 @@ export let questionIndex; //Main
 
 export let MaxNumberOfItems = 10;
 export let displayEdit = false;
+let show = true;
  
 $:content  = $questionsStore[questionIndex].content;
 
@@ -106,6 +108,13 @@ function addImage(){
 
 </script>
  <!-- top bar -->
+<div class='flex justify-center'>
+<BtnWIconSm icon={Icons.NOTES} bgColor ="bg-gray-900"
+clk={()=>show = !show} >Content Editor</BtnWIconSm>  
+</div>
+
+{ #if show }
+
 <div class='flex  bg-stone-700 mx-10  p-1 m-1  mt-0'>
   
     <button 
@@ -167,5 +176,7 @@ function addImage(){
 <p class='p-1 m-1 text/sm'>No Content Items added</p>
 {/if}
 </div>
+
+{/if}
 
 

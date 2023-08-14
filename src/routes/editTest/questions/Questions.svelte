@@ -6,6 +6,7 @@ import QuestionContentEditor from '../QuestionContentEditor.svelte';
 import Options from './Options.svelte';
 
 import { questionsStore } from '../store';
+    import QuestionSettings from './QuestionSettings.svelte';
 
 $:questions = $questionsStore;
 
@@ -35,48 +36,20 @@ function getTitle(content){
         {#if  questions }  
         {#each questions as question, questionIndex }  
 
-        <SectionHeadIcon title={getTitle(question.content)}  ser={questionIndex+1}  deleteFn ={()=>deleteQuestion(question.id)}
-         >
+        <SectionHeadIcon title={getTitle(question.content)}  ser={questionIndex+1}  deleteFn ={()=>deleteQuestion(question.id)} >
           
-          <!-- ****************************************** -->
           <!-- ****************************************** -->
         <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
           class="border-2 border-gray-500 p-1 m-0 mt-0" >
 
-
         <!-- ****************************************** -->
-          <BtnWIconSm icon={Icons.NOTES} bgColor ="bg-gray-900">Content Editor</BtnWIconSm>  
+          
 
           <QuestionContentEditor  {questionIndex}   />  
+        <!-- ****************************************** -->
+          <QuestionSettings  {question}   />  
           
-          
-          <BtnWIconSm bgColor ="bg-gray-900" icon={Icons.QUESTIONMARK}>Question Settings</BtnWIconSm>
-
-          <FormRow title="Multi Select">
-          <Tf obj={question} bool_prop="multiSelect"  />
-          </FormRow>
-
-          <FormRow title="Explanation">
-          <textarea class="w-full bg-gray-700 color-white p-2 m-1 rounded-md"
-              bind:value={question.explanation}></textarea>
-          </FormRow>
-         
-          <FormRow title="Options">
-            <Options {question} />
-          </FormRow>
-
-          <br/>
-
-
-          <div class="text-center">
-                  
-              <br/>
           </div>
-
-          </div>
-
-          <!-- ****************************************** -->
-          <!-- ****************************************** -->
         </SectionHeadIcon>
         <br/>
         {/each}
