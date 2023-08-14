@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 import { SectionHead, FormRow, Tf } from '$lib/cmp';
-
+import ClassesDd from "$lib/appComp/ClassesDD.svelte";
 import {itemStore} from '../store';
 $:item = $itemStore;
 export let visible;
@@ -57,7 +57,9 @@ export let visible;
         selected={item.private === false}
         >Public</option>
        </select>
+       <ClassesDd {item}/>
     </FormRow>
+
 
     <!-- Additional FormRows for 'saveResponse', 'showIntro', 'showResult' properties -->
 

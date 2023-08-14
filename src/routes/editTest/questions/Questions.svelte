@@ -36,7 +36,7 @@ function getTitle(content){
         {#if  questions }  
         {#each questions as question, questionIndex }  
 
-        <SectionHeadIcon title={getTitle(question.content)}  ser={questionIndex+1}  deleteFn ={()=>deleteQuestion(question.id)} >
+        <SectionHeadIcon title={getTitle(question.content)}  ser={questionIndex+1}  deleteFn ={()=>deleteQuestion(question.id)}>
           
           <!-- ****************************************** -->
         <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
