@@ -9,14 +9,8 @@ import { questionsStore } from '../store';
     import QuestionSettings from './QuestionSettings.svelte';
 
 $:questions = $questionsStore;
+export let quizObj;
 
-function deleteQuestion(id) {
-    // debugger;
-    questionsStore.update(questions => {
-    const updatedQuestions = questions.filter(question => question.id !== id);
-        return updatedQuestions;
-    });
-}
 
 function getTitle(content){
  // debugger;
@@ -36,7 +30,7 @@ function getTitle(content){
         {#if  questions }  
         {#each questions as question, questionIndex }  
 
-        <SectionHeadIcon title={getTitle(question.content)}  ser={questionIndex+1}  deleteFn ={()=>deleteQuestion(question.id)}>
+        <SectionHeadIcon title={getTitle(question.content)}  ser={questionIndex+1}  deleteFn ={()=>quizObj.questions.delete(question.id)}>
           
           <!-- ****************************************** -->
         <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 

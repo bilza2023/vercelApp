@@ -1,9 +1,9 @@
 <script>
 // @ts-nocheck
 import { SectionHead, FormRow, Tf } from '$lib/cmp';
-import ClassesDd from "$lib/appComp/ClassesDD.svelte";
 import {itemStore} from '../store';
-    import Access from './Access.svelte';
+import Access from './Access.svelte';
+
 $:item = $itemStore;
 export let visible;
 

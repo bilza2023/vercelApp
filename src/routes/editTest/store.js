@@ -12,7 +12,7 @@ export const showQuestionsStore     = writable(false);
 export const visibleDialogStore     = writable('');
 
 export const showRunDlgStore     = writable(false);
-export const showCloneStore         = writable(false);
+// export const showCloneStore         = writable(false);
 export const showDeleteStore        = writable(false);
 
 export const errorsArrayStore       = writable([]);

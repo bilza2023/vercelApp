@@ -14,27 +14,29 @@ import PageSeparator from './PageSeparator.svelte';
 import quizStringifiedQsToArray from '$lib/appComp/fn/quizStringifiedQsToArray';
 
 import {itemStore,questionsStore,showQuestionsStore} from './store';
+import QuizObj from './quizObj/QuizObj';
 
-$:item = $itemStore;
+
+$:item = $itemStore; 
 
 $: showQuestions = $showQuestionsStore;
-
+let quizObj;
 //-14-aug-2023 other than error handling everything is ok
 onMount(async ()=>{
   try {
       // debugger;
+    quizObj = new QuizObj();  
     const quizId = new URLSearchParams(location.search).get("quizId");
     const resp = await Agent.readone('test' , {id: quizId });
     if (resp.ok){
       
       const data = await resp.json();
       let incomming = data.item;
-      //
+      //--This will be moved into QuizObj in future
       incomming = await quizStringifiedQsToArray(incomming);
       
-      //--Quiz and Question are seperate from here but must be united before saving / clone or run.
-      itemStore.set(incomming); //important
-      questionsStore.set(incomming.questions);//important
+      quizObj.set(incomming); //important
+      quizObj.questions.set(incomming.questions);//important
 
     }else {
         toast.push('failed to load');
@@ -58,7 +60,7 @@ import MainNav from '$lib/appComp/MainNav.svelte';
         <!-- ************** -->
         <!-- THE MAIN CODE ENDS -->
         <Centre>
-        <HdgWithIcon icon='📜'>Edit Test</HdgWithIcon>
+        <HdgWithIcon icon='📜'>{item.title}</HdgWithIcon>
         </Centre>
 
         <PageSeparator />
@@ -66,15 +68,15 @@ import MainNav from '$lib/appComp/MainNav.svelte';
         <PublishErrors />
         <!-- ********** The Hidden Dialogue box **************** -->
                         
-            <HiddenDivs {item} />
+            <HiddenDivs {item} {quizObj}/>
 
         <!-- ********** Main Settings  *********** -->
         <div class='px-8'>
           <br/>          
             {#if  showQuestions}
-            <Questions />
+            <Questions {quizObj} />
              <br/>
-            <AddQuestionBar />
+            <AddQuestionBar {quizObj}/>
             <br/>
             {:else}
             <SettingMain {item}/>

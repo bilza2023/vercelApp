@@ -7,7 +7,7 @@
   import { visibleDialogStore } from './store';
 
   export let item;
-
+  
   function toggleDialog(dialog) {
     if ($visibleDialogStore === dialog) {
       visibleDialogStore.set(null);
