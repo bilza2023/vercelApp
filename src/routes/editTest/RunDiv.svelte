@@ -2,8 +2,7 @@
 //@ts-nocheck
 import {Comment , BtnWIconSm , HdgWithIcon} from '$lib/cmp';
 import { Icons } from '$lib/util';
-import runFn from './fn/runFn';
-export let quizObj;
+export let quizObj; 
 </script>
 
 <!-- <InputForm clk={ runFn  } title='Run Test' btnTitle='Run' btnColor='bg-orange-800'/> -->

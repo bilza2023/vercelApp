@@ -1,12 +1,12 @@
 <script>
   // @ts-nocheck
   import { PageNav, PageNavBtn } from '$lib/cmp';
-  import { Icons, get } from '$lib/util';
-  import save from './fn/save';
+  import { Icons } from '$lib/util';
 
   import { visibleDialogStore } from './store';
 
   export let item;
+  export let quizObj;
   
   function toggleDialog(dialog) {
     if ($visibleDialogStore === dialog) {
@@ -23,7 +23,7 @@
     title="Save"
     tf={true}
     trueColor={"text-white"}
-    clk={() => save(item)}
+    clk={() => quizObj.save(item)}
   />
 
   <PageNavBtn

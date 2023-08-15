@@ -4,7 +4,6 @@ import { itemStore ,questionsStore,visibleDialogStore} from '../store.js';
 import QuestionsObj from './QuestionsObj.js';
 import {get,Agent,goto,toast} from "$lib/util";
 import quizStringify from './quizStringify.js';
-import combQnQdeep from '../fn/combQnQdeep.js';
 
 export default class QuizObj  {
 
@@ -43,6 +42,7 @@ export default class QuizObj  {
     async clone(title){
         try{
       //   debugger;
+            //--getDeepCopy is local fn and alsocombines quiz with Qs
             let  item = getDeepCopy();
             item  = await quizStringify(item);
 
@@ -70,7 +70,8 @@ export default class QuizObj  {
     }
     async run(){
        try{
-    let  item = combQnQ();
+
+     let  item = getDeepCopy();
     // ////////////========== Test
     if (item.title === ''){
         toast.push('Missing title');
@@ -92,7 +93,7 @@ export default class QuizObj  {
     item.published = true; //changed ??????
     item.createdAt =  new Date();
     //////////////////////////////////////
-    // last step stringify questions
+    // last step stringify questions ---stringify here not at top 
     item  = await quizStringify(item);
         const resp = await Agent.create('run',{item});
         if (resp.ok) {

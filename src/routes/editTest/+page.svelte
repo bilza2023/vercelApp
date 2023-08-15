@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 import {PageWrapper,HdgWithIcon,Centre,Loading} from '$lib/cmp';
-import {onMount,toast,get,Agent} from '$lib/util';
+import {onMount,toast,Agent} from '$lib/util';
 
 import Questions from './questions/Questions.svelte'
 import SettingMain from './settings/SettingsMain.svelte';
@@ -55,7 +55,7 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 <PageWrapper>
 {#if  item}
 <!-- ************** -->
-<Toolbar {item} />
+<Toolbar {item} {quizObj}/>
 
         <!-- ************** -->
         <!-- THE MAIN CODE ENDS -->
