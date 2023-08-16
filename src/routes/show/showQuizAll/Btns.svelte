@@ -4,9 +4,6 @@
 
 export let quiz;
 
-
- export let saveResponse;
-
 import {pageStateStore, studentIdStore } from '../store.js';
 $: studentId = $studentIdStore;
 import saveResults from '../fn/saveResults';

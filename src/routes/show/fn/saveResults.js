@@ -3,14 +3,20 @@ import { v4 as uuid } from 'uuid';
 import { toast } from '@zerodevx/svelte-toast';
 import transformQ2R from "./transformQ2R";
 
-import {pageStateStore, studentIdStore,studentNameStore } from '../store.js';
+import { studentIdStore,studentNameStore } from '../store.js';
 
 import {Agent,get} from "$lib/util";
 
-export default async function saveResults  (quiz){
+import { itemObject } from '../store';
+import { get } from '$lib/util';
+
+export default async function saveResults  ( ){
   try{
-    // debugger;
-    if (quiz.private === false){
+    debugger;
+    let quiz = get  (  itemObject);
+
+    if (quiz.saveResponse === false){
+    nextPageState();
         return false;
     }
     let quizResult = {};
@@ -24,24 +30,17 @@ export default async function saveResults  (quiz){
     quizResult.classId = quiz.classId; //importantay 
     quizResult.studentId = get(studentIdStore) ; //here
     quizResult.studentName = get(studentNameStore) ; //here
-    
-    // console.log("quizResult after check before save" ,quizResult);
-    // const resp = await ajaxPost(`${BASE_URL}/result/save`,{ quizResult, quiz } ); 
+    //======
     const resp = await Agent.create('result', {item :quizResult});
       if (resp.ok){
-          // console.log("resp",resp)
-            pageStateStore.set('goodbye');
-          // console.log("outro",$pageStateStore)
+          nextPageState();
           toast.push("results saved");
       }else {
-      debugger;
         const data = await resp.json();
-          // hideSaveBtn = false;
-          toast.push(data.message);
-          pageStateStore.set('goodbye');
-   }
-  // pageStateStore.set('goodbye');
+        toast.push(data.message);
+        nextPageState();
+    }
   }catch (e) {
-    toast.push(e.message);
+        toast.push(e.message);
   }
 }

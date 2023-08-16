@@ -3,26 +3,28 @@
 import Loading from '$lib/cmp/Loading.svelte';
 import { onMount } from 'svelte';
 import { BASE_URL } from '$lib/cmn/config.js';
-import {pageStateStore} from "./store";
+import {pageStateStore,itemStore} from "./store";
 import {toast} from '$lib/util';
 ///////////////////////////////////////////////////
 import LoginForm from './loginForm/LoginForm.svelte';
-import Goodbye from './goodbye/Goodbye.svelte';
+
 import ShowQuizOneByOne from './showQuizOneByOne/ShowQuizOneByOne.svelte';
 import ShowQuizAll from './showQuizAll/ShowQuizAll.svelte';
+
 import Result from './result/Result.svelte';
+import Goodbye from './goodbye/Goodbye.svelte';
+
+import nextPageState from './fn/nextPageState';
+
 import quizStringifiedQsToArray from '$lib/appComp/fn/quizStringifiedQsToArray';
 $: pageState = $pageStateStore;
+$: quiz = $itemStore;
 
-///////////////////////////////////////////////////
-///////////////////////////////////////////////////
-let quiz;
 let students;
 
+//steps : loading , loaded,
 onMount(async () => {
   try {
-    // debugger;
-    pageStateStore.set('loading');
     let  quizId = new URLSearchParams(location.search).get("quizId"); 
       const resp = await fetch( `${BASE_URL}/show/${quizId}`, {
         method: 'GET',
@@ -32,22 +34,21 @@ onMount(async () => {
       });
   
     if (resp.ok) {
-        pageStateStore.set('loaded');
+        //--This is the first call and happnes only when resp.ok
         const data = await resp.json();
         const incomming = {...data.quiz};
-        quiz = await quizStringifiedQsToArray(incomming);
-        // quiz.displayQOneByOne = true; //for testing
-        // console.log("item before SHOW" , quiz);
-        //  debugger;    
+    // debugger;
+    //-- Question content is already in array form (i dont know how that happened).
+        quiz = await quizStringifiedQsToArray(incomming);   
         students = data.students;
-
+        nextPageState();//loginForm or ShowQuiz
     } else {
-      const data = await resp.json();
-      toast.push(data.message);
+        const data = await resp.json();
+        toast.push(data.message);
     }
-  
   } catch (error) {
-    console.error(error);
+    toast.push('Unknown Error');
+    // console.error(error);
   }
 }); 
 
@@ -56,8 +57,8 @@ onMount(async () => {
 <div class="wrapper w-full p-2 bg-gray-800 min-h-screen text-white ">
 
 {#if quiz}
-          <!-- //==loaded======-->    
-            {#if pageState == 'loaded'}
+       
+            {#if pageState == 'loginForm'}
               <LoginForm {quiz}{students} />
             {/if}
           
@@ -79,9 +80,8 @@ onMount(async () => {
             {#if pageState == 'goodbye'}
               <Goodbye  {quiz}/>
             {/if}
-
-<!-- {:else} -->
-<!-- <Loading /> -->
+{:else}
+<Loading />
 {/if}
 </div>
 

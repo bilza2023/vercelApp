@@ -34,6 +34,9 @@ export let visible;
         bind:value={item.farewellText}
       />
     </FormRow>
+    <FormRow title="Show Student Result">
+      <Tf bool_prop='showResult' obj={item} />
+    </FormRow>
    
     <FormRow title="Show Questions">
     <div class='flex justify-center  w-full'>

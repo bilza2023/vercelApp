@@ -14,13 +14,11 @@ export let quiz;
  export let cq;
  export let saveResponse;
 
-import {pageStateStore, studentIdStore } from '../store.js';
+import {studentIdStore } from '../store.js';
 $: studentId = $studentIdStore;
 import saveResults from '../fn/saveResults';
 import {Agent} from "$lib/ajax";
-
 let hideSaveBtn = false;
-
 </script>
 
 
@@ -30,9 +28,9 @@ let hideSaveBtn = false;
   <button class="" on:click={prev}>
   <span class="text-2xl p-2">&#8592;</span>
   </button>
-  </div>
+</div>
 
-  <div class="elm">
+<div class="elm">
     <!--submit btn-->
     {#if (cq == questions.length-1)} 
       {#if (hideSaveBtn == false)}
@@ -40,18 +38,18 @@ let hideSaveBtn = false;
           class="p-1 m-0"
           on:click={ ()=>saveResults(quiz)  }   > 
           {#if saveResponse == true}
-          <span class="text-2xl">💾 Submit & Save</span>
+            <span class="text-2xl">💾 Submit & Save</span>
           {:else}
             <span class="text-2xl">📋Submit</span>
           {/if}
         </button>
       {/if}
     {/if}
-  </div>
+</div>
 
-  <div class="elm">
+<div class="elm">
   <button class="" on:click={next}>
-   <span class="text-2xl p-2">&#8594;</span>
+      <span class="text-2xl p-2">&#8594;</span>
   </button>
   </div>
 </div>

@@ -1,25 +1,12 @@
 <script>
 // @ts-nocheck
-
 import Btns from "./Btns.svelte";
 import ShowQuestions from "./ShowQuestions.svelte";
 import ProgressBar from "$lib/cmp/ProgressBar.svelte";
-import Loading from '$lib/cmp/Loading.svelte';
-import {Display} from '../../../lib/SkillEditor';
-import {onMount} from '$lib/util';
+import {Display} from '$lib/SkillEditor';
 
 //--we need these only if we want to react to them
 export let quiz;
-
-onMount(async () => {
-  try {
-  // debugger
-  // console.log("quiz",quiz)
-  // console.log("quiz to show" ,quiz);  
-  }catch(e) {
-
-  }
-});
 
 let cq = 0;
 
@@ -37,10 +24,10 @@ const prev = ()=>{
     cq= 0;
   }
 }
-async function getcontent(cont){
-  const r = await JSON.parse(cont);
-  return r;
-}
+// async function getcontent(cont){
+//   const r = await JSON.parse(cont);
+//   return r;
+// }
 </script>
 
 
@@ -55,15 +42,9 @@ async function getcontent(cont){
 
 <ProgressBar total={quiz.questions.length} current={cq}/>
 
-  <!-- <h1 
-    class="bg-red-900 rounded-md p-4 m-3  text-center text-xl">
-    {quiz.questions[cq].content}
-  </h1> -->
-<!-- {console.log("ok" ,quiz.questions[cq].content)} -->
-
   <div class="bg-gray-900 rounded-md p-1 m-1  ">
 
-{#each quiz.questions[cq].content as contentItem}
+    {#each quiz.questions[cq].content as contentItem}
     <!-- DivDsiplay will show EACH contentItem of content array one by one -->
     <!-- This is where we inser if contentItem.type == div then -->
     <Display  {contentItem} />  
@@ -73,6 +54,6 @@ async function getcontent(cont){
 <br>
 <ShowQuestions  questions={quiz.questions} {cq} />
   
-<Btns   questions={quiz.questions} {cq}  {quiz}  saveResponse={quiz.saveResponse} {next} {prev} />
+<Btns   questions={quiz.questions} {cq}  {quiz}  {next} {prev} />
 </div><!--flex box ends--->
 

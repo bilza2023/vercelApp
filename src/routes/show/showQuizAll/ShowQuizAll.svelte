@@ -39,6 +39,6 @@ export let quiz;
 {/each}
   </div>
   
-<Btns     {quiz}  saveResponse={quiz.saveResponse} />
+<Btns     {quiz}  />
 </div><!--flex box ends--->
 
