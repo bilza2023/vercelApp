@@ -16,7 +16,7 @@ import Goodbye from './goodbye/Goodbye.svelte';
 
 import nextPageState from './fn/nextPageState';
 
-import quizStringifiedQsToArray from '$lib/appComp/fn/quizStringifiedQsToArray';
+import quizStringifiedQsToArray from './fn/quizStringifiedQsToArray';
 $: pageState = $pageStateStore;
 $: quiz = $itemStore;
 
@@ -25,6 +25,7 @@ let students;
 //steps : loading , loaded,
 onMount(async () => {
   try {
+  // debugger;
     let  quizId = new URLSearchParams(location.search).get("quizId"); 
       const resp = await fetch( `${BASE_URL}/show/${quizId}`, {
         method: 'GET',
@@ -39,7 +40,9 @@ onMount(async () => {
         const incomming = {...data.quiz};
     // debugger;
     //-- Question content is already in array form (i dont know how that happened).
-        quiz = await quizStringifiedQsToArray(incomming);   
+    //-- Question content is not in array form
+        const stringified = await quizStringifiedQsToArray(incomming);   
+        itemStore.set(stringified) //===> important
         students = data.students;
         nextPageState();//loginForm or ShowQuiz
     } else {

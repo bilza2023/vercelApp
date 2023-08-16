@@ -9,10 +9,11 @@ return quiz;
 }
 //This function return a vlaid Array or [].Every content of a question is an array of objects.
 async function stringToArray(content){
- // debugger;
+ debugger;
  try{
- const items = await JSON.parse(content);
-//  const items = await JSON.parse(items1);
+ let items1 = await JSON.parse(content);
+ let items2 = await JSON.parse(items1);
+ let items = await JSON.parse(items2);
     if (items.length > 0){
         return items;
     }else {

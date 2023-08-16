@@ -5,7 +5,7 @@ import {Icons,onMount,toast,ajaxGet} from '$lib/util';
 import ThreeCards from '$lib/appComp/ThreeCards.svelte';
 import { BASE_URL } from '$lib/cmn/config';
 import Display from '../lib/SkillEditor/Display.svelte';
-import quizStringifiedQsToArray from '$lib/appComp/fn/quizStringifiedQsToArray';
+import quizStringifiedQsToArray from './show/fn/quizStringifiedQsToArray';
 
 let items;
 onMount(async ()=>{

@@ -11,7 +11,7 @@ import HiddenDivs from './HiddenDivs.svelte';
 import PublishErrors from './PublishErrors.svelte';
 import PageSeparator from './PageSeparator.svelte';
 
-import quizStringifiedQsToArray from '$lib/appComp/fn/quizStringifiedQsToArray';
+import quizStringifiedQsToArray from '../show/fn/quizStringifiedQsToArray';
 
 import {itemStore,questionsStore,showQuestionsStore} from './store';
 import QuizObj from './quizObj/QuizObj';

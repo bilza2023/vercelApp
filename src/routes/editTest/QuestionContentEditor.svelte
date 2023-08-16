@@ -4,7 +4,7 @@
 
 import {BtnWIconSm } from '$lib/cmp';
 import {divData,listData,tableData,preData,youtubeData,imageData,Display,Editor} from '$lib/SkillEditor';
-import {Icons,fade} from '$lib/util';
+import {Icons,fade,toast} from '$lib/util';
 import { questionsStore } from './store';
 
 

@@ -6,17 +6,18 @@ import transformQ2R from "./transformQ2R";
 import { studentIdStore,studentNameStore } from '../store.js';
 
 import {Agent,get} from "$lib/util";
-
-import { itemObject } from '../store';
-import { get } from '$lib/util';
-
+import nextPageState from '../fn/nextPageState.js';
+import { itemStore } from '../store';
+/////////////////////////////////////////////////////
+ 
 export default async function saveResults  ( ){
   try{
-    debugger;
-    let quiz = get  (  itemObject);
-
-    if (quiz.saveResponse === false){
-    nextPageState();
+    // debugger;
+    let quiz = get  (  itemStore );
+    //--For Now we are not using th savResponse flag which we already have in quiz Model We simply only save private.
+    if ( quiz.private === false){
+      //-if public send from here for result or goodbye
+       nextPageState();
         return false;
     }
     let quizResult = {};
@@ -33,12 +34,13 @@ export default async function saveResults  ( ){
     //======
     const resp = await Agent.create('result', {item :quizResult});
       if (resp.ok){
+          //-if private send from here for result or goodbye
           nextPageState();
           toast.push("results saved");
       }else {
         const data = await resp.json();
         toast.push(data.message);
-        nextPageState();
+        // nextPageState();
     }
   }catch (e) {
         toast.push(e.message);

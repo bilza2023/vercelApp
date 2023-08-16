@@ -7,6 +7,7 @@ export let quiz;
 import {pageStateStore, studentIdStore } from '../store.js';
 $: studentId = $studentIdStore;
 import saveResults from '../fn/saveResults';
+import nextPageState from '../fn/nextPageState.js';
 import {Agent} from "$lib/ajax";
 
 let hideSaveBtn = false;
@@ -21,14 +22,14 @@ let hideSaveBtn = false;
       {#if (hideSaveBtn == false)}
         <button 
           class="p-1 m-0"
-          on:click={ ()=>saveResults(quiz)  }   > 
+          on:click={  nextPageState  }   > 
           <span class="text-2xl">💾 Submit & Save</span>
         </button>
       {/if}
       {:else}
        <button 
           class="p-1 m-0"
-          on:click={ ()=>pageStateStore.set('result')  }   > 
+          on:click={ nextPageState  }   > 
           <span class="text-2xl">💾 Submit</span>
         </button>
       {/if}

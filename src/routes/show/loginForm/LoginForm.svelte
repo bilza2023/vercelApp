@@ -20,10 +20,6 @@ let password;
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
 
-const allowPublicAccess = ()=>{
-pageStateStore.set("showQuiz");
-          return;
-}
 const checklogin = ()=>{
   // debugger;
   for (let i = 0; i < students.length; i++) {
@@ -32,6 +28,7 @@ const checklogin = ()=>{
         if (student.password == password){
           studentIdStore.set(studentId); 
           studentNameStore.set(student.name); 
+          //--this should be changed to nextPageState
           pageStateStore.set("showQuiz");
           return;
         }  
@@ -49,7 +46,7 @@ const checklogin = ()=>{
 
 <IntroText introText= {quiz.introText} />
 
-{#if quiz.private}
+{ #if  quiz.private }
 
 <div class="flex justify-center w-full">
 <!--button-->
@@ -80,7 +77,7 @@ const checklogin = ()=>{
 <div class="flex justify-center w-full ">
 
  <button class="bg-green-500 text-white m-3 p-3 rounded-lg w-4/12"
-    on:click={allowPublicAccess}>
+    on:click={()=>pageStateStore.set("showQuiz")}>
     Start
  </button>
 </div>
