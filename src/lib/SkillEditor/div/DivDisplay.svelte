@@ -1,15 +1,6 @@
 <script>
 //@ts-nocheck
-
-// export let data;
-// export let data;
 export let contentItem
-//   import { onMount } from "$lib/util";
-// onMount(()=>{
-// debugger;
-// console.log(contentItem);
-
-// });
 
 </script>
 {#if contentItem}

@@ -3,7 +3,7 @@
 import {Icons, fade} from '$lib/util';
 import { SectionHeadIcon,FormRow , Tf , BtnWIconSm } from '$lib/cmp';
 import QuestionContentEditor from '../QuestionContentEditor.svelte';
-import Options from './Options.svelte';
+import Content from '../Content.svelte';
 
 import { questionsStore } from '../store';
     import QuestionSettings from './QuestionSettings.svelte';
@@ -38,10 +38,10 @@ function getTitle(content){
 
         <!-- ****************************************** -->
           
-
+          <!-- <Content {questions}  contentData={question.content} /> -->
           <QuestionContentEditor  {questionIndex}   />  
         <!-- ****************************************** -->
-          <QuestionSettings  {question}   />  
+          <!-- <QuestionSettings  contentFields={question.content} />   -->
           
           </div>
         </SectionHeadIcon>

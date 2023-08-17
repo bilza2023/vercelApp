@@ -23,7 +23,15 @@ const correctId = uuid();
     return {
     id : uuid(),
     required : false,
-    content : [],
+    content : {
+            divs : [],
+            images : [],
+            lists : [],
+            pres : [],
+            tables : [],
+            youtubes : [],
+            sortOrder : [],
+            },
     explanation : "",
     multiSelect: false,
     selectedOptions :[],

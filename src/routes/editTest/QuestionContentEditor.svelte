@@ -13,8 +13,14 @@ export let questionIndex; //Main
 export let MaxNumberOfItems = 10;
 export let displayEdit = false;
 let show = true;
- 
+
 $:content  = $questionsStore[questionIndex].content;
+let prep =[];
+import { onMount } from "$lib/util";
+onMount(()=>{
+prep = getItem( );
+console.log(prep);
+});
 
 function deleteDiv(contentIndex) {
      questionsStore.update(questions => {
@@ -46,14 +52,22 @@ function moveDown(contentIndex) {
 }
 
 function addDiv(){
-     if ( content.length < MaxNumberOfItems) {
+    // debugger;
+    const data =  divData(); 
+    //  if ( content.length < MaxNumberOfItems) {
         questionsStore.update(questions => {
-            questions[questionIndex].content = [...questions[questionIndex].content, divData()];
+            questions[questionIndex].content.divs = [...questions[questionIndex].content.divs, data];
+
+            questions[questionIndex].content.sortOrder = [...questions[questionIndex].content.sortOrder , data.id];
+            
+            console.log('questions' ,  questions);
             return questions;
         });
-    } else {
-        toast.push('Max number of items reached as question content');
-    }
+
+    // } else {
+        // toast.push('Max number of items reached as question content');
+    // }
+   prep = getItem( ); 
 }
 function addList(){
      if ( content.length < MaxNumberOfItems) {
@@ -105,6 +119,30 @@ function addImage(){
         toast.push('Max number of items reached as question content');
     }
 }
+
+function getItem( ) {
+    const temp = [];
+    const arrayNames = ['divs', 'images', 'lists', 'pres', 'tables', 'youtubes'];
+
+    for (let i = 0; i < $questionsStore[questionIndex].content.sortOrder.length; i++) {
+        const sort = content.sortOrder[i];
+
+        for (let j = 0; j < arrayNames.length; j++) {
+            const arrayName = arrayNames[j];
+
+            for (let k = 0; k < content[arrayName].length; k++) {
+                const item = content[arrayName][k];
+
+                if (item.id === sort) {
+                    temp.push(item);
+                    break; // Once the item is found, no need to continue searching in this array
+                }
+            }
+        }
+    }
+    return temp;
+}
+
 
 </script>
  <!-- top bar -->
@@ -162,13 +200,14 @@ clk={()=>show = !show} >Content Editor</BtnWIconSm>
 <div class='bg-gray-900 p-4 mx-10 my-0  border-2 border-gray-600'>
 
 
-{#if content.length > 0}
+{#if prep.length > 0}
 
-    {#each content as contentItem , contentIndex }
-    <Display {contentItem} />
+    {#each prep as contentItem , sortIndex }
+      {console.log("contentItem: " , contentItem)}  
+    <Display {contentItem}  />
             
     {#if displayEdit}
-    <Editor {contentItem}  {questionIndex}  {contentIndex} {moveDown} {moveUp} {deleteDiv}/>
+    <!-- <Editor contentItem={getItemById(content,sort)}  {questionIndex}  {moveDown} {moveUp} {deleteDiv}/> -->
     {/if}
 
     {/each}

@@ -3,13 +3,6 @@
 export let contentItem;
 import {ListDisplay,DivDisplay,TableDisplay,PreDisplay,YoutubeDisplay,ImageDisplay} from './index';
 
-//   import { onMount } from "$lib/util";
-// onMount(()=>{
-// debugger;
-// console.log(contentItem);
-
-// });
-
 </script>
 
 {#if contentItem.type === 'div'}

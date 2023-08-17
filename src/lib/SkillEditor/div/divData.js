@@ -1,8 +1,9 @@
+import { v4 as uuid } from 'uuid';
 
-
-export default function divData (){ 
+export default function (){ 
     
-    const divItem = {
+const divItem = {
+id : uuid(),
 content : 'Content',
 type : 'div',
 

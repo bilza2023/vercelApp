@@ -8,6 +8,8 @@ export let moveUp;
 export let deleteDiv;
 
 import {ListEditor,DivEditor , TableEditor ,PreEditor , YoutubeEditor ,ImageEditor} from './index';
+
+
 </script>
 
 {#if contentItem.type == 'div'}
