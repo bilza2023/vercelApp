@@ -32,8 +32,8 @@ onMount(async ()=>{
       
       const data = await resp.json();
       let incomming = data.item;
-      //--This will be moved into QuizObj in future
-      incomming = await quizStringifiedQsToArray(incomming);
+      //--This is not required
+      // incomming = await quizStringifiedQsToArray(incomming);
       
       quizObj.set(incomming); //important
       quizObj.questions.set(incomming.questions);//important

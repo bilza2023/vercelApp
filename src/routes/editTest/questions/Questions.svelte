@@ -32,10 +32,9 @@ function getTitle(content){
 
         <SectionHeadIcon title={getTitle(question.content)}  ser={questionIndex+1}  deleteFn ={()=>quizObj.questions.delete(question.id)}>
           
-          <!-- ****************************************** -->
+        <!-- ****************************************** -->
         <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
           class="border-2 border-gray-500 p-1 m-0 mt-0" >
-
         <!-- ****************************************** -->
           
           <!-- <Content {questions}  contentData={question.content} /> -->

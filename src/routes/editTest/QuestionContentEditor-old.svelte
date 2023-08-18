@@ -14,34 +14,16 @@ export let MaxNumberOfItems = 10;
 export let displayEdit = false;
 let show = true;
 //Every question has one content item which has contentItems which has 6 arrays including sortOrder arra.
-// $:content  = $questionsStore[questionIndex].content;
+$:content  = $questionsStore[questionIndex].content;
 let contentObj;
-let formatted;
 import { onMount } from "$lib/util";
 onMount(()=>{
-    // debugger;
-const content = $questionsStore[questionIndex].content;    
-contentObj = new ContentObj(content[0]);
-// const rez =contentObj.findInDivs(contentObj.sortOrder()[0])
-console.log("contentObj: " ,  contentObj);
-// console.log("rez: " ,  rez);
-console.log('formatQs()' , formatQs());
-formatted = formatQs();
+    debuggger;
+contentObj = new ContentObj(content);
+contentObj.findInDivs(contentObj.sortOrder[0])
+// getItem(content );
 });
 
-
- function formatQs(){
-    // debugger;
-   const  rez = [];
-   for (let i = 0; i < contentObj.getSortOrder().length; i++) {
-        const sortOrderId = contentObj.getSortOrder()[i];
-            const temp = contentObj.findInDivs( sortOrderId  );
-            if (temp != null) {
-            rez.push(temp);    
-            }
-   } 
-  return rez;
- }
 function deleteDiv(contentIndex) {
      questionsStore.update(questions => {
         questions[questionIndex].content = questions[questionIndex].content.filter((_, index) => index !== contentIndex);
@@ -141,6 +123,38 @@ function addImage(){
     }
 }
 
+function getItem( content ) {
+
+}
+
+// function getItem( content ) {
+//     debugger;
+//     const temp = [];
+//     const arrayNames = ['divs', 'images', 'lists', 'pres', 'tables', 'youtubes'];
+//     //=======================================
+//     for (let i = 0; i < content.length; i++) {
+//         const sortOrder = content[i].sortOrder;
+//         //--We take sort order one by one
+//         for (let j = 0; j < sortOrder.length; j++) {
+//                 //--Now take content arrays one by one 
+//                 for (let k = 0; k < arrayNames.length; k++) {
+//                     const arrayName = arrayNames[k];
+//                     for (let l = 0; l < content[arrayName].length; l++) {
+//                             const item = content[arrayName][l];
+//                             if (item.id == sortOrder){
+//                                 temp.push(item);
+//                                 console.log('item',item);
+//                                 console.log('found in ',arrayName);
+//                             } 
+//                     }                       
+//                 }
+//         }
+//     }//first loop
+//     console.log("--- temp",temp);
+//     return temp;
+// }
+
+
 </script>
  <!-- top bar -->
 <div class='flex justify-center'>
@@ -149,7 +163,6 @@ clk={()=>show = !show} >Content Editor</BtnWIconSm>
 </div>
 
 { #if show }
-{ #if formatted }
 
 <div class='flex  bg-stone-700 mx-10  p-1 m-1  mt-0' in:fade={{ delay: 300 }} out:fade={{ delay: 300 }}>
   
@@ -197,16 +210,23 @@ clk={()=>show = !show} >Content Editor</BtnWIconSm>
 <!-- middle bar -->
 <div class='bg-gray-900 p-4 mx-10 my-0  border-2 border-gray-600'>
 
-    {#each formatted as item}
-    <Display contentItem={item}  />
+
+{#if [].length > 0}
+
+    {#each prep as contentItem , sortIndex }
+      {console.log("contentItem: " , contentItem)}  
+    <Display {contentItem}  />
             
-        {#if displayEdit}
-        <!-- <Editor contentItem={getItemById(content,sort)}  {questionIndex}  {moveDown} {moveUp} {deleteDiv}/> -->
-        {/if}
+    {#if displayEdit}
+    <!-- <Editor contentItem={getItemById(content,sort)}  {questionIndex}  {moveDown} {moveUp} {deleteDiv}/> -->
+    {/if}
+
     {/each}
+{:else}
+<p class='p-1 m-1 text/sm'>No Content Items added</p>
+{/if}
 </div>
 
-{/if}
 {/if}
 
 

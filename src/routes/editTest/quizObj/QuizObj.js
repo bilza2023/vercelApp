@@ -113,7 +113,8 @@ export default class QuizObj {
             let item = combQnQ();
             // item.classId = ''; since the test does not have a class id just the "run" has it. This will help us to keep the classId  = none and we will not save new runs with faluty classId. it needs to be set every time.
             item.classId = '';
-            item = await quizStringify(item);
+            //--This is no longer required since the question.content are not strigified now
+            // item = await quizStringify(item);
 
             const resp = await Agent.update('test', { item });
 
