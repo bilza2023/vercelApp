@@ -1,4 +1,4 @@
-import QuestionContentEditor from "../../routes/editTest/question/QuestionContentEditor.svelte";
+// import QuestionContentEditor from "../../routes/editTest/question/QuestionContentEditor.svelte";
 import Editor from "./Editor.svelte";
 import Display from "./Display.svelte";
 
@@ -36,7 +36,7 @@ import imageData from "./image/imageData";
 
 
 export {
-QuestionContentEditor,
+// QuestionContentEditor,
 Editor,
 Display,
 

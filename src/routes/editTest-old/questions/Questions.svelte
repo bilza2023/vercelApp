@@ -8,8 +8,8 @@ import Content from '../Content.svelte';
 import { questionsStore } from '../store';
     import QuestionSettings from './QuestionSettings.svelte';
 
-$:questions = $questionsStore;
-export let quizObj;
+// $:questions = $questionsStore;
+export let quiz;
 
 
 function getTitle(content){
@@ -27,18 +27,17 @@ function getTitle(content){
 
 </script>
 
-        {#if  questions }  
-        {#each questions as question, questionIndex }  
+        {#if  quiz }  
+        {#each quiz.questionsArray as question, questionIndex }  
 
-        <SectionHeadIcon title={getTitle(question.content)}  ser={questionIndex+1}  deleteFn ={()=>quizObj.questions.delete(question.id)}>
-          
+        <SectionHeadIcon title={getTitle(question.content)}  ser={questionIndex+1}  deleteFn ={console.log("ok")}>
+          <!-- ()=>quizObj.questions.delete(question.id) -->
         <!-- ****************************************** -->
         <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
           class="border-2 border-gray-500 p-1 m-0 mt-0" >
         <!-- ****************************************** -->
-          
           <!-- <Content {questions}  contentData={question.content} /> -->
-          <QuestionContentEditor  {questionIndex}   />  
+          <!--<QuestionContentEditor  {questionIndex} />-->
         <!-- ****************************************** -->
           <!-- <QuestionSettings  contentFields={question.content} />   -->
           

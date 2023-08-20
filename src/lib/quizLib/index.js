@@ -1,8 +1,9 @@
-import QuizObj from "./quizObj/quizObj.js";
-import getMCQ from "./fn/getMCQ.js";
+import QuizObj from "./quiz.js";
 
 const quiz = new QuizObj(138);
-
+// quiz.questions.push(getMCQ());
+quiz.questions.addMCQ();
+quiz.questions.addDiv(0);
 
 console.log('Quiz' ,  quiz);
-console.log('getMCQ' ,  getMCQ());
+console.log('content' ,  quiz.questions.getContent(0));
