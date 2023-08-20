@@ -1,10 +1,11 @@
+import { v4 as uuid } from 'uuid';
 
 
 export default function listData (){ 
-    
     const divItem = {
+    id : uuid(),
 content : 'Content \n more and more \n more and more \n more and more \n more and more',
-type : 'list',
+type : 'lists',
 
             bgColor : 'gray',
             fontColor : 'white',

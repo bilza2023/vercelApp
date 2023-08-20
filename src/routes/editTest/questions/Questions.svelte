@@ -2,7 +2,7 @@
 // @ts-nocheck
 import {Icons, fade} from '$lib/util';
 import { SectionHeadIcon,FormRow , Tf , BtnWIconSm } from '$lib/cmp';
-import QuestionContentEditor from '../QuestionContentEditor.svelte';
+import QuestionContentEditor from '../question/QuestionContentEditor.svelte';
 import Content from '../Content.svelte';
 
 import { questionsStore } from '../store';

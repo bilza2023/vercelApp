@@ -1,11 +1,11 @@
 import { v4 as uuid } from 'uuid';
 
 export default function (){ 
-    
+     
 const divItem = {
 id : uuid(),
 content : 'Content',
-type : 'div',
+type : 'divs',
 
             bgColor : 'gray',
             fontColor : 'white',

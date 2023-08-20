@@ -2,13 +2,20 @@
 //@ts-nocheck
 // export let data;
 // export let data;
-export let contentItem
+export let contentItem;
 
+import { onMount } from "$lib/util";
+onMount(async () => {
+  console.log('contentItem' ,contentItem);
+});
+
+////////////////////////////////////////
 function contentToList(contentItem){
-  const temp = contentItem.content;
-   const list = temp.split('\n');
-  return list;
+    const temp = contentItem.content;
+    const list = temp.split('\n');
+    return list;
 }
+////////////////////////////////////////
 </script>
 {#if contentItem}
 <!-- {#each items as contentItem} -->

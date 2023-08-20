@@ -1,6 +1,5 @@
 <script>
 //@ts-nocheck
-// -8/Aug-2023 QuestionContentEditor : This is just one of the many possible wiringup of Displays and Editors. We can have many such arragements. This is specifically for creating content for Questions. We can have a different such arrangement for "Web Page Builder" but the base components like DivEditor or DivDisplay remains the same.
 
 import {BtnWIconSm } from '$lib/cmp';
 import {divData,listData,tableData,preData,youtubeData,imageData,Display,Editor} from '$lib/SkillEditor';
@@ -155,47 +154,6 @@ clk={()=>show = !show} >Content Editor</BtnWIconSm>
 
 { #if show }
 { #if formatted }
-
-<div class='flex  bg-stone-700 mx-10  p-1 m-1  mt-0' in:fade={{ delay: 300 }} out:fade={{ delay: 300 }}>
-  
-    <button 
-        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={()=>displayEdit = !displayEdit} >
-        {Icons.EYE}
-    </button>
-
-    <button 
-        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={addDiv}>
-        {Icons.NOTES}
-    </button>
-    <button 
-        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={addList}>
-        {'■'}
-    </button>
-    <button 
-        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={addTable}>
-        {Icons.CHARTDOWN}
-    </button>
-    <button 
-        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={addPre}>
-        {Icons.CODE}
-    </button>
-    <button 
-        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={addYoutube}>
-        {Icons.NET}
-    </button>
-    <button 
-        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={addImage}>
-        {Icons.PALETTE}
-    </button>
-
-</div>
 
 
 

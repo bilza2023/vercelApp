@@ -4,7 +4,7 @@ export default function divData (){
     
     const divItem = {
 content : 'Content',
-type : 'image',
+type : 'images',
 
             bgColor : 'gray',
             fontColor : 'white',
