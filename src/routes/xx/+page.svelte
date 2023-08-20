@@ -2,7 +2,7 @@
 // @ts-nocheck
 import {PageWrapper,HdgWithIcon,Centre,Loading} from '$lib/cmp';
 import {onMount,toast,Agent} from '$lib/util';
-
+import Display from '$lib/SkillEditor/Display.svelte';
 import QuizObj from "../../lib/quizLib/quiz";
 
 let quiz;
@@ -10,7 +10,7 @@ let quiz;
 onMount(async ()=>{
   try {
     // debugger;
-    const quiz = new QuizObj(138);
+    quiz = new QuizObj(138);
     quiz.questions.addMCQ();
     quiz.questions.addDiv(0);
     
@@ -29,8 +29,12 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 {#if  quiz}
 <!-- ************** -->
 <!-- <Toolbar {item} {quizObj}/> -->
-
+<h1>{quiz.title}</h1>
         
+{#each quiz.questions.questionsArray as question}
+  {console.log('getContent' , question.content.getContent())}
+  <Display content={question.content.getContent()} />
+{/each}
 {/if}
 
 <br>

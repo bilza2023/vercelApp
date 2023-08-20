@@ -1,39 +1,40 @@
 <script>
 //@ts-nocheck
-export let contentItem;
+export let content;
 import {ListDisplay,DivDisplay,TableDisplay,PreDisplay,YoutubeDisplay,ImageDisplay} from './index';
 
 import { onMount } from "$lib/util";
 onMount(async () => {
     // debugger;
-    console.log(contentItem)
+    // console.log( "frm display" , content)
     // const content = $questionsStore[questionIndex].content;
     // contentObj = new ContentObj(content);
 });
 </script>
+{#each content as contentItem }
 
-{#if contentItem.type === 'divs'}
-<DivDisplay {contentItem} />
-{/if}
+        {#if contentItem.type === 'div'}
+        <DivDisplay {contentItem} />
+        {/if}
 
-{#if contentItem.type === 'lists'}
-<ListDisplay {contentItem} />
-{/if}
+        {#if contentItem.type === 'list'}
+        <ListDisplay {contentItem} />
+        {/if}
 
-{#if contentItem.type === 'tables'}
-<TableDisplay  {contentItem} />
-{/if}
+        {#if contentItem.type === 'table'}
+        <TableDisplay  {contentItem} />
+        {/if}
 
-{#if contentItem.type === 'pres'}
-<PreDisplay {contentItem} />
-{/if}
+        {#if contentItem.type === 'pre'}
+        <PreDisplay {contentItem} />
+        {/if}
 
-{#if contentItem.type === 'youtubes'}
-<YoutubeDisplay {contentItem} />
-{/if}
+        {#if contentItem.type === 'youtube'}
+        <YoutubeDisplay {contentItem} />
+        {/if}
 
-{#if contentItem.type === 'images'}
-<ImageDisplay {contentItem} />
-{/if}
+        {#if contentItem.type === 'image'}
+        <ImageDisplay {contentItem} />
+        {/if}
 
-
+{/each}

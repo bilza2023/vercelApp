@@ -1,7 +1,13 @@
 <script>
 //@ts-nocheck
 export let contentItem
-
+import { onMount } from "$lib/util";
+onMount(async () => {
+    // debugger;
+    console.log( "frm contentItem" , contentItem)
+    // const content = $questionsStore[questionIndex].content;
+    // contentObj = new ContentObj(content);
+});
 </script>
 {#if contentItem}
 <!-- {#each items as contentItem} -->
