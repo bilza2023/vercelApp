@@ -11,45 +11,29 @@ import HiddenDivs from './HiddenDivs.svelte';
 import PublishErrors from './PublishErrors.svelte';
 import PageSeparator from './PageSeparator.svelte';
 import QuizObj from "../../lib/quizLib/quiz";
+import Display from '$lib/SkillEditor/Display.svelte';
+
 import quizStringifiedQsToArray from '../show/fn/quizStringifiedQsToArray';
 
 import {itemStore,questionsStore,showQuestionsStore} from './store';
-// import QuizObj from './quizObj/QuizObj';
-
-
 // $:item = $itemStore; 
-
 // $: showQuestions = $showQuestionsStore;
 let quiz;
 //-14-aug-2023 other than error handling everything is ok
 onMount(async ()=>{
   try {
-    // debugger;
-    const quiz = new QuizObj(138);
-// quiz.questions.push(getMCQ());
+
+    quiz = new QuizObj(138);
     quiz.questions.addMCQ();
-    quiz.questions.addDiv(0);
+    quiz.questions.addDiv(0 , 'He is illegal');
+    quiz.questions.addDiv(0 , 'Ghair Kanooni');
+    quiz.questions.addDiv(0 , 'This is great');
+    quiz.questions.addDiv(0 , 'Pakistani Newspaper');
+    //----
+    // debugger;
+    console.log('quiz.questions.getDivs()',quiz.questions.getDivs(0));
 
-    // quizObj.set(incomming); //important
-      // quizObj.questions.set(incomming.questions);//important
-      // debugger;
-    // quizObj = new QuizObj();  
-    // const quizId = new URLSearchParams(location.search).get("quizId");
-    // const resp = await Agent.readone('test' , {id: quizId });
-    // if (resp.ok){
-      
-    //   const data = await resp.json();
-    //   let incomming = data.item;
-    //   //--This is not required
-    //   // incomming = await quizStringifiedQsToArray(incomming);
-      
-    //   quizObj.set(incomming); //important
-    //   quizObj.questions.set(incomming.questions);//important
-
-    // }else {
-    //     toast.push('failed to load');
-    // }
-  } catch (e) {
+ } catch (e) {
        toast.push('failed to load');
     // console.error(e);
   }   
@@ -83,6 +67,10 @@ import MainNav from '$lib/appComp/MainNav.svelte';
           <br/>          
             <!-- {#if  showQuestions} -->
             <!-- <Questions {quiz} /> -->
+                
+{#each quiz.questions.questionsArray as question}
+  <Display content={question.content.getContent()} />
+{/each}
              <br/>
             <!-- <AddQuestionBar {quizObj}/> -->
             <br/>

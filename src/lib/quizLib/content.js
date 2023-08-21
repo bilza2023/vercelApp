@@ -14,31 +14,41 @@ this.youtubes = [];
 this.sortOrder = [];
 }
 
+getDivs(){return this.divs;}
+getImages(){return this.images;}
+getLists(){return this.lists;}
+getPres(){return this.pres;}
+getTables(){return this.tables;}
+getYoutubes(){return this.youtubes;}
 
-addDiv(){
-const data = getDivData();
+addDiv(payload){
+const data = getDivData(payload);
 this.divs.push(data);
 this.sortOrder.push(data.id);
 }
 //This will return a single item 
-findInDivs(id){
-    for (let i = 0; i < this.divs.length; i++) {
-        const item = this.divs[i];
+findIn( arrayName, id,rez ){
+    for (let i = 0; i < this[arrayName].length; i++) {
+        const item = this[arrayName][i];
         if (item.id == id){
-            return  item;
+            rez.push(item);
+            return;
         } 
     }
-    return null;
+    return;
 }
 
 getContent() {
     const rez = [];
     for (let i = 0; i < this.sortOrder.length; i++) {
         const sortOrderId = this.sortOrder[i];
-        const temp = this.findInDivs(sortOrderId);
-        if (temp != null) {
-            rez.push(temp);
-        }
+        this.findIn( 'divs' ,sortOrderId ,rez);
+        this.findIn( 'images' ,sortOrderId ,rez);
+        this.findIn( 'lists' ,sortOrderId ,rez);
+        this.findIn( 'pres' ,sortOrderId ,rez);
+        this.findIn( 'tables' ,sortOrderId ,rez);
+        this.findIn( 'youtubes' ,sortOrderId ,rez);
+
     }
     return rez;
 }

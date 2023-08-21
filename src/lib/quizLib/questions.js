@@ -2,20 +2,26 @@
 import uuid from './fn/uuid.js';
 import Content from './content.js';
 ////////////////////////////////////
+
+/**
+ * 21-Aug-2023 : When a pice of software is working fine do not add more code to it , write another layer another plug where the first code is plugged.If you have a well tested layer you can add more layers to it.
+ */
+//-The purpose of Questions is to save and store questions and contents as per the structure. Do not add more complexity
+
 export default class Questions {
 
 constructor(userId){
 this.userId = userId;
 this.questionsArray = [];
-
 }
+
 getQuestions(){
 return this.questionsArray;
 }
+
 getContent(questionIndex){
  return this.questionsArray[ questionIndex  ].content.getContent();
 }
-
 
 //---Adding Questions
 addMCQ (){
@@ -37,9 +43,28 @@ const correctId = uuid();
         ]
     });
 }//----
+
 //---Add to content
-addDiv(questionIndex){
-    this.questionsArray[ questionIndex  ].content.addDiv();
+addDiv(questionIndex,payload){
+    this.questionsArray[questionIndex].content.addDiv(payload);
+}
+
+getDivs(questionIndex){return this.questionsArray[questionIndex].content.getDivs();
+}
+
+getImages(questionIndex){return this.questionsArray[questionIndex].content.getImages();
+}
+
+getLists(questionIndex){return this.questionsArray[questionIndex].content.getLists();
+}
+
+getPres(questionIndex){return this.questionsArray[questionIndex].content.getPres();
+}
+
+getTables(questionIndex){return this.questionsArray[questionIndex].content.getTables();
+}
+
+getYoutubes(questionIndex){return this.questionsArray[questionIndex].content.getYoutubes();
 }
 
 

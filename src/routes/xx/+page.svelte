@@ -35,7 +35,6 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 <h1>{quiz.title}</h1>
         
 {#each quiz.questions.questionsArray as question}
-  {console.log('getContent' , question.content.getContent())}
   <Display content={question.content.getContent()} />
 {/each}
 {/if}
