@@ -11,6 +11,7 @@ onMount(async () => {
     // contentObj = new ContentObj(content);
 });
 </script>
+
 {#each content as contentItem }
 
         {#if contentItem.type === 'div'}

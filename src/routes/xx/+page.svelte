@@ -13,6 +13,9 @@ onMount(async ()=>{
     quiz = new QuizObj(138);
     quiz.questions.addMCQ();
     quiz.questions.addDiv(0);
+    quiz.questions.addDiv(0);
+    quiz.questions.addDiv(0);
+    quiz.questions.addDiv(0);
     
   } catch (e) {
        toast.push('failed to load');

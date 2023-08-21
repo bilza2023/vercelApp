@@ -19,7 +19,7 @@
 >
 
 <!-- {#if typeof contentItem } -->
-  {#each contentItem.content as row, rowIndex}
+  {#each contentItem.payload as row, rowIndex}
     <div style="display: flex; justify-content: space-between;">
       {#each row as cell, cellIndex}
         <div

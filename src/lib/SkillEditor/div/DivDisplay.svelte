@@ -4,7 +4,7 @@ export let contentItem
 import { onMount } from "$lib/util";
 onMount(async () => {
     // debugger;
-    console.log( "frm contentItem" , contentItem)
+    // console.log( "frm contentItem" , contentItem)
     // const content = $questionsStore[questionIndex].content;
     // contentObj = new ContentObj(content);
 });
@@ -24,7 +24,7 @@ onMount(async () => {
   style:font-weight="{contentItem.fontWeight}"
   style:text-align="{contentItem.textAlign}"
 >
-{contentItem.content}
+{contentItem.payload}
 </div>
 
 {/if}

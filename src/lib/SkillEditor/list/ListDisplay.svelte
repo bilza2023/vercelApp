@@ -11,7 +11,7 @@ onMount(async () => {
 
 ////////////////////////////////////////
 function contentToList(contentItem){
-    const temp = contentItem.content;
+    const temp = contentItem.payload;
     const list = temp.split('\n');
     return list;
 }
