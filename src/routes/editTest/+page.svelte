@@ -13,9 +13,7 @@ import PageSeparator from './PageSeparator.svelte';
 import QuizObj from "../../lib/quizLib/quiz";
 import Display from '$lib/SkillEditor/Display.svelte';
 import ToolbarContent from './ToolbarContent.svelte';
-import quizStringifiedQsToArray from '../show/fn/quizStringifiedQsToArray';
 
-import {itemStore,questionsStore,showQuestionsStore} from './store';
 let quiz;;
 
 onMount(async ()=>{
@@ -24,19 +22,12 @@ onMount(async ()=>{
     quiz = new QuizObj(138);
     quiz.addMCQ();
     quiz.questions[0].content.addDiv('Ghair Kanooni');
-    // quiz.questions.addDiv(0 , 'This is great');
-    //----
-    itemStore.set(quiz);
-    // debugger;
-    // console.log('quiz.questions.getDivs()',quiz.questions.getDivs(0));
-
  } catch (e) {
        toast.push('failed to load');
     // console.error(e);
   }   
 });
 
-$:item = $itemStore; 
 
 function redraw(){quiz = quiz;}
 
@@ -75,8 +66,6 @@ import MainNav from '$lib/appComp/MainNav.svelte';
             <!-- <Questions {quiz} /> -->
 
 {#each quiz.questions  as question}
-
-<button on:click={()=>add(question)}>add</button>            
 
 <ToolbarContent  {question} {redraw}/>
 
