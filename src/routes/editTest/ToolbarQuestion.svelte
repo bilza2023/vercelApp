@@ -8,7 +8,7 @@ export let toggleShowEditor;
 
 </script>
 
-<div class='flex  bg-gray-700 mx-10  p-1 m-1  mt-0' in:fade={{ delay: 300 }} out:fade={{ delay: 300 }}>
+<div class='flex  bg-stone-700 mx-10  p-1 m-1  mt-0' in:fade={{ delay: 300 }} out:fade={{ delay: 300 }}>
   
     <button 
         class='rounded-md bg-stone-400 p-1 m-1 text-xs'

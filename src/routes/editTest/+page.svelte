@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
-import {PageWrapper,HdgWithIcon,Centre,Loading} from '$lib/cmp';
-import {onMount,toast,Agent} from '$lib/util';
+import {PageWrapper,HdgWithIcon,Centre,Loading,SectionHeadIcon} from '$lib/cmp';
+import {onMount,toast,fade} from '$lib/util';
 
 import Questions from './questions/Questions.svelte'
 import SettingMain from './settings/SettingsMain.svelte';
@@ -11,8 +11,8 @@ import HiddenDivs from './HiddenDivs.svelte';
 import PublishErrors from './PublishErrors.svelte';
 import PageSeparator from './PageSeparator.svelte';
 import QuizObj from "../../lib/quizLib/quiz";
-import {Display,Editor} from '$lib/ContentEditor';
-import ToolbarContent from './ToolbarContent.svelte';
+import {Display} from '$lib/ContentEditor';
+
 
 let quiz;;
 
@@ -64,13 +64,24 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 {#if quiz.questions.length > 0}
 
     
-  {#each quiz.questions  as question}
-    <ToolbarContent  {question} {redraw}/>
-    <Display content={question.content.sortContent()} />
-    <Editor content={question.content.sortContent()}  {redraw}/>
-  {/each}
-{/if}
+{#each quiz.questions  as question}
+<SectionHeadIcon title={'TT'} >
+          
+<!-- ****************************************** -->
+<div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
+  class="border-2 border-gray-500 p-1 m-0 mt-0" >
 
+<!-- ****************************************** -->
+<div class="flex justify-center"><button class="bg-gray-900 p-2 m-2 rounded-md px-8 hover:bg-gray-500 active:bg-gray-200">📋&nbsp;
+Content Editor</button></div>
+          
+<Display content={question.content.sortContent()} {redraw}/>
+
+</div>
+
+</SectionHeadIcon>
+{/each}
+{/if}
              <br/>
             <!-- <AddQuestionBar {quizObj}/> -->
             <br/>
@@ -78,7 +89,7 @@ import MainNav from '$lib/appComp/MainNav.svelte';
             <!-- <SettingMain {item}/> -->
             <!-- {/if} -->
         </div>
-        
+
 {:else}
 <Loading />
 {/if}
