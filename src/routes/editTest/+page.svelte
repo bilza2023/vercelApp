@@ -14,14 +14,14 @@ import QuizObj from "../../lib/quizLib/quiz";
 import {Display} from '$lib/ContentEditor';
 
 
-let quiz;;
+let quiz;
 
 onMount(async ()=>{
   try {
   // debugger;
     quiz = new QuizObj(138);
     quiz.addMCQ();
-    quiz.questions[0].content.addDiv('Ghair Kanooni');
+    // quiz.questions[0].content.addDiv('Ghair Kanooni');
  } catch (e) {
        toast.push('failed to load');
     // console.error(e);
@@ -35,7 +35,12 @@ function redraw(){quiz = quiz;}
 //===I will have to remove it later and replace it with redraw but it is interesting that I have sued the game loop technique
 setInterval(function(){ quiz = quiz;},200);
 
-
+function getQuestionTitle(question){
+  if (question.content.divs.length > 0){
+    return question.content.divs[0].payload;
+  }
+return 'Add Title';  
+}
 import MainNav from '$lib/appComp/MainNav.svelte';
 /////////////////////////////////////////////////////////////////
 </script>
@@ -43,7 +48,6 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 <MainNav/>
 <PageWrapper>
 {#if quiz}
-<button on:click={printQuiz}>Print Quiz</button>
 <!-- ************** -->
 <!-- <Toolbar {item} {quizObj}/> -->
 
@@ -68,7 +72,7 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 {#if quiz.questions.length > 0}
 
 {#each quiz.questions  as question}
-<SectionHeadIcon title={'TT'} >
+<SectionHeadIcon title={getQuestionTitle(question)} >
           
 <!-- ****************************************** -->
 <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
@@ -93,10 +97,11 @@ Question Settings</button></div>
 
 
 </SectionHeadIcon>
+<br>
 {/each}
 {/if}
              <br/>
-            <!-- <AddQuestionBar {quizObj}/> -->
+            <AddQuestionBar {quiz}/>
             <br/>
             <!-- {:else} -->
             <!-- <SettingMain {item}/> -->
