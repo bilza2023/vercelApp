@@ -1,10 +1,10 @@
 <script>
 //@ts-nocheck
 import {Icons,fade} from '$lib/util';
-export let displayEdit=false;
+// export let displayEdit=false;
 // export let redraw;
 export let toggleShowEditor;
-
+export let contentObj;
 
 </script>
 
@@ -18,7 +18,7 @@ export let toggleShowEditor;
 
      <button 
         class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={()=>{}}>
+        on:click={()=>contentObj.addDiv("Content")}>
         {Icons.NOTES}
     </button>
     <!--

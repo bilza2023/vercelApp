@@ -22,10 +22,12 @@ getTables(){return this.tables;}
 getYoutubes(){return this.youtubes;}
 
 addDiv(payload){
+    // debugger;
 const data = getDivData(payload);
 this.divs.push(data);
 this.sortOrder.push(data.id);
 }
+
 //This will return a single item 
 findIn( arrayName, id,rez ){
     for (let i = 0; i < this[arrayName].length; i++) {

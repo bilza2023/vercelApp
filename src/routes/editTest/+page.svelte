@@ -32,6 +32,10 @@ onMount(async ()=>{
 function printQuiz(){console.log('quiz' , quiz);}
 function redraw(){quiz = quiz;}
 
+//===I will have to remove it later and replace it with redraw but it is interesting that I have sued the game loop technique
+setInterval(function(){ quiz = quiz;},200);
+
+
 import MainNav from '$lib/appComp/MainNav.svelte';
 /////////////////////////////////////////////////////////////////
 </script>
@@ -63,21 +67,30 @@ import MainNav from '$lib/appComp/MainNav.svelte';
             <!-- <Questions {quiz} /> -->
 {#if quiz.questions.length > 0}
 
-    
 {#each quiz.questions  as question}
 <SectionHeadIcon title={'TT'} >
           
 <!-- ****************************************** -->
 <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
-  class="border-2 border-gray-500 p-1 m-0 mt-0" >
+  class="border-2 border-gray-500 p-1 m-2 mt-0" >
 
 <!-- ****************************************** -->
 <div class="flex justify-center"><button class="bg-gray-900 p-2 m-2 rounded-md px-8 hover:bg-gray-500 active:bg-gray-200">📋&nbsp;
 Content Editor</button></div>
-          
-<Display content={question.content.sortContent()} {redraw}/>
+           
+<Display content={question.content.sortContent()} contentObj={question.content}  {redraw}/>
+
+<div class="flex justify-center"><button class="bg-gray-900 p-2 m-2 rounded-md px-8 hover:bg-gray-500 active:bg-gray-200">📋&nbsp;
+Question Settings</button></div>
+
+
+
 
 </div>
+
+
+
+
 
 </SectionHeadIcon>
 {/each}

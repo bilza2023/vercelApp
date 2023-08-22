@@ -10,7 +10,7 @@ export let redraw;
 // export let moveUp;
 // export let deleteDiv;
 
-let show = true;
+let show = false;
 
 function handleFieldInput(field ,event) {
   // contentItem[field] = event.target.value;
@@ -53,7 +53,7 @@ function handleFieldInput(field ,event) {
  <!-- Edit Control -->
 <div class='bg-gray-800 p-4 m-10 mt-0 mb-2  rounded-md border-2 border-gray-600' style="max-height: 200px; overflow-y: auto;">
 
-<!-- this is not each just an if--why??? -->
+<!--- this is not each just an if--why??? --->
     <FormRow title="Content">
     <input type="text" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" 
     bind:value={contentItem.payload}
@@ -62,30 +62,30 @@ function handleFieldInput(field ,event) {
     />
     </FormRow>
     
-<!--     
+     
     <FormRow title="Background Color">
-    <input type="color" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].contentItem[contentIndex].bgColor} />
+    <input type="color" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={contentItem.bgColor} />
     </FormRow>
 
     <FormRow title="Font Color">
-    <input type="color" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].contentItem[contentIndex].fontColor} />
+    <input type="color" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={contentItem.fontColor} />
     </FormRow>
 
 
     <FormRow title="Border Color">
-    <input type="color" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].contentItem[contentIndex].borderColor} />
+    <input type="color" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={contentItem.borderColor} />
     </FormRow>
 
-    <FormRow title= {`Border Width: ${$questionsStore[questionIndex].contentItem[contentIndex].borderWidth}`}>
-    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].contentItem[contentIndex].borderWidth} min=0 max=100/>
+    <FormRow title= {`Border Width: ${contentItem.borderWidth}`}>
+    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={contentItem.borderWidth} min=0 max=100/>
     </FormRow>
 
-    <FormRow title= {`Font Size: ${$questionsStore[questionIndex].contentItem[contentIndex].fontSize}`}>
-    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].contentItem[contentIndex].fontSize} min=0 max=200/>
+    <FormRow title= {`Font Size: ${contentItem.fontSize}`}>
+    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={contentItem.fontSize} min=0 max=200/>
     </FormRow>
 
     <FormRow title= 'Text Alignment'>
-    <select type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].contentItem[contentIndex].textAlign} >
+    <select type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={contentItem.textAlign} >
     <option value="justify">justify</option>
     <option value="left" selected>Left</option>
     <option value="right">Right</option>
@@ -93,33 +93,33 @@ function handleFieldInput(field ,event) {
     </select>
     </FormRow>
 
-  marginX & Y
+  <!-- marginX & Y -->
 
-    <FormRow title= {`Margin X: ${$questionsStore[questionIndex].contentItem[contentIndex].marginX}`}>
-    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].contentItem[contentIndex].marginX} min=0 max= 500/>
+    <FormRow title= {`Margin X: ${contentItem.marginX}`}>
+    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={contentItem.marginX} min=0 max= 500/>
     </FormRow>
 
-    <FormRow title= {`Margin Y: ${$questionsStore[questionIndex].contentItem[contentIndex].marginY}`}>
-    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].contentItem[contentIndex].marginY} min=0 max= 50/>
+    <FormRow title= {`Margin Y: ${contentItem.marginY}`}>
+    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={contentItem.marginY} min=0 max= 50/>
     </FormRow>
 
-  paddingX & Y 
+  <!-- paddingX & Y  -->
 
-    <FormRow title= {`Padding X: ${$questionsStore[questionIndex].contentItem[contentIndex].paddingX}`}>
-    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].contentItem[contentIndex].paddingX} min=0 max= 300/>
+    <FormRow title= {`Padding X: ${contentItem.paddingX}`}>
+    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={contentItem.paddingX} min=0 max= 300/>
     </FormRow>
 
-    <FormRow title= {`Padding Y: ${$questionsStore[questionIndex].contentItem[contentIndex].paddingY}`}>
-    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].contentItem[contentIndex].paddingY} min=0 max= 300 step=0.1 />
+    <FormRow title= {`Padding Y: ${contentItem.paddingY}`}>
+    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={contentItem.paddingY} min=0 max= 300 step=0.1 />
     </FormRow>
 
-    <FormRow title= {`Opacity: ${$questionsStore[questionIndex].contentItem[contentIndex].opacity}`}>
-    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].contentItem[contentIndex].opacity} min=0 max= 1 step=0.1/>
+    <FormRow title= {`Opacity: ${contentItem.opacity}`}>
+    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={contentItem.opacity} min=0 max= 1 step=0.1/>
     </FormRow>
 
-    <FormRow title= {`Border Radius: ${$questionsStore[questionIndex].contentItem[contentIndex].borderRadius}`}>
-    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={$questionsStore[questionIndex].contentItem[contentIndex].borderRadius} min=0 max=100 step=1/>
-    </FormRow> -->
+    <FormRow title= {`Border Radius: ${contentItem.borderRadius}`}>
+    <input type="range" class="w-full bg-gray-700 color-white p-2 m-1 rounded-md" bind:value={contentItem.borderRadius} min=0 max=100 step=1/>
+    </FormRow>
 
 
 </div>
