@@ -38,7 +38,7 @@ findIn( arrayName, id,rez ){
     return;
 }
 
-getContent() {
+sortContent() {
     const rez = [];
     for (let i = 0; i < this.sortOrder.length; i++) {
         const sortOrderId = this.sortOrder[i];

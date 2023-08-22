@@ -11,7 +11,8 @@ import HiddenDivs from './HiddenDivs.svelte';
 import PublishErrors from './PublishErrors.svelte';
 import PageSeparator from './PageSeparator.svelte';
 import QuizObj from "../../lib/quizLib/quiz";
-import Display from '$lib/SkillEditor/Display.svelte';
+import DivDisplay from './DivDisplay.svelte';
+import DivEditor from './DivEditor.svelte';
 import ToolbarContent from './ToolbarContent.svelte';
 
 let quiz;;
@@ -29,6 +30,7 @@ onMount(async ()=>{
 });
 
 
+function printQuiz(){console.log('quiz' , quiz);}
 function redraw(){quiz = quiz;}
 
 function add(question){
@@ -43,6 +45,7 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 <MainNav/>
 <PageWrapper>
 {#if quiz}
+<button on:click={printQuiz}>Print Quiz</button>
 <!-- ************** -->
 <!-- <Toolbar {item} {quizObj}/> -->
 
@@ -64,14 +67,16 @@ import MainNav from '$lib/appComp/MainNav.svelte';
           <br/>          
             <!-- {#if  showQuestions} -->
             <!-- <Questions {quiz} /> -->
+{#if quiz.questions.length > 0}
 
-{#each quiz.questions  as question}
+  {#each quiz.questions  as question}
 
-<ToolbarContent  {question} {redraw}/>
+    <ToolbarContent  {question} {redraw}/>
+    <DivDisplay content={question.content.sortContent()[0]} />
+    <DivEditor content={question.content.sortContent()[0]}  {redraw}/>
+  {/each}
+{/if}
 
-<Display content={question.content.getContent()} />
-
-{/each}
              <br/>
             <!-- <AddQuestionBar {quizObj}/> -->
             <br/>
