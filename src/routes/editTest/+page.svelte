@@ -11,8 +11,7 @@ import HiddenDivs from './HiddenDivs.svelte';
 import PublishErrors from './PublishErrors.svelte';
 import PageSeparator from './PageSeparator.svelte';
 import QuizObj from "../../lib/quizLib/quiz";
-import DivDisplay from './DivDisplay.svelte';
-import DivEditor from './DivEditor.svelte';
+import {Display,Editor} from '$lib/ContentEditor';
 import ToolbarContent from './ToolbarContent.svelte';
 
 let quiz;;
@@ -33,13 +32,8 @@ onMount(async ()=>{
 function printQuiz(){console.log('quiz' , quiz);}
 function redraw(){quiz = quiz;}
 
-function add(question){
- question.content.addDiv('Ghair Kanooni')
- console.log(question);
- quiz = quiz;
-}
-
 import MainNav from '$lib/appComp/MainNav.svelte';
+/////////////////////////////////////////////////////////////////
 </script>
 <!-- ****************************************** -->
 <MainNav/>
@@ -69,11 +63,11 @@ import MainNav from '$lib/appComp/MainNav.svelte';
             <!-- <Questions {quiz} /> -->
 {#if quiz.questions.length > 0}
 
+    
   {#each quiz.questions  as question}
-
     <ToolbarContent  {question} {redraw}/>
-    <DivDisplay content={question.content.sortContent()[0]} />
-    <DivEditor content={question.content.sortContent()[0]}  {redraw}/>
+    <Display content={question.content.sortContent()} />
+    <Editor content={question.content.sortContent()}  {redraw}/>
   {/each}
 {/if}
 
