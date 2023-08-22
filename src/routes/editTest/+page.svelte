@@ -16,22 +16,19 @@ import ToolbarContent from './ToolbarContent.svelte';
 import quizStringifiedQsToArray from '../show/fn/quizStringifiedQsToArray';
 
 import {itemStore,questionsStore,showQuestionsStore} from './store';
-// $:item = $itemStore; 
-// $: showQuestions = $showQuestionsStore;
-let quiz;
-//-14-aug-2023 other than error handling everything is ok
-let formatted;
+let quiz;;
+
 onMount(async ()=>{
   try {
   // debugger;
     quiz = new QuizObj(138);
-    quiz.questions.addMCQ();
-    quiz.questions.addDiv(0 , 'Ghair Kanooni');
-    quiz.questions.addDiv(0 , 'This is great');
-    quiz.questions.addDiv(0 , 'Pakistani Newspaper');
+    quiz.addMCQ();
+    quiz.questions[0].content.addDiv('Ghair Kanooni');
+    // quiz.questions.addDiv(0 , 'This is great');
     //----
+    itemStore.set(quiz);
     // debugger;
-    console.log('quiz.questions.getDivs()',quiz.questions.getDivs(0));
+    // console.log('quiz.questions.getDivs()',quiz.questions.getDivs(0));
 
  } catch (e) {
        toast.push('failed to load');
@@ -39,15 +36,15 @@ onMount(async ()=>{
   }   
 });
 
+$:item = $itemStore; 
 
+function redraw(){quiz = quiz;}
 
-function add(index=0,arrayName){
-  // debugger;
-  quiz.questions.addDiv( index , 'Ghair Kanooni');
-  quiz  = quiz; /// later find some good solution for this but for now it works
-  console.log('quiz.questions.getDivs()',quiz.questions.getDivs(0));
+function add(question){
+ question.content.addDiv('Ghair Kanooni')
+ console.log(question);
+ quiz = quiz;
 }
-
 
 import MainNav from '$lib/appComp/MainNav.svelte';
 </script>
@@ -76,11 +73,14 @@ import MainNav from '$lib/appComp/MainNav.svelte';
           <br/>          
             <!-- {#if  showQuestions} -->
             <!-- <Questions {quiz} /> -->
-{#each quiz.questions.questionsArray  as question}
 
-<button on:click={()=>add(0 ,'divs', 'He is illegal')}>add</button>            
-<!-- <ToolbarContent  questions={formatted} />             -->
-  <Display content={question.content.getContent()} />
+{#each quiz.questions  as question}
+
+<button on:click={()=>add(question)}>add</button>            
+
+<ToolbarContent  {question} {redraw}/>
+
+<Display content={question.content.getContent()} />
 
 {/each}
              <br/>

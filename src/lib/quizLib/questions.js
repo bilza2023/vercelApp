@@ -15,6 +15,15 @@ this.userId = userId;
 this.questionsArray = [];
 }
 
+getQuestion(id){
+    for (let i = 0; i < this.questionsArray.length; i++) {
+        const q = this.questionsArray[i];
+        if (q.id === id){
+        return q;
+        }
+    }
+}
+
 getQuestions(){
 return this.questionsArray;
 }

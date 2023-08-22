@@ -2,18 +2,18 @@
 //@ts-nocheck
 import {Icons,fade} from '$lib/util';
 export let displayEdit=false;
-export let questions;
-function add(index=0,payload,arrayName){
-//   debugger;
-//   questions.addDiv( index , payload);
-    questions.addDiv( 0 , 'Ghair Kanooni');
-  console.log('quiz.questions.getDivs()',questions.getDivs(0));
-}
+export let question;
+export let redraw;
 
+function add(payload){
+ question.content.addDiv(payload)
+ console.log(question);
+    redraw();
+}
 
 </script>
 
-{#if questions}
+{#if question}
 <div class='flex  bg-stone-700 mx-10  p-1 m-1  mt-0' in:fade={{ delay: 300 }} out:fade={{ delay: 300 }}>
   
     <button 
@@ -22,11 +22,12 @@ function add(index=0,payload,arrayName){
         {Icons.EYE}
     </button>
 
-    <button 
+     <button 
         class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={()=>add(0,'sasaxsxdcdcfvgb')}>
+        on:click={()=>add('ddd')}>
         {Icons.NOTES}
     </button>
+    <!--
     <button 
         class='rounded-md bg-stone-400 p-1 m-1 text-xs'
         on:click={questions.addList}>
@@ -51,7 +52,7 @@ function add(index=0,payload,arrayName){
         class='rounded-md bg-stone-400 p-1 m-1 text-xs'
         on:click={questions.addImage}>
         {Icons.PALETTE}
-    </button>
+    </button> -->
 
 </div>
 {/if}

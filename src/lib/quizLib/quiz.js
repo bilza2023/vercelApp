@@ -1,9 +1,6 @@
 //@ts-nocheck
-// import { v4 as uuid } from 'uuid';
-//-for now questions obj is just a grou of methods that act upon the questions data inside quiz. leter we can change that.
-
-import Questions from "./Questions.js";
-
+import { v4 as uuid } from 'uuid';
+import Content from "./content";
 
 ///////////////////////////Class Begins//////////
 export default class QuizObj{
@@ -26,9 +23,29 @@ constructor(userId){
         this.displayQOneByOne= false;
         this.private= true;
 //----
-        this.questions = new Questions(userId);
+        this.questions = [];
 // this.qObj = new QuestionsObj();        
 }
+
+addMCQ (){
+const correctId = uuid();
+    this.questions.push(
+     {
+        id : uuid(),
+        content : new Content(),
+        required : false,
+        explanation : "",
+        multiSelect: false,
+        selectedOptions :[],
+        correctOptions :[correctId],
+        displayOptions : 'bars',
+        questionType : 'mcq',
+        options :[
+        {id : correctId , content : ""},
+        {id : uuid() , content : ""}
+        ]
+    });
+}//----
 
 ///////////////////////////
 } //quizObj
