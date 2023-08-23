@@ -4,8 +4,8 @@ import { v4 as uuid } from 'uuid';
 export default function listData (){ 
     const divItem = {
     id : uuid(),
-payload : 'Content \n more and more \n more and more \n more and more \n more and more',
-type : 'lists',
+payload : 'List item One \n List item Two \n List item Three',
+type : 'list',
 
             bgColor : 'gray',
             fontColor : 'white',

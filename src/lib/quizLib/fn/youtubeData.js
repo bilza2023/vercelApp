@@ -4,7 +4,7 @@ export default function divData (){
     
     const divItem = {
 payload : 'https://www.youtube.com/embed/83NnB-PxOLg',
-type : 'youtubes',
+type : 'youtube',
 
             bgColor : 'gray',
             fontColor : 'white',

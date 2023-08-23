@@ -4,7 +4,7 @@ export default function preData (){
     
     const divItem = {
 payload : 'Content \n Content \n Content',
-type : 'pres',
+type : 'pre',
 
             bgColor : 'gray',
             fontColor : 'white',

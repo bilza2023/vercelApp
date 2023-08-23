@@ -3,9 +3,10 @@
 export let contentItem
 </script>
 
+
 {#if contentItem}
 <!-- {#each items as contentItem} -->
-<div class='flex justify-center w-full'
+<div
   style:padding="{contentItem.paddingY}px {contentItem.paddingX}px"
   style:margin="{contentItem.marginY}px {contentItem.marginX}px"
   style:opacity="{contentItem.opacity}"
@@ -18,9 +19,9 @@ export let contentItem
   style:font-weight="{contentItem.fontWeight}"
   style:text-align="{contentItem.textAlign}"
 >
-<iframe width="560" height="315" src={contentItem.content} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
+    <pre>
+        {contentItem.payload}
+    </pre>
 </div>
 
 {/if}

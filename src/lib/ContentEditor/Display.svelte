@@ -5,9 +5,7 @@ export let content;
 export let redraw;
 export let contentObj;
 
-
-// import {ListDisplay,DivDisplay,TableDisplay,PreDisplay,YoutubeDisplay,ImageDisplay} from './index';
-import {DivDisplay,DivEditor,TableDisplay , TableEditor } from './index';
+import {DivDisplay,DivEditor,TableDisplay , TableEditor ,ImageDisplay,ListDisplay , PreDisplay , YoutubeDisplay ,ImageEditor , PreEditor,YoutubeEditor ,ListEditor } from './index';
 
 let showEditor = false;
 function toggleShowEditor(){showEditor = !showEditor;}
@@ -59,7 +57,7 @@ function moveDown(contentId) {
 <!-- <button on:click={(e)=>contentObj.addDiv('ffff')}>Add</button> -->
 <ToolbarContent  {redraw} {toggleShowEditor} {contentObj}/>
 {#each content as contentItem }
-{console.log('contentObj' , contentObj) }
+<!-- { console.log('contentObj' , contentObj) } -->
 
         <!--xxxxxxxxxxxxxxxxxxx=======>> -->
         {#if contentItem.type === 'div'}
@@ -79,24 +77,41 @@ function moveDown(contentId) {
           {/if}
         {/if}
         
-        <!-- {#if contentItem.type === 'list'}
-        <ListDisplay {contentItem} />
-        {/if}
-
-        {#if contentItem.type === 'table'}
-        <TableDisplay  {contentItem} />
-        {/if}
-
-        {#if contentItem.type === 'pre'}
-        <PreDisplay {contentItem} />
-        {/if}
-
-        {#if contentItem.type === 'youtube'}
-        <YoutubeDisplay {contentItem} />
-        {/if}
-
+        <!--xxxxxxxxxxxxxxxxxxx=======>> -->
         {#if contentItem.type === 'image'}
         <ImageDisplay {contentItem} />
-        {/if} -->
+
+          {#if  showEditor}
+           <ImageEditor {contentItem}  {redraw} {contentObj} {moveUp} {moveDown} {deleteItem}/>
+          {/if}
+        {/if}
+       
+        <!--xxxxxxxxxxxxxxxxxxx=======>> -->
+        {#if contentItem.type === 'pre'}
+        <PreDisplay {contentItem} />
+
+          {#if  showEditor}
+           <PreEditor {contentItem}  {redraw} {contentObj} {moveUp} {moveDown} {deleteItem}/>
+          {/if}
+        {/if}
+        
+        <!--xxxxxxxxxxxxxxxxxxx=======>> -->
+        {#if contentItem.type === 'list'}
+        <ListDisplay {contentItem} />
+
+          {#if  showEditor}
+           <ListEditor {contentItem}  {redraw} {contentObj} {moveUp} {moveDown} {deleteItem}/>
+          {/if}
+        {/if}
+       
+        <!--xxxxxxxxxxxxxxxxxxx=======>> -->
+        {#if contentItem.type === 'youtube'}
+        <YoutubeDisplay {contentItem} />
+
+          {#if  showEditor}
+        <YoutubeEditor {contentItem}  {redraw} {contentObj} {moveUp} {moveDown} {deleteItem}/>
+          {/if}
+        {/if}
+        
 
 {/each}

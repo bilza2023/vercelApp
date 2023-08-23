@@ -1,11 +1,24 @@
 <script>
 //@ts-nocheck
-export let contentItem
-</script>
+export let contentItem;
 
+import { onMount } from "$lib/util";
+onMount(async () => {
+  console.log('contentItem' ,contentItem);
+});
+
+////////////////////////////////////////
+////////////////////////////////////////
+function contentToList(contentItem){
+    const temp = contentItem;
+    const list = temp.split('\n');
+    return list;
+}
+////////////////////////////////////////
+</script>
 {#if contentItem}
 <!-- {#each items as contentItem} -->
-<div class='flex justify-center w-full'
+<div
   style:padding="{contentItem.paddingY}px {contentItem.paddingX}px"
   style:margin="{contentItem.marginY}px {contentItem.marginX}px"
   style:opacity="{contentItem.opacity}"
@@ -18,10 +31,12 @@ export let contentItem
   style:font-weight="{contentItem.fontWeight}"
   style:text-align="{contentItem.textAlign}"
 >
-<iframe width="560" height="315" src={contentItem.content} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
+    <!-- <ol class="list-decimal"> -->
+    <ol >
+    {#each contentToList(contentItem.payload) as li}
+        <li>{li}</li>
+    {/each}
+    </ol>
 </div>
-
 {/if}
 

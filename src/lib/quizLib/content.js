@@ -1,6 +1,10 @@
 //@ts-nocheck
 import getDivData from './fn/getDivData.js';
 import tableData from './fn/tableData.js';
+import imageData from './fn/imageData.js';
+import preData from './fn/preData.js';
+import listData from './fn/listData.js';
+import youtubeData from './fn/youtubeData.js';
 
 //////////////////////////////////////
 export default class Content {
@@ -34,6 +38,27 @@ addTable(){
     this.tables.push(data);
     this.sortOrder.push(data.id);
     // console.log(this.tables);
+}
+addImage(){
+    const data = imageData();
+    this.images.push(data);
+    this.sortOrder.push(data.id);
+}
+addPre(){
+    const data = preData();
+    this.images.push(data);
+    this.sortOrder.push(data.id);
+}
+addList(){
+    const data = listData();
+    this.images.push(data);
+    this.sortOrder.push(data.id);
+}
+
+addYoutube(){
+    const data = youtubeData();
+    this.images.push(data);
+    this.sortOrder.push(data.id);
 }
 
 //This will return a single item 

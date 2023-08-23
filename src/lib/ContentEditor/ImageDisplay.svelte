@@ -3,6 +3,7 @@
 export let contentItem
 </script>
 
+
 {#if contentItem}
 <!-- {#each items as contentItem} -->
 <div class='flex justify-center w-full'
@@ -18,9 +19,9 @@ export let contentItem
   style:font-weight="{contentItem.fontWeight}"
   style:text-align="{contentItem.textAlign}"
 >
-<iframe width="560" height="315" src={contentItem.content} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-
+<!-- svelte-ignore a11y-img-redundant-alt -->
+<img src='{contentItem.payload}' alt='image'/>
 </div>
 
 {/if}

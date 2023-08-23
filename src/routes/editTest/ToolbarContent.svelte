@@ -22,33 +22,39 @@ export let contentObj;
         {Icons.NOTES}
      </button>
 
+    <button 
+        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
+        on:click={()=>contentObj.addList()}>
+        {'■'}
+    </button>
+
      <button 
         class='rounded-md bg-stone-400 p-1 m-1 text-xs'
         on:click={()=>contentObj.addTable()}>
         {Icons.CHARTDOWN}
     </button>
-    
-    <!--
-    <button 
+
+     <button 
         class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={contentObj.addList}>
-        {'■'}
+        on:click={()=>contentObj.addImage()}>
+        {Icons.PALETTE}
     </button>
-    
-    <button 
+
+      <button 
         class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={questions.addPre}>
+        on:click={()=>contentObj.addPre()}>
         {Icons.CODE}
     </button>
-    <button 
+      <button 
         class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={questions.addYoutube}>
+        on:click={()=>contentObj.addYoutube()}>
         {Icons.NET}
     </button>
-    <button 
-        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={questions.addImage}>
-        {Icons.PALETTE}
-    </button> -->
+    <!--
+  
+    
+  
+  
+    -->
 
 </div>
