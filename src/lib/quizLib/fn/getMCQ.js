@@ -13,7 +13,7 @@ const correctId = uuid();
         selectedOptions :[],
         correctOptions :[correctId],
         displayOptions : 'bars',
-        questionType : 'mcq',
+        questionType : 'SurveyMCQ',
         options :[
         {id : correctId , content : ""},
         {id : uuid() , content : ""}

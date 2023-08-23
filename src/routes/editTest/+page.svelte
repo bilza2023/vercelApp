@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 import {PageWrapper,HdgWithIcon,Centre,Loading,SectionHeadIcon} from '$lib/cmp';
-import {onMount,toast,fade} from '$lib/util';
+import {onMount,toast,fade,Agent} from '$lib/util';
 
 import Questions from './questions/Questions.svelte'
 import SettingMain from './settings/SettingsMain.svelte';
@@ -12,20 +12,31 @@ import PublishErrors from './PublishErrors.svelte';
 import PageSeparator from './PageSeparator.svelte';
 import QuizObj from "../../lib/quizLib/quiz";
 import {Display} from '$lib/ContentEditor';
-
+import save from './fn/save';
 
 let quiz;
-
+//64d752724b54563100f70269
+    // quiz = new QuizObj(138);
+    // quiz.addMCQ();
 onMount(async ()=>{
-  try {
+  try{
   // debugger;
-    quiz = new QuizObj(138);
-    quiz.addMCQ();
-    // quiz.questions[0].content.addDiv('Ghair Kanooni');
- } catch (e) {
+  const quizId = new URLSearchParams(location.search).get("quizId");
+    const resp = await Agent.readone('test' , {id: quizId });
+    if (resp.ok){
+      
+      const data = await resp.json();
+      quiz = new QuizObj(data.item);
+      console.log(data.item);
+      quiz.addMCQ();
+
+    }else {
+        toast.push('failed to load');
+    }
+  } catch (e) {
        toast.push('failed to load');
     // console.error(e);
-  }   
+  }      
 });
 
 
@@ -49,9 +60,9 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 <MainNav/>
 <PageWrapper>
 {#if quiz}
-<button on:click={printQuiz}>printQuiz</button>
+<button on:click={()=>save(quiz)}>printQuiz</button>
 <!-- ************** -->
-<!-- <Toolbar {item} {quizObj}/> -->
+<!-- <Toolbar  {quiz}/> -->
 
         <!-- ************** -->
         <!-- THE MAIN CODE ENDS -->
@@ -90,13 +101,7 @@ Content Editor</button></div>
 Question Settings</button></div>
 
 
-
-
 </div>
-
-
-
-
 
 </SectionHeadIcon>
 <br>

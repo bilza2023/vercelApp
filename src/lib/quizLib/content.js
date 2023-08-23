@@ -46,18 +46,18 @@ addImage(){
 }
 addPre(){
     const data = preData();
-    this.images.push(data);
+    this.pres.push(data);
     this.sortOrder.push(data.id);
 }
 addList(){
     const data = listData();
-    this.images.push(data);
+    this.lists.push(data);
     this.sortOrder.push(data.id);
 }
 
 addYoutube(){
     const data = youtubeData();
-    this.images.push(data);
+    this.youtubes.push(data);
     this.sortOrder.push(data.id);
 }
 

@@ -5,25 +5,26 @@ import Content from "./content";
 ///////////////////////////Class Begins//////////
 export default class QuizObj{
 
-constructor(userId){
-        this.title = 'Quiz';
-        this.userId = userId;
-        this.saveResponse = true;
-        this.showIntro = true;
-        this.introText = 'Welcome';
-        this.showResult = true;
-        this.showfarewellText = true;
-        this.farewellText = 'Farewell';
-        this.classId = '';
-        this.createdAt= Date.now(); // Corrected line
-        this.members = [];
-        this.marks = 10;
-        this.publishObj ={};
-        this.tags= [];
-        this.displayQOneByOne= false;
-        this.private= true;
+constructor(incomming){
+        this._id = incomming._id;
+        this.questions = incomming.questions;
+        this.title = incomming.title;
+        this.userId = incomming.userId;
+        this.saveResponse = incomming.saveResponse;
+        this.showIntro = incomming.showIntro;
+        this.introText = incomming.introText;
+        this.showResult = incomming.showResult;
+        this.showfarewellText = incomming.showfarewellText;
+        this.farewellText = incomming.farewellText;
+        this.classId = incomming.classId;
+        this.createdAt== incomming.createdAt;
+        this.members = incomming.members;
+        this.marks = incomming.marks;
+        this.publishObj = incomming.publishObj;
+        this.tags== incomming.tags;
+        this.displayQOneByOne== incomming.displayQOneByOne;
+        this.private== incomming.private;
 //----
-        this.questions = [];
 // this.qObj = new QuestionsObj();        
 }
 
