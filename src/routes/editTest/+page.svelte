@@ -49,6 +49,7 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 <MainNav/>
 <PageWrapper>
 {#if quiz}
+<button on:click={printQuiz}>printQuiz</button>
 <!-- ************** -->
 <!-- <Toolbar {item} {quizObj}/> -->
 

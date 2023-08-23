@@ -7,7 +7,7 @@ export let contentObj;
 
 
 // import {ListDisplay,DivDisplay,TableDisplay,PreDisplay,YoutubeDisplay,ImageDisplay} from './index';
-import {DivDisplay,DivEditor} from './index';
+import {DivDisplay,DivEditor,TableDisplay , TableEditor } from './index';
 
 let showEditor = false;
 function toggleShowEditor(){showEditor = !showEditor;}
@@ -59,13 +59,23 @@ function moveDown(contentId) {
 <!-- <button on:click={(e)=>contentObj.addDiv('ffff')}>Add</button> -->
 <ToolbarContent  {redraw} {toggleShowEditor} {contentObj}/>
 {#each content as contentItem }
-<!-- {console.log('contentObj' , contentObj) } -->
+{console.log('contentObj' , contentObj) }
 
+        <!--xxxxxxxxxxxxxxxxxxx=======>> -->
         {#if contentItem.type === 'div'}
         <DivDisplay {contentItem} />
 
           {#if  showEditor}
            <DivEditor {contentItem}  {redraw} {contentObj} {moveUp} {moveDown} {deleteItem}/>
+          {/if}
+        {/if}
+        
+        <!--xxxxxxxxxxxxxxxxxxx=======>> -->
+        {#if contentItem.type === 'table'}
+        <TableDisplay {contentItem} />
+
+          {#if  showEditor}
+           <TableEditor {contentItem}  {redraw} {contentObj} {moveUp} {moveDown} {deleteItem}/>
           {/if}
         {/if}
         

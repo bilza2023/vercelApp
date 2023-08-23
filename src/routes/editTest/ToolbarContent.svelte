@@ -20,18 +20,21 @@ export let contentObj;
         class='rounded-md bg-stone-400 p-1 m-1 text-xs'
         on:click={()=>contentObj.addDiv("Content")}>
         {Icons.NOTES}
+     </button>
+
+     <button 
+        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
+        on:click={()=>contentObj.addTable()}>
+        {Icons.CHARTDOWN}
     </button>
+    
     <!--
     <button 
         class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={questions.addList}>
+        on:click={contentObj.addList}>
         {'■'}
     </button>
-    <button 
-        class='rounded-md bg-stone-400 p-1 m-1 text-xs'
-        on:click={questions.addTable}>
-        {Icons.CHARTDOWN}
-    </button>
+    
     <button 
         class='rounded-md bg-stone-400 p-1 m-1 text-xs'
         on:click={questions.addPre}>

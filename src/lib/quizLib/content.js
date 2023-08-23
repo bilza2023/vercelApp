@@ -1,5 +1,6 @@
 //@ts-nocheck
 import getDivData from './fn/getDivData.js';
+import tableData from './fn/tableData.js';
 
 //////////////////////////////////////
 export default class Content {
@@ -28,6 +29,13 @@ this.divs.push(data);
 this.sortOrder.push(data.id);
 }
 
+addTable(){
+    const data = tableData();
+    this.tables.push(data);
+    this.sortOrder.push(data.id);
+    // console.log(this.tables);
+}
+
 //This will return a single item 
 findIn( arrayName, id,rez ){
     for (let i = 0; i < this[arrayName].length; i++) {
@@ -53,7 +61,7 @@ sortContent() {
 
     }
     return rez;
-}
+} 
 
 //=============|
 }//============|
