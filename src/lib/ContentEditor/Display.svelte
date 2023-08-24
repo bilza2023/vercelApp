@@ -1,12 +1,12 @@
 <script> 
 //@ts-nocheck
 import ToolbarContent from '../../routes/editTest/ToolbarContent.svelte';
-export let content;
+import sortContent from '$lib/quizLib/fn/sortContent';
 export let contentObj;
 export let redraw;
+$: sorted =  sortContent(contentObj);
 
 import {DivDisplay,DivEditor,TableDisplay , TableEditor ,ImageDisplay,ListDisplay , PreDisplay , YoutubeDisplay ,ImageEditor , PreEditor,YoutubeEditor ,ListEditor } from './index';
-
 let showEditor = false;
 function toggleShowEditor(){showEditor = !showEditor;}
 
@@ -52,11 +52,10 @@ function moveDown(contentId) {
     return sortOrder;
 }
 
-
 </script>
 <!-- <button on:click={(e)=>contentObj.addDiv('ffff')}>Add</button> -->
 <ToolbarContent  {redraw} {toggleShowEditor} {contentObj}/>
-{#each content as contentItem }
+{#each sorted as contentItem }
 <!-- { console.log('contentObj' , contentObj) } -->
 
         <!--xxxxxxxxxxxxxxxxxxx=======>> -->

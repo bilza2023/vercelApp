@@ -1,8 +1,10 @@
+import uuid from './uuid.js';
 
 
 export default function divData (){ 
     
     const divItem = {
+id : uuid(),    
 payload : 'Content',
 type : 'image',
 

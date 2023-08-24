@@ -23,10 +23,11 @@ function addTable(content){
 }
 
 function addImage(content){
-    debugger;
+    // debugger;
     const data = imageData();
     content.images.push(data);
     content.sortOrder.push(data.id);
+    // console.log('content after image added' , content);
 }
 
 function addPre(content){

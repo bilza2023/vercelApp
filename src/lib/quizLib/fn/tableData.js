@@ -1,8 +1,9 @@
-
+import uuid from './uuid.js';
 
 export default function tableData (){ 
     
     const divItem = {
+id : uuid(),    
 payload : [
             [ "1" , "2" , "3" ],
             [ "4" , "5" , "6" ]

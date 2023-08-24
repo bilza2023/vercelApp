@@ -1,8 +1,9 @@
-
+import uuid from './uuid.js';
 
 export default function preData (){ 
     
     const divItem = {
+id : uuid(),    
 payload : 'Content \n Content \n Content',
 type : 'pre',
 

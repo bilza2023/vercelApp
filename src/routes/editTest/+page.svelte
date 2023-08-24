@@ -13,7 +13,7 @@ import PageSeparator from './PageSeparator.svelte';
 import QuizObj from "../../lib/quizLib/quiz";
 import {Display} from '$lib/ContentEditor';
 import save from './fn/save';
-import sortContent from '../../lib/quizLib/fn/sortContent';
+
 let quiz;
 //64d752724b54563100f70269
     // quiz = new QuizObj(138);
@@ -94,7 +94,7 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 <div class="flex justify-center"><button class="bg-gray-900 p-2 m-2 rounded-md px-8 hover:bg-gray-500 active:bg-gray-200">📋&nbsp;
 Content Editor</button></div>
            
-<Display content={sortContent(question.content)} contentObj={question.content}  {redraw}/>
+<Display  contentObj={question.content}  {redraw}/>
 
 <div class="flex justify-center"><button class="bg-gray-900 p-2 m-2 rounded-md px-8 hover:bg-gray-500 active:bg-gray-200">📋&nbsp;
 Question Settings</button></div>

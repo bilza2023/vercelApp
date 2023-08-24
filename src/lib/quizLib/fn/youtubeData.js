@@ -1,8 +1,9 @@
-
+import uuid from './uuid.js';
 
 export default function divData (){ 
     
     const divItem = {
+id : uuid(),    
 payload : 'https://www.youtube.com/embed/83NnB-PxOLg',
 type : 'youtube',
 
