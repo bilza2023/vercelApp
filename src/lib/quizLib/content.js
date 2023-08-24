@@ -61,33 +61,6 @@ addYoutube(){
     this.sortOrder.push(data.id);
 }
 
-//This will return a single item 
-findIn( arrayName, id,rez ){
-    for (let i = 0; i < this[arrayName].length; i++) {
-        const item = this[arrayName][i];
-        if (item.id == id){
-            rez.push(item);
-            return;
-        } 
-    }
-    return;
-}
-
-sortContent() {
-    const rez = [];
-    for (let i = 0; i < this.sortOrder.length; i++) {
-        const sortOrderId = this.sortOrder[i];
-        this.findIn( 'divs' ,sortOrderId ,rez);
-        this.findIn( 'images' ,sortOrderId ,rez);
-        this.findIn( 'lists' ,sortOrderId ,rez);
-        this.findIn( 'pres' ,sortOrderId ,rez);
-        this.findIn( 'tables' ,sortOrderId ,rez);
-        this.findIn( 'youtubes' ,sortOrderId ,rez);
-
-    }
-    return rez;
-} 
-
 //=============|
 }//============|
 //=============|
