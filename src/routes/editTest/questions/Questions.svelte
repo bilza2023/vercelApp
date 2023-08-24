@@ -4,7 +4,7 @@ import {Icons, fade} from '$lib/util';
 import { SectionHeadIcon,FormRow , Tf , BtnWIconSm } from '$lib/cmp';
 import QuestionContentEditor from '../question/QuestionContentEditor.svelte';
 import Content from '../Content.svelte';
-
+import {Display} from '$lib/ContentEditor';
 import { questionsStore } from '../store';
     import QuestionSettings from './QuestionSettings.svelte';
 
@@ -25,25 +25,34 @@ function getTitle(content){
     }
 }
 
+function getQuestionTitle(question){
+ // debugger;
+  if (question.content.divs.length > 0){
+    return question.content.divs[0].payload;
+  }
+return 'Add Title';  
+}
+
 </script>
 
-        {#if  quiz }  
-        {#each quiz.questionsArray as question, questionIndex }  
+{#if quiz.questions.length > 0}
 
-        <SectionHeadIcon title={getTitle(question.content)}  ser={questionIndex+1}  deleteFn ={console.log("ok")}>
-          <!-- ()=>quizObj.questions.delete(question.id) -->
-        <!-- ****************************************** -->
-        <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
-          class="border-2 border-gray-500 p-1 m-0 mt-0" >
-        <!-- ****************************************** -->
-          <!-- <Content {questions}  contentData={question.content} /> -->
-          <!--<QuestionContentEditor  {questionIndex} />-->
-        <!-- ****************************************** -->
-          <!-- <QuestionSettings  contentFields={question.content} />   -->
+{#each quiz.questions  as question}
+<SectionHeadIcon title={getQuestionTitle(question)} >
           
-          </div>
-        </SectionHeadIcon>
-        <br/>
-        {/each}
-        {/if}
+<!-- ****************************************** -->
+<div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
+  class="border-2 border-gray-500 p-1 m-2 mt-0" >
+           
+<Display  contentObj={question.content}  />
+
+<div class="flex justify-center"><button class="bg-gray-900 p-2 m-2 rounded-md px-8 hover:bg-gray-500 active:bg-gray-200">📋&nbsp;
+Question Settings</button></div>
+
+<!-- ****************************************** -->
+</div>
+</SectionHeadIcon>
+<br/>
+{/each}
+{/if}
 

@@ -5,7 +5,7 @@
 
   import { visibleDialogStore } from './store';
 
-  export let item;
+  export let quiz;
   export let quizObj;
   
   function toggleDialog(dialog) {
@@ -23,7 +23,7 @@
     title="Save"
     tf={true}
     trueColor={"text-white"}
-    clk={() => quizObj.save(item)}
+    clk={() => quizObj.save(quiz)}
   />
 
   <PageNavBtn
