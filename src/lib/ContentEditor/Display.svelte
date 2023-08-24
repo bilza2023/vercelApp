@@ -2,8 +2,8 @@
 //@ts-nocheck
 import ToolbarContent from '../../routes/editTest/ToolbarContent.svelte';
 export let content;
-export let redraw;
 export let contentObj;
+export let redraw;
 
 import {DivDisplay,DivEditor,TableDisplay , TableEditor ,ImageDisplay,ListDisplay , PreDisplay , YoutubeDisplay ,ImageEditor , PreEditor,YoutubeEditor ,ListEditor } from './index';
 
@@ -64,7 +64,7 @@ function moveDown(contentId) {
         <DivDisplay {contentItem} />
 
           {#if  showEditor}
-           <DivEditor {contentItem}  {redraw} {contentObj} {moveUp} {moveDown} {deleteItem}/>
+           <DivEditor {contentItem}  {redraw}  {moveUp} {moveDown} {deleteItem}/>
           {/if}
         {/if}
         
@@ -73,7 +73,7 @@ function moveDown(contentId) {
         <TableDisplay {contentItem} />
 
           {#if  showEditor}
-           <TableEditor {contentItem}  {redraw} {contentObj} {moveUp} {moveDown} {deleteItem}/>
+           <TableEditor {contentItem}  {redraw} {moveUp} {moveDown} {deleteItem}/>
           {/if}
         {/if}
         
@@ -82,7 +82,7 @@ function moveDown(contentId) {
         <ImageDisplay {contentItem} />
 
           {#if  showEditor}
-           <ImageEditor {contentItem}  {redraw} {contentObj} {moveUp} {moveDown} {deleteItem}/>
+           <ImageEditor {contentItem}  {redraw} {moveUp} {moveDown} {deleteItem}/>
           {/if}
         {/if}
        
@@ -91,7 +91,7 @@ function moveDown(contentId) {
         <PreDisplay {contentItem} />
 
           {#if  showEditor}
-           <PreEditor {contentItem}  {redraw} {contentObj} {moveUp} {moveDown} {deleteItem}/>
+           <PreEditor {contentItem}  {redraw}  {moveUp} {moveDown} {deleteItem}/>
           {/if}
         {/if}
         
@@ -100,7 +100,7 @@ function moveDown(contentId) {
         <ListDisplay {contentItem} />
 
           {#if  showEditor}
-           <ListEditor {contentItem}  {redraw} {contentObj} {moveUp} {moveDown} {deleteItem}/>
+           <ListEditor {contentItem}  {redraw} {moveUp} {moveDown} {deleteItem}/>
           {/if}
         {/if}
        
@@ -109,7 +109,7 @@ function moveDown(contentId) {
         <YoutubeDisplay {contentItem} />
 
           {#if  showEditor}
-        <YoutubeEditor {contentItem}  {redraw} {contentObj} {moveUp} {moveDown} {deleteItem}/>
+        <YoutubeEditor {contentItem}  {redraw}{moveUp} {moveDown} {deleteItem}/>
           {/if}
         {/if}
         

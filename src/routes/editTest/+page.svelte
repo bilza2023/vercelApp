@@ -27,9 +27,7 @@ onMount(async ()=>{
       
       const data = await resp.json();
       quiz = new QuizObj(data.item);
-      console.log(data.item);
-      quiz.addMCQ();
-
+      // console.log(data.item);
     }else {
         toast.push('failed to load');
     }

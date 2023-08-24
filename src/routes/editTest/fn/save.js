@@ -3,7 +3,7 @@ import {toast,Agent} from '$lib/util';
 
 export default async function save(item) {
     try {
-        debugger;
+        // debugger;
 
         item.classId = '';
         //--This is no longer required since the question.content are not strigified now
