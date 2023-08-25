@@ -3,11 +3,11 @@
 import {Icons, fade} from '$lib/util';
 import { FormRow , Tf , BtnWIconSm } from '$lib/cmp';
 import SectionHeadQuestion from './SectionHeadQuestion.svelte'
-import QuestionContentEditor from '../question/QuestionContentEditor.svelte';
+// import QuestionContentEditor from '../question/QuestionContentEditor.svelte';
 import Content from '../Content.svelte';
 import {Display} from '$lib/ContentEditor';
-import { questionsStore } from '../store';
-import QuestionSettings from './QuestionSettings.svelte';
+// import { questionsStore } from '../store';
+// import QuestionSettings from './QuestionSettings.svelte';
 import Options from './Options.svelte';
 
 
@@ -51,14 +51,12 @@ return 'Add Title';
 <SectionHeadQuestion title={getQuestionTitle(question)} 
 deleteFn={()=>deleteQuestion(quiz,question.id)}  
 moveQuestionUp={()=>moveQuestionUp(quiz,question.id)}  
-moveQuestionDown={()=>moveQuestionDown(quiz,question.id)}  
-
->
+moveQuestionDown={()=>moveQuestionDown(quiz,question.id)}  >
 
 <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
   class="border-2 border-gray-500 p-1 m-2 mt-0" >
 
-<div class="flex justify-center"><button class="bg-gray-900 p-2 m-2 rounded-md px-8 hover:bg-gray-500 active:bg-gray-200">📋&nbsp;
+<div class="flex justify-center"><button class="bg-gray-900 p-2 m-2 rounded-md px-8 hover:bg-gray-500 active:bg-gray-200">{Icons.TEMPLATE}
 Content</button></div>
 
 <div class='bg-gray-900 m-1 p-4 py-6  rounded-md mb-4'>
@@ -67,7 +65,7 @@ Content</button></div>
 
 
 <div class="flex justify-center">
-  <button class="bg-gray-900 p-2 m-2 rounded-md px-8 hover:bg-gray-500 active:bg-gray-200">📋&nbsp;Options</button>
+  <button class="bg-gray-900 p-2 m-2 rounded-md px-8 hover:bg-gray-500 active:bg-gray-200">{Icons.QUESTIONMARK}Options</button>
 </div>
 
   <div class='bg-gray-900 m-1 p-4 rounded-md mb-4'>
