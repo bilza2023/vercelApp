@@ -26,13 +26,8 @@ const  toggleVisibility = ()=> visible = !visible;
         
     </div>
     
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
-    <div class="rounded-t-lg border border-gray-400 p-2 
-    hover:cursor-pointer bg-gray-900 w-1/12 text-center hover:bg-gray-600"
-        
-    >
-        {icon}
+<div class="rounded-t-lg border border-gray-400 p-2 hover:cursor-pointer bg-gray-900 w-1/12 text-center hover:bg-gray-600" >
+        🔱
     </div>
     
 <button class="rounded-t-lg border border-gray-400 p-2 hover:cursor-pointer bg-gray-900 w-1/12 text-center hover:bg-gray-600" 
