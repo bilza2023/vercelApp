@@ -8,6 +8,9 @@ import {Display} from '$lib/ContentEditor';
 import { questionsStore } from '../store';
 import QuestionSettings from './QuestionSettings.svelte';
 import Options from './Options.svelte';
+import deleteQuestion from '../fn/deleteQuestion';
+
+
 export let quiz;
 
 
@@ -37,9 +40,10 @@ return 'Add Title';
 {#if quiz.questions.length > 0}
 
 {#each quiz.questions  as question}
-<SectionHeadIcon title={getQuestionTitle(question)} >
           
 <!-- ****************************************** -->
+<SectionHeadIcon title={getQuestionTitle(question)} deleteFn={()=>deleteQuestion(quiz,question.id)}>
+
 <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
   class="border-2 border-gray-500 p-1 m-2 mt-0" >
 

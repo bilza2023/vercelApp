@@ -14,6 +14,7 @@ import QuizObj from "../../lib/quizLib/quiz";
 import save from './fn/save';
 import {showQuestionsStore} from './store'
 
+
 $: showQuestions = $showQuestionsStore;
 let quiz;
 onMount(async ()=>{
@@ -43,7 +44,7 @@ setInterval(function(){ quiz = quiz;},200);
 import MainNav from '$lib/appComp/MainNav.svelte';
 /////////////////////////////////////////////////////////////////
 </script>
-<!-- ****************************************** -->
+  <!-- ****************************************** -->
 <MainNav/>
 <PageWrapper>
 {#if quiz}
@@ -57,12 +58,9 @@ import MainNav from '$lib/appComp/MainNav.svelte';
         </Centre>
 
         <PageSeparator />
-
         <!-- <PublishErrors /> -->
         <!-- ********** The Hidden Dialogue box **************** -->
-                        
             <HiddenDivs {quiz}/>
-
         <!-- ********** Main Settings  *********** -->
         <div class='px-8'>
           <br/>          
