@@ -34,11 +34,14 @@ const mark_correct = (option_id) => {
 </script>
 <BtnWIconXs icon='+' clk={()=>addOption(question.id)}>Option</BtnWIconXs>
 <br/>
+<br/>
 
     <div class="text-center">
     {#if question.options && question.options.length > 0}
     {#each question.options as option}
       <Option {option} {question} {deleteOption} {mark_correct}/>
     {/each}
+    <br/>
+    <br/>
     {/if}
     </div>
