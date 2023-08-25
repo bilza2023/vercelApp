@@ -61,7 +61,7 @@ import MainNav from '$lib/appComp/MainNav.svelte';
         <!-- <PublishErrors /> -->
         <!-- ********** The Hidden Dialogue box **************** -->
                         
-            <!-- <HiddenDivs {item} {quizObj}/> -->
+            <HiddenDivs {quiz}/>
 
         <!-- ********** Main Settings  *********** -->
         <div class='px-8'>
@@ -73,7 +73,7 @@ import MainNav from '$lib/appComp/MainNav.svelte';
             <AddQuestionBar {quiz}/>
             <br/>
             {:else}
-            <SettingMain item={quiz}/>
+            <SettingMain {quiz}/>
             {/if}
         </div>
 

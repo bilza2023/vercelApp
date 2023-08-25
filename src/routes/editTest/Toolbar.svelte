@@ -4,9 +4,9 @@
   import { Icons } from '$lib/util';
 
   import { visibleDialogStore } from './store';
+import save from './fn/save';
 
   export let quiz;
-  export let quizObj;
   
   function toggleDialog(dialog) {
     if ($visibleDialogStore === dialog) {
@@ -23,7 +23,7 @@
     title="Save"
     tf={true}
     trueColor={"text-white"}
-    clk={() => quizObj.save(quiz)}
+    clk={() =>save(quiz)}
   />
 
   <PageNavBtn

@@ -3,8 +3,9 @@
 import { InputForm } from '$lib/cmp';
 import RunDiv from './RunDiv.svelte';
   
-export let quizObj;
-
+export let quiz;
+import del from './fn/del.js';
+import clone from './fn/clone.js';
 import {visibleDialogStore} from './store';
 $: visibleDialog = $visibleDialogStore;
 
@@ -12,18 +13,18 @@ $: visibleDialog = $visibleDialogStore;
 
   <!-- ********** The Hidden Dialogue box **************** -->
 
-{#if quizObj}
+{#if quiz}
 {#if visibleDialog=='cloneDlg' }
-<InputForm clk={ quizObj.clone  } title='Clone Test' btnTitle='Clone' btnColor='bg-green-800'/>
+<InputForm clk={ clone  } title='Clone Test' btnTitle='Clone' btnColor='bg-green-800'/>
 {/if}
 
 {#if visibleDialog=='runDlg' }
-<RunDiv {quizObj}/>
+<RunDiv {quiz}/>
 {/if}
 
 
 {#if visibleDialog=='deleteDlg' }
-<InputForm clk={ quizObj.delete  } title='Delete Test' btnTitle='Delete' comment='Type in the title' btnColor='bg-red-800'/>
+<InputForm clk={ del } title='Delete Test' btnTitle='Delete' comment='Type in the title' btnColor='bg-red-800'/>
 {/if}
 
 <!-- ********** The Hidden Dialogue Box Ends *********** -->

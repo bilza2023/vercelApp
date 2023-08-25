@@ -7,15 +7,11 @@ import SettingDiv from './SettingDiv.svelte';
 import PublishTimings from './PublishTimings.svelte';  
 import UnPublishTimings from './UnPublishTimings.svelte';  
 
-
-// let toggle = true;
-import {itemStore} from '../store';
-$:item = $itemStore;
-
+export let quiz;
 </script>
 
 <br/>
-<SettingDiv visible={true}/>
+<SettingDiv visible={true} {quiz}/>
 <br/>
  
  

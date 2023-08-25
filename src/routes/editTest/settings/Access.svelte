@@ -3,22 +3,18 @@
 import {BtnWIconXs,FormRow} from '$lib/cmp';
 import {Icons} from '$lib/util';
 import ClassesDd from "$lib/appComp/ClassesDD.svelte";
-import {itemStore} from '../store';
-export let item;
+export let quiz;
 
 function setAccess(access){
-        itemStore.update(item => {
-        item.private = access;
-        return item;
-    });
-    console.log("item.private" , item.private);
+        quiz.private = access;
 }
+
 // debugger;
 let btnColorPrivate;
 let btnColorPublic;
 
-$: btnColorPublic = $itemStore.private ? 'bg-blue-800' : 'bg-red-800';
-$: btnColorPrivate = $itemStore.private ? 'bg-red-800' : 'bg-blue-800';
+$: btnColorPublic = quiz.private ? 'bg-blue-800' : 'bg-red-800';
+$: btnColorPrivate = quiz.private ? 'bg-red-800' : 'bg-blue-800';
 </script>
 
 <div>
@@ -36,9 +32,9 @@ $: btnColorPrivate = $itemStore.private ? 'bg-red-800' : 'bg-blue-800';
         clk={()=>setAccess(true)} >
         Private</BtnWIconXs>
     </div>
-    {#if item.private}
+    {#if quiz.private}
         <FormRow title='Class'>
-            <ClassesDd {item}/>
+            <ClassesDd item={quiz}/>
         </FormRow>
     {/if}
 </div>       
