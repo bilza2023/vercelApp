@@ -11,7 +11,6 @@ import HiddenDivs from './HiddenDivs.svelte';
 import PublishErrors from './PublishErrors.svelte';
 import PageSeparator from './PageSeparator.svelte';
 import QuizObj from "../../lib/quizLib/quiz";
-import save from './fn/save';
 import {showQuestionsStore} from './store'
 
 

@@ -42,8 +42,8 @@ const correctId = uuid();
         displayOptions : 'bars',
         questionType : 'mcq',
         options :[
-        {id : correctId , content : ""},
-        {id : uuid() , content : ""}
+        {id : correctId , content : "Option 01"},
+        {id : uuid() , content : "Option 02"}
         ]
     });
 }//----
