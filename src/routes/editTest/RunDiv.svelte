@@ -2,8 +2,8 @@
 //@ts-nocheck
 import {Comment , BtnWIconSm , HdgWithIcon} from '$lib/cmp';
 import { Icons } from '$lib/util';
+export let quiz;
 import run from './fn/run';
-
 </script>
 
 <!-- <InputForm clk={ runFn  } title='Run Test' btnTitle='Run' btnColor='bg-orange-800'/> -->
@@ -18,7 +18,7 @@ import run from './fn/run';
     <Comment>Run a copy of this test. You can run as many copies as you want of each test with different titles , settings and timings. You can assign each copy to different classes.</Comment>
 
 <div class='flex justify-center w-full'>
-    <BtnWIconSm icon= {Icons.RUN} clk={run}>Run</BtnWIconSm>
+    <BtnWIconSm icon= {Icons.RUN} clk={()=>run(quiz)}>Run</BtnWIconSm>
 </div>
 
 </div>

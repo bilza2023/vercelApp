@@ -5,7 +5,7 @@ import checkQuestion from "./checkQuestion";
 import checkMCQ from "./checkMCQ";
 import checkMCQMultiSelect from "./checkMCQMultiSelect";
 import checkMCQSingleSelect from "./checkMCQSingleSelect";
-
+ 
 
 export default function checkBeforePub(quiz){
 const errorsArray = [];
@@ -15,14 +15,14 @@ checkQuiz(quiz,errorsArray);
 
         for (let i = 0; i < quiz.questions.length; i++) {
             const question = quiz.questions[i];
-                checkQuestion(question,errorsArray);
+                checkQuestion(question,errorsArray,i);
 
-            if (question.questionType === 'SurveyMCQ'){
-                checkMCQ(question,errorsArray);
+            if (question.questionType === 'mcq'){
+                checkMCQ(question,errorsArray,i);
                     if (question.multiSelect == true){
-                        checkMCQMultiSelect(question,errorsArray);
+                        checkMCQMultiSelect(question,errorsArray,i);
                     }else{
-                        checkMCQSingleSelect(question,errorsArray);
+                        checkMCQSingleSelect(question,errorsArray,i);
                     }
 
             }else {

@@ -6,6 +6,8 @@ import RunDiv from './RunDiv.svelte';
 export let quiz;
 import del from './fn/del.js';
 import clone from './fn/clone.js';
+import PublishErrors from './PublishErrors.svelte';
+
 import {visibleDialogStore} from './store';
 $: visibleDialog = $visibleDialogStore;
 
@@ -14,8 +16,13 @@ $: visibleDialog = $visibleDialogStore;
   <!-- ********** The Hidden Dialogue box **************** -->
 
 {#if quiz}
+
 {#if visibleDialog=='cloneDlg' }
 <InputForm clk={ clone  } title='Clone Test' btnTitle='Clone' btnColor='bg-green-800'/>
+{/if}
+
+{#if visibleDialog=='errors' }
+<PublishErrors />
 {/if}
 
 {#if visibleDialog=='runDlg' }

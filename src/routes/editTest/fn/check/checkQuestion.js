@@ -1,8 +1,8 @@
+//@ts-nocheck
 
+export default function checkQuestion(question,errorsArray,i){
 
-export default function checkQuestion(question,errorsArray){
-
-    checkstatement(question,errorsArray);
+    // checkstatement(question,errorsArray);
 
    
 
@@ -10,9 +10,9 @@ export default function checkQuestion(question,errorsArray){
 
 ////////////////////////////////////
 
-function checkstatement(question,errorsArray) {
-     if (question.content == "") {
-    errorsArray.push("The Question is missing statement");
-    }
-}
+// function checkstatement(question,errorsArray) {
+//      if (question.content.payload == "" ) {
+//     errorsArray.push("The Question is missing statement");
+//     }
+// }
 

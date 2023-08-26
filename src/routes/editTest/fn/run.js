@@ -1,10 +1,17 @@
 //@ts-nocheck
 import {toast,Agent} from '$lib/util';
-import {visibleDialogStore} from '../store';
-
+import {visibleDialogStore,errorsArrayStore} from '../store';
+import checkBeforePub from './check/checkBeforePub';
 //////////////////////////////////
 export default async function run(item) {
         try {
+    // debugger;        
+    const chq =  checkBeforePub(item);
+        if (chq.length > 0) {
+        errorsArrayStore.set(chq);
+        visibleDialogStore.set('errors');            
+        return; 
+        }
     // ////////////========== Test
     if (item.title === '') {
         toast.push('Missing title');
