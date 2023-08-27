@@ -40,7 +40,8 @@ function getQuestionTitle(question){
   }
 return 'Add Title';  
 }
-
+let showContent = true;
+let showOptions = true;
 </script>
 
 {#if quiz.questions.length > 0}
@@ -58,20 +59,33 @@ ser={qIndex+1}
 <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
   class="border-2 border-gray-500 p-1 m-2 mt-0" >
 
-<div class="flex justify-center"><button class="bg-gray-900 p-2 m-2 rounded-md px-8 hover:bg-gray-500 active:bg-gray-200">{Icons.TEMPLATE}
-Content</button></div>
+<!-- content section -->
 
-<div class='bg-gray-900 m-1 p-4 py-6  rounded-md mb-4'>
+<div class="flex justify-center">
+<button class="bg-gray-900 p-2 m-2 rounded-md px-8 hover:bg-gray-500 active:bg-gray-200"
+on:click={()=>showContent = !showContent}
+>{Icons.TEMPLATE}
+Content</button>
+</div>
+
+<div class='bg-gray-900 m-1 p-4 py-6  rounded-md mb-4 ' in:fade={{ delay: 300 }} out:fade={{ delay: 300 }}>
+  {#if showContent}
   <Display  contentObj={question.content}  {qIndex}/>
+  {/if}
 </div>
 
 
 <div class="flex justify-center">
-  <button class="bg-gray-900 p-2 m-2 rounded-md px-8 hover:bg-gray-500 active:bg-gray-200">{Icons.QUESTIONMARK}Options</button>
+  <button class="bg-gray-900 p-2 m-2 rounded-md px-8 hover:bg-gray-500 active:bg-gray-200"
+  on:click={() =>showOptions = !showOptions}
+  >{Icons.QUESTIONMARK}Options</button>
 </div>
 
-  <div class='bg-gray-900 m-1 p-4 rounded-md mb-4'>
+
+  <div class='bg-gray-900 m-1 p-4 rounded-md mb-4' in:fade={{ delay: 300 }} out:fade={{ delay: 300 }}>
+    {#if showOptions }
       <Options  {question}/>
+    {/if}  
   </div>
 
 </SectionHeadQuestion>

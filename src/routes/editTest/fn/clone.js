@@ -5,7 +5,7 @@ import {visibleDialogStore} from '../store';
 //////////////////////////////////
 export default async function clone(item , title) {
 try {
-    debugger;
+    // debugger;
     const resp = await Agent.create('test', { title });
     if (resp.ok) {
         const data = await resp.json();
