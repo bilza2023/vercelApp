@@ -11,6 +11,11 @@ import PublishErrors from './PublishErrors.svelte';
 import {visibleDialogStore} from './store';
 $: visibleDialog = $visibleDialogStore;
 
+function fnForClone(incommingTitle){
+//  debugger;
+  clone(quiz, incommingTitle);
+}
+
 </script>
 
   <!-- ********** The Hidden Dialogue box **************** -->
@@ -18,7 +23,7 @@ $: visibleDialog = $visibleDialogStore;
 {#if quiz}
 
 {#if visibleDialog=='cloneDlg' }
-<InputForm clk={ clone  } title='Clone Test' btnTitle='Clone' btnColor='bg-green-800'/>
+<InputForm clk={ fnForClone  } title='Clone Test' btnTitle='Clone' btnColor='bg-green-800'/>
 {/if}
 
 {#if visibleDialog=='errors' }

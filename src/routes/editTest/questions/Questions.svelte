@@ -45,13 +45,15 @@ return 'Add Title';
 
 {#if quiz.questions.length > 0}
 
-{#each quiz.questions  as question}
+{#each quiz.questions  as question, qIndex}
           
 <!-- ****************************************** -->
 <SectionHeadQuestion title={getQuestionTitle(question)} 
 deleteFn={()=>deleteQuestion(quiz,question.id)}  
 moveQuestionUp={()=>moveQuestionUp(quiz,question.id)}  
-moveQuestionDown={()=>moveQuestionDown(quiz,question.id)}  >
+moveQuestionDown={()=>moveQuestionDown(quiz,question.id)}  
+ser={qIndex+1}
+>
 
 <div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} 
   class="border-2 border-gray-500 p-1 m-2 mt-0" >
@@ -60,7 +62,7 @@ moveQuestionDown={()=>moveQuestionDown(quiz,question.id)}  >
 Content</button></div>
 
 <div class='bg-gray-900 m-1 p-4 py-6  rounded-md mb-4'>
-  <Display  contentObj={question.content}  />
+  <Display  contentObj={question.content}  {qIndex}/>
 </div>
 
 

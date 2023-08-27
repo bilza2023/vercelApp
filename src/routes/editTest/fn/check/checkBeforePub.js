@@ -14,15 +14,16 @@ checkQuiz(quiz,errorsArray);
 
 
         for (let i = 0; i < quiz.questions.length; i++) {
+        const qIndex = i+1;
             const question = quiz.questions[i];
-                checkQuestion(question,errorsArray,i);
+                checkQuestion(question,errorsArray,qIndex);
 
             if (question.questionType === 'mcq'){
-                checkMCQ(question,errorsArray,i);
+                checkMCQ(question,errorsArray,qIndex);
                     if (question.multiSelect == true){
-                        checkMCQMultiSelect(question,errorsArray,i);
+                        checkMCQMultiSelect(question,errorsArray,qIndex);
                     }else{
-                        checkMCQSingleSelect(question,errorsArray,i);
+                        checkMCQSingleSelect(question,errorsArray,qIndex);
                     }
 
             }else {

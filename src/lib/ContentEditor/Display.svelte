@@ -4,6 +4,7 @@ import ToolbarContent from '../../routes/editTest/ToolbarContent.svelte';
 import sortContent from '$lib/quizLib/fn/sortContent';
 export let contentObj;
 export let redraw;
+export let qIndex;
 $: sorted =  sortContent(contentObj);
 
 import {DivDisplay,DivEditor,TableDisplay , TableEditor ,ImageDisplay,ListDisplay , PreDisplay , YoutubeDisplay ,ImageEditor , PreEditor,YoutubeEditor ,ListEditor } from './index';
