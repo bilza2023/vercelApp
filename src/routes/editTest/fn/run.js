@@ -5,7 +5,7 @@ import checkBeforePub from './check/checkBeforePub';
 //////////////////////////////////
 export default async function run(item) {
         try {
-    // debugger;        
+    debugger;        
     const chq =  checkBeforePub(item);
         if (chq.length > 0) {
         errorsArrayStore.set(chq);
