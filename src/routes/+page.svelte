@@ -5,7 +5,7 @@ import {Icons,onMount,toast,ajaxGet} from '$lib/util';
 import ThreeCards from '$lib/appComp/ThreeCards.svelte';
 import { BASE_URL } from '$lib/cmn/config';
 import Display from '../lib/SkillEditor/Display.svelte';
-import quizStringifiedQsToArray from './show/fn/quizStringifiedQsToArray';
+// import quizStringifiedQsToArray from './show/fn/quizStringifiedQsToArray';
 
 let items;
 onMount(async ()=>{
@@ -15,9 +15,9 @@ onMount(async ()=>{
             const data = await resp.json();
             items = data.items;
             // debugger;
-            for (let i = 0; i < items.length; i++) {
-                items[i] = await quizStringifiedQsToArray(items[i]); 
-            }
+            // for (let i = 0; i < items.length; i++) {
+            //     items[i] = await quizStringifiedQsToArray(items[i]); 
+            // }
             for (let i = 0; i < items.length; i++) {
                 console.log('items[i].questions[0].content[0]' , items[i].questions[0].content[0])
             }

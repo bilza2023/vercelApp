@@ -3,7 +3,8 @@
 import Btns from "./Btns.svelte";
 import ShowQuestions from "./ShowQuestions.svelte";
 import ProgressBar from "$lib/cmp/ProgressBar.svelte";
-import {Display} from '$lib/SkillEditor';
+import Display from '../Display.svelte';
+import arrangeContent from '../fn/arrangeContent';
 
 //--we need these only if we want to react to them
 export let quiz;
@@ -44,7 +45,8 @@ const prev = ()=>{
 
   <div class="bg-gray-900 rounded-md p-1 m-1  ">
 
-    {#each quiz.questions[cq].content as contentItem}
+    {#each arrangeContent(quiz.questions[cq].content) as contentItem}
+    <!-- {#each quiz.questions[cq].content as contentItem} -->
     <!-- DivDsiplay will show EACH contentItem of content array one by one -->
     <!-- This is where we inser if contentItem.type == div then -->
     <Display  {contentItem} />  
