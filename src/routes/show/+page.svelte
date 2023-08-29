@@ -7,24 +7,19 @@ import {pageStateStore} from "./store";
 import {toast} from '$lib/util';
 ///////////////////////////////////////////////////
 import LoginForm from './loginForm/LoginForm.svelte';
-
 import ShowQuizOneByOne from './showQuizOneByOne/ShowQuizOneByOne.svelte';
 import ShowQuizAll from './showQuizAll/ShowQuizAll.svelte';
-
 import Result from './result/Result.svelte';
 import Goodbye from './goodbye/Goodbye.svelte';
-
 import nextPageState from './fn/nextPageState';
 
 $: pageState = $pageStateStore;
 
 let quiz;
 let students;
-
-//steps : loading , loaded,
+////////////////////////////////////
 onMount(async () => {
   try {
-
       let  quizId = new URLSearchParams(location.search).get("quizId"); 
       const resp = await fetch( `${BASE_URL}/show/${quizId}`, {
         method: 'GET',
