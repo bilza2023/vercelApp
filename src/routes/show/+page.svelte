@@ -3,11 +3,10 @@
 import Loading from '$lib/cmp/Loading.svelte';
 import { onMount } from 'svelte';
 import { BASE_URL } from '$lib/cmn/config.js';
-import {pageStateStore,itemStore} from "./store";
+import {pageStateStore} from "./store";
 import {toast} from '$lib/util';
 ///////////////////////////////////////////////////
 import LoginForm from './loginForm/LoginForm.svelte';
-import arrangeContent from './fn/arrangeContent';
 
 import ShowQuizOneByOne from './showQuizOneByOne/ShowQuizOneByOne.svelte';
 import ShowQuizAll from './showQuizAll/ShowQuizAll.svelte';
@@ -18,8 +17,8 @@ import Goodbye from './goodbye/Goodbye.svelte';
 import nextPageState from './fn/nextPageState';
 
 $: pageState = $pageStateStore;
-$: quiz = $itemStore;
 
+let quiz;
 let students;
 
 //steps : loading , loaded,
@@ -35,12 +34,8 @@ onMount(async () => {
       });
   
     if (resp.ok) {
-        //--This is the first call and happnes only when resp.ok
-        // debugger;
         const data = await resp.json();
-        
-    //-- Question content is not in array form
-        itemStore.set(data.quiz) //===> important
+        quiz = data.quiz //===> important
         students = data.students;
         nextPageState();//loginForm or ShowQuiz
     } else {
@@ -65,11 +60,11 @@ onMount(async () => {
           
           <!-- //==showQuiz======-->    
             {#if pageState == 'showQuiz'}
-                <!-- {#if quiz.displayQOneByOne} -->
-                <!-- <ShowQuizOneByOne {quiz} /> -->
-                <!-- {:else} -->
+                {#if quiz.displayQOneByOne}
+                <ShowQuizOneByOne {quiz} />
+                {:else}
                 <ShowQuizAll {quiz} />
-                <!-- {/if} -->
+                {/if}
             {/if}
 
             <!-- //==result======-->  

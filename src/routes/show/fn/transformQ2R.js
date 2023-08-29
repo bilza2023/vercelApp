@@ -9,7 +9,7 @@ export default async function transformQ2R(quiz){
 
       for (let i = 0; i < quiz.questions.length; i++) {
         const question = quiz.questions[i];
-            if (question.questionType == 'SurveyMCQ'){
+            if (question.questionType == 'mcq'){
                 const rMCQ = transformMCQ(question);
                 answers.push(rMCQ);
             }else {

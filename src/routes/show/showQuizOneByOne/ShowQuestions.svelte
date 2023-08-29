@@ -8,7 +8,7 @@ export let cq;
 
 </script>
 
-    {#if questions[cq].questionType == "SurveyMCQ"}
+    {#if questions[cq].questionType == "mcq"}
       <ShowMcq question={questions[cq]} />
     {/if}
     

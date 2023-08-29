@@ -1,6 +1,6 @@
 <script>
 // @ts-nocheck
-
+ 
 import Btns from "./Btns.svelte";
 import ShowQuestions from "./ShowQuestions.svelte";
 import ProgressBar from "$lib/cmp/ProgressBar.svelte";
@@ -27,8 +27,6 @@ export let quiz;
 {#each quiz.questions as question}
 
     {#each arrangeContent(question.content) as contentItem}
-    <!-- DivDsiplay will show EACH contentItem of content array one by one -->
-    <!-- This is where we inser if contentItem.type == div then -->
     <Display  {contentItem} />  
     {/each}
 

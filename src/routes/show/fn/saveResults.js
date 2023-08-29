@@ -10,11 +10,9 @@ import nextPageState from '../fn/nextPageState.js';
 import { itemStore } from '../store';
 /////////////////////////////////////////////////////
  
-export default async function saveResults  ( ){
+export default async function saveResults  ( quiz ){
   try{
     // debugger;
-    let quiz = get  (  itemStore );
-    //--For Now we are not using th savResponse flag which we already have in quiz Model We simply only save private.
     if ( quiz.private === false){
       //-if public send from here for result or goodbye
        nextPageState();
@@ -32,6 +30,7 @@ export default async function saveResults  ( ){
     quizResult.studentId = get(studentIdStore) ; //here
     quizResult.studentName = get(studentNameStore) ; //here
     //======
+    //  debugger;
     const resp = await Agent.create('result', {item :quizResult});
       if (resp.ok){
           //-if private send from here for result or goodbye

@@ -26,7 +26,6 @@ const mark_selected = (option_id) => {
 
 
 </script>
-
 <div class=" flex justify-center flex-col text-center ">
   {#each question.options as option }
     <!-- svelte-ignore a11y-click-events-have-key-events -->

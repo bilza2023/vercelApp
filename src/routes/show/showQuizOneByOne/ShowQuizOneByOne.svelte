@@ -1,4 +1,4 @@
-<script>
+<script> 
 // @ts-nocheck
 import Btns from "./Btns.svelte";
 import ShowQuestions from "./ShowQuestions.svelte";
