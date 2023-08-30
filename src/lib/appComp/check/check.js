@@ -6,7 +6,7 @@ import gradeMCQ from "./gradeMCQ.js";
 
 ///////////////////////////////////////////////////////////////////////
     const schemaMap = {
-    "SurveyMCQ"         : gradeMCQ
+    "mcq"         : gradeMCQ
     // "SurveyInput"       : CheckSurveyInput,
     // "SurveyParagraph"   : CheckSurveyInput,
     // "SurveyNumber"      : CheckSurveyInput,
@@ -17,7 +17,7 @@ import gradeMCQ from "./gradeMCQ.js";
 
 export default async function check(incommingResults,quiz){
   try{
-      
+      // debugger;
       for (let i = 0; i < incommingResults.length; i++) {
         const result = incommingResults[i];
                checkSingleResult(result,quiz)
@@ -33,7 +33,7 @@ function checkSingleResult(singleResult,quiz){
 
   for (let i = 0; i < singleResult.answers.length; i++) {
     const answer = singleResult.answers[i];
-          if (answer.questionType == 'SurveyMCQ'){
+          if (answer.questionType == 'mcq'){
               gradeMCQ(answer,quiz);
           }
   }

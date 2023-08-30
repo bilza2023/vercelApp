@@ -1,17 +1,12 @@
 <script>
 //@ts-nocheck
 import {Agent , Icons, onMount,toast} from '$lib/util';
-
-import { BASE_URL } from '$lib/cmn/config.js';
 import {Loading,PageWrapper} from '$lib/cmp';
 import Indl from './indl/Indl.svelte';
 import Summary from './summary/Summary.svelte';
 import Combined from './combined/Combined.svelte';
 import ToolBar from './toolbar/ToolBar.svelte';
 import check from '$lib/appComp/check/check.js';
-
-// import StudentResportsTable from "./individual/StudentResportsTable.svelte"; 
-// import getStudentReports from "./individual/getStudentReports.js"; 
 
 let pageState = "loading";
 let results= null;

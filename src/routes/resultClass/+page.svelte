@@ -19,7 +19,7 @@ let students;
 ////////////////////////////////////
 onMount(async () => {
   try {
-  // debugger;
+  debugger;
   loaded = false;
   const  id = new URLSearchParams(location.search).get("quizId");
 

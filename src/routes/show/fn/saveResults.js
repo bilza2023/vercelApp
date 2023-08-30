@@ -12,7 +12,7 @@ import { itemStore } from '../store';
  
 export default async function saveResults  ( quiz ){
   try{
-    // debugger;
+    debugger;
     if ( quiz.private === false){
       //-if public send from here for result or goodbye
        nextPageState();

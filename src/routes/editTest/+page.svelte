@@ -5,7 +5,7 @@ import {onMount,toast,fade,Agent} from '$lib/util';
 
 import Questions from './questions/Questions.svelte'
 import SettingMain from './settings/SettingsMain.svelte';
-import Toolbar from './Toolbar.svelte';      
+import Toolbar from './Toolbar.svelte';   
 import AddQuestionBar from './AddQuestionBar.svelte';
 import HiddenDivs from './HiddenDivs.svelte';
 import PublishErrors from './PublishErrors.svelte';
