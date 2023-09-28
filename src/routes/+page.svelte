@@ -65,6 +65,8 @@ cls = cls;
 
 <MathCard id="650b951ed750929738a45500" details="Ex 4.1 Q 3 Pt 2" board="FBISE" className="9th"  />  
 
+<MathCard id="650b94ddd750929738a45366" details="Ex 1.5 Q 4 Pt 1" board="FBISE" className="9th"  />  
+
 </div>
 <br/>
 <br/>
