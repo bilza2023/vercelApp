@@ -15,10 +15,7 @@ onMount( async ()=>{
 <MainNav/>
 
 
+<a href="/math?id=650b951ed750929738a45500">fbise_cl_9_ch_4_ex_4.1_q_3_pt_2</a>
 
 
-<div class="p-1 m-1 bg-red-700">
-<h1>Welcome</h1>
-
-</div>
 </PageWrapper>
