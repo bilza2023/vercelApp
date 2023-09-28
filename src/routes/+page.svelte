@@ -1,5 +1,18 @@
+<script>
+import {PageWrapper} from '$lib/cmp';
 
+import MainNav from '$lib/appComp/MainNav.svelte';
 
+import {isLoginStore,onMount,Icons,chqLogin} from '$lib/util';
+$: isLogin = $isLoginStore;
+onMount( async ()=>{
+    chqLogin()
+});
+
+</script>
+
+<PageWrapper>
+<MainNav/>
 
 
 
@@ -8,3 +21,4 @@
 <h1>Welcome</h1>
 
 </div>
+</PageWrapper>
