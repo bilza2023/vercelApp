@@ -108,7 +108,7 @@ let eqs=[];
 let questionDetails;
 onMount(async () => {
   try {
-  debugger;
+  // debugger;
   let  id = new URLSearchParams(location.search).get("id"); 
   const token = localStorage.getItem("token");
   const resp = await fetch( `${BASE_URL}/get_question` ,{
@@ -121,7 +121,7 @@ onMount(async () => {
   });
   
     if (resp.ok) {
-    debugger;
+    // debugger;
         const data = await resp.json();
         const mathQuestion  = data.mathQuestion //===> important
         soundFile = await getSoundFile(mathQuestion.filename);
