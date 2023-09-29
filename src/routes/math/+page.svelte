@@ -142,7 +142,7 @@ onMount(async () => {
         PresentationTotalTime = sound.duration();
         maxSliderValue = PresentationTotalTime;
         //--check again
-        eqs[eqs.length-1].endTime =  PresentationTotalTime;
+        eqs[eqs.length-1].eqEndTime =  PresentationTotalTime;
         setFocus( );
     }
     });
