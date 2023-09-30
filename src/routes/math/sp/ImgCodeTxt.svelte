@@ -2,6 +2,7 @@
 //@ts-nocheck
 import Katex from 'svelte-katex'
 import Table from './Table.svelte';
+import TableCode from './TableCode.svelte';
 export let eq;
 
 </script>
@@ -23,6 +24,11 @@ export let eq;
     {#if eq.type == 'table' || eq.type == 'tbl'}
         <!-- <img src={eq.code} alt="Not found"> -->
         <Table code={eq.code}/>
+    {/if}
+    
+    {#if eq.type == 'tableCode' }
+        <!-- <img src={eq.code} alt="Not found"> -->
+        <TableCode code={eq.code}/>
     {/if}
    
     {#if eq.type == 'html'}

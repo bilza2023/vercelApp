@@ -103,7 +103,7 @@ let maxSliderValue; //it is not timeDiff since it does not change
 let isPlaying=false;
 let timeDiff = 0; // Initialize timeDiff - keep timeDiff and not use sound.seek() since sound.seek() is a function where as the timeDiff is a value that can be passed to the components.
 // let content=[];
-
+let notFreeContent = false;
 let eqs=[];
 let questionDetails;
 onMount(async () => {
@@ -123,6 +123,10 @@ onMount(async () => {
     if (resp.ok) {
     // debugger;
         const data = await resp.json();
+        if (data.errorCode == "notFree"){
+            notFreeContent = true;
+            return;
+        }
         const mathQuestion  = data.mathQuestion //===> important
         soundFile = await getSoundFile(mathQuestion.filename);
         // soundFile =  `./mathSounds/${mathQuestion.filename}.mp3`;
@@ -164,6 +168,13 @@ onMount(async () => {
 {#if !isPlaying}
 <MainNav/>
 {/if}
+
+{#if notFreeContent}
+<div>
+This is premier content
+</div>
+{/if}
+
  <div class='p-1 m-0 text-xs bg-gray-800 text-yellow-600  '>{questionDetails}</div>
 
 <!-- ************** -->
