@@ -1,19 +1,59 @@
 <script>
-import { PageWrapper } from "$lib/cmp";
-import { onMount } from "$lib/util";
+import {PageWrapper} from '$lib/cmp';
+import {BASE_URL,onMount,toast} from '$lib/util';
+import MainNav from '$lib/appComp/MainNav.svelte';
+import Sticky from "./Sticky.svelte";
+import { Howl } from 'howler';
+import SidePanel from './sp/SidePanel.svelte';
+import MainPanel from './MainPanel/MainPanel.svelte';
+
 import getTableData from "./demo";
-import Cell from "./Cell.svelte";
-let calcData = { rows: [] };
-let interval = null;
+
+let gridData = { rows: [] };
 let startTime = null;
 let runningTime = null;
+let  questionDetails = "xyz";
+let eqs = [];
+let soundFile;
+let sound;
+let PresentationTotalTime =0; 
+/////////////////////////
+let interval;
+let maxSliderValue; //it is not timeDiff since it does not change
+let isPlaying=false;
+let timeDiff = 0; // Initialize timeDiff - keep timeDiff and not use sound.see
 
-onMount(async () => {
-    calcData = await getTableData();
-    startTime = Date.now();
-    interval = setInterval(updateTimeDiff, 1000);
-});
+function changeSeek(newSeekValue){
+ sound.seek(newSeekValue);
+}
 
+function start(){
+    // debugger;
+    if (isPlaying == true){return;}
+    isPlaying = true;
+    sound.play();
+        sound.on('play', function () {
+        interval = setInterval(updateTimeDiff,1000);
+        });
+    
+}
+
+function stop(){
+    sound.stop();
+    isPlaying = false;
+    timeDiff = 0;
+    clearInterval(interval);
+    window.scrollTo({top: 0,behavior: 'smooth'});
+    setFocus();
+}
+// function updateTimeDiff() {
+//       timeDiff = sound.seek();
+//       setFocus();
+//       checkFullScreen();
+//     if (timeDiff > (sound.duration() * 1000)) {
+//         stop();
+//     }
+// }
 function updateTimeDiff() {
 // debugger;
 const currentTime = Date.now();
@@ -22,33 +62,48 @@ const timeDiff = currentTime - startTime;
 runningTime = Math.floor(timeDiff / 1000);
 }
 
+async function fileExists(url) {
+  try {
+    const response = await fetch(url);
+    return response.status === 200;
+  } catch (error) {
+    return false;
+  }
+}
+
+async function getSoundFile(filename) {
+  const soundFile = `./mathSounds/${filename}.mp3`;
+  
+  if (await fileExists(soundFile)) {
+    return soundFile;
+  } else {
+    return './mathSounds/test.mp3';
+  }
+}
+
+onMount(async () => {
+    gridData = await getTableData();
+    startTime = Date.now();
+    interval = setInterval(updateTimeDiff, 1000);
+});
+
 
 </script>
 
 
 <PageWrapper>
-  <br>
-  <br>
-  <br>
+<MainNav/>
 
-  {#if calcData && calcData.rows && calcData.rows.length > 0}
-  <div class="flex justify-center w-full">
-    <table class={`m-2 p-2 table_bg`}
-      style = {`background-color : ${calcData.bgColor}`}
-    >
-      {#each calcData.rows as row}
-      <tr>
-        {#each row.cells as cell}
-        <Cell {cell} {runningTime} bgColor={calcData.bgColor} bgIntensity={calcData.bgIntensity}/>
-        
-        {/each}
-      </tr>
-      {/each}
-    </table>
-  </div>
-  {/if}
+<div class='p-1 m-0 text-xs bg-gray-800 text-yellow-600'>
+{questionDetails}</div>
+
+    <Sticky {start} {stop} {timeDiff} {changeSeek} maxSliderValue={maxSliderValue}/>
 
 
+<div class="flex justify-center w-full">
+<MainPanel {gridData}  {soundFile} {runningTime}   />
+<SidePanel  {eqs} />
+</div>
 
 <br>
 <br>
