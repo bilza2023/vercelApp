@@ -120,20 +120,20 @@ onMount(async () => {
       body: JSON.stringify( {id} )
   });
   
-    if (resp.ok) {
     // debugger;
+    if (resp.ok) {
         const data = await resp.json();
         if (data.errorCode == "notFree"){
             notFreeContent = true;
             return;
         }
-        const mathQuestion  = data.mathQuestion //===> important
-        soundFile = await getSoundFile(mathQuestion.filename);
+        const question  = data.question //===> important
+        eqs = data.eqs.eqs; //its twice eqs.eqs
+        soundFile = await getSoundFile(question.filename);
         // soundFile =  `./mathSounds/${mathQuestion.filename}.mp3`;
 
     // const data  = (await import(`../../lib/mathData/${id}.js`)).default;  
-    eqs = mathQuestion.eqs;
-    questionDetails = mathQuestion.filename;;
+    questionDetails = question.filename;;
 
     sound = new Howl({
     src: [soundFile],
