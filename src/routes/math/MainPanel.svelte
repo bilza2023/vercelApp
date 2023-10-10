@@ -1,7 +1,6 @@
 <svelte:head>
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css" integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ" crossorigin="anonymous">
 </svelte:head>
-
 <script>
 //@ts-nocheck
  import { browser,onMount } from '$lib/util';
@@ -9,15 +8,16 @@ import CodeTxt from './CodeTxt.svelte';
 //== Import variables
 export let eqs;
 let innerEqs =[];
+export let changeSeek;
 
 $: {
-     eqs; // just included to start the fun
-    //  if (eqs.length > 0){
+     eqs; 
         const topIndex = findTopIndex();
         innerEqs = removeElementsBeforeIndex(topIndex);
-    //  }
 }
-
+function log(index){
+    console.log("index" , index);
+}
 function removeElementsBeforeIndex(index) {
     if (index < 0 || index >= eqs.length) {
         return eqs;
@@ -34,14 +34,16 @@ function findTopIndex() {
 
 </script>
 
-
     {#each innerEqs as eq,index}
-    <div class='flex'>
-        <div class='m-1 p-1 rounded-2xl bg-stone-600 text-xs items-center justify-center'>{eq.step}</div>
+    <button class='flex w-full'  on:click={()=>changeSeek(eq.eqStartTime)}>
+        
+        <div class='m-1 p-1 rounded-2xl bg-stone-600 text-xs items-center justify-center' >{eq.step}</div>
+
         <div class="{ eq.isf == true ? 'focused' : 'nonFocused'}  w-full text-center">
-        <CodeTxt {eq}/>
+            <CodeTxt {eq}/>
         </div>
-    </div>
+
+    </button>    
     {/each}
 <!-- do not remove the 4 br they are bery important -->
 <br/>    

@@ -3,7 +3,7 @@
 import ImgCodeTxt from "./ImgCodeTxt.svelte";
 // export let permContent;
 export let eqs;
-</script>
+</script> 
 
 <div class='justify-center line-clamp-4 text-yellow-300'>
    

@@ -29,7 +29,8 @@ function checkFullScreen(){
   }
 }
 function changeSeek(newSeekValue){
- sound.seek(newSeekValue);
+ let r = sound.seek(newSeekValue);
+ console.log('sound.seek',r);
 }
  
 function start(){
@@ -110,7 +111,6 @@ onMount(async () => {
   try {
   // debugger;
   let  id = new URLSearchParams(location.search).get("id"); 
-  //http://localhost/fe/get_question?id=65241c2f94cd0f67ca0a9d2b
   const token = localStorage.getItem("token");
   const resp = await fetch( `${BASE_URL}/fe/get_question` ,{
       method: 'POST',
@@ -162,8 +162,6 @@ onMount(async () => {
     // console.error(error);
   }
 });
-
-
 /////////////////////////////////////////
 </script>
 
@@ -187,11 +185,11 @@ This is premier content
    
 
     <div class="flex px-2 rounded-md bg-gray-900" >
-
+ 
 <!--Main Panel---->
 {#if !fullScreen}
         <div class= "w-8/12 min-h-screen p-2  m-0 overflow-x-auto"  >
-        <MainPanel {eqs}  {soundFile} {timeDiff}  />
+        <MainPanel {eqs}  {soundFile} {timeDiff}  {changeSeek}/>
         </div>
 
 <!--Side Panel---->
