@@ -10,11 +10,13 @@ export let eq;
 <div class='flex justify-center '>
 
     {#if eq.type == undefined || eq.type == 'txt' || eq.type == 'text'}
-        <p>{eq.code}</p>
+        <p class="bg-stone-700 p-2 m-1 rounded-md">{eq.code}</p>
     {/if}
 
     {#if eq.type == 'code'}
+        <div class="bg-stone-900 p-2 m-1 rounded-md">    
         <Katex>{eq.code}</Katex>
+        </div>
     {/if}
 
     {#if eq.type == 'img' || eq.type == 'image'}

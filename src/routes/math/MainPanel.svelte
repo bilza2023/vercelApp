@@ -37,7 +37,7 @@ function findTopIndex() {
     {#each innerEqs as eq,index}
     <button class='flex w-full'  on:click={()=>changeSeek(eq.eqStartTime)}>
         
-        <div class='m-1 p-1 rounded-2xl bg-stone-600 text-xs items-center justify-center' >{eq.step}</div>
+        <div class='m-1 p-1 rounded-2xl bg-stone-600 text-sm items-center justify-center' >{eq.step}</div>
 
         <div class="{ eq.isf == true ? 'focused' : 'nonFocused'}  w-full text-center">
             <CodeTxt {eq}/>
