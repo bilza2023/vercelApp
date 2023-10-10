@@ -110,8 +110,9 @@ onMount(async () => {
   try {
   // debugger;
   let  id = new URLSearchParams(location.search).get("id"); 
+  //http://localhost/fe/get_question?id=65241c2f94cd0f67ca0a9d2b
   const token = localStorage.getItem("token");
-  const resp = await fetch( `${BASE_URL}/get_question` ,{
+  const resp = await fetch( `${BASE_URL}/fe/get_question` ,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -120,15 +121,16 @@ onMount(async () => {
       body: JSON.stringify( {id} )
   });
   
-    // debugger;
     if (resp.ok) {
+      
         const data = await resp.json();
-        if (data.errorCode == "notFree"){
-            notFreeContent = true;
-            return;
-        }
+        // if (data.errorCode == "notFree"){
+        //     notFreeContent = true;
+        //     return;
+        // }
         const question  = data.question //===> important
-        eqs = data.eqs.eqs; //its twice eqs.eqs
+        // eqs = data.eqs.eqs; //its twice eqs.eqs
+        eqs = question.eqs;
         soundFile = await getSoundFile(question.filename);
         // soundFile =  `./mathSounds/${mathQuestion.filename}.mp3`;
 
