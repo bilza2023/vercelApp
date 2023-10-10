@@ -29,8 +29,10 @@ function checkFullScreen(){
   }
 }
 function changeSeek(newSeekValue){
- let r = sound.seek(newSeekValue);
- console.log('sound.seek',r);
+ sound.seek(newSeekValue);
+ timeDiff = sound.seek();
+ setFocus();
+//  console.log('sound.seek',r);
 }
  
 function start(){
