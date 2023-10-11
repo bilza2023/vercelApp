@@ -63,7 +63,10 @@ cls = cls;
 
 <div class='flex justify-center flex-wrap gap-2 bg-gray-900 p-8 m-8 mt-1 rounded-md border-2 border-white'>
 
-    <MathCard id="65241cc094cd0f67ca0aa1b5" details="Ex 4.4 Q 1" board="FBISE" className="9th"  />  
+    <MathCard id="65241cc094cd0f67ca0aa1b5" details="Ex 4.4 Q 1 P 1" board="FBISE" className="9th"  />  
+    <MathCard id="65241cc294cd0f67ca0aa1ba" details="Ex 4.4 Q 1 P 2" board="FBISE" className="9th"  />  
+    <MathCard id="65241cc694cd0f67ca0aa1bf" details="Ex 4.4 Q 1 P 3" board="FBISE" className="9th"  />  
+    <MathCard id="65241cca94cd0f67ca0aa1c4" details="Ex 4.4 Q 1 P 4" board="FBISE" className="9th"  />  
 
     <!-- <MathCard id="650b94ddd750929738a45366" details="Ex 1.5 Q 4 Pt 1" board="FBISE" className="9th"  />   -->
 
