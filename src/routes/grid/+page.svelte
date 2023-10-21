@@ -1,109 +1,28 @@
+<svelt:head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+</svelt:head>
 <script>
 import {PageWrapper} from '$lib/cmp';
 import {BASE_URL,onMount,toast} from '$lib/util';
 import MainNav from '$lib/appComp/MainNav.svelte';
-import Sticky from "./Sticky.svelte";
-import { Howl } from 'howler';
-import SidePanel from './sp/SidePanel.svelte';
-import MainPanel from './MainPanel/MainPanel.svelte';
-
-import getTableData from "./demo";
-
-let gridData = { rows: [] };
-let startTime = null;
-let runningTime = null;
-let  questionDetails = "xyz";
-let eqs = [];
-let soundFile;
-let sound;
-let PresentationTotalTime =0; 
-/////////////////////////
-let interval;
-let maxSliderValue; //it is not timeDiff since it does not change
-let isPlaying=false;
-let timeDiff = 0; // Initialize timeDiff - keep timeDiff and not use sound.see
-
-function changeSeek(newSeekValue){
- sound.seek(newSeekValue);
-}
-
-function start(){
-    // debugger;
-    if (isPlaying == true){return;}
-    isPlaying = true;
-    sound.play();
-        sound.on('play', function () {
-        interval = setInterval(updateTimeDiff,1000);
-        });
-    
-}
-
-function stop(){
-    sound.stop();
-    isPlaying = false;
-    timeDiff = 0;
-    clearInterval(interval);
-    window.scrollTo({top: 0,behavior: 'smooth'});
-    setFocus();
-}
-// function updateTimeDiff() {
-//       timeDiff = sound.seek();
-//       setFocus();
-//       checkFullScreen();
-//     if (timeDiff > (sound.duration() * 1000)) {
-//         stop();
-//     }
-// }
-function updateTimeDiff() {
-// debugger;
-const currentTime = Date.now();
-const timeDiff = currentTime - startTime;
-// Calculate runningTime if needed, for example, in seconds:
-runningTime = Math.floor(timeDiff / 1000);
-}
-
-async function fileExists(url) {
-  try {
-    const response = await fetch(url);
-    return response.status === 200;
-  } catch (error) {
-    return false;
-  }
-}
-
-async function getSoundFile(filename) {
-  const soundFile = `./mathSounds/${filename}.mp3`;
-  
-  if (await fileExists(soundFile)) {
-    return soundFile;
-  } else {
-    return './mathSounds/test.mp3';
-  }
-}
-
-onMount(async () => {
-    gridData = await getTableData();
-    startTime = Date.now();
-    interval = setInterval(updateTimeDiff, 1000);
-});
-
+import MainPanel from './MainPanel.svelte';
+import SidePanel from './SidePanel.svelte';
+// import Sticky from "./Sticky.svelte";
 
 </script>
+
+
 
 
 <PageWrapper>
 <MainNav/>
 
-<div class='p-1 m-0 text-xs bg-gray-800 text-yellow-600'>
-{questionDetails}</div>
-
-    <Sticky {start} {stop} {timeDiff} {changeSeek} maxSliderValue={maxSliderValue}/>
-
 
 <div class="flex justify-center w-full">
-<MainPanel {gridData}  {soundFile} {runningTime}   />
-<SidePanel  {eqs} />
+    <MainPanel   />
+    <SidePanel   />
 </div>
+
 
 <br>
 <br>
@@ -111,4 +30,5 @@ onMount(async () => {
 <br>
 <br>
 </PageWrapper>
+
 
