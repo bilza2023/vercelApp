@@ -1,1 +1,0 @@
-In this code when i send bgIntensity as 800 it works but not 900 

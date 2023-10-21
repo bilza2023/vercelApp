@@ -1,12 +1,14 @@
 <script>
 //@ts-nocheck
-import {Icons,browser} from '$lib/util';
-export let start;
-export let changeSeek;
-export let maxSliderValue
-export let stop;
-export let timeDiff;
 
+import {Icons,browser} from '$lib/util';
+import {runningTime} from "./store";
+import { start,stop } from "./main.js";
+// export let changeSeek;
+export let maxSliderValue=5000;
+// export let timeDiff;
+$:rTime = $runningTime;
+stop();
 </script>
 
 <div class="sticky top-0 z-50 bg-stone-900 shadow-sm p-2">
@@ -20,10 +22,10 @@ export let timeDiff;
       ◼ <!-- This is the UTF-8 stop icon -->
     </button>
     <div class="p-1 bg-gray-700 mx-2 rounded text-xs text-yellow-600 ">
-      {(timeDiff).toFixed(0)} sec</div>
+      {(rTime).toFixed(0)} sec</div>
     <div class='flex-grow'>
-    <input class='w-full'  type="range"  id="timeSlider" value={timeDiff} min=0 max={maxSliderValue} 
-    on:change={(e)=>changeSeek(e.target.value)}
+    <input class='w-full'  type="range"  id="timeSlider" value={rTime} min=0 max={maxSliderValue} 
     > </div>  
   </div>
 </div>
+    <!-- on:change={(e)=>changeSeek(e.target.value)} -->
