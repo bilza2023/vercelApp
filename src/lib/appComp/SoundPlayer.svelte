@@ -14,12 +14,20 @@ let  interval         = null;
 
 
 async function start(){
+try{
+debugger;
+  await loadSound();
  if (isPlaying == true){return;}
-  isPlaying = true;
-    sound.play();
-    sound.on('play', function () {
+        sound.play();
+        sound.on('play', function () {
+        isPlaying = true;
         interval = setInterval(updateTimeDiff,1000);
     });
+
+}catch(e){
+  throw new Error("Can not load");
+}
+    
  return true;     
 }
 
@@ -39,14 +47,19 @@ function changeSeek(newSeekValue){
     sound.seek(newSeekValue);
     updateTimeDiff();
 }
-onMount(async()=>{
-    sound = new Howl({
+
+async function loadSound(){
+sound = new Howl({
     src: [soundFile],
     volume: 1.0,
     onload: function() {
         maxSliderValue = sound.duration();
+        console.log("sound loaded..");
     }
     });
+}
+onMount(async()=>{
+    // loadSound();
 });
 </script>
 

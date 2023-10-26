@@ -100,12 +100,6 @@ let soundFile;
 let sound;
 let PresentationTotalTime =0; 
 /////////////////////////
-async function loadAndLogJson(name) {
-      const response = await  fetch(name)
-      const data =  await response.json();
-      return data;
-    }
-/////////////////////////
 let fullScreen = false;
 let interval;
 let maxSliderValue; //it is not timeDiff since it does not change
@@ -119,11 +113,24 @@ onMount(async () => {
   try {
   // debugger;
   let  id = new URLSearchParams(location.search).get("id"); 
-  const name = 'first.json';
-  const data = await loadAndLogJson(name);
-  console.log("data",data);
-  //////////////////////////////
-  const question  = data.question //===> important
+  const token = localStorage.getItem("token");
+  const resp = await fetch( `${BASE_URL}/fe/get_question` ,{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+      body: JSON.stringify( {id} )
+  });
+  
+    if (resp.ok) {
+      
+        const data = await resp.json();
+        // if (data.errorCode == "notFree"){
+        //     notFreeContent = true;
+        //     return;
+        // }
+        const question  = data.question //===> important
         // eqs = data.eqs.eqs; //its twice eqs.eqs
         eqs = question.eqs;
         soundFile = await getSoundFile(question.filename);
@@ -148,6 +155,10 @@ onMount(async () => {
     }
     });
 
+    } else {
+        const data = await resp.json();
+        toast.push(data.message);
+    }
   } catch (error) {
     toast.push('Unknown Error');
     // console.error(error);
@@ -201,4 +212,3 @@ This is premier content
 <br>
 
 </div><!--page div-->
-
