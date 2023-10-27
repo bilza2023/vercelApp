@@ -8,19 +8,26 @@ import Sticky from "./Sticky.svelte";
 import { Howl } from 'howler';
 import SidePanel from './sp/SidePanel.svelte';
 import FullScreen from './sp/FullScreen.svelte';
+
+import {runningTimeStore,currentEqStore} from "./store";
+
+$:runningTime = $runningTimeStore;
+$:currentEq   = $currentEqStore;
+
 ////////////////////////////////////////////////
 
 function updateTimeDiff() {
       runningTime = sound.seek();
-      // setFocus();
+      setCurrentEq();
       checkFullScreen();
     if (runningTime > (sound.duration() * 1000)) {
         stop();
     }
 }
+
 function checkFullScreen(){
- setCurrentEq();
-  if (currentEq.fs.length > 0) {
+ 
+  if (currentEq &&  currentEq.fs.length > 0) {
      if (runningTime >= currentEq.fsStartTime && runningTime < currentEq.fsEndTime ){
       // console.log("Full screen data avaialbe");
       fullScreen = true;
@@ -34,7 +41,8 @@ function setCurrentEq(){
  for (let i = 0; i < eqs.length; i++) {
  const eq = eqs[i];
         if (runningTime >= eq.eqStartTime && runningTime < eq.eqEndTime ){
-       currentEq = eq;
+       currentEqStore.set(eq);
+      //  console.log("currentEq==>",currentEq);
         return; 
         }
  }
@@ -143,7 +151,7 @@ onMount(async () => {
         maxSliderValue = PresentationTotalTime;
         //--check again
         eqs[eqs.length-1].eqEndTime =  PresentationTotalTime;
-        
+        currentEqStore.set(eqs[0]);
     }
     });
 

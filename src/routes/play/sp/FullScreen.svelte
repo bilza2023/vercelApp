@@ -1,39 +1,19 @@
 <script>
 //@ts-nocheck
 import ImgCodeTxt from "./ImgCodeTxt.svelte";
-import {onMount} from '$lib/util';
-export let eqs;
-export let runningTime;
-let currentEqFs;
-$:{
-        runningTime;
-        setCurrentEq();
-}
-function setCurrentEq(){
- for (let i = 0; i < eqs.length; i++) {
- const eq = eqs[i];
-        if (runningTime >= eq.eqStartTime && runningTime < eq.eqEndTime ){
-       currentEqFs = eq.fs;
-        return; 
-        }
- }
-}
+import {currentEqStore} from "../store";
+$:currentEq   = $currentEqStore;
 
-onMount(()=>{
-        if(eqs.length  > 0){
-        currentEqFs = eqs[0].fs;
-        }else {
-        currentEq = null;
-        }
-});
 </script> 
-{#if currentEqFs}
+{#if currentEq}
 <div class='justify-center line-clamp-4 text-yellow-300'>
    
         <div class='w-full  rounded-md m-1 p-1 bg-stone-600 text-center'>
-                {#each currentEqFs as eq}    
+        {#if currentEq && currentEq.fs.length > 0 }    
+                {#each currentEq.fs as eq}    
                 <ImgCodeTxt {eq} />        
                 {/each}
+        {/if}
         </div>
 
 </div>

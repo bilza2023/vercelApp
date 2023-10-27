@@ -4,15 +4,18 @@
 <script>
 //@ts-nocheck
 import { browser,onMount } from '$lib/util';
+import {currentEqStore} from "./store";
+$:currentEq   = $currentEqStore;
+
 import CodeTxt from './CodeTxt.svelte';
 //== Import variables
 export let eqs;
-export let runningTime;
+// export let runningTime;
 let innerEqs =[];
 export let changeSeek;
 
 $: { 
-     runningTime; 
+     currentEq; 
     //  console.log("runningTime",runningTime);
         setFocus( );
         const topIndex = findTopIndex();
@@ -22,10 +25,8 @@ function setFocus( ){
   eqs = eqs.map( (eq)=>{eq.isf = false;return eq;});
   for (let i = 0; i < eqs.length; i++) {
         const eq = eqs[i];
-            if (runningTime >= eq.eqStartTime && runningTime < eq.eqEndTime ){
+            if (currentEq._id == eq._id ){
                 eq.isf = true;
-                // fullScreen = false;
-                eqs = [...eqs];        
                 return; // no need to checkany further
             }
         }
@@ -45,7 +46,9 @@ function findTopIndex() {
  return index - 2;    
 }
 onMount(()=>{
-    setFocus( );
+    if(eqs && eqs.length > 0) {
+        eqs[0].isf = true;
+    }
 });
 </script>
 
