@@ -16,7 +16,6 @@ export let changeSeek;
 
 $: { 
      currentEq; 
-    //  console.log("runningTime",runningTime);
         setFocus( );
         const topIndex = findTopIndex();
         innerEqs = removeElementsBeforeIndex(topIndex);

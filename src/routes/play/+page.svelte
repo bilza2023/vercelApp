@@ -2,56 +2,23 @@
 // @ts-nocheck
 import {BASE_URL,onMount,toast} from '$lib/util';
 import MainNav from '$lib/appComp/MainNav.svelte';
-// import MainPanel from './MainPanel.svelte';
-import EqPanel from './EqPanel.svelte';
 import Sticky from "./Sticky.svelte";
 import { Howl } from 'howler';
-import SidePanel from './sp/SidePanel.svelte';
-import FullScreen from './sp/FullScreen.svelte';
-
-import {runningTimeStore,currentEqStore} from "./store";
-
-$:runningTime = $runningTimeStore;
-$:currentEq   = $currentEqStore;
-
+import EqPlayer from '$lib/appComp/EqPlayer/EqPlayer.svelte';
 ////////////////////////////////////////////////
 
 function updateTimeDiff() {
       runningTime = sound.seek();
-      setCurrentEq();
-      checkFullScreen();
     if (runningTime > (sound.duration() * 1000)) {
         stop();
     }
 }
 
-function checkFullScreen(){
- 
-  if (currentEq &&  currentEq.fs.length > 0) {
-     if (runningTime >= currentEq.fsStartTime && runningTime < currentEq.fsEndTime ){
-      // console.log("Full screen data avaialbe");
-      fullScreen = true;
-     }else {
-      fullScreen = false;
-     }
-  }
-return false;  
-}
-function setCurrentEq(){
- for (let i = 0; i < eqs.length; i++) {
- const eq = eqs[i];
-        if (runningTime >= eq.eqStartTime && runningTime < eq.eqEndTime ){
-       currentEqStore.set(eq);
-      //  console.log("currentEq==>",currentEq);
-        return; 
-        }
- }
-}
+
 function changeSeek(newSeekValue){
  sound.seek(newSeekValue);
  runningTime = sound.seek();
-//  setFocus();
-//  console.log('sound.seek',r);
+ setCurrentEq();
 }
  
 function start(){
@@ -74,14 +41,6 @@ function stop(){
     window.scrollTo({top: 0,behavior: 'smooth'});
     // setFocus();
 }
-function getIsfTrue() {
-    for (let i = 0; i < eqs.length; i++) {
-        if (eqs[i].isf === true) {
-            return eqs[i];
-        }
-    }
-    return null;
-}
 
 async function fileExists(url) {
   try {
@@ -102,15 +61,11 @@ async function getSoundFile(filename) {
   }
 }
 
-//=======
-/////////////////////////
-let currentEq;
 /////////////////////////
 let soundFile;
 let sound;
 let PresentationTotalTime =0; 
 /////////////////////////
-let fullScreen = false;
 let interval;
 let maxSliderValue; //it is not runningTime since it does not change
 let isPlaying=false;
@@ -151,7 +106,6 @@ onMount(async () => {
         maxSliderValue = PresentationTotalTime;
         //--check again
         eqs[eqs.length-1].eqEndTime =  PresentationTotalTime;
-        currentEqStore.set(eqs[0]);
     }
     });
 
@@ -181,28 +135,11 @@ This is premier content
 
 <!-- ************** -->
 <div class='bg-gray-800 w-full  text-white min-h-screen p-0 m-0'>
-    <Sticky {start} {stop} {runningTime} {changeSeek} maxSliderValue={maxSliderValue}/>
+
+<Sticky {start} {stop} {runningTime} {changeSeek} maxSliderValue={maxSliderValue}/>
    
+<EqPlayer    {runningTime} {eqs} {changeSeek}/> 
 
-    <div class="flex px-2 rounded-md bg-gray-900" >
- 
-<!--Main Panel---->
-{#if !fullScreen}
-        <div class= "w-8/12 min-h-screen p-2  m-0 overflow-x-auto"  >
-        <EqPanel {eqs}  {runningTime}  {changeSeek}/>
-        </div>
-
-<!--Side Panel---->
-        <div class= "w-4/12   min-h-screen p-2 m-0 mt-2  bg-yellow-950 text-yellow-300b" >
-        <SidePanel  {eqs} {runningTime} />
-        </div>
-{:else}
-<!--Full Screen---->
-        <div class= "w-full   min-h-screen p-2 m-0 mt-2  bg-yellow-950 text-yellow-300b" >
-        <FullScreen eqs= {eqs} />
-        </div>
-{/if}
-    </div><!--flex div for 2 panels-->
 <br>
 <br>
 <br>
