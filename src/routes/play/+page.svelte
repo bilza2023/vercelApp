@@ -3,7 +3,7 @@
 import {BASE_URL,onMount,toast} from '$lib/util';
 import MainNav from '$lib/appComp/MainNav.svelte';
 // import MainPanel from './MainPanel.svelte';
-import EqPlayer from './EqPlayer.svelte';
+import EqPanel from './EqPanel.svelte';
 import Sticky from "./Sticky.svelte";
 import { Howl } from 'howler';
 import SidePanel from './sp/SidePanel.svelte';
@@ -13,21 +13,31 @@ import FullScreen from './sp/FullScreen.svelte';
 function updateTimeDiff() {
       runningTime = sound.seek();
       // setFocus();
-      // checkFullScreen();
+      checkFullScreen();
     if (runningTime > (sound.duration() * 1000)) {
         stop();
     }
 }
 function checkFullScreen(){
- const focused = getIsfTrue();
-  if (focused.fs.length > 0) {
-     if (runningTime >= focused.fsStartTime && runningTime < focused.fsEndTime ){
+ setCurrentEq();
+  if (currentEq.fs.length > 0) {
+     if (runningTime >= currentEq.fsStartTime && runningTime < currentEq.fsEndTime ){
       // console.log("Full screen data avaialbe");
       fullScreen = true;
      }else {
       fullScreen = false;
      }
   }
+return false;  
+}
+function setCurrentEq(){
+ for (let i = 0; i < eqs.length; i++) {
+ const eq = eqs[i];
+        if (runningTime >= eq.eqStartTime && runningTime < eq.eqEndTime ){
+       currentEq = eq;
+        return; 
+        }
+ }
 }
 function changeSeek(newSeekValue){
  sound.seek(newSeekValue);
@@ -43,6 +53,7 @@ function start(){
     sound.play();
         sound.on('play', function () {
         interval = setInterval(updateTimeDiff,1000);
+        // runningTime = runningTime +0; 
         });
     
 }
@@ -84,6 +95,8 @@ async function getSoundFile(filename) {
 }
 
 //=======
+/////////////////////////
+let currentEq;
 /////////////////////////
 let soundFile;
 let sound;
@@ -161,8 +174,6 @@ This is premier content
 <!-- ************** -->
 <div class='bg-gray-800 w-full  text-white min-h-screen p-0 m-0'>
     <Sticky {start} {stop} {runningTime} {changeSeek} maxSliderValue={maxSliderValue}/>
-<!-- <button on:click={() => {showSP = !showSP}}>SidePanel</button> -->
-
    
 
     <div class="flex px-2 rounded-md bg-gray-900" >
@@ -170,20 +181,17 @@ This is premier content
 <!--Main Panel---->
 {#if !fullScreen}
         <div class= "w-8/12 min-h-screen p-2  m-0 overflow-x-auto"  >
-        <!-- <MainPanel {eqs}  {soundFile} {runningTime}  {changeSeek}/> -->
-        <EqPlayer {eqs}  {runningTime}  {changeSeek}/>
+        <EqPanel {eqs}  {runningTime}  {changeSeek}/>
         </div>
 
 <!--Side Panel---->
         <div class= "w-4/12   min-h-screen p-2 m-0 mt-2  bg-yellow-950 text-yellow-300b" >
         <SidePanel  {eqs} {runningTime} />
-        <!-- sidePanel -->
         </div>
 {:else}
 <!--Full Screen---->
         <div class= "w-full   min-h-screen p-2 m-0 mt-2  bg-yellow-950 text-yellow-300b" >
-        <!-- <FullScreen eqs= {eqs} /> -->
-        FullScreen
+        <FullScreen eqs= {eqs} />
         </div>
 {/if}
     </div><!--flex div for 2 panels-->

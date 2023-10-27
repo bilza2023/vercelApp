@@ -2,13 +2,8 @@
 //@ts-nocheck
 import ImgCodeTxt from "./ImgCodeTxt.svelte";
 import {onMount} from '$lib/util';
-import Katex from 'svelte-katex'
-import Table from './Table.svelte';
-import TableCode from './TableCode.svelte';
-// export let permContent;
 export let eqs;
 export let runningTime;
-let currentEq;
 let currentEqSp;
 $:{
         runningTime;
@@ -18,22 +13,17 @@ function setCurrentEq(){
  for (let i = 0; i < eqs.length; i++) {
  const eq = eqs[i];
         if (runningTime >= eq.eqStartTime && runningTime < eq.eqEndTime ){
-        currentEq = eq;
-        currentEqSp = currentEq.sp;
-        // currentEqSp = currentEqSp;
-        // console.log('currentEq' ,currentEq);
-        return; // no need to checkany further
+       currentEqSp = eq.sp;
+        return; 
         }
  }
 }
 
 onMount(()=>{
         if(eqs.length  > 0){
-        currentEq = eqs[0];
-        currentEqSp = currentEq.sp;
-        // currentEqSp = currentEqSp;
+        currentEqSp = eqs[0].sp;
         }else {
-        currentEq = null;
+        currentEqSp = null;
         }
 });
 </script> 
@@ -42,39 +32,7 @@ onMount(()=>{
    
         <div class='w-full  rounded-md m-1 p-1  text-center'>
                 {#each currentEqSp as eq}    
-                 <div class='flex justify-center '>
-
-    {#if eq.type == undefined || eq.type == 'txt' || eq.type == 'text'}
-        <p class="bg-stone-700 p-2 m-1 rounded-md">{eq.code}</p>
-    {/if}
-
-    {#if eq.type == 'code'}
-        <div class="bg-stone-900 p-2 m-1 rounded-md">    
-        <Katex>{eq.code}</Katex>
-        </div>
-    {/if}
-
-    {#if eq.type == 'img' || eq.type == 'image'}
-        <img src= "/mathImages/{eq.code}.png" alt="Not found">
-    {/if}
-    
-    {#if eq.type == 'table' || eq.type == 'tbl'}
-        <!-- <img src={eq.code} alt="Not found"> -->
-        <Table code={eq.code}/>
-    {/if}
-    
-    {#if eq.type == 'tableCode' }
-        <!-- <img src={eq.code} alt="Not found"> -->
-        <TableCode code={eq.code}/>
-    {/if}
-   
-    {#if eq.type == 'html'}
-        <div>
-        {@html eq.code }
-        </div>
-    {/if}
-
-</div>
+                <ImgCodeTxt {eq} />        
                 {/each}
         </div>
 
