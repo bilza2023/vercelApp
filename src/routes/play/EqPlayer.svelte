@@ -3,21 +3,34 @@
 </svelte:head>
 <script>
 //@ts-nocheck
- import { browser,onMount } from '$lib/util';
+import { browser,onMount } from '$lib/util';
 import CodeTxt from './CodeTxt.svelte';
 //== Import variables
 export let eqs;
+export let runningTime;
 let innerEqs =[];
 export let changeSeek;
 
-$: {
-     eqs; 
+$: { 
+     runningTime; 
+    //  console.log("runningTime",runningTime);
+        setFocus( );
         const topIndex = findTopIndex();
         innerEqs = removeElementsBeforeIndex(topIndex);
 }
-function log(index){
-    console.log("index" , index);
+function setFocus( ){
+  eqs = eqs.map( (eq)=>{eq.isf = false;return eq;});
+  for (let i = 0; i < eqs.length; i++) {
+        const eq = eqs[i];
+            if (runningTime >= eq.eqStartTime && runningTime < eq.eqEndTime ){
+                eq.isf = true;
+                // fullScreen = false;
+                eqs = [...eqs];        
+                return; // no need to checkany further
+            }
+        }
 }
+
 function removeElementsBeforeIndex(index) {
     if (index < 0 || index >= eqs.length) {
         return eqs;
@@ -31,7 +44,9 @@ function findTopIndex() {
     }
  return index - 2;    
 }
-
+onMount(()=>{
+    setFocus( );
+});
 </script>
 
     {#each innerEqs as eq,index}

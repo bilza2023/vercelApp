@@ -2,7 +2,8 @@
 // @ts-nocheck
 import {BASE_URL,onMount,toast} from '$lib/util';
 import MainNav from '$lib/appComp/MainNav.svelte';
-import MainPanel from './MainPanel.svelte';
+// import MainPanel from './MainPanel.svelte';
+import EqPlayer from './EqPlayer.svelte';
 import Sticky from "./Sticky.svelte";
 import { Howl } from 'howler';
 import SidePanel from './sp/SidePanel.svelte';
@@ -10,17 +11,17 @@ import FullScreen from './sp/FullScreen.svelte';
 ////////////////////////////////////////////////
 
 function updateTimeDiff() {
-      timeDiff = sound.seek();
-      setFocus();
-      checkFullScreen();
-    if (timeDiff > (sound.duration() * 1000)) {
+      runningTime = sound.seek();
+      // setFocus();
+      // checkFullScreen();
+    if (runningTime > (sound.duration() * 1000)) {
         stop();
     }
 }
 function checkFullScreen(){
  const focused = getIsfTrue();
   if (focused.fs.length > 0) {
-     if (timeDiff >= focused.fsStartTime && timeDiff < focused.fsEndTime ){
+     if (runningTime >= focused.fsStartTime && runningTime < focused.fsEndTime ){
       // console.log("Full screen data avaialbe");
       fullScreen = true;
      }else {
@@ -30,8 +31,8 @@ function checkFullScreen(){
 }
 function changeSeek(newSeekValue){
  sound.seek(newSeekValue);
- timeDiff = sound.seek();
- setFocus();
+ runningTime = sound.seek();
+//  setFocus();
 //  console.log('sound.seek',r);
 }
  
@@ -49,10 +50,10 @@ function start(){
 function stop(){
     sound.stop();
     isPlaying = false;
-    timeDiff = 0;
+    runningTime = 0;
     clearInterval(interval);
     window.scrollTo({top: 0,behavior: 'smooth'});
-    setFocus();
+    // setFocus();
 }
 function getIsfTrue() {
     for (let i = 0; i < eqs.length; i++) {
@@ -63,18 +64,6 @@ function getIsfTrue() {
     return null;
 }
 
-function setFocus( ){
-  eqs = eqs.map( (eq)=>{eq.isf = false;return eq;});
-  for (let i = 0; i < eqs.length; i++) {
-        const eq = eqs[i];
-            if (timeDiff >= eq.eqStartTime && timeDiff < eq.eqEndTime ){
-                eq.isf = true;
-                fullScreen = false;
-                eqs = [...eqs];        
-                return; // no need to checkany further
-            }
-        }
-}
 async function fileExists(url) {
   try {
     const response = await fetch(url);
@@ -102,9 +91,9 @@ let PresentationTotalTime =0;
 /////////////////////////
 let fullScreen = false;
 let interval;
-let maxSliderValue; //it is not timeDiff since it does not change
+let maxSliderValue; //it is not runningTime since it does not change
 let isPlaying=false;
-let timeDiff = 0; // Initialize timeDiff - keep timeDiff and not use sound.seek() since sound.seek() is a function where as the timeDiff is a value that can be passed to the components.
+let runningTime = 0; // Initialize runningTime - keep runningTime and not use sound.seek() since sound.seek() is a function where as the runningTime is a value that can be passed to the components.
 // let content=[];
 let notFreeContent = false;
 let eqs=[];
@@ -126,32 +115,22 @@ onMount(async () => {
     if (resp.ok) {
       
         const data = await resp.json();
-        // if (data.errorCode == "notFree"){
-        //     notFreeContent = true;
-        //     return;
-        // }
+      
         const question  = data.question //===> important
-        // eqs = data.eqs.eqs; //its twice eqs.eqs
         eqs = question.eqs;
         soundFile = await getSoundFile(question.filename);
-        // soundFile =  `./mathSounds/${mathQuestion.filename}.mp3`;
-
-    // const data  = (await import(`../../lib/mathData/${id}.js`)).default;  
     questionDetails = question.filename;;
 
     sound = new Howl({
     src: [soundFile],
     volume: 1.0,
     onload: function() {
-        // addEndTimeToObjects();
-        // addStepsToObjects();
         eqs = eqs.map( (eq)=>{eq.isf = false;return eq;});
-        // console.log("eqs", eqs);
         PresentationTotalTime = sound.duration();
         maxSliderValue = PresentationTotalTime;
         //--check again
         eqs[eqs.length-1].eqEndTime =  PresentationTotalTime;
-        setFocus( );
+        
     }
     });
 
@@ -181,7 +160,7 @@ This is premier content
 
 <!-- ************** -->
 <div class='bg-gray-800 w-full  text-white min-h-screen p-0 m-0'>
-    <Sticky {start} {stop} {timeDiff} {changeSeek} maxSliderValue={maxSliderValue}/>
+    <Sticky {start} {stop} {runningTime} {changeSeek} maxSliderValue={maxSliderValue}/>
 <!-- <button on:click={() => {showSP = !showSP}}>SidePanel</button> -->
 
    
@@ -191,17 +170,20 @@ This is premier content
 <!--Main Panel---->
 {#if !fullScreen}
         <div class= "w-8/12 min-h-screen p-2  m-0 overflow-x-auto"  >
-        <MainPanel {eqs}  {soundFile} {timeDiff}  {changeSeek}/>
+        <!-- <MainPanel {eqs}  {soundFile} {runningTime}  {changeSeek}/> -->
+        <EqPlayer {eqs}  {runningTime}  {changeSeek}/>
         </div>
 
 <!--Side Panel---->
         <div class= "w-4/12   min-h-screen p-2 m-0 mt-2  bg-yellow-950 text-yellow-300b" >
-        <SidePanel  {eqs} />
+        <SidePanel  {eqs} {runningTime} />
+        <!-- sidePanel -->
         </div>
 {:else}
 <!--Full Screen---->
         <div class= "w-full   min-h-screen p-2 m-0 mt-2  bg-yellow-950 text-yellow-300b" >
-        <FullScreen eqs= {eqs} />
+        <!-- <FullScreen eqs= {eqs} /> -->
+        FullScreen
         </div>
 {/if}
     </div><!--flex div for 2 panels-->

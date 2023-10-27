@@ -1,6 +1,7 @@
 <script>
 //@ts-nocheck
   import { onMount } from "svelte";
+  import Katex from 'svelte-katex'
   export let code;
   let parsedData=[];
 
@@ -9,6 +10,11 @@
     console.log(parsedData);
   });
 
+$:{
+  code;
+  parsedData = JSON.parse(code);
+
+}
 </script>
 {#if parsedData.length > 0}
 
@@ -19,7 +25,7 @@
       {#each row as cell, colIndex}
         <td class='border-2 border-gray-200 p-1'>
           <!-- <div class="bg-gray-900 m-1 p-1 rounded-md w-8/12"> -->
-          {cell}
+          <Katex>{cell}</Katex>
         <!-- </div> -->
         </td>
       {/each}
