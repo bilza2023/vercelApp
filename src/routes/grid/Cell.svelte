@@ -42,7 +42,5 @@ function getColor(startTime) {
         `}
  
  >
-{cell.content},
-{cell.color}
-
+{cell.content}
 </div>

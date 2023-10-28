@@ -1,9 +1,9 @@
 <script>
 //@ts-nocheck
 import Cell from "./Cell.svelte";
-let global = {bgColor: "#111827", fontSize: 1, padding: 4,margin:1,cellBorderColor:"#e52222" ,cellFontColor : "white",showGrid : true,gridColor: "#384556" }
 
 export let rows;
+export let global;;
 // import Katex from "svelte-katex";
 import {runningTime,isPlayingStore} from "./store";
 
@@ -15,11 +15,12 @@ $:rTime = $runningTime;
 </script>
 
 
-<div class="w-9/12 min-h-screen " style= {`background-color : ${global.bgColor}`}>
 
 
 {#if rows}
-<div class="flex w-full justify-center p-2">
+<div class="flex justify-center  p-1 w-8/12 border-2 border-red-800 items-start" 
+    style="background-color : {global.bgColor}"
+    >
 
 <table class=" p-0 m-0 " >
 {#each rows as row, rowIndex}
@@ -39,6 +40,3 @@ $:rTime = $runningTime;
 
 </div>
 {/if}
-
-
-</div>
