@@ -6,6 +6,9 @@ import {Icons} from '$lib/util';
 import MainNav from '$lib/appComp/MainNav.svelte';
 import BoardButton from '$lib/homePage/BoardButton.svelte';
 import BooksImages from '$lib/homePage/BooksImages.svelte';
+
+import {Test} from 'taleemutil';
+
 let board  = "FBISE";
 let cls  = "Class 9th";
 
@@ -23,6 +26,7 @@ cls = cls;
 
 <MainNav/>
 <PageWrapper>
+<!-- <Test /> -->
 <!-- <a href="/graph/index.html">Graph</a> -->
 
     <Centre>

@@ -29,7 +29,7 @@ function checkFullScreen(){
 const currentEq = get(currentEqStore);
   if (currentEq &&  currentEq.fs.length > 0) {
      if (runningTime >= currentEq.fsStartTime && runningTime < currentEq.fsEndTime ){
-      console.log("Full screen true");
+//       console.log("Full screen true");
       fullScreen = true;
      }else {
       fullScreen = false;
@@ -41,11 +41,11 @@ return false;
 /////////////////////////
 let fullScreen = false;
 export let eqs=[];
-export let runningTime = 0;
+export let runningTime = 1;
 export let changeSeek;
 /////////////////////////////////////////
 onMount(async () => {
-        currentEqStore.set(eqs[0]);
+        // currentEqStore.set(eqs[0]);
 });
 </script>
 
