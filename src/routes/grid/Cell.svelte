@@ -11,8 +11,24 @@ export let cell;
 $:{
         rTime;
         console.log("runningTime -from-cell",rTime);
-        cell.color = getColor(cell.startTime); 
+        cell.color = getColor(cell.startTime);
+        cell.blc = borderColor(cell.bl);
+        cell.btc = borderColor(cell.bt);
+        cell.brc = borderColor(cell.br);
+        cell.bbc = borderColor(cell.bb); 
 
+}
+function borderColor(tf){
+ // debugger;
+    if (tf==true){
+        return global.cellBorderColor;
+    }else{
+        if (global.showGrid == true){
+         return global.gridColor;
+        }else {
+         return global.bgColor;
+        } 
+    }
 }
 function getColor(startTime) {
     // debugger;
@@ -31,10 +47,14 @@ function getColor(startTime) {
 }
 </script>
 
- <div class=  "hover:cursor-pointer   border-2  text-center flex items-center justify-center" 
+ <div class=  " border-2  text-center flex items-center justify-center" 
   style= {`
             min-width: 70px;
             min-height: 70px;
+            border-left-color : ${cell.blc};
+            border-top-color : ${cell.btc};
+            border-right-color : ${cell.brc};
+            border-bottom-color : ${cell.bbc};
             font-size : ${global.fontSize}em;
             margin : ${global.margin}px;
             padding : ${global.padding}px;

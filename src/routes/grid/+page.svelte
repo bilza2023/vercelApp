@@ -38,7 +38,7 @@ onMount(async () => {
         const question  = data.question //===> important
         rows = question.grid.rows;
         if(question.grid.global !== undefined && question.grid.global !== null){
-          global = question.grid.global;
+          // global = question.grid.global;
         }
         // eqs = eqs.map( (eq)=>{eq.isf = false;return eq;});
         soundFile = await getSoundFile(question.filename);
