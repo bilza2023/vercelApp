@@ -7,7 +7,22 @@ import {runningTime} from './store';
 $:rTime = $runningTime;
 //=============================
 export let soundFile;
-// export let callBack;
+export let moveSeek;
+
+$:{
+  moveSeek;
+  if (sound && !isNaN(moveSeek)) {
+    const seekPosition = parseInt(moveSeek);
+    if (seekPosition >= 0 && seekPosition <= maxSliderValue) {
+      sound.seek(seekPosition);
+      runningTime.set(seekPosition);
+      // console.log("Seeking to position:", seekPosition);
+    } else {
+      console.error("Invalid seek position:", seekPosition);
+    }
+  }
+}
+
 //=============================
 let maxSliderValue=0;
 let  sound;
@@ -43,12 +58,13 @@ function stop(){
 function updateTimeDiff() {
     const r = sound.seek();
     runningTime.set(r);
-    // callBack(runningTime);
 }
 
 function changeSeek(newSeekValue){
-    sound.seek(newSeekValue);
-    updateTimeDiff();
+//  debugger;
+    sound.seek(parseInt(newSeekValue));
+    runningTime.set(parseInt(newSeekValue));
+    // updateTimeDiff();
 }
 
 async function loadSound(){
