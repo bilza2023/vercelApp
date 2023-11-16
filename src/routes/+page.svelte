@@ -7,8 +7,6 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 import BoardButton from '$lib/homePage/BoardButton.svelte';
 import BooksImages from '$lib/homePage/BooksImages.svelte';
 
-import {Test} from 'taleemutil';
-
 let board  = "FBISE";
 let cls  = "Class 9th";
 
@@ -44,14 +42,14 @@ cls = cls;
 
 <div class="flex w-full justify-between ">
 <div>
-<BoardButton checkWith ="FBISE" {board} {setBoard}/>
-<BoardButton checkWith ="KPK Board" {board} {setBoard}/>
+<!-- <BoardButton checkWith ="FBISE" {board} {setBoard}/> -->
+<!-- <BoardButton checkWith ="KPK Board" {board} {setBoard}/> -->
 </div>
 
 <div>
-<BoardButton checkWith ="Class 8th" board={cls} setBoard={setClass}/>
-<BoardButton checkWith ="Class 9th" board={cls} setBoard={setClass}/>
-<BoardButton checkWith ="Class 10th" board={cls} setBoard={setClass}/>
+<!-- <BoardButton checkWith ="Class 8th" board={cls} setBoard={setClass}/> -->
+<!-- <BoardButton checkWith ="Class 9th" board={cls} setBoard={setClass}/> -->
+<!-- <BoardButton checkWith ="Class 10th" board={cls} setBoard={setClass}/> -->
 </div>
 
 
