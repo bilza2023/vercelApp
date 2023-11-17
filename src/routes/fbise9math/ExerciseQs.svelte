@@ -36,8 +36,8 @@ $: totalExQuestion = questions.filter(question => question.partNo.exercise === s
 {#if showQs}
 <div class='flex  w-full justify-center  flex-wrap  '>
 {#each sortedArray as question,index}    
-        <!-- {#if question.partNo.exercise == selectedEx } -->
             <div class='w-3/12'>
+        {#if question.status == 'final' }
             <Card
             title = {`Ex ${question.partNo.exercise} Q-${question.partNo.questionNo} pt ${question.partNo.part}`}
             icon={Icons.TEST}
@@ -45,9 +45,16 @@ $: totalExQuestion = questions.filter(question => question.partNo.exercise === s
             >
                       
             </Card>
+        {:else}
+        <Card
+            title = {`Ex ${question.partNo.exercise} Q-${question.partNo.questionNo} pt ${question.partNo.part}`}
+            icon={Icons.HOURGLASS }
+            url = {''}
+            >
+                      
+            </Card>
+        {/if}
             </div>
-        <!-- {/if} -->
-    <!-- {/if} -->
 {/each}
     </div>
 {/if}    

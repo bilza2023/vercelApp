@@ -2,24 +2,24 @@
 //@ts-nocheck
 import {onMount} from "$lib/util";
 import { Howl } from 'howler';
-import {runningTime,isPlayingStore} from './store';
 
-$:rTime = $runningTime;
-$:isPlaying = $isPlayingStore;
 //=============================
+export let pulse=0;
+export let isPlaying=false;
 export let soundFile;
 export let moveSeek=()=>{};
+//=============================
 
 $:{
   moveSeek;
-  if (sound && !isNaN(moveSeek)) {
+  if ( sound && !isNaN(moveSeek) ) {
     const seekPosition = parseInt(moveSeek);
     if (seekPosition >= 0 && seekPosition <= maxSliderValue) {
       sound.seek(seekPosition);
-      runningTime.set(seekPosition);
+      pulse = seekPosition;
       // console.log("Seeking to position:", seekPosition);
     } else {
-      console.error("Invalid seek position:", seekPosition);
+      // console.error("Invalid seek position:", seekPosition);
     }
   }
 }
@@ -27,8 +27,7 @@ $:{
 //=============================
 let maxSliderValue=0;
 let  sound;
-// let  isPlaying        = false; //delete it 
-let  interval         = null;
+let  interval  = null;
 
 
 async function start(){
@@ -38,7 +37,7 @@ try{
  if (isPlaying == true){return;}
         sound.play();
         sound.on('play', function () {
-        isPlayingStore.set(true);
+        isPlaying = true;
         interval = setInterval(updateTimeDiff,1000);
     });
 
@@ -50,21 +49,21 @@ try{
 }
 
 function stop(){ 
-    isPlayingStore.set(false);
+    isPlaying = false;
     sound.stop();
     clearInterval(interval);
-    runningTime.set(0);
+    pulse = 0; 
     return true;
 }
 function updateTimeDiff() {
     const r = sound.seek();
-    runningTime.set(r);
+    pulse = r;
 }
 
 function changeSeek(newSeekValue){
 //  debugger;
     sound.seek(parseInt(newSeekValue));
-    runningTime.set(parseInt(newSeekValue));
+    pulse = parseInt(newSeekValue);
     // updateTimeDiff();
 }
 
@@ -94,9 +93,9 @@ onMount(async()=>{
       ◼ <!-- This is the UTF-8 stop icon -->
     </button>
     <div class="p-1 bg-gray-700 mx-2 rounded text-xs text-yellow-600 ">
-      {(rTime).toFixed(0)}/{maxSliderValue.toFixed(0)} sec</div>
+      {(pulse).toFixed(0)}/{maxSliderValue.toFixed(0)} sec</div>
     <div class='flex-grow'>
-    <input class='w-full'  type="range"  id="timeSlider" value={rTime} min=0 max={maxSliderValue} 
+    <input class='w-full'  type="range"  id="timeSlider" value={pulse} min=0 max={maxSliderValue} 
     on:change={(e)=>changeSeek(e.target.value)}
     > </div>  
   </div>

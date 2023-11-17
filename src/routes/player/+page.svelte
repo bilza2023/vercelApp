@@ -8,12 +8,15 @@
 */
 import {browser,onMount,toast,BASE_URL} from '$lib/util'
 import { themes ,Presentation} from '$lib/Presentation';
-import PlayButtons from './PlayButtons.svelte';
+import MainNav from '$lib/appComp/MainNav.svelte';
+import SoundPlayer from './SoundPlayer.svelte';
 import readSlides from '$lib/tdf/readSlides';
 
 let slides;
+let item;
 let id;
 let tcode;
+let isPlaying=false;
 let theme = themes.basic;
 let hydrateInterval=null;
  
@@ -21,13 +24,16 @@ onMount(async ()=>{
 //http://localhost:5173/player?tcode=fbise9math&id=653113340a6eaa163e9f89d0  
 id = new URLSearchParams(location.search).get("id");
 tcode = new URLSearchParams(location.search).get("tcode");
+// debugger;
+let data  = await readSlides(id,tcode);
+let returnSlides  = data.slides;
+item  = data.item;
 
-let returnSlides  = await readSlides(id,tcode);
-// ?????;
+// console.log(item.filename);
 returnSlides[0].endTime = 100;
 if (returnSlides){slides = returnSlides}
 else {throw new Error('Failed to load');}
-hydrate();
+// hydrate();
 });
 
 
@@ -59,16 +65,9 @@ function stopHydrate(){
     pulse = 0;
 }
 
-function start(){
-    interval= setInterval(gameloop,1000);
-}
-
-function stop(){
-    clearInterval(interval);
-    pulse = 0;
-}
 
 function setCurrentSlide(){
+ if (!slides ){return;}
  for (let i = 0; i < slides.length; i++) {
  const slide = slides[i];
         if (pulse >= slide.startTime && pulse < slide.endTime ){
@@ -77,16 +76,49 @@ function setCurrentSlide(){
         }
  }
 }
+
+async function fileExists(url) {
+  try {
+    const response = await fetch(url);
+    return response.status === 200;
+  } catch (error) {
+    return false;
+  }
+}
+
+async function getSoundFile(filename) {
+  const soundFile = `./mathSounds/${filename}.mp3`;
+  
+  if (await fileExists(soundFile)) {
+    return soundFile;
+  } else {
+    return './mathSounds/test.mp3';
+  }
+}
+function changeSeek(newSeekValue){
+    moveSeek = parseInt(newSeekValue);
+    // console.log("seek", newSeekValue);
+}
+
+$:{
+ pulse;
+//  console.log(pulse);
+setCurrentSlide();
+}
 </script> 
+{#if !isPlaying}
+<MainNav />
+{/if}
 
 <div class='bg-gray-800 text-white w-full min-h-screen'>
 
-<div class='flex justify-start sticky top-0 w-full p-1 m-0 bg-gray-700'>
-<PlayButtons   {start} {stop} {pulse} callback={applyTheme} />
+{#if  item  }
+<div class='flex justify-start sticky top-0 w-full p-1 m-0 bg-gray-600'>
+<SoundPlayer   bind:pulse={pulse} bind:isPlaying={isPlaying} soundFile={`/mathSounds/${item.filename}.mp3`}/>
 </div>
+{/if}
 
-
-{#if currentSlide}
+{#if  currentSlide  }
 <!-- {currentSlide} {theme} {pulse} and displayMode -->
 <!-- Thats all only these 4 inputs keep in mind there is just 1 slide that being currentSlide AND theme is external -->
     <Presentation {currentSlide} {theme} {pulse} {setPulse}/>
