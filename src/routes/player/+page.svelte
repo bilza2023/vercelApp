@@ -106,9 +106,9 @@ $:{
 setCurrentSlide();
 }
 </script> 
-{#if !isPlaying}
+<!-- {#if !isPlaying}
 <MainNav />
-{/if}
+{/if} -->
 
 <div class='bg-gray-800 text-white w-full min-h-screen'>
 
