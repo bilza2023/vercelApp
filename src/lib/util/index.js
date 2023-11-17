@@ -3,6 +3,7 @@
         import { onMount } from 'svelte';
         import { toast } from '@zerodevx/svelte-toast';
         import { fade } from 'svelte/transition';
+        import convertEqsToSlide from './convertEqToSlide.js';
         import { get } from 'svelte/store';
         import { BASE_URL } from './config';
         import { goto } from '$app/navigation';
@@ -21,6 +22,7 @@
                 fade,
                 get,
                 goto,
+                convertEqsToSlide,
                 browser,
                 Icons,
                 ajaxPost,
