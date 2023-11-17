@@ -23,7 +23,7 @@ id = new URLSearchParams(location.search).get("id");
 tcode = new URLSearchParams(location.search).get("tcode");
 
 let returnSlides  = await readSlides(id,tcode);
-// debugger;
+// ?????;
 returnSlides[0].endTime = 100;
 if (returnSlides){slides = returnSlides}
 else {throw new Error('Failed to load');}
@@ -52,11 +52,13 @@ function hydrate(){
 start();
  hydrateInterval =  setInterval(stopHydrate,2000);
 }
+
 function stopHydrate(){
     clearInterval(hydrateInterval);
     stop();
     pulse = 0;
 }
+
 function start(){
     interval= setInterval(gameloop,1000);
 }
