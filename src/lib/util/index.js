@@ -1,31 +1,35 @@
-        // @ts-nocheck
-        import { browser } from '$app/environment';
-        import { onMount } from 'svelte';
-        import { toast } from '@zerodevx/svelte-toast';
-        import { fade } from 'svelte/transition';
-        import convertEqsToSlide from './convertEqToSlide.js';
-        import { get } from 'svelte/store';
-        import { BASE_URL } from './config';
-        import { goto } from '$app/navigation';
-        import Icons from './icons';
-        import chqLogin from '../loginFns/chqLogin';
-        import {isLoginStore , accountPaidStore} from './appStore';
-        import ajaxPost from './ajaxPost';
-        import ajaxGet from './ajaxGet';
+// @ts-nocheck
+import { browser } from '$app/environment';
+import { onMount } from 'svelte';
+import { toast } from '@zerodevx/svelte-toast';
+import { fade } from 'svelte/transition';
+import { get } from 'svelte/store';
+import { goto } from '$app/navigation';
+import chqLogin from './chqLogin.js';
+import checkToken from './checkToken';
+import checkAdminToken from './checkAdminToken';
+import convertEqsToSlide from './convertEqToSlide.js';
+import { BASE_URL } from './config';
+import { isLoginStore,isAdminStore } from './appStore';
+import Icons from './icons';
+import uuid from './uuid';
+// import chqLogin from './chqLogin';
 
-        export {
-                isLoginStore , 
-                accountPaidStore,
-                onMount,
-                BASE_URL,
-                toast,
-                fade,
-                get,
-                goto,
-                convertEqsToSlide,
-                browser,
-                Icons,
-                ajaxPost,
-                ajaxGet,
-                chqLogin
-        }
+            export {
+            isLoginStore,isAdminStore,
+            BASE_URL,
+                    onMount,
+                    toast,
+                    fade,
+                    chqLogin,
+                    get,
+                    convertEqsToSlide,
+                    uuid,
+                    goto,
+                    browser,
+                    Icons,
+                    checkToken,
+                    checkAdminToken
+            }
+
+/*<div in:fade={{ delay: 300 }} out:fade={{ delay: 300 }} */
