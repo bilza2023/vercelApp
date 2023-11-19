@@ -1,5 +1,5 @@
 // @ts-nocheck
-import {isLoginStore,accountPaidStore,BASE_URL,toast,goto } from '$lib/util';
+import {isLoginStore,BASE_URL,toast,goto } from '$lib/util';
 import validateString from "../../routes/login/validateString"
 import validateEmail from "../../routes/login/validateEmail"
 ///////////////////////////////////////////
