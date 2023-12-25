@@ -11,7 +11,57 @@ import { themes ,Presentation} from '$lib/Presentation';
 import PlayButtons from './PlayButtons.svelte';
 import readSlides from '$lib/tdf/readSlides';
 import Slider from './Slider.svelte';
+//==newly added stuff
+import { Howl } from 'howler';
+let  sound;
+let  soundFile=null;
+let  isPlaying=false;
+let  maxSliderValue=0;
+let  interval  = null;
 
+async function start(){
+try{
+// debugger;
+  await loadSound();
+ if (isPlaying == true){return;}
+        sound.play();
+        sound.on('play', function () {
+        isPlaying = true;
+        interval = setInterval(updateTimeDiff,1000);
+    });
+
+}catch(e){
+  throw new Error("Can not load");
+}
+    
+ return true;     
+}
+
+function stop(){ 
+    isPlaying = false;
+    sound.stop();
+    clearInterval(interval);
+    pulse = 0; 
+    return true;
+}
+function updateTimeDiff() {
+    const r = sound.seek();
+    pulse = r.toFixed(0);
+       setCurrentSlide();
+}
+
+async function loadSound(){
+sound = new Howl({
+    src: [soundFile],
+    volume: 1.0,
+    onload: function() {
+        maxSliderValue = sound.duration();
+        // console.log("sound loaded..");
+    }
+    });
+}
+
+//============================================================
 let slides;
 let id;
 let tcode;
@@ -24,13 +74,17 @@ id = new URLSearchParams(location.search).get("id");
 tcode = new URLSearchParams(location.search).get("tcode");
 
 let val  = await readSlides(id,tcode);
-  let returnSlides  = await readSlides(id,tcode);
+let returnSlides  = await readSlides(id,tcode);
    
  if (returnSlides){
+//  debugger;
   slides = returnSlides.slides;
+  //fbise_cl_9_ch_1_ex_1.1_q_1_pt_0
+  soundFile = 'fbise9math/' +  returnSlides.item.filename + '.mp3';
   getStopTime(slides);
   currentSlide = slides[0];
  }
+
 else {throw new Error('Failed to load');}
 // hydrate();
 });
@@ -46,7 +100,7 @@ async function   getStopTime(slides){
  }
 }
 
-let interval=null;
+// let interval=null;
 let pulse=0;
 let currentSlide = null;
 
@@ -75,14 +129,14 @@ function gameloop(){
 //     stop();
 //     pulse = 0;
 // }
-function start(){
-    interval= setInterval(gameloop,1000);
-}
+// function start(){
+//     interval= setInterval(gameloop,1000);
+// }
 
-function stop(){
-    clearInterval(interval);
-    pulse = 0;
-}
+// function stop(){
+//     clearInterval(interval);
+//     pulse = 0;
+// }
 
 function setCurrentSlide(){
 //  debugger;
