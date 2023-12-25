@@ -46,7 +46,7 @@ function stop(){
 }
 function updateTimeDiff() {
     const r = sound.seek();
-    pulse = r.toFixed(0);
+    pulse = r;
        setCurrentSlide();
 }
 
@@ -79,6 +79,7 @@ let returnSlides  = await readSlides(id,tcode);
  if (returnSlides){
 //  debugger;
   slides = returnSlides.slides;
+  fixEndTime(slides);
   //fbise_cl_9_ch_1_ex_1.1_q_1_pt_0
   soundFile = 'fbise9math/' +  returnSlides.item.filename + '.mp3';
   getStopTime(slides);
@@ -88,6 +89,24 @@ let returnSlides  = await readSlides(id,tcode);
 else {throw new Error('Failed to load');}
 // hydrate();
 });
+async function fixEndTime(slides) {
+    for (let i = 0; i < slides.length; i++) {
+        const slide = slides[i];
+
+        if (slide.type== 'Eqs' || slide.type== 'eqs' ) {
+        const lastItemEndTime = slide.endTime;
+            for (let j = 0; j < slide.items.length; j++) {
+                const item = slide.items[j];
+
+                if (j < slide.items.length - 1) {
+                    item.extra.endTime = slide.items[j + 1].extra.startTime;
+                } else {
+                    item.extra.endTime = lastItemEndTime;
+                }
+            }
+        }
+    }
+}
 
 async function   getStopTime(slides){
  if(slides.length > 0){
@@ -105,6 +124,7 @@ let pulse=0;
 let currentSlide = null;
 
 function setPulse(time){
+sound.seek(time);
 pulse = time;
 // if(pulse > stopTime){stop();return;}
 setCurrentSlide();
@@ -114,35 +134,14 @@ function applyTheme(themeKey){
 theme = themes[themeKey];
 // console.log(theme);
 }
-function gameloop(){
-    pulse++;
-    if(pulse > stopTime){stop();return;}
-    setCurrentSlide();
-}
 
-// function hydrate(){
-// start();
-//  hydrateInterval =  setInterval(stopHydrate,2000);
-// }
-// function stopHydrate(){
-//     clearInterval(hydrateInterval);
-//     stop();
-//     pulse = 0;
-// }
-// function start(){
-//     interval= setInterval(gameloop,1000);
-// }
-
-// function stop(){
-//     clearInterval(interval);
-//     pulse = 0;
-// }
 
 function setCurrentSlide(){
 //  debugger;
+const r = sound.seek();
  for (let i = 0; i < slides.length; i++) {
  const slide = slides[i];
-        if (pulse >= slide.startTime && pulse < slide.endTime ){
+        if (r >= slide.startTime && r < slide.endTime ){
        currentSlide = slide ;
         return; 
         }

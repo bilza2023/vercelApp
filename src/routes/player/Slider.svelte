@@ -11,7 +11,13 @@ export let setPulse;
 {#if slides}
 
     <div class="w-3/12 p-1 rounded-sm bg-gray-900 text-yellow-500 text-xs">
-    {pulse}/{slides[slides.length -1].endTime} sec</div>
+    {#if typeof pulse === 'number'}
+        {pulse.toFixed(0)}
+      {:else}
+        {pulse}
+      {/if}
+      /{slides[slides.length - 1].endTime} sec
+    </div>
 
   <div class='9/12'>
   

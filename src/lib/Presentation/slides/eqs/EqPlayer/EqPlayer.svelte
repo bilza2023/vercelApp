@@ -15,6 +15,7 @@ let currentItem = null;
 $:{
    pulse;
 //    console.log("pulse",pulse);
+        // if(pulse >= 99 ){debugger;}
    for (let i = 0; i < items.length; i++) {
     const item = items[i];
     if (pulse >= item.extra.startTime && pulse < item.extra.endTime) {
