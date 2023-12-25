@@ -3,12 +3,11 @@ import {BASE_URL} from '$lib/util';
 export default async function getSyllabus() {
  try{
  //=============================  
-    // const token = localStorage.getItem('token');
-    const resp = await fetch( `${BASE_URL}/fe/fbise_math9th_syllabus`, {
+    const token = localStorage.getItem('token');
+    const resp = await fetch( `${BASE_URL}/be/fbise_math9th_syllabus`, {
         method: 'GET',
         headers: {
-        'Authorization': `Bearer 0000`,
-        // 'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${token}`,
         }
     });
     if (resp.ok){

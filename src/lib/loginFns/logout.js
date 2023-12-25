@@ -1,13 +1,14 @@
 
-import {isLoginStore} from '$lib/util/appStore';
-import {goto} from '$lib/util';
+import {goto ,isLoginStore,isAdminStore} from '$lib/util';
 
 export default function logout(){
     isLoginStore.set(false);
-    accountPaidStore.set(false);
+    isAdminStore.set(false);
 
     localStorage.removeItem("token");
-    localStorage.removeItem("accountTypePaid");
+    localStorage.removeItem("teacher_status");
+    localStorage.removeItem("teacher_name");
+    localStorage.removeItem("math_syllabus");
      
-goto('/login');
+    goto('/login');
 }

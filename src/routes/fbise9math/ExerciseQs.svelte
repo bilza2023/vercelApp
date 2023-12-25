@@ -49,7 +49,7 @@ $: totalExQuestion = questions.filter(question => question.partNo.exercise === s
         <Card
             title = {`Ex ${question.partNo.exercise} Q-${question.partNo.questionNo} pt ${question.partNo.part}`}
             icon={Icons.HOURGLASS }
-            url = {''}
+            url = {`/player?tcode=fbise9math&id=${question._id}`}
             >
                       
             </Card>

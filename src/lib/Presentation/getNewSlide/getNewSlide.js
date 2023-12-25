@@ -28,15 +28,40 @@ export default function getNewSlide(type) {
     case 'Eqs':
     slide = addEqs();
     break;
+
+    case 'grid':
+    slide = addGrid();
+    break;
  
     default:
-    slide = null;
+    slide = addDefault(type);
     break;
  }
 return slide;
 }
 /////////////////////////////////////////////
+/////////////////////////////////////////////
+function addDefault(name){
+//start time and end time will be re-written once the slide is inserted
+    const newSlide = newSlideData(name);
+    newSlide.uuid = uuid();
+    // newSlide.items.push(getNewItem('The Title','heading'));
+    // newSlide.items.push(getNewItem('graph','imgSrc'));
 
+    return newSlide;
+}
+
+function addGrid(){
+ return { 
+            startTime:0,
+            endTime:0,
+            type : 'grid',
+            version : 0,
+            template : '',
+            items : [],
+            slideExtra : []
+ };
+}
 function addHdgImg(){
 //start time and end time will be re-written once the slide is inserted
     const newSlide = newSlideData("HdgImg");
@@ -47,7 +72,7 @@ function addHdgImg(){
     return newSlide;
 }
 
-function addBlinkingMessage(){
+function  addBlinkingMessage(){
 const newSlide = newSlideData("BlinkingMessage");
     newSlide.uuid = uuid();
     newSlide.items.push(getNewItem('',''));
@@ -82,7 +107,7 @@ const newSlide = newSlideData("TblStr");
 function addEqs(){
 const newSlide =  {
   startTime : 0,    //This is slide start and end time
-  endTime : 50,    
+  endTime : 10,    
   type : 'Eqs',    
   template : '',    
   version : '',    

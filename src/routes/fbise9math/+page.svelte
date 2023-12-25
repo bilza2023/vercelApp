@@ -32,7 +32,7 @@ selectedChapter = newChapter;
 }
 /////////////////-----on-mount
 function getUrl(question){
- return `/eqs?id=${question._id}`;
+ return `/player?tcode=fbise9math&?id=${question._id}`;
 } 
 
 onMount(async () => {

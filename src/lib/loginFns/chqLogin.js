@@ -1,5 +1,5 @@
 
-import {isLoginStore,accountPaidStore} from '$lib/util';
+import {isLoginStore,isAdminStore , goto} from '$lib/util';
 
 /**
  - This is just a temp arrangement later we add encrypted cookies
@@ -9,25 +9,24 @@ import {isLoginStore,accountPaidStore} from '$lib/util';
 
 export default function chqLogin(){
 const token = localStorage.getItem('token');
-const accountPaid = localStorage.getItem('accountTypePaid');
+const teacher_status = localStorage.getItem('teacher_status');
  
       if (! token){
         isLoginStore.set(false);
+        goto("/");
       }else {
         isLoginStore.set(true);
       return true;                  
       }
       //=============================
-      if (! accountPaid){
-        accountPaidStore.set(false);
-      }else { //only being present does not mean the accountType is paid
-        if (accountPaid == true){
-        accountPaidStore.set(true);
+      if (! teacher_status){
+        isAdminStore.set(false);
+      }else { 
+        if (teacher_status == 'admin'){
+          isAdminStore.set(true);
         }else {
-        accountPaidStore.set(false);
+          isAdminStore.set(false);
         }
       return true;                  
       }
-
-
 }

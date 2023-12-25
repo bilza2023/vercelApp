@@ -5,8 +5,8 @@ import { toast } from '@zerodevx/svelte-toast';
 import { fade } from 'svelte/transition';
 import { get } from 'svelte/store';
 import { goto } from '$app/navigation';
-import chqLogin from './chqLogin.js';
 import checkToken from './checkToken';
+import updateStoreArray from './updateStoreArray';
 import checkAdminToken from './checkAdminToken';
 import convertEqsToSlide from './convertEqToSlide.js';
 import { BASE_URL } from './config';
@@ -21,8 +21,8 @@ import uuid from './uuid';
                     onMount,
                     toast,
                     fade,
-                    chqLogin,
                     get,
+                    updateStoreArray,
                     convertEqsToSlide,
                     uuid,
                     goto,

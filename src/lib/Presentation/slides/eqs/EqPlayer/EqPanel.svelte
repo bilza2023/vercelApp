@@ -4,48 +4,62 @@
 <script>
 //@ts-nocheck
 import { onMount } from '$lib/util';
+ import { afterUpdate } from 'svelte';
 import CodeTxt from './CodeTxt.svelte';
 
 export let pulse;
 export let items;
 export let setPulse;
-export let showFullPage;
-
+/**
+Svelte is good for drawing data and NOT-AT_ALL good for calculating while drawing so make calculations before the draw begins and then just draw the already calculated data.
+*/
 ////////////////////////////////
-function isFocus(item){
-  if (pulse >= item.extra.startTime && pulse < item.extra.endTime ){
-      return true; 
-  }else {
-      return  false;  
-  }
-}
-
-
+let focusedDivId=null;
+ let prevFocusedDivId = null;
 $:{
    pulse;
-   items = [...items];
+   for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    if (pulse >= item.extra.startTime && pulse < item.extra.endTime) {
+       prevFocusedDivId = focusedDivId;
+        focusedDivId = i;
+     }
+   }
+  items = [...items];
 }
 
+ afterUpdate(() => {
+      if (focusedDivId !== null && focusedDivId !== prevFocusedDivId) {
+      const focusedElement = document.getElementById(`${focusedDivId}`);
+      if (focusedElement) {
+        focusedElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
 </script>
 
-    {#each items as item,index}
-    <button   class='flex w-full'  on:click={()=>setPulse(item.extra.startTime)}>
-        
-        <button class='m-1 p-1 rounded-2xl  text-sm items-center justify-center {(item.extra.fs.length > 0)? 'bg-yellow-700': 'bg-stone-600'}' on:click={()=>showFullPage(index)}>{ item.extra.step }</button>
+{#each items as item,index}
 
-      {#if isFocus(item)}
-       <div class="focused w-full text-center">
-            <CodeTxt eq={item}/>
-       </div>
+  <button class='flex w-full' on:click={()=>setPulse(item.extra.startTime)}>
+   
+    <div class='m-1 p-1 rounded-2xl text-sm items-center justify-center 
+    bg-stone-600' >
+    { item.extra.step }
+    </div>
+   
+    <div id={`${index}`}  class={focusedDivId === index ? "focused w-full text-center" : "nonFocused w-full text-center"} >
+      <CodeTxt eq={item}/>
+    </div> 
 
-      {:else}
-       <div class=" nonFocused w-full text-center">
-            <CodeTxt eq={item}/>
-       </div>
-      {/if}
-    </button>    
-    {/each}
+  </button> 
+
+{/each}
+
 <!-- do not remove the 4 br they are bery important -->
+<br/>    
+<br/>    
+<br/>    
+<br/>    
 <br/>    
 <br/>    
 <br/>    
