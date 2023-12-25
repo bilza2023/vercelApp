@@ -1,6 +1,6 @@
 <script>
 //@ts-nocheck
-import {PageWrapper,HdgWithIcon,Centre,SectionHead,FormRow,InputElm,NumberElm,Comment,BtnWIconSm , BtnWIcon,FormElm,Lbl} from '$lib/cmp';
+import {PageWrapper,HdgWithIcon,BtnWIconSm,FormElm} from '$lib/cmp';
 import { Icons } from '$lib/util';
 
 import loginFn from '$lib/loginFns/loginFn';
@@ -8,7 +8,7 @@ import loginFn from '$lib/loginFns/loginFn';
 let email ="";
 let password =""; 
 
-import MainNav from '$lib/appComp/MainNav.svelte';
+import MainNav from '../../lib/appComp/MainNav.svelte';
 </script>
 
 <MainNav/>
