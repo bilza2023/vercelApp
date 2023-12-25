@@ -6,74 +6,36 @@
 /**
  6-Nov-2023 : If the core data-structure of a software is decided the software is decided.
 */
-import {browser,onMount,toast,BASE_URL} from '$lib/util'
+import {onMount,toast,BASE_URL} from '$lib/util'
 import { themes ,Presentation} from '$lib/Presentation';
 import PlayButtons from './PlayButtons.svelte';
 import readSlides from '$lib/tdf/readSlides';
 import Slider from './Slider.svelte';
-//==newly added stuff
 import { Howl } from 'howler';
+
 let  sound;
 let  soundFile=null;
 let  isPlaying=false;
 let  maxSliderValue=0;
 let  interval  = null;
 
-async function start(){
-try{
-// debugger;
-  await loadSound();
- if (isPlaying == true){return;}
-        sound.play();
-        sound.on('play', function () {
-        isPlaying = true;
-        interval = setInterval(updateTimeDiff,1000);
-    });
-
-}catch(e){
-  throw new Error("Can not load");
-}
-    
- return true;     
-}
-
-function stop(){ 
-    isPlaying = false;
-    sound.stop();
-    clearInterval(interval);
-    pulse = 0; 
-    return true;
-}
-function updateTimeDiff() {
-    const r = sound.seek();
-    pulse = r;
-       setCurrentSlide();
-}
-
-async function loadSound(){
-sound = new Howl({
-    src: [soundFile],
-    volume: 1.0,
-    onload: function() {
-        maxSliderValue = sound.duration();
-        // console.log("sound loaded..");
-    }
-    });
-}
-
-//============================================================
 let slides;
 let id;
 let tcode;
 let theme = themes.basic;
-let hydrateInterval=null;
 let stopTime = null;
+let isPaused = false;
+
+let pulse=0;
+let state='loading';
+let currentSlide = null;
+
 
 onMount(async ()=>{  
 id = new URLSearchParams(location.search).get("id");
 tcode = new URLSearchParams(location.search).get("tcode");
 
-let val  = await readSlides(id,tcode);
+// let val  = await readSlides(id,tcode);
 let returnSlides  = await readSlides(id,tcode);
    
  if (returnSlides){
@@ -84,6 +46,8 @@ let returnSlides  = await readSlides(id,tcode);
   soundFile = 'fbise9math/' +  returnSlides.item.filename + '.mp3';
   getStopTime(slides);
   currentSlide = slides[0];
+         await loadSound();
+         state='loaded';
  }
 
 else {throw new Error('Failed to load');}
@@ -119,10 +83,6 @@ async function   getStopTime(slides){
  }
 }
 
-// let interval=null;
-let pulse=0;
-let currentSlide = null;
-
 function setPulse(time){
 sound.seek(time);
 pulse = time;
@@ -133,6 +93,64 @@ function applyTheme(themeKey){
 // debugger;
 theme = themes[themeKey];
 // console.log(theme);
+}
+async function start(){
+try{
+// debugger;
+ if (isPaused == true){pause();return;}
+ if (isPlaying == true){return;}
+//   await loadSound();
+        sound.play();
+        sound.on('play', function () {
+        isPlaying = true;
+        interval = setInterval(updateTimeDiff,500);
+    });
+
+}catch(e){
+  state = 'error';
+  throw new Error("Can not load");
+}
+    
+ return true;     
+}
+function pause() {
+if (isPaused) {
+    sound.play();
+} else {
+    sound.pause();
+}
+isPaused = !isPaused;
+}
+function stop(){ 
+    isPlaying = false;
+    isPaused = false; // imp
+    sound.stop();
+    clearInterval(interval);
+    pulse = 0; 
+    return true;
+}
+function updateTimeDiff() {
+    const r = sound.seek();
+    pulse = r;
+       setCurrentSlide();
+}
+async function loadSound() {
+  try {
+    sound = new Howl({
+      src: [soundFile],
+      volume: 1.0,
+      onload: function () {
+        maxSliderValue = sound.duration();
+        // console.log("sound loaded..");
+      },
+      onloaderror: function (id, error) {
+        // console.error("Error loading sound:", error);
+        state = 'error';
+      },
+    });
+  } catch (e) {
+    toast.push('failed to load sound');
+  }
 }
 
 
@@ -149,10 +167,11 @@ const r = sound.seek();
 }
 </script> 
 
+
 <div class='bg-gray-800 text-white w-full min-h-screen' style='position: fixed; top: 0;'>
 
 <div class='flex justify-start sticky top-0 w-full p-1 m-0 bg-gray-700'>
-<PlayButtons   {start} {stop} callback={applyTheme} />
+<PlayButtons   {start} {stop} callback={applyTheme} {pause} {isPlaying} {isPaused}/>
 
 {#if currentSlide}
 <Slider  {slides} {pulse} {setPulse}/>
@@ -160,8 +179,15 @@ const r = sound.seek();
 
 </div>
 
-{#if currentSlide}
+ {#if state=='loading'}
+    <h1>loading</h1>
+    {/if}
 
+{#if state=='error'}
+    <h1>Some Error Occured</h1>
+    {/if}
+
+{#if currentSlide && state=='loaded' }
     <Presentation {currentSlide} {theme} {pulse} {setPulse}/>
 {/if}
 
