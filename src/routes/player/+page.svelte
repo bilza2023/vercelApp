@@ -42,7 +42,6 @@ let returnSlides  = await readSlides(id,tcode);
 //  debugger;
   slides = returnSlides.slides;
   fixEndTime(slides);
-  git 
   getStopTime(slides);
   currentSlide = slides[0];
          await loadSound();
