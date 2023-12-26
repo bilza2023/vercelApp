@@ -42,8 +42,7 @@ let returnSlides  = await readSlides(id,tcode);
 //  debugger;
   slides = returnSlides.slides;
   fixEndTime(slides);
-  //fbise_cl_9_ch_1_ex_1.1_q_1_pt_0
-  soundFile = 'fbise9math/' +  returnSlides.item.filename + '.mp3';
+  git 
   getStopTime(slides);
   currentSlide = slides[0];
          await loadSound();
