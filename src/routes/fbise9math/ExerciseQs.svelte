@@ -33,22 +33,31 @@ $: totalExQuestion = questions.filter(question => question.partNo.exercise === s
     Total Exercise Questions ({`${totalExQuestion}`})
     </button>
     </div>
+
 {#if showQs}
 <div class='flex  w-full justify-center  flex-wrap  '>
 {#each sortedArray as question,index}    
             <div class='w-3/12'>
-        {#if question.status == 'final' }
+        {#if question.questionType == 'paid' }
             <Card
             title = {`Ex ${question.partNo.exercise} Q-${question.partNo.questionNo} pt ${question.partNo.part}`}
-            icon={Icons.TEST}
+            icon={Icons.RECYCLE}
             url = {`/player?tcode=fbise9math&id=${question._id}`}
             >
                       
             </Card>
-        {:else}
+         {:else if question.questionType == 'login' }
         <Card
             title = {`Ex ${question.partNo.exercise} Q-${question.partNo.questionNo} pt ${question.partNo.part}`}
-            icon={Icons.HOURGLASS }
+            icon={Icons.LOCK }
+            url = {`/player?tcode=fbise9math&id=${question._id}`}
+            >
+                      
+            </Card>    
+        {:else if question.questionType == 'free'}
+        <Card
+            title = {`Ex ${question.partNo.exercise} Q-${question.partNo.questionNo} pt ${question.partNo.part}`}
+            icon={Icons.ROCKET }
             url = {`/player?tcode=fbise9math&id=${question._id}`}
             >
                       

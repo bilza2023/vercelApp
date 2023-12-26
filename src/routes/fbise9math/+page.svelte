@@ -7,7 +7,7 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 import Dd from "./Dd.svelte";
 import ExerciseQs from "./ExerciseQs.svelte";
 import Exercises from "./Exercises.svelte";
-import getSyllabus from '$lib/appComp/getSyllabus';
+import {syllabus} from '$lib/data/syllabus.js';
 
 /////////////////////////////////
 let questions;
@@ -24,9 +24,6 @@ function setEx(ex){
   selectedEx = ex;
 }
 
-let isLogin = false;
-let isAdmin = false;
-
 function setChapter(newChapter){
 selectedChapter = newChapter;
 }
@@ -37,15 +34,7 @@ function getUrl(question){
 
 onMount(async () => {
 try{
-  let r  = await getSyllabus();
-    if (r){
-      questions = r;
-      console.log(questions);
-      // isLogin = checkToken();
-      // isAdmin = checkAdminToken();
-    }else {
-      toast.push("Failed to load");
-    }
+questions = syllabus;  
 
   } catch (e) {
        toast.push('System error');
