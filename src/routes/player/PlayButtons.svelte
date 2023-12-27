@@ -1,7 +1,7 @@
 <script>
   //@ts-nocheck
   import { ThemeDD } from '$lib/Presentation';
-  import { Icons } from '$lib/util';
+  import { Icons ,goto} from '$lib/util';
 
   export let start;
   export let stop;
@@ -9,12 +9,17 @@
   export let callback;
   export let isPlaying;
   export let isPaused;
+function home(){
+stop();
+goto('/');
+}
+
 </script>
 
 <div class="flex items-center space-x-2">
     &nbsp;&nbsp;  
-<a class="p-1 rounded-sm bg-green-700 text-white text-sm" 
-  style='background-color:#065d7f'  href="/">{Icons.HOUSE}</a>
+<button class="p-1 rounded-sm bg-green-700 text-white text-sm" 
+  style='background-color:#065d7f' on:click={home}>{Icons.HOUSE}</button>
 
     {#if isPlaying}
         {#if isPaused}

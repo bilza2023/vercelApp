@@ -6,13 +6,12 @@
 /**
  6-Nov-2023 : If the core data-structure of a software is decided the software is decided.
 */
-import {onMount,toast,BASE_URL} from '$lib/util'
+import {onMount,toast} from '$lib/util'
 import { themes ,Presentation} from '$lib/Presentation';
 import PlayButtons from './PlayButtons.svelte';
 import readSlides from '$lib/tdf/readSlides';
 import Slider from './Slider.svelte';
 import { Howl } from 'howler';
-
 let  sound;
 let  soundFile=null;
 let  isPlaying=false;
@@ -48,9 +47,7 @@ let returnSlides  = await readSlides(id);
          await loadSound();
          state='loaded';
  }
-
 else {throw new Error('Failed to load');}
-// hydrate();
 });
 async function fixEndTime(slides) {
     for (let i = 0; i < slides.length; i++) {
@@ -164,6 +161,7 @@ const r = sound.seek();
         }
  }
 }
+
 </script> 
 
 
