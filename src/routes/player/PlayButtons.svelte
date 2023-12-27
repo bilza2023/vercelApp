@@ -1,6 +1,7 @@
 <script>
   //@ts-nocheck
   import { ThemeDD } from '$lib/Presentation';
+  import { Icons } from '$lib/util';
 
   export let start;
   export let stop;
@@ -12,6 +13,8 @@
 
 <div class="flex items-center space-x-2">
     &nbsp;&nbsp;  
+<a class="p-1 rounded-sm bg-green-700 text-white text-sm" 
+  style='background-color:#065d7f'  href="/">{Icons.HOUSE}</a>
 
     {#if isPlaying}
         {#if isPaused}
