@@ -35,14 +35,13 @@ onMount(async ()=>{
 id = new URLSearchParams(location.search).get("id");
 tcode = new URLSearchParams(location.search).get("tcode");
 
-// let val  = await readSlides(id,tcode);
-let returnSlides  = await readSlides(id,tcode);
+let returnSlides  = await readSlides(id);
    
  if (returnSlides){
 //  debugger;
   slides = returnSlides.slides;
   //I can use different tcode (different tables) for the same eq-player. the files should be in static/tcode/exercise/filename.mp3
-  soundFile = tcode + '/' + returnSlides.item.partNo.exercise  + '/' + returnSlides.item.filename + '.mp3';
+  soundFile = tcode + '/' + returnSlides.partNo.exercise  + '/' + returnSlides.filename + '.mp3';
   fixEndTime(slides);
   getStopTime(slides);
   currentSlide = slides[0];

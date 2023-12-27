@@ -4,7 +4,6 @@ import {PageWrapper,HdgWithIcon,Centre} from '$lib/cmp';
 import MathCard from '$lib/homePage/MathCard.svelte';
 import {Icons} from '$lib/util';
 import MainNav from '$lib/appComp/MainNav.svelte';
-import BoardButton from '$lib/homePage/BoardButton.svelte';
 import BooksImages from '$lib/homePage/BooksImages.svelte';
 
 let board  = "FBISE";
