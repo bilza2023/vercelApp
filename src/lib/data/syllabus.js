@@ -4079,6 +4079,1949 @@ export const syllabus = [
     ]
   },
   {
+    "_id": "6531133a0a6eaa163e9f8a0c",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "isSpecial": false,
+    "partNo": {
+      "exercise": "1.3",
+      "questionNo": 2,
+      "part": 0,
+      "_id": "6531133a0a6eaa163e9f8a0d"
+    },
+    "questionType": "free",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_2_pt_0",
+    "grid": {
+      "global": {
+        "bgColor": "#293544",
+        "fontSize": 1,
+        "padding": 1,
+        "margin": 1,
+        "cellBorderColor": "#e52222",
+        "cellFontColor": "white",
+        "showGrid": false,
+        "gridColor": "#384556",
+        "_id": "6531133a0a6eaa163e9f8a0b"
+      },
+      "rows": [],
+      "sp": [],
+      "fs": [],
+      "_id": "6531133a0a6eaa163e9f8a0a"
+    },
+    "eqs": [
+      {
+        "step": 1,
+        "type": "text",
+        "code": "Additive Inverse of Matrices",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 0,
+        "eqEndTime": 10,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6541f0165687f5b1a82ad988"
+        },
+        "_id": "6541f0165687f5b1a82ad987"
+      },
+      {
+        "step": 2,
+        "type": "code",
+        "code": "A=\\begin{bmatrix} 2& 4 \\\\ -2 &1 \\\\  \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 10,
+        "eqEndTime": 20,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "The additive inverse of a matrix is obtained by changing the sign of each entity",
+            "type": "text",
+            "_id": "6541fe01e5c1cb8e30ed8bb9"
+          },
+          {
+            "code": "Additive inverse of A=-A",
+            "type": "text",
+            "_id": "6541fe01e5c1cb8e30ed8bba"
+          },
+          {
+            "code": "A=\\begin{bmatrix} -2& -4 \\\\ 2 &-1 \\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6541fe01e5c1cb8e30ed8bbb"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6541fe01e5c1cb8e30ed8bbc"
+        },
+        "_id": "6541fe01e5c1cb8e30ed8bb8"
+      },
+      {
+        "step": 3,
+        "type": "code",
+        "code": "B=\\begin{bmatrix} 1& 0&-1  \\\\2 & -1&3 \\\\ 3 & -2&1\\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 20,
+        "eqEndTime": 30,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "Additive inverse of B=-B",
+            "type": "heading",
+            "_id": "6541f48f5687f5b1a82adca2"
+          },
+          {
+            "code": "\\begin{bmatrix} -1& 0&1  \\\\-2 & 1&3 \\\\ -3 & 2&-1\\end{bmatrix}",
+            "type": "code",
+            "_id": "6541f48f5687f5b1a82adca3"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6541f48f5687f5b1a82adca4"
+        },
+        "_id": "6541f48f5687f5b1a82adca1"
+      },
+      {
+        "step": 4,
+        "type": "code",
+        "code": "C=\\begin{bmatrix} 4  \\\\ -2 \\\\ \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 30,
+        "eqEndTime": 40,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "\nAdditive inverse of C =-C\n\n\n\n\n\n",
+            "type": "text",
+            "_id": "6538ae416ef44ebc089457d9"
+          },
+          {
+            "code": "\\begin{bmatrix} -4  \\\\ 2 \\\\ \\end{bmatrix}",
+            "type": "code",
+            "_id": "6541fe01e5c1cb8e30ed8bc3"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6541f0165687f5b1a82ad995"
+        },
+        "_id": "6538ae416ef44ebc089457d8"
+      },
+      {
+        "step": 5,
+        "type": "code",
+        "code": "D=\\begin{bmatrix} 1& 0  \\\\-3 & -2 \\\\ 2 & 1\\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 40,
+        "eqEndTime": 50,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "Additive inverse of D =-D",
+            "type": "text",
+            "_id": "6541fe01e5c1cb8e30ed8bc6"
+          },
+          {
+            "code": "\\begin{bmatrix} -1& 0  \\\\3 & 2 \\\\ -2 & -1\\end{bmatrix}",
+            "type": "code",
+            "_id": "6541fe01e5c1cb8e30ed8bc7"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6541f0165687f5b1a82ad997"
+        },
+        "_id": "6538ae416ef44ebc089457da"
+      },
+      {
+        "step": 6,
+        "type": "code",
+        "code": "E=\\begin{bmatrix}1 & 0 \\\\0& 1 \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 50,
+        "eqEndTime": 60,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "Additive inverse of E =-E",
+            "type": "text",
+            "_id": "6538ae416ef44ebc089457dc"
+          },
+          {
+            "code": "\\begin{bmatrix}-1 & 0 \\\\0& -1 \\end{bmatrix}",
+            "type": "code",
+            "_id": "6541fe01e5c1cb8e30ed8bcb"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6541f0165687f5b1a82ad99a"
+        },
+        "_id": "6538ae416ef44ebc089457db"
+      },
+      {
+        "step": 7,
+        "type": "code",
+        "code": "F=\\begin{bmatrix}\\sqrt{3} & 1  \\\\ -1& \\sqrt{2} \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 60,
+        "eqEndTime": 70,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "Additive inverse of F =-F",
+            "type": "text",
+            "_id": "6538ae416ef44ebc089457de"
+          },
+          {
+            "code": "F=\\begin{bmatrix}-\\sqrt{3} & -1  \\\\ 1& -\\sqrt{2} \\end{bmatrix}",
+            "type": "code",
+            "_id": "6541fe01e5c1cb8e30ed8bcf"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6541f0165687f5b1a82ad99d"
+        },
+        "_id": "6538ae416ef44ebc089457dd"
+      }
+    ],
+    "__v": 0,
+    "filledBy": "miss@gmail.com",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 25,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch-1 Ex 1.3 Q-2\nThe additive Inverse of a Matrix is obtained by changing the sign of each entry.",
+            "_id": "658e665460e47ec5082df0d4"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "658e665460e47ec5082df0d5"
+          }
+        ],
+        "_id": "658e665460e47ec5082df0d3"
+      },
+      {
+        "startTime": 25,
+        "endTime": 192,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "text",
+              "step": 0,
+              "code": "Additive Inverse of Matrices",
+              "startTime": "25",
+              "endTime": 15,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Additive Inverse ",
+                  "type": "heading"
+                },
+                {
+                  "code": "The additive Inverse of a Matrix is obtained by changing the sign of each entry.",
+                  "type": "text"
+                },
+                {
+                  "code": "+ 3 + (-3) = 0",
+                  "type": "code"
+                },
+                {
+                  "code": "+100 + (-100) = 0",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5f56c43fc92ad1fe455"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 1,
+              "code": "A=\\begin{bmatrix} 2& 4 \\\\ -2 &1 \\\\  \\end{bmatrix}",
+              "startTime": 74,
+              "endTime": 25,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Additive Inverse of A=-A",
+                  "type": "text",
+                  "_id": "6541fe01e5c1cb8e30ed8bba"
+                },
+                {
+                  "code": "-A=\\begin{bmatrix} -2& -4 \\\\ 2 &-1 \\\\  \\end{bmatrix}",
+                  "type": "code",
+                  "_id": "6541fe01e5c1cb8e30ed8bbb"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5f56c43fc92ad1fe456"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 2,
+              "code": "B=\\begin{bmatrix} 1& 0&-1  \\\\2&-1&3 \\\\ 3 & -2&1\\end{bmatrix}",
+              "startTime": 104,
+              "endTime": 35,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Additive Inverse of B=-B",
+                  "type": "heading",
+                  "_id": "6541f48f5687f5b1a82adca2"
+                },
+                {
+                  "code": "-B=\\begin{bmatrix} -1& 0&1  \\\\-2 & 1&3 \\\\ -3 & 2&-1\\end{bmatrix}",
+                  "type": "code",
+                  "_id": "6541f48f5687f5b1a82adca3"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5f56c43fc92ad1fe457"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 3,
+              "code": "C=\\begin{bmatrix} 4  \\\\ -2 \\\\ \\end{bmatrix}",
+              "startTime": 133,
+              "endTime": 45,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "\nAdditive Inverse of C =-C\n\n\n\n\n\n",
+                  "type": "text",
+                  "_id": "6538ae416ef44ebc089457d9"
+                },
+                {
+                  "code": "-C=\\begin{bmatrix} -4  \\\\ 2 \\\\ \\end{bmatrix}",
+                  "type": "code",
+                  "_id": "6541fe01e5c1cb8e30ed8bc3"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5f56c43fc92ad1fe458"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 4,
+              "code": "D=\\begin{bmatrix} 1& 0 \\\\-3 & -2 \\\\ 2 & 1\\end{bmatrix}",
+              "startTime": 144,
+              "endTime": 55,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Additive Inverse of D =-D",
+                  "type": "text",
+                  "_id": "6541fe01e5c1cb8e30ed8bc6"
+                },
+                {
+                  "code": "-D=\\begin{bmatrix} -1& 0  \\\\3 & 2 \\\\ -2 & -1\\end{bmatrix}",
+                  "type": "code",
+                  "_id": "6541fe01e5c1cb8e30ed8bc7"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5f56c43fc92ad1fe459"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 5,
+              "code": "E=\\begin{bmatrix}1 & 0 \\\\0& 1 \\end{bmatrix}",
+              "startTime": 159,
+              "endTime": 65,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Additive Inverse of E =-E",
+                  "type": "text",
+                  "_id": "6538ae416ef44ebc089457dc"
+                },
+                {
+                  "code": "-E=\\begin{bmatrix}-1 & 0 \\\\0& -1 \\end{bmatrix}",
+                  "type": "code",
+                  "_id": "6541fe01e5c1cb8e30ed8bcb"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5f56c43fc92ad1fe45a"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 6,
+              "code": "F=\\begin{bmatrix}\\sqrt{3} & 1  \\\\ -1& \\sqrt{2} \\end{bmatrix}",
+              "startTime": 170,
+              "endTime": 75,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Additive Inverse of F =-F",
+                  "type": "text",
+                  "_id": "6538ae416ef44ebc089457de"
+                },
+                {
+                  "code": "-F=\\begin{bmatrix}-\\sqrt{3} & -1  \\\\ 1& -\\sqrt{2} \\end{bmatrix}",
+                  "type": "code",
+                  "_id": "6541fe01e5c1cb8e30ed8bcf"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5f56c43fc92ad1fe45b"
+          }
+        ],
+        "slideExtra": [],
+        "_id": "654ef5f56c43fc92ad1fe454"
+      }
+    ]
+  },
+  {
+    "_id": "65433526bca9577fd75eaa9c",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "isSpecial": false,
+    "partNo": {
+      "exercise": "1.3",
+      "questionNo": 3,
+      "part": 1,
+      "_id": "65433526bca9577fd75eaa9d"
+    },
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_3_pt_1",
+    "eqs": [
+      {
+        "step": 1,
+        "type": "text",
+        "code": "Ex  1.3 Q:3 Part 1",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 0,
+        "eqEndTime": 10,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "A=\\begin{bmatrix} -1 & 2  \\\\ 2& 1 \\\\ \\end{bmatrix}",
+            "type": "code",
+            "_id": "6546600c1b0b32b85191b5e4"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6545f514c6814e359741994b"
+        },
+        "_id": "6545f514c6814e359741994a"
+      },
+      {
+        "step": 2,
+        "type": "code",
+        "code": "Find    A+\\begin{bmatrix} -1 & 2  \\\\ 2& 1 \\\\ \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 10,
+        "eqEndTime": 20,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6546600c1b0b32b85191b5e7"
+        },
+        "_id": "6546600c1b0b32b85191b5e6"
+      },
+      {
+        "step": 3,
+        "type": "text",
+        "code": "EQUATION:1",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 20,
+        "eqEndTime": 30,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6546600c1b0b32b85191b5e9"
+        },
+        "_id": "6546600c1b0b32b85191b5e8"
+      },
+      {
+        "step": 4,
+        "type": "code",
+        "code": "=A+\\begin{bmatrix} 1 & 1  \\\\ 1 & 1  \\\\ \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 30,
+        "eqEndTime": 40,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "Putting the value of A in Eq:1",
+            "type": "heading",
+            "_id": "6546600c1b0b32b85191b5eb"
+          },
+          {
+            "code": "=\\begin{bmatrix} -1 & 2  \\\\ 2& 1 \\\\ \\end{bmatrix}+\\begin{bmatrix} 1 & 1  \\\\ 1& 1 \\\\ \\end{bmatrix}",
+            "type": "code",
+            "_id": "6546600c1b0b32b85191b5ec"
+          },
+          {
+            "code": "=\\begin{bmatrix} -1+1 & 2+1  \\\\ 2+1& 1+1 \\\\ \\end{bmatrix}",
+            "type": "code",
+            "_id": "6546600c1b0b32b85191b5ed"
+          },
+          {
+            "code": "=\\begin{bmatrix} 0 & 3  \\\\ 3& 3 \\\\ \\end{bmatrix}",
+            "type": "code",
+            "_id": "6546600c1b0b32b85191b5ee"
+          },
+          {
+            "code": "SO  Eq:1",
+            "type": "heading",
+            "_id": "6546600c1b0b32b85191b5ef"
+          },
+          {
+            "code": "A+\\begin{bmatrix} 1 & 1  \\\\ 1 & 1  \\\\ \\end{bmatrix}=\\begin{bmatrix} 0 & 3  \\\\ 3& 3 \\\\ \\end{bmatrix}",
+            "type": "code",
+            "_id": "6546600c1b0b32b85191b5f0"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6546600c1b0b32b85191b5f1"
+        },
+        "_id": "6546600c1b0b32b85191b5ea"
+      }
+    ],
+    "__v": 0,
+    "filledBy": "miss@gmail.com",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 6,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch-1 Ex 1.3 Q 3 Part (i)",
+            "_id": "658e682060e47ec5082df12a"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "658e682060e47ec5082df12b"
+          }
+        ],
+        "_id": "658e682060e47ec5082df129"
+      },
+      {
+        "startTime": 6,
+        "endTime": 103,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 0,
+              "code": "Find  ",
+              "startTime": 5,
+              "endTime": 15,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} -1 & 2  \\\\ 2& 1 \\\\ \\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "Find",
+                  "type": "heading"
+                },
+                {
+                  "code": "A + \\begin{bmatrix} 1 & 1  \\\\ 1& 1 \\\\ \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6976c43fc92ad2004ab"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 1,
+              "code": "=A+\\begin{bmatrix} 1 & 1  \\\\ 1 & 1  \\\\ \\end{bmatrix}    ",
+              "startTime": 39,
+              "endTime": 25,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Putting the value of A in Equation",
+                  "type": "heading",
+                  "_id": "6546600c1b0b32b85191b5eb"
+                },
+                {
+                  "code": "=A+\\begin{bmatrix} 1 & 1  \\\\ 1 & 1  \\\\ \\end{bmatrix}    ",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6976c43fc92ad2004ae"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 56,
+              "endTime": 35,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -1& 2\\\\2& 1\\\\  \\end{bmatrix}+\\begin{bmatrix} 1& 1\\\\1& 1\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65956121868434f6e2613da6"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 75,
+              "endTime": 45,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -1+1& 2+1\\\\2+1& 1+1\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65956121868434f6e2613da7"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 96,
+              "endTime": 55,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 0& 3\\\\3& 2\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Answer",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65956121868434f6e2613da8"
+          }
+        ],
+        "_id": "654ef6976c43fc92ad2004aa",
+        "slideExtra": []
+      }
+    ]
+  },
+  {
+    "_id": "65433528bca9577fd75eaaa0",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "isSpecial": false,
+    "partNo": {
+      "exercise": "1.3",
+      "questionNo": 3,
+      "part": 2,
+      "_id": "65433528bca9577fd75eaaa1"
+    },
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_3_pt_2",
+    "eqs": [
+      {
+        "step": 1,
+        "type": "text",
+        "code": "Ex: 1.3 Q:3 Part: 2",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 0,
+        "eqEndTime": 10,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "B=\\begin{bmatrix} 1   \\\\ -1 \\end{bmatrix}",
+            "type": "code",
+            "_id": "65466044b0a4b56c5df20ccf"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65466044b0a4b56c5df20cd0"
+        },
+        "_id": "65466044b0a4b56c5df20cce"
+      },
+      {
+        "step": 2,
+        "type": "code",
+        "code": "Find:\n B+\\begin{bmatrix} 1   \\\\ -1 \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 10,
+        "eqEndTime": 20,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65466044b0a4b56c5df20cd2"
+        },
+        "_id": "65466044b0a4b56c5df20cd1"
+      },
+      {
+        "step": 3,
+        "type": "code",
+        "code": "EQUATION:1",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 20,
+        "eqEndTime": 30,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65466044b0a4b56c5df20cd4"
+        },
+        "_id": "65466044b0a4b56c5df20cd3"
+      },
+      {
+        "step": 4,
+        "type": "code",
+        "code": "=B+\\begin{bmatrix} -2   \\\\ 3 \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 30,
+        "eqEndTime": 40,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "Putting the value of B in Eq:1",
+            "type": "heading",
+            "_id": "65466044b0a4b56c5df20cd6"
+          },
+          {
+            "code": "=\\begin{bmatrix} 1   \\\\ -1 \\end{bmatrix}+\\begin{bmatrix} -2   \\\\ 3 \\end{bmatrix}",
+            "type": "code",
+            "_id": "65466044b0a4b56c5df20cd7"
+          },
+          {
+            "code": "=\\begin{bmatrix} 1+(-2)   \\\\(-1)+ 3 \\end{bmatrix}",
+            "type": "code",
+            "_id": "65466044b0a4b56c5df20cd8"
+          },
+          {
+            "code": "=\\begin{bmatrix} -1   \\\\ 2 \\end{bmatrix}",
+            "type": "code",
+            "_id": "65466044b0a4b56c5df20cd9"
+          },
+          {
+            "code": "So Eq:1",
+            "type": "heading",
+            "_id": "65466044b0a4b56c5df20cda"
+          },
+          {
+            "code": "\n=B+\\begin{bmatrix} 1   \\\\ -1\\end{bmatrix}=\\begin{bmatrix} -1   \\\\ 2 \\end{bmatrix}",
+            "type": "code",
+            "_id": "65466044b0a4b56c5df20cdb"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65466044b0a4b56c5df20cdc"
+        },
+        "_id": "65466044b0a4b56c5df20cd5"
+      }
+    ],
+    "__v": 0,
+    "filledBy": "miss@gmail.com",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 5,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.3 Q 3 Part(ii)",
+            "_id": "658e6a6d60e47ec5082df1a4"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "658e6a6d60e47ec5082df1a5"
+          }
+        ],
+        "_id": "658e6a6d60e47ec5082df1a3"
+      },
+      {
+        "startTime": 5,
+        "endTime": 75,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 0,
+              "code": "Find",
+              "startTime": 5,
+              "endTime": 15,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "B = \\begin{bmatrix} -2   \\\\ 3 \\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": " B+\\begin{bmatrix} 1   \\\\ -1 \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef6986c43fc92ad2004e9"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 1,
+              "code": "=B+\\begin{bmatrix} -2   \\\\ 3 \\end{bmatrix}",
+              "startTime": 27,
+              "endTime": 25,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Putting the value of B in Equation.",
+                  "type": "heading",
+                  "_id": "65466044b0a4b56c5df20cd6"
+                },
+                {
+                  "code": "=\\begin{bmatrix} 1   \\\\ -1 \\end{bmatrix}+\\begin{bmatrix} -2   \\\\ 3 \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef6986c43fc92ad2004ea"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 40,
+              "endTime": 35,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 1+(-2)\\\\(-1)+3\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "659563cd868434f6e2613e2a"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 59,
+              "endTime": 45,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -1\\\\2\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "659563cd868434f6e2613e2b"
+          }
+        ],
+        "_id": "654ef6986c43fc92ad2004e6",
+        "slideExtra": []
+      }
+    ]
+  },
+  {
+    "_id": "65433529bca9577fd75eaaa4",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "isSpecial": false,
+    "partNo": {
+      "exercise": "1.3",
+      "questionNo": 3,
+      "part": 3,
+      "_id": "65433529bca9577fd75eaaa5"
+    },
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_3_pt_3",
+    "eqs": [
+      {
+        "step": 1,
+        "type": "text",
+        "code": "Ex 1.3 Q:3 Part :3",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 0,
+        "eqEndTime": 10,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "C=\\begin{bmatrix} 1&-1&2   \\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6546608db0a4b56c5df20cec"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6546608db0a4b56c5df20ced"
+        },
+        "_id": "6546608db0a4b56c5df20ceb"
+      },
+      {
+        "step": 2,
+        "type": "code",
+        "code": "Find:\n\nC+\\begin{bmatrix} -2&1&3   \\\\  \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 10,
+        "eqEndTime": 20,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6546608db0a4b56c5df20cef"
+        },
+        "_id": "6546608db0a4b56c5df20cee"
+      },
+      {
+        "step": 3,
+        "type": "text",
+        "code": "EQUATION:1",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 20,
+        "eqEndTime": 30,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6546608db0a4b56c5df20cf1"
+        },
+        "_id": "6546608db0a4b56c5df20cf0"
+      },
+      {
+        "step": 4,
+        "type": "code",
+        "code": "=C+\\begin{bmatrix} -2&1&3   \\\\  \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 30,
+        "eqEndTime": 40,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "Putting the value of C in Eq:1",
+            "type": "heading",
+            "_id": "6546608db0a4b56c5df20cf3"
+          },
+          {
+            "code": "=\\begin{bmatrix} 1&-1&2   \\\\  \\end{bmatrix}+\\begin{bmatrix} -2&1&3   \\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6546608db0a4b56c5df20cf4"
+          },
+          {
+            "code": "=\\begin{bmatrix} 1+(-2)&-1+1&2+3   \\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6546608db0a4b56c5df20cf5"
+          },
+          {
+            "code": "=\\begin{bmatrix} -1&0&5  \\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6546608db0a4b56c5df20cf6"
+          },
+          {
+            "code": "So Eq:1",
+            "type": "heading",
+            "_id": "6546608db0a4b56c5df20cf7"
+          },
+          {
+            "code": "=C+\\begin{bmatrix} -2&1&3   \\\\  \\end{bmatrix}=\\begin{bmatrix} -1&0&5  \\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6546608db0a4b56c5df20cf8"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6546608db0a4b56c5df20cf9"
+        },
+        "_id": "6546608db0a4b56c5df20cf2"
+      }
+    ],
+    "__v": 0,
+    "filledBy": "miss@gmail.com",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 8,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch-1 Ex 1.3 Q 3 Part(iii)",
+            "_id": "658e6ffd60e47ec5082df2eb"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "658e6ffd60e47ec5082df2ec"
+          }
+        ],
+        "_id": "658e6ffd60e47ec5082df2ea"
+      },
+      {
+        "startTime": 8,
+        "endTime": 112,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 0,
+              "code": "Find",
+              "startTime": 3,
+              "endTime": 13,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "=C+\\begin{bmatrix} -2&1&3   \\\\  \\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "C value given",
+                  "type": "text"
+                },
+                {
+                  "code": "C=\\begin{bmatrix} 1&-1&2  \\\\  \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef69a6c43fc92ad200523"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 1,
+              "startTime": 43,
+              "endTime": 23,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=C+\\begin{bmatrix} -2&1&3   \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "=C+\\begin{bmatrix} -2&1&3   \\\\  \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": true,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "658e6ffd60e47ec5082df2ef"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 54,
+              "endTime": 33,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 1&-1&2  \\\\  \\end{bmatrix}+\\begin{bmatrix} -2&1&3   \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Adding the value of C",
+                  "type": "heading"
+                },
+                {
+                  "code": "C=\\begin{bmatrix} 1&-1&2  \\\\  \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "65956425868434f6e2613e3c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 72,
+              "endTime": 43,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 1+ (-2) &-1+1 &2+3  \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "659564d9868434f6e2613e63"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 98,
+              "endTime": 53,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "\\begin{bmatrix} -1&0&5 \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Answer",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "spVisibility": true,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65956425868434f6e2613e3d"
+          }
+        ],
+        "_id": "654ef69a6c43fc92ad200522",
+        "slideExtra": []
+      }
+    ]
+  },
+  {
+    "_id": "6543352bbca9577fd75eaaa8",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "isSpecial": false,
+    "partNo": {
+      "exercise": "1.3",
+      "questionNo": 3,
+      "part": 4,
+      "_id": "6543352bbca9577fd75eaaa9"
+    },
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_3_pt_4",
+    "eqs": [
+      {
+        "step": 1,
+        "type": "text",
+        "code": "Ex 1.3 Q:3 Part: 4",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 0,
+        "eqEndTime": 10,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "D=\\begin{bmatrix} 1 & 2 & 3 \\\\ -1 & 0 & 2 \\\\ \\end{bmatrix}",
+            "type": "code",
+            "_id": "65465816e3d3a4fc9430db75"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65465816e3d3a4fc9430db76"
+        },
+        "_id": "65465816e3d3a4fc9430db74"
+      },
+      {
+        "step": 2,
+        "type": "code",
+        "code": "Find\n\n=D+\\begin{bmatrix} 0 & 1 & 0 \\\\ 2 & 0 & 1\\\\ \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 10,
+        "eqEndTime": 20,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "654662f9042fe4de5e3fabfe"
+        },
+        "_id": "654662f9042fe4de5e3fabfd"
+      },
+      {
+        "step": 3,
+        "type": "text",
+        "code": "EQUATION:1",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 20,
+        "eqEndTime": 30,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "654662f9042fe4de5e3fac00"
+        },
+        "_id": "654662f9042fe4de5e3fabff"
+      },
+      {
+        "step": 4,
+        "type": "code",
+        "code": "D+\\begin{bmatrix} 0 & 1 & 0 \\\\ 2 & 0 & 1\\\\ \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 30,
+        "eqEndTime": 40,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "Putting the value of D in Eq:1",
+            "type": "heading",
+            "_id": "654662f9042fe4de5e3fac02"
+          },
+          {
+            "code": "=\\begin{bmatrix} 1 & 2 & 3 \\\\ -1 & 0 & 2 \\\\ \\end{bmatrix}+\\begin{bmatrix} 0 & 1 & 0 \\\\ 2 & 0 & 1\\\\ \\end{bmatrix}",
+            "type": "code",
+            "_id": "654662f9042fe4de5e3fac03"
+          },
+          {
+            "code": "=\\begin{bmatrix} 1+0 & 2+1 & 3+0 \\\\ -1+2 & 0+0 & 2+1 \\\\ \\end{bmatrix}",
+            "type": "code",
+            "_id": "654662f9042fe4de5e3fac04"
+          },
+          {
+            "code": "=\\begin{bmatrix} 1 & 3 & 3 \\\\ 1 & 0 & 3\\\\ \\end{bmatrix}",
+            "type": "code",
+            "_id": "654662f9042fe4de5e3fac05"
+          },
+          {
+            "code": "So Eq:1",
+            "type": "heading",
+            "_id": "654662f9042fe4de5e3fac06"
+          },
+          {
+            "code": "D+\\begin{bmatrix} 0 & 1 & 0 \\\\ 2 & 0 & 1\\\\ \\end{bmatrix}=\\begin{bmatrix} 1 & 3 & 3 \\\\ 1 & 0 & 3\\\\ \\end{bmatrix}",
+            "type": "code",
+            "_id": "654662f9042fe4de5e3fac07"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "654662f9042fe4de5e3fac08"
+        },
+        "_id": "654662f9042fe4de5e3fac01"
+      }
+    ],
+    "__v": 0,
+    "filledBy": "miss@gmail.com",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 8,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1Ex 1.3 Q 3 Part:(iv)",
+            "_id": "658e731660e47ec5082df379"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "658e731660e47ec5082df37a"
+          }
+        ],
+        "_id": "658e731660e47ec5082df378"
+      },
+      {
+        "startTime": 8,
+        "endTime": 107,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 0,
+              "code": "D=\\begin{bmatrix} 1 & 2 & 3 \\\\ -1 & 0 & 2\\\\ \\end{bmatrix}",
+              "startTime": "8",
+              "endTime": 12,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef69d6c43fc92ad200560"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 1,
+              "code": "D+\\begin{bmatrix} 0 & 1 & 0 \\\\ 2 & 0 & 1\\\\ \\end{bmatrix}",
+              "startTime": 28,
+              "endTime": 22,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef69d6c43fc92ad200562"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 42,
+              "endTime": 32,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Put the Value Of D",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "D+\\begin{bmatrix} 0 & 1 & 0 \\\\ 2 & 0 & 1\\\\ \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "65545245eba66b04cc9e2b0b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 50,
+              "endTime": 42,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 1 & 2 & 3 \\\\ -1 & 0 & 2\\\\ \\end{bmatrix}+\\begin{bmatrix} 0 & 1 & 0 \\\\ 2 & 0 & 1\\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "65956681868434f6e2613ea5"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 71,
+              "endTime": 52,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 1+0 & 2+1 & 3+0 \\\\ -1+2 & 0 +0& 2+1\\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "65956681868434f6e2613ea6"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 97,
+              "endTime": 62,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 1 & 3 & 3 \\\\ -1 & 0 & 3\\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Answer",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "spVisibility": true,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65956681868434f6e2613ea7"
+          }
+        ],
+        "_id": "654ef69d6c43fc92ad20055e",
+        "slideExtra": []
+      }
+    ]
+  },
+  {
+    "_id": "6543352cbca9577fd75eaaac",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "isSpecial": false,
+    "partNo": {
+      "exercise": "1.3",
+      "questionNo": 3,
+      "part": 5,
+      "_id": "6543352cbca9577fd75eaaad"
+    },
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_3_pt_5",
+    "eqs": [
+      {
+        "step": 1,
+        "type": "code",
+        "code": "Ex 1.3 Q:3 Part :5",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 0,
+        "eqEndTime": 10,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "A=\\begin{bmatrix} -1 & 2  \\\\ 2& 1 \\\\ \\end{bmatrix}",
+            "type": "code",
+            "_id": "65466547042fe4de5e3faf89"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65466547042fe4de5e3faf8a"
+        },
+        "_id": "65466547042fe4de5e3faf88"
+      },
+      {
+        "step": 2,
+        "type": "text",
+        "code": "Find   : \n2 A",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 10,
+        "eqEndTime": 20,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65466547042fe4de5e3faf8c"
+        },
+        "_id": "65466547042fe4de5e3faf8b"
+      },
+      {
+        "step": 3,
+        "type": "code",
+        "code": "EQUATION:1",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 20,
+        "eqEndTime": 30,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65466547042fe4de5e3faf8e"
+        },
+        "_id": "65466547042fe4de5e3faf8d"
+      },
+      {
+        "step": 4,
+        "type": "code",
+        "code": "=2\\begin{bmatrix} -1 & 2  \\\\ 2& 1 \\\\ \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 30,
+        "eqEndTime": 40,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65466547042fe4de5e3faf90"
+        },
+        "_id": "65466547042fe4de5e3faf8f"
+      },
+      {
+        "step": 5,
+        "type": "code",
+        "code": "=\\begin{bmatrix} 2*-1 & 2*2  \\\\ 2*2&2* 1 \\\\ \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 40,
+        "eqEndTime": 50,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65466547042fe4de5e3faf92"
+        },
+        "_id": "65466547042fe4de5e3faf91"
+      },
+      {
+        "step": 6,
+        "type": "code",
+        "code": "=\\begin{bmatrix} -2 & 4  \\\\ 4& 2 \\\\ \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 50,
+        "eqEndTime": 60,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65466547042fe4de5e3faf94"
+        },
+        "_id": "65466547042fe4de5e3faf93"
+      },
+      {
+        "step": 7,
+        "type": "code",
+        "code": "2A=\\begin{bmatrix} -2 & 4  \\\\ 4& 2 \\\\ \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 60,
+        "eqEndTime": 70,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65466547042fe4de5e3faf96"
+        },
+        "_id": "65466547042fe4de5e3faf95"
+      }
+    ],
+    "__v": 0,
+    "filledBy": "miss@gmail.com",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 6,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.3 Q 3 Part(v)",
+            "_id": "658e75a260e47ec5082df42e"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "658e75a260e47ec5082df42f"
+          }
+        ],
+        "_id": "658e75a260e47ec5082df42d"
+      },
+      {
+        "startTime": 6,
+        "endTime": 87,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 0,
+              "code": "Find  ",
+              "startTime": "6",
+              "endTime": 15,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "2A",
+                  "type": "text"
+                },
+                {
+                  "code": "A=\\begin{bmatrix} -1 & 2  \\\\ 2& 1 \\\\ \\end{bmatrix}",
+                  "type": "code",
+                  "_id": "65466547042fe4de5e3faf89"
+                },
+                {
+                  "code": "[[\"=2\\\\begin{bmatrix} -1 & 2  \\\\\\\\ 2& 1 \\\\\\\\ \\\\end{bmatrix}\"]]",
+                  "type": "tableCode"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef69e6c43fc92ad20059b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 1,
+              "code": "=2\\begin{bmatrix} -1 & 2  \\\\ 2& 1 \\\\ \\end{bmatrix}",
+              "startTime": 29,
+              "endTime": 25,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef69e6c43fc92ad20059f"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 36,
+              "endTime": 35,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2*-1 & 2*2  \\\\ 2*2&2* 1 \\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "659566f0868434f6e2613ece"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 59,
+              "endTime": 45,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -2 & 4  \\\\ 4& 2 \\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "659566f0868434f6e2613ecf"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 80,
+              "endTime": 55,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "2A=\\begin{bmatrix} -2 & 4  \\\\ 4& 2 \\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Answer",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "spVisibility": true,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "659566f0868434f6e2613ed0"
+          }
+        ],
+        "_id": "654ef69e6c43fc92ad20059a",
+        "slideExtra": []
+      }
+    ]
+  },
+  {
     "_id": "653113340a6eaa163e9f89d0",
     "board": "FBISE",
     "classNo": 9,
