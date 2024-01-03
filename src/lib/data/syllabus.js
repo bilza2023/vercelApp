@@ -3426,13 +3426,13 @@ export const syllabus = [
                   "_id": "65378060b1dc4c31190fb2b3"
                 },
                 {
-                  "code": "This is a row matrix because it has only one row.",
+                  "code": "This is a Row matrix because it has only one row.",
                   "type": "text"
                 }
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": false
+              "spVisibility": true
             },
             "arr": [],
             "_id": "654ef5ca6c43fc92ad1fe1a8"
@@ -3525,6 +3525,555 @@ export const syllabus = [
           }
         ],
         "_id": "654ef5ca6c43fc92ad1fe19c",
+        "slideExtra": []
+      }
+    ]
+  },
+  {
+    "_id": "6531133a0a6eaa163e9f8a06",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "isSpecial": false,
+    "partNo": {
+      "exercise": "1.3",
+      "questionNo": 1,
+      "part": 0,
+      "_id": "6531133a0a6eaa163e9f8a07"
+    },
+    "questionType": "free",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_1_pt_0",
+    "grid": {
+      "global": {
+        "bgColor": "#293544",
+        "fontSize": 1,
+        "padding": 1,
+        "margin": 1,
+        "cellBorderColor": "#e52222",
+        "cellFontColor": "white",
+        "showGrid": false,
+        "gridColor": "#384556",
+        "_id": "6531133a0a6eaa163e9f8a05"
+      },
+      "rows": [],
+      "sp": [],
+      "fs": [],
+      "_id": "6531133a0a6eaa163e9f8a04"
+    },
+    "eqs": [
+      {
+        "step": 1,
+        "type": "text",
+        "code": "Which matrice are comforable  for addition",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 0,
+        "eqEndTime": 10,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6545019ad1fa614d95fe5fe3"
+        },
+        "_id": "6545019ad1fa614d95fe5fe2"
+      },
+      {
+        "step": 2,
+        "type": "hdg",
+        "code": "Matrices of same order are conformable for addition.",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 10,
+        "eqEndTime": 20,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "Both are same order",
+            "type": "heading",
+            "_id": "65450f623167e6386d0c7a90"
+          },
+          {
+            "code": "A=\\begin{bmatrix} 2 & 1  \\\\ -1 & 3 \\\\  \\end{bmatrix}\n",
+            "type": "code",
+            "_id": "65450f623167e6386d0c7a91"
+          },
+          {
+            "code": "E=\\begin{bmatrix}-1 & 0 \\\\ 1& 2\\\\\\end{bmatrix}",
+            "type": "code",
+            "_id": "65450f623167e6386d0c7a92"
+          },
+          {
+            "code": "MatriceA and E  are conformable for addition  { because both have order 2-by -2",
+            "type": "heading",
+            "_id": "65450f623167e6386d0c7a93"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "654502fbd1fa614d95fe6081"
+        },
+        "_id": "654502fbd1fa614d95fe6080"
+      },
+      {
+        "step": 3,
+        "type": "code",
+        "code": "A=\\begin{bmatrix} 2 & 1  \\\\ -1 & 3 \\\\  \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 20,
+        "eqEndTime": 30,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65450f623167e6386d0c7a96"
+        },
+        "_id": "65450f623167e6386d0c7a95"
+      },
+      {
+        "step": 4,
+        "type": "code",
+        "code": "E=\\begin{bmatrix}-1 & 0 \\\\ 1& 2\\\\\\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 30,
+        "eqEndTime": 40,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "Both are same order",
+            "type": "heading",
+            "_id": "65450f623167e6386d0c7a98"
+          },
+          {
+            "code": "B=\\begin{bmatrix} 3 \\\\ 1  \\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "65450f623167e6386d0c7a99"
+          },
+          {
+            "code": "D=\\begin{bmatrix} 2+1 \\\\ 3  \\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "65450f623167e6386d0c7a9a"
+          },
+          {
+            "code": "Matrices B and D  are conformable for addition  { because both have order 2-by -2",
+            "type": "heading",
+            "_id": "65450f623167e6386d0c7a9b"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "654502fbd1fa614d95fe607d"
+        },
+        "_id": "654502fbd1fa614d95fe607c"
+      },
+      {
+        "step": 5,
+        "type": "code",
+        "code": "B=\\begin{bmatrix} 3 \\\\ 1  \\\\  \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 40,
+        "eqEndTime": 50,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65450f623167e6386d0c7a9e"
+        },
+        "_id": "65450f623167e6386d0c7a9d"
+      },
+      {
+        "step": 6,
+        "type": "code",
+        "code": "D=\\begin{bmatrix} 2+1 \\\\ 3  \\\\  \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 50,
+        "eqEndTime": 60,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "Both are same order",
+            "type": "heading",
+            "_id": "65450f623167e6386d0c7aa0"
+          },
+          {
+            "code": "Matrice  B and D  are conformable for addition  { because both have order 2-by -2",
+            "type": "text",
+            "_id": "65450f623167e6386d0c7aa1"
+          },
+          {
+            "code": "B=\\begin{bmatrix} 3 \\\\ 1  \\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "65450f623167e6386d0c7aa2"
+          },
+          {
+            "code": "D=\\begin{bmatrix} 2+1 \\\\ 3  \\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "65450f623167e6386d0c7aa3"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6544fc667025b50e3b7342ef"
+        },
+        "_id": "6538a81473396c39eae10356"
+      },
+      {
+        "step": 7,
+        "type": "code",
+        "code": "C=\\begin{bmatrix}1 & 0\\\\ 2& -1 \\\\ 1&- 2 \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 60,
+        "eqEndTime": 70,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65450f623167e6386d0c7aa6"
+        },
+        "_id": "65450f623167e6386d0c7aa5"
+      },
+      {
+        "step": 8,
+        "type": "code",
+        "code": "F=\\begin{bmatrix} 3 & 2  \\\\ 1+1 & -4 \\\\ 3+2 & 2+1 \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 70,
+        "eqEndTime": 80,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "Both hare same order",
+            "type": "text",
+            "_id": "65450f623167e6386d0c7aa8"
+          },
+          {
+            "code": "C=\\begin{bmatrix}1 & 0\\\\ 2& -1 \\\\ 1&- 2 \\end{bmatrix}",
+            "type": "code",
+            "_id": "65450f623167e6386d0c7aa9"
+          },
+          {
+            "code": "F=\\begin{bmatrix} 3 & 2  \\\\ 1+1 & -4 \\\\ 3+2 & 2+1 \\end{bmatrix}",
+            "type": "code",
+            "_id": "65450f623167e6386d0c7aaa"
+          },
+          {
+            "code": "Matrice  Cand F  are conformable for addition  { because both have order 2-by -2",
+            "type": "text",
+            "_id": "65450f623167e6386d0c7aab"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65450f623167e6386d0c7aac"
+        },
+        "_id": "65450f623167e6386d0c7aa7"
+      }
+    ],
+    "__v": 0,
+    "filledBy": "miss@gmail.com",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 13,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch:1 Ex:1.3 Q:1\nWhich Matrices are Conformable  for Addition",
+            "_id": "658e4f0b410199bf5f3ddd75"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "658e4f0b410199bf5f3ddd76"
+          }
+        ],
+        "_id": "658e4f0b410199bf5f3ddd74"
+      },
+      {
+        "startTime": 13,
+        "endTime": 39,
+        "type": "BlinkingMessage",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "In matrix addition, matrices need to be conformable, which means they must have the same dimensions/order. Specifically, matrices must have the same number of rows and columns to be added together.",
+            "showAt": 0,
+            "arr": [],
+            "_id": "65954228115bd6516e1dd1eb"
+          }
+        ],
+        "slideExtra": [],
+        "_id": "65954228115bd6516e1dd1ea"
+      },
+      {
+        "startTime": 39,
+        "endTime": 158,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 0,
+              "startTime": 39,
+              "endTime": 20,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Which Matrices are Conformable  for Addition",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "658e632e60e47ec5082defd2"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 1,
+              "startTime": 45,
+              "endTime": 30,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Given Matrices",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "Matrices A,B,C",
+                  "type": "heading"
+                },
+                {
+                  "code": "A=\\begin{bmatrix} 2 & 1  \\\\ -1 & 3 \\\\  \\end{bmatrix}\n",
+                  "type": "code"
+                },
+                {
+                  "code": "B=\\begin{bmatrix} 3 \\\\ 1  \\\\  \\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "C=\\begin{bmatrix}1 & 0\\\\ 2& -1 \\\\ 1&- 2 \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "658e51f87cb5a5cf78dc311b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 76,
+              "endTime": 40,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Given Matrices",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "Matrices D,E,F",
+                  "type": "heading"
+                },
+                {
+                  "code": "D=\\begin{bmatrix} 2+1 \\\\ 3  \\\\  \\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "E=\\begin{bmatrix}-1 & 0 \\\\ 1& 2\\\\\\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "F=\\begin{bmatrix} 3 & 2  \\\\ 1+1 & -4 \\\\ 3+2 & 2+1 \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": true,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65956e7d8282d96689ecc534"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 99,
+              "endTime": 50,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "D=\\begin{bmatrix} 3 \\\\ 3  \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "D=\\begin{bmatrix} 2+1 \\\\ 3  \\\\  \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65956e7d8282d96689ecc535"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 107,
+              "endTime": 60,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "F=\\begin{bmatrix} 3 & 2  \\\\ 2 & -4 \\\\ 5 & 3 \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "F=\\begin{bmatrix} 3 & 2  \\\\ 1+1 & -4 \\\\ 3+2 & 2+1 \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65956e7d8282d96689ecc536"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 121,
+              "endTime": 70,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "A=\\begin{bmatrix} 2 & 1  \\\\ -1 & 3 \\\\  \\end{bmatrix}\n",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "E=\\begin{bmatrix}-1 & 0 \\\\ 1& 2\\\\\\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "A and E are both 2 by 2 matrices",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "658e51f87cb5a5cf78dc311c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 6,
+              "code": "B=\\begin{bmatrix} 3 \\\\ 1  \\\\  \\end{bmatrix}",
+              "startTime": 139,
+              "endTime": 80,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "B and D are both 2 by 1 matrices",
+                  "type": "heading"
+                },
+                {
+                  "code": "D=\\begin{bmatrix} 3 \\\\ 3  \\\\  \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef5f36c43fc92ad1fe3e7"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 7,
+              "code": "C=\\begin{bmatrix}1 & 0\\\\ 2& -1 \\\\ 1&- 2 \\end{bmatrix}",
+              "startTime": 150,
+              "endTime": 90,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "F=\\begin{bmatrix} 3 & 2  \\\\ 2 & -4 \\\\ 5 & 3 \\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "C and F are both 3 by 2 metrices",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef5f36c43fc92ad1fe3e9"
+          }
+        ],
+        "_id": "654ef5f36c43fc92ad1fe3e2",
         "slideExtra": []
       }
     ]
