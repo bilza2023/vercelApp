@@ -7312,6 +7312,845 @@ export const syllabus = [
     ]
   },
   {
+    "_id": "6543353ebca9577fd75eaac4",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "isSpecial": false,
+    "partNo": {
+      "exercise": "1.3",
+      "questionNo": 4,
+      "part": 1,
+      "_id": "6543353ebca9577fd75eaac5"
+    },
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_4_pt_1",
+    "eqs": [
+      {
+        "step": 1,
+        "type": "text",
+        "code": "EX:1.4  Q:4 Part:1",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 0,
+        "eqEndTime": 10,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6547c9087c7a95938c0e5374"
+        },
+        "_id": "6547c9087c7a95938c0e5373"
+      },
+      {
+        "step": 2,
+        "type": "code",
+        "code": "Simplify",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 10,
+        "eqEndTime": 20,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "=\\begin{bmatrix} 1& 0\\\\0& 1\\\\  \\end{bmatrix}+\\begin{bmatrix} 0& 2\\\\3& 0\\\\  \\end{bmatrix}+\\begin{bmatrix} 1& 1\\\\1& 0\\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6547c9087c7a95938c0e5376"
+          },
+          {
+            "code": "=\\begin{bmatrix} 1+0+1& 0+2+1\\\\0+3+1& 1+0+0\\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6547c9087c7a95938c0e5377"
+          },
+          {
+            "code": "\\begin{bmatrix} 2& 3\\\\4& 1\\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6547c9087c7a95938c0e5378"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6547c9087c7a95938c0e5379"
+        },
+        "_id": "6547c9087c7a95938c0e5375"
+      }
+    ],
+    "__v": 0,
+    "filledBy": "miss@gmail.com",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 7,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.3 Q 4 Part (i)",
+            "_id": "658e892588542b0325f09cdc"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "658e892588542b0325f09cdd"
+          }
+        ],
+        "_id": "658e892588542b0325f09cdb"
+      },
+      {
+        "startTime": 7,
+        "endTime": 144,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 0,
+              "code": "Perform the indicated Operations and simplify the following",
+              "startTime": "7",
+              "endTime": 12,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "We have 3 matrices with Add (+) operation. Also the first 2 matrices are inside brackets thus needs to be solved first",
+                  "type": "text"
+                },
+                {
+                  "code": "=(\\begin{bmatrix} 1& 0\\\\0& 1\\\\  \\end{bmatrix}+\\begin{bmatrix} 0& 2\\\\3& 0\\\\  \\end{bmatrix})+\\begin{bmatrix} 1& 1\\\\1& 0\\\\  \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef6a36c43fc92ad2006b0"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 1,
+              "startTime": 52,
+              "endTime": 22,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=(\\begin{bmatrix} 1& 0\\\\0& 1\\\\  \\end{bmatrix}+\\begin{bmatrix} 0& 2\\\\3& 0\\\\  \\end{bmatrix})+\\begin{bmatrix} 1& 1\\\\1& 0\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Lets first add the matrices inside brackets and then add the third one ",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "65964549d302e51ea0fd0428"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 63,
+              "endTime": 32,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=(\\begin{bmatrix} 1+0& 0+2\\\\0+3& 1+0\\\\  \\end{bmatrix})+\\begin{bmatrix} 1& 1\\\\1& 0\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Each element of the first matrix is added to the corresponding element of the second matrix",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "65964549d302e51ea0fd0429"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 84,
+              "endTime": 42,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 1& 2\\\\3& 1\\\\  \\end{bmatrix}+\\begin{bmatrix} 1& 1\\\\1& 0\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Result of the first Addition",
+                  "type": "heading"
+                },
+                {
+                  "code": "\\begin{bmatrix} 1& 2\\\\3& 1\\\\  \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "65964549d302e51ea0fd042a"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": "111",
+              "endTime": 52,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 1+1& 2+1\\\\3+1& 1+0\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Now that the brackets are removed we can add the remaining 2 matrices",
+                  "type": "text"
+                },
+                {
+                  "code": "Each element of the first matrix is added to the corresponding element of the second matrix",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "65964549d302e51ea0fd042b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 133,
+              "endTime": 62,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix}2 &3 \\\\ 4 & 1  \\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Answer",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "655457b8eba66b04cc9e2e53"
+          }
+        ],
+        "_id": "654ef6a36c43fc92ad2006ae",
+        "slideExtra": []
+      }
+    ]
+  },
+  {
+    "_id": "6543353fbca9577fd75eaac8",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "isSpecial": false,
+    "partNo": {
+      "exercise": "1.3",
+      "questionNo": 4,
+      "part": 2,
+      "_id": "6543353fbca9577fd75eaac9"
+    },
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_4_pt_2",
+    "eqs": [
+      {
+        "step": 1,
+        "type": "text",
+        "code": "EX:1.4  Q:4 Part:2",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 0,
+        "eqEndTime": 10,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6547c9807c7a95938c0e5383"
+        },
+        "_id": "6547c9807c7a95938c0e5382"
+      },
+      {
+        "step": 2,
+        "type": "code",
+        "code": "",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 10,
+        "eqEndTime": 20,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "=\\begin{bmatrix} 1& 0\\\\0& 1\\\\  \\end{bmatrix}+\\begin{bmatrix} 0& 2\\\\3& 0\\\\  \\end{bmatrix}-\\begin{bmatrix} 1& 1\\\\1& 0\\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6547c9807c7a95938c0e5385"
+          },
+          {
+            "code": "=\\begin{bmatrix} 1+0-1& 0+2-1\\\\0+3-1& 1+0-0\\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6547c9807c7a95938c0e5386"
+          },
+          {
+            "code": "=\\begin{bmatrix} 0& 1\\\\2& 1\\\\  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6547c9807c7a95938c0e5387"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6547c9807c7a95938c0e5388"
+        },
+        "_id": "6547c9807c7a95938c0e5384"
+      }
+    ],
+    "__v": 0,
+    "filledBy": "miss@gmail.com",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 6,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.3 Q.4 Part (ii)",
+            "_id": "659240556c676fd5f8092006"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "659240556c676fd5f8092007"
+          }
+        ],
+        "_id": "659240556c676fd5f8092005"
+      },
+      {
+        "startTime": 6,
+        "endTime": 168,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 0,
+              "code": "Perform the indicated Operations and simplify the following",
+              "startTime": "6",
+              "endTime": 15,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "=\\begin{bmatrix}1 &0  \\\\ 0 & 1  \\\\ \\end{bmatrix}+\\left(\\begin{bmatrix} 0 & 2  \\\\ 3 & 0  \\\\ \\end{bmatrix}-\\begin{bmatrix} 1 & 1  \\\\ 1 & 0  \\\\ \\end{bmatrix}\\right)",
+                  "type": "code"
+                },
+                {
+                  "code": "We have to solve the matrices inside the brackets first. First we will subtract the matrices inside the brackets and then Add the result with the outer matrix",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef6a46c43fc92ad2006cf"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 1,
+              "startTime": 34,
+              "endTime": 25,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix}1 &0  \\\\ 0 & 1  \\\\ \\end{bmatrix}+\\left(\\begin{bmatrix} 0 & 2  \\\\ 3 & 0  \\\\ \\end{bmatrix}-\\begin{bmatrix} 1 & 1  \\\\ 1 & 0  \\\\ \\end{bmatrix}\\right)",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Lets first perform the Negative operation on the matrices inside brackets",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "659240556c676fd5f809200a"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 44,
+              "endTime": 35,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix}1 &0  \\\\ 0 & 1  \\\\ \\end{bmatrix}+\\begin{bmatrix}0-1 &2-1  \\\\ 3-1 & 0-0 \\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Each corresponding element of the matrix (inside brackets) is subtracted from the corresponding element of the other matrix",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "6596452973f6fd4c9322941f"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": "60",
+              "endTime": 45,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix}1 &0  \\\\ 0 & 1  \\\\ \\end{bmatrix}+\\begin{bmatrix}-1 &1  \\\\2& 0\\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Result of the first Subtraction Operation",
+                  "type": "heading"
+                },
+                {
+                  "code": "\\begin{bmatrix}-1 &1  \\\\2& 0\\\\ \\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "Now we have removed the brackets let Add this resultant matrix with the other matrix",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "6596452973f6fd4c93229420"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 78,
+              "endTime": 55,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix}1+(-1) &0+1  \\\\0+2&1+ 0\\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Each corresponding element of the matrices is Added to the corresponding element of the other matrix",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "6596452973f6fd4c93229421"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 127,
+              "endTime": 65,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix}0 &1 \\\\ 2 & 1  \\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Answer",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "spVisibility": true,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6596452973f6fd4c93229422"
+          }
+        ],
+        "slideExtra": [],
+        "_id": "654ef6a46c43fc92ad2006ce"
+      }
+    ]
+  },
+  {
+    "_id": "65433541bca9577fd75eaacc",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "isSpecial": false,
+    "partNo": {
+      "exercise": "1.3",
+      "questionNo": 4,
+      "part": 3,
+      "_id": "65433541bca9577fd75eaacd"
+    },
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_4_pt_3",
+    "eqs": [
+      {
+        "step": 1,
+        "type": "code",
+        "code": "Ex 1.4 Q:4 Part 3",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 0,
+        "eqEndTime": 10,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6547ca3b7c7a95938c0e5397"
+        },
+        "_id": "6547ca3b7c7a95938c0e5396"
+      },
+      {
+        "step": 2,
+        "type": "code",
+        "code": "=\\begin{bmatrix} 2&3&1  \\end{bmatrix}+\\begin{bmatrix} 1& 0&2 \\end{bmatrix}-\\begin{bmatrix} 2& 3&1  \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 10,
+        "eqEndTime": 20,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "=\\begin{bmatrix} 2&3&1  \\end{bmatrix}+\\begin{bmatrix} 1& 0&2 \\end{bmatrix}-\\begin{bmatrix} 2& 3&1  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6547ca3b7c7a95938c0e5399"
+          },
+          {
+            "code": "=\\begin{bmatrix} 2+1-2& 3+0-2&1+2-2  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6547ca3b7c7a95938c0e539a"
+          },
+          {
+            "code": "\\begin{bmatrix} 1& 1&1  \\end{bmatrix}",
+            "type": "code",
+            "_id": "6547ca3b7c7a95938c0e539b"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "6547ca3b7c7a95938c0e539c"
+        },
+        "_id": "6547ca3b7c7a95938c0e5398"
+      }
+    ],
+    "__v": 0,
+    "filledBy": "miss@gmail.com",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 5,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch-1 Ex 1.3 Q.4 Part (iii)",
+            "_id": "659241a86c676fd5f809202d"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "659241a86c676fd5f809202e"
+          }
+        ],
+        "_id": "659241a86c676fd5f809202c"
+      },
+      {
+        "startTime": 5,
+        "endTime": 146,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 0,
+              "startTime": "5",
+              "endTime": 12,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Perform the indicated Operations on Matrices",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "Operation = Mathematical operations of + , - , X and divide etc",
+                  "type": "text"
+                },
+                {
+                  "code": "Matrices inside brackets gets to be solved first",
+                  "type": "text"
+                },
+                {
+                  "code": "=\\begin{bmatrix} 2&3&1  \\end{bmatrix}+\\left(\\begin{bmatrix} 1& 0&2 \\end{bmatrix}-\\begin{bmatrix} 2& 2&2  \\end{bmatrix}\\right)",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "65965fec4588ac7456305494"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 1,
+              "startTime": 36,
+              "endTime": 22,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2&3&1  \\end{bmatrix}+\\left(\\begin{bmatrix} 1& 0&2 \\end{bmatrix}-\\begin{bmatrix} 2& 2&2  \\end{bmatrix}\\right)",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "We have 2 matrices inside brackets with Subtraction operation we will solve them first",
+                  "type": "text"
+                },
+                {
+                  "code": "Finally we will Add the result of step 1 with the outer matrix",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "spVisibility": true,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "659241a86c676fd5f8092031"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 52,
+              "endTime": 32,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2&3&1  \\end{bmatrix}+\\left(\\begin{bmatrix} 1-2& 0-2&2 -2\\end{bmatrix}\\right)",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Subtracting the matrices inside the brackets",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "spVisibility": true,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6596462373f6fd4c93229470"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 64,
+              "endTime": 42,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2&3&1  \\end{bmatrix}+\\begin{bmatrix} -1& -2&0\\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Result of Step -1 Subtraction",
+                  "type": "heading"
+                },
+                {
+                  "code": "\\begin{bmatrix} -1& -2&0\\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": true,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6596478d73f6fd4c932294b1"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": "77",
+              "endTime": 52,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2+(-1)& 3+(-2)&1+ 0 \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Keep in mind that the + and - sings are multiplied thus + X - = -",
+                  "type": "text"
+                },
+                {
+                  "code": "Do not get confused here.",
+                  "type": "heading"
+                },
+                {
+                  "code": "Remember if we have a negative number on the right side we will have to use brackets.",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "spVisibility": true,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6596462373f6fd4c93229471"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 114,
+              "endTime": 62,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2-1& 3-2&1+0  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "65965fec4588ac7456305499"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 6,
+              "startTime": 133,
+              "endTime": 72,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 1&1&1 \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Answer",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "spVisibility": true,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6596462373f6fd4c93229472"
+          }
+        ],
+        "_id": "654ef6a56c43fc92ad2006ee",
+        "slideExtra": []
+      }
+    ]
+  },
+  {
     "_id": "653113340a6eaa163e9f89d0",
     "board": "FBISE",
     "classNo": 9,
