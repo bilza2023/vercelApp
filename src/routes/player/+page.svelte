@@ -135,6 +135,7 @@ async function loadSound() {
     sound = new Howl({
       src: [soundFile],
       volume: 1.0,
+      html5: true,
       onload: function () {
         maxSliderValue = sound.duration();
         // console.log("sound loaded..");
@@ -149,6 +150,45 @@ async function loadSound() {
   }
 }
 
+// let bufferPercentage = 0;
+
+// async function loadSound() {
+//   try {
+//     sound = new Howl({
+//       src: [soundFile],
+//       volume: 1.0,
+//       onload: function () {
+//         maxSliderValue = sound.duration();
+//         state = 'loaded';
+//       },
+//       onloaderror: function (id, error) {
+//         state = 'error';
+//       },
+//       onplayerror: function (id, error) {
+//         state = 'error';
+//       },
+//       // onplay: function () {
+//       //   isPlaying = true;
+//       //   interval = setInterval(updateTimeDiff, 500);
+//       // },
+//       // onpause: function () {
+//       //   isPaused = !isPaused;
+//       // },
+//       // onend: function () {
+//       //   isPlaying = false;
+//       //   isPaused = false;
+//       //   clearInterval(interval);
+//       //   pulse = 0;
+//       // },
+//       onloadprogress: function (id, loaded, total) {
+//         bufferPercentage = (loaded / total) * 100;
+//         console.log("bufferPercentage", bufferPercent);
+//       },
+//     });
+//   } catch (e) {
+//     toast.push('failed to load sound');
+//   }
+// }
 
 function setCurrentSlide(){
 //  debugger;
@@ -185,6 +225,7 @@ const r = sound.seek();
     {/if}
 
 {#if currentSlide && state=='loaded' }
+  <!-- <div>{bufferPercentage}</div> -->
     <Presentation {currentSlide} {theme} {pulse} {setPulse}/>
 {/if}
 
