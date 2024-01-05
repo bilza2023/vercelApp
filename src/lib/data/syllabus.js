@@ -5145,7 +5145,7 @@ export const syllabus = [
               "type": "hdg",
               "sp": [
                 {
-                  "code": "A=\\begin{bmatrix} 1& 2 & 3 \n\\\\ 2 & 3 & 1\n\\\\ 1 & -1 & 0\\end{bmatrix}  ",
+                  "code": "A=\\begin{bmatrix} 1& 2 & 3 \n\\\\ 2 & 3 & 1\n\\\\ 0 & 2 & -1\\end{bmatrix}  ",
                   "type": "code"
                 },
                 {
@@ -5178,7 +5178,7 @@ export const syllabus = [
               "fsEndTime": null,
               "sp": [
                 {
-                  "code": "A=\\begin{bmatrix} 1& 2 & 3 \n\\\\ 2 & 3 & 1\n\\\\ 1 & -1 & 0\\end{bmatrix}  ",
+                  "code": "A=\\begin{bmatrix} 1& 2 & 3 \n\\\\ 2 & 3 & 1\n\\\\ 0 & 2 & -1\\end{bmatrix}  ",
                   "type": "code"
                 },
                 {
@@ -5223,7 +5223,7 @@ export const syllabus = [
               "endTime": 42,
               "fsStartTime": 0,
               "fsEndTime": 0,
-              "code": "A+C=\\begin{bmatrix} \n1& 2 & 3 \n\\\\ 2 & 3 & 1\n\\\\ 1 & -1 & 0 \\end{bmatrix}  +\\begin{bmatrix} -1 & 0 & 0\\\\ 0 & -2 & 3 \\\\ 1 & 1 & 2\\end{bmatrix}",
+              "code": "A+C=\\begin{bmatrix} \n1& 2 & 3 \n\\\\ 2 & 3 & 1\n\\\\ 0 & 2 & -1 \\end{bmatrix}  +\\begin{bmatrix} -1 & 0 & 0\\\\ 0 & -2 & 3 \\\\ 1 & 1 & 2\\end{bmatrix}",
               "type": "code",
               "sp": [
                 {
@@ -5248,7 +5248,7 @@ export const syllabus = [
               "endTime": 52,
               "fsStartTime": 0,
               "fsEndTime": 0,
-              "code": "=\\begin{bmatrix}\n 1+(-1) & 2+0 & 3+0\n \\\\ 2+0& 3 +(-2)&1+3 \n\\\\ 1+1 & -1 +1& 0+2 \n\\end{bmatrix}",
+              "code": "=\\begin{bmatrix}\n 1+(-1) & 2+0 & 3+0\n \\\\ 2+0& 3 +(-2)&1+3 \n\\\\ 0+1 & 2 +1& (-1)+2 \n\\end{bmatrix}",
               "type": "code",
               "sp": [],
               "fs": [],
@@ -5264,31 +5264,11 @@ export const syllabus = [
             "showAt": 0,
             "extra": {
               "step": 5,
-              "startTime": 90,
-              "endTime": 62,
-              "fsStartTime": 0,
-              "fsEndTime": 0,
-              "code": "=\\begin{bmatrix} 1-1 & 2+0 & 3+0 \n\\\\ 2+0& 3 -2&1+3\n \\\\ 1+1 & -1 +1& 0+2 \\end{bmatrix}",
-              "type": "code",
-              "sp": [],
-              "fs": [],
-              "fsVisibility": false,
-              "spVisibility": true
-            },
-            "arr": [],
-            "_id": "659686c182e388f04923bac7"
-          },
-          {
-            "name": "",
-            "content": "",
-            "showAt": 0,
-            "extra": {
-              "step": 6,
               "startTime": 117,
               "endTime": 72,
               "fsStartTime": 0,
               "fsEndTime": 0,
-              "code": "A+C =\\begin{bmatrix} 0 & 2 & 3 \\\\ 2& 1 &4 \\\\ 2 & 0 & 2 \\end{bmatrix}",
+              "code": "A+C =\\begin{bmatrix} 0 & 2 & 3 \\\\ 2& 1 &4 \\\\ 1 & 3 & 1 \\end{bmatrix}",
               "type": "code",
               "sp": [],
               "fs": [],
@@ -5304,7 +5284,7 @@ export const syllabus = [
             "showAt": 0,
             "extra": {
               "type": "hdg",
-              "step": 7,
+              "step": 6,
               "code": "R.H.S=C+A",
               "startTime": 143,
               "endTime": 82,
@@ -5333,12 +5313,12 @@ export const syllabus = [
             "content": "",
             "showAt": 0,
             "extra": {
-              "step": 8,
+              "step": 7,
               "startTime": 155,
               "endTime": 92,
               "fsStartTime": 0,
               "fsEndTime": 0,
-              "code": "C+A=\\begin{bmatrix} -1 & 0 & 0 \\\\ 0& -2 & 3\\\\ 1 & 1 & 2 \\end{bmatrix}+\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 1 & -1 & 0 \\end{bmatrix}  ",
+              "code": "C+A=\\begin{bmatrix} -1 & 0 & 0 \\\\ 0& -2 & 3\\\\ 1 & 1 & 2 \\end{bmatrix}+\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0 & 2 & -1 \\end{bmatrix}  ",
               "type": "code",
               "sp": [],
               "fs": [],
@@ -5353,12 +5333,12 @@ export const syllabus = [
             "content": "",
             "showAt": 0,
             "extra": {
-              "step": 9,
+              "step": 8,
               "startTime": 163,
               "endTime": 102,
               "fsStartTime": 0,
               "fsEndTime": 0,
-              "code": "=\\begin{bmatrix} -1+1 & 0+2 & 0+3 \\\\ 0+2& -2+3 & 3+1\\\\\n 1+1 & 1+(-1)& 2+0\\end{bmatrix}",
+              "code": "=\\begin{bmatrix} (-1)+1 & 0+2 & 0+3 \\\\ 0+2& (-2)+3 & 3+1\\\\\n 1+0 & 1+2& 2+(-1)\\end{bmatrix}",
               "type": "code",
               "sp": [
                 {
@@ -5372,7 +5352,7 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": false
+              "spVisibility": true
             },
             "arr": [],
             "_id": "6596541ac144543a7678982f"
@@ -5382,29 +5362,9 @@ export const syllabus = [
             "content": "",
             "showAt": 0,
             "extra": {
-              "step": 10,
-              "startTime": 188,
-              "endTime": 112,
-              "fsStartTime": 0,
-              "fsEndTime": 0,
-              "code": "=\\begin{bmatrix} -1+1 & 0+2 & 0+3 \\\\ 0+2& -2+3 & 3+1\\\\ \n1+1 & 1-1& 2-1 \\end{bmatrix}",
               "type": "code",
-              "sp": [],
-              "fs": [],
-              "fsVisibility": false,
-              "spVisibility": true
-            },
-            "arr": [],
-            "_id": "6596541ac144543a76789830"
-          },
-          {
-            "name": "",
-            "content": "",
-            "showAt": 0,
-            "extra": {
-              "type": "code",
-              "step": 11,
-              "code": "=\\begin{bmatrix} 0 & 2& 3 \\\\ 2& 1 & 4\\\\ 2 & 0& 2 \\end{bmatrix}",
+              "step": 9,
+              "code": "=\\begin{bmatrix} 0 & 2& 3 \\\\ 2& 1 & 4\\\\ 1 & 3& 1 \\end{bmatrix}",
               "startTime": 218,
               "endTime": 122,
               "fsStartTime": null,
@@ -5435,7 +5395,502 @@ export const syllabus = [
             "_id": "654ef60e6c43fc92ad1fe62c"
           }
         ],
-        "_id": "654ef60e6c43fc92ad1fe61f",
+        "slideExtra": [],
+        "_id": "654ef60e6c43fc92ad1fe61f"
+      }
+    ]
+  },
+  {
+    "_id": "6531134a0a6eaa163e9f8aa2",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "isSpecial": false,
+    "partNo": {
+      "exercise": "1.4",
+      "questionNo": 1,
+      "part": 0,
+      "_id": "6531134a0a6eaa163e9f8aa3"
+    },
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.4_q_1_pt_0",
+    "grid": {
+      "global": {
+        "bgColor": "#293544",
+        "fontSize": 1,
+        "padding": 1,
+        "margin": 1,
+        "cellBorderColor": "#e52222",
+        "cellFontColor": "white",
+        "showGrid": false,
+        "gridColor": "#384556",
+        "_id": "6531134a0a6eaa163e9f8aa1"
+      },
+      "rows": [],
+      "sp": [],
+      "fs": [],
+      "_id": "6531134a0a6eaa163e9f8aa0"
+    },
+    "eqs": [
+      {
+        "step": 1,
+        "type": "code",
+        "code": "EX:1.4 Q:1 Part:1",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 0,
+        "eqEndTime": 10,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "Matrix Comfortable for Multiplication ",
+            "type": "heading",
+            "_id": "65487a073dbe5562a21493cc"
+          },
+          {
+            "code": "Two matrices are conformable for multiplication if the number of columns of first matrix are equal to number of rows of second matrix.  ",
+            "type": "text",
+            "_id": "65487a073dbe5562a21493cd"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65487a073dbe5562a21493ce"
+        },
+        "_id": "65487a073dbe5562a21493cb"
+      },
+      {
+        "step": 2,
+        "type": "text",
+        "code": "So according to the definaton :",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 10,
+        "eqEndTime": 20,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65487a073dbe5562a21493d0"
+        },
+        "_id": "65487a073dbe5562a21493cf"
+      },
+      {
+        "step": 3,
+        "type": "code",
+        "code": "(1)=\\begin{bmatrix}1 &-1 \\\\ 0&2 \\\\ \\end{bmatrix}    \\begin{bmatrix} -2 \\\\ 3 \\\\ \\end{bmatrix} ",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 20,
+        "eqEndTime": 30,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "(1)is conformable for multiplication (because the first matrix has just two  columns and second matrix has same number of rows].",
+            "type": "heading",
+            "_id": "65487a073dbe5562a21493d2"
+          },
+          {
+            "code": "[[\"Rows M-1\",\"Col M-2\"],[\"2\",\"2\"],[\"2\",\"1\"]]",
+            "type": "tableCode",
+            "_id": "65487d7d1a9df893324d35dc"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65487a073dbe5562a21493d3"
+        },
+        "_id": "6538b87bfb64f196fb84fa41"
+      },
+      {
+        "step": 4,
+        "type": "code",
+        "code": "(2)=\\begin{bmatrix}1 &-1 \\\\ 0&2 \\\\ \\end{bmatrix}    \\begin{bmatrix} 2&-1 \\\\1&3  \\\\ \\end{bmatrix} ",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 30,
+        "eqEndTime": 40,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "(2)is conformable for multiplication (because the first matrix has just two  columns and second matrix has same number of rows].",
+            "type": "heading",
+            "_id": "65487cb61a9df893324d35b1"
+          },
+          {
+            "code": "[[\"Row-M-2\",\"Col M-2\"],[\"2\",\"2\"],[\"2\",\"2\"]]",
+            "type": "tableCode",
+            "_id": "65487d7d1a9df893324d35e0"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65487cb61a9df893324d35b2"
+        },
+        "_id": "65487cb61a9df893324d35b0"
+      },
+      {
+        "step": 5,
+        "type": "code",
+        "code": "(3)=\\begin{bmatrix} 1 \\\\ -1  \\\\ \\end{bmatrix}\\begin{bmatrix}0 & 1  \\\\ -1&2 \\\\ \\end{bmatrix}\n",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 40,
+        "eqEndTime": 50,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "Matrices is not conformable for multiplication (because the first matrix has one columns and second matrix has two rows].",
+            "type": "text",
+            "_id": "6538b87bfb64f196fb84fa44"
+          },
+          {
+            "code": "[[\"Rows M-3\",\"Col M-3\"],[\"2\",\"1\"],[\"2\",\"2\"]]",
+            "type": "table",
+            "_id": "653f370723789be523479d8b"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65487a073dbe5562a21493d7"
+        },
+        "_id": "6538b87bfb64f196fb84fa43"
+      },
+      {
+        "step": 6,
+        "type": "code",
+        "code": "(4)\\begin{bmatrix} 1& 2 \\\\ 0 & -1 \\\\-1 & -2\\end{bmatrix}\\begin{bmatrix} 1& 0 & -1 \\\\ 0 & 1& 2 \\\\ \\end{bmatrix}\n",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 50,
+        "eqEndTime": 60,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "iv) is conformable for multiplication (because the first matrix has just  two columns and second matrix has same number of rows].",
+            "type": "text",
+            "_id": "6538b87bfb64f196fb84fa46"
+          },
+          {
+            "code": "[[\"Row-M-4\",\"ColM-4\",\"\"],[\"3\",\"2\",\"\"],[\"2\",\"3\",\"\"]]",
+            "type": "tableCode",
+            "_id": "65488203769291b76a70a6f7"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65487a073dbe5562a21493da"
+        },
+        "_id": "6538b87bfb64f196fb84fa45"
+      },
+      {
+        "step": 7,
+        "type": "code",
+        "code": "(5)\\begin{bmatrix}3 & 2 & 1 \\\\ 0& 1 & -1 \\\\  \\end{bmatrix}\n\\begin{bmatrix}  1& -1 \\\\ 0& 2 \\\\ -2 & 3 \\end{bmatrix}",
+        "showSPinFS": false,
+        "MPWidth": 8,
+        "eqStartTime": 60,
+        "eqEndTime": 70,
+        "fsStartTime": 0,
+        "fsEndTime": 0,
+        "sp": [
+          {
+            "code": "(v) is conformable for multiplication (because the first matrix has three columns and second matrix has same number of rows].",
+            "type": "text",
+            "_id": "6538b87bfb64f196fb84fa4a"
+          },
+          {
+            "code": "[[\"Row-M-5\",\"Col-M-5\"],[\"2\",\"3\"],[\"3\",\"2\"]]",
+            "type": "tableCode",
+            "_id": "65488203769291b76a70a6fb"
+          }
+        ],
+        "fs": {
+          "code": "",
+          "type": "TestComp",
+          "_id": "65487a073dbe5562a21493e0"
+        },
+        "_id": "6538b87bfb64f196fb84fa49"
+      }
+    ],
+    "__v": 0,
+    "filledBy": "miss@gmail.com",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 52,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.4 Q-1\nWhich of the following Matrices  are Conformable for Multiplication\nConformable means : In agreement,Similar or Consistent\nWe must make sure that all of the steps we take are conformable with the law",
+            "_id": "6594db07509a9a5291bfc052"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "6594db07509a9a5291bfc053"
+          }
+        ],
+        "_id": "6594db07509a9a5291bfc051"
+      },
+      {
+        "startTime": 52,
+        "endTime": 86,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "The CR Rule for Matrix Multiplication\nAccording to CR rules \nThe Columns of First Matrix must be\n=\nRows of Second Matrix",
+            "_id": "6597c94e90fb7a81d2d83354"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "6597c94e90fb7a81d2d83355"
+          }
+        ],
+        "_id": "6597c94e90fb7a81d2d83353"
+      },
+      {
+        "startTime": 86,
+        "endTime": 308,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 0,
+              "code": "Find Matrices Conformable for Multiplication",
+              "startTime": 86,
+              "endTime": 12,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef63d6c43fc92ad1fec3d"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 1,
+              "code": "(1)=\\begin{bmatrix}1 &-1 \\\\ 0&2 \\\\ \\end{bmatrix}    \\begin{bmatrix} -2 \\\\ 3 \\\\ \\end{bmatrix} ",
+              "startTime": 93,
+              "endTime": 22,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Order of Matrix 1 & 2",
+                  "type": "heading"
+                },
+                {
+                  "code": "[[\"Order\",\"M-1\",\"M-2\"],[\"Rows\",\"2\",\"2\"],[\"Col\",\"2\",\"1\"]]",
+                  "type": "tableCode",
+                  "_id": "65487d7d1a9df893324d35dc"
+                },
+                {
+                  "code": "[[\"Col-M1\",\"=\",\"Rows- M2\"],[\"2\",\"=\",\"2\"]]",
+                  "type": "tableCode"
+                },
+                {
+                  "code": "(1) is conformable for multiplication because the Columns of first matrix are equal to the Rows of second matrix.",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef63d6c43fc92ad1fec3e"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 2,
+              "code": "(2)=\\begin{bmatrix}1 &-1 \\\\ 1&0 \\\\ \\end{bmatrix}    \\begin{bmatrix} 2&-1 \\\\1&3  \\\\ \\end{bmatrix} ",
+              "startTime": 155,
+              "endTime": 32,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Order of Matrix 1 & 2",
+                  "type": "heading",
+                  "_id": "65487cb61a9df893324d35b1"
+                },
+                {
+                  "code": "[[\"Order\",\"M-1\",\"M-2\"],[\"Row\",\"2\",\"2\"],[\"Col\",\"2\",\"2\"]]",
+                  "type": "tableCode",
+                  "_id": "65487d7d1a9df893324d35e0"
+                },
+                {
+                  "code": "[[\"Col-M1\",\"=\",\"Row-M2\"],[\"2\",\"=\",\"2\"]]",
+                  "type": "tableCode"
+                },
+                {
+                  "code": "(2) is conformable for multiplication because the Columns of first matrix are equal to the Rows of second matrix.",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef63d6c43fc92ad1fec3f"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 3,
+              "code": "(3)=\\begin{bmatrix} 1 \\\\ -1  \\\\ \\end{bmatrix}\\begin{bmatrix}0 & 1  \\\\ -1&2 \\\\ \\end{bmatrix}\n",
+              "startTime": 186,
+              "endTime": 42,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Order of Matrix 1 & 2",
+                  "type": "heading"
+                },
+                {
+                  "code": "[[\"Order\",\"M1\",\"M2\"],[\"Row\",\"2\",\"2\"],[\"Col\",\"1\",\"2\"]]",
+                  "type": "tableCode"
+                },
+                {
+                  "code": "[[\"Col-M1\",\"Not=\",\"Row-M2\"],[\"1\",\"Not=\",\"2\"]]",
+                  "type": "tableCode"
+                },
+                {
+                  "code": "(4) is NOT conformable for multiplication because the Columns of first matrix are NOT equal to the Rows of second matrix.",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef63d6c43fc92ad1fec40"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 4,
+              "code": "(4)\\begin{bmatrix} 1& 2 \\\\ 0 & -1 \\\\-1 & -2\\end{bmatrix}\\begin{bmatrix} 1& 0 & -1 \\\\ 0 & 1& 2 \\\\ \\end{bmatrix}\n",
+              "startTime": 232,
+              "endTime": 52,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Order of Matrix 1 & 2",
+                  "type": "heading"
+                },
+                {
+                  "code": "[[\"Order\",\"M1\",\"M2\"],[\"Row\",\"3\",\"2\"],[\"Col\",\"2\",\"3\"]]",
+                  "type": "tableCode",
+                  "_id": "65488203769291b76a70a6f7"
+                },
+                {
+                  "code": "[[\"Col−M1\",\"=\",\"Row-M2\"],[\"2\",\"=\",\"2\"]]",
+                  "type": "tableCode"
+                },
+                {
+                  "code": "(4) is conformable for multiplication because the Columns of first matrix are equal to the Rows of second matrix.",
+                  "type": "text",
+                  "_id": "6538b87bfb64f196fb84fa46"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef63d6c43fc92ad1fec41"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 5,
+              "code": "(5)\\begin{bmatrix}3 & 2 & 1 \\\\ 0& 1 & -1 \\\\  \\end{bmatrix}\n\\begin{bmatrix}  1& -1 \\\\ 0& 2 \\\\ -2 & 3 \\end{bmatrix}",
+              "startTime": 270,
+              "endTime": 62,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Order of Matrix 1 & 2",
+                  "type": "heading"
+                },
+                {
+                  "code": "[[\"Order\",\"M1\",\"M2\"],[\"Row\",\"2\",\"3\"],[\"Col\",\"3\",\"2\"]]",
+                  "type": "tableCode"
+                },
+                {
+                  "code": "[[\"Col−M1\",\"=\",\"Row−M2\"],[\"3\",\"=\",\"3\"]]",
+                  "type": "tableCode"
+                },
+                {
+                  "code": "(5) is conformable for multiplication because the Columns of first matrix are equal to the Rows of second matrix.",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef63d6c43fc92ad1fec42"
+          }
+        ],
+        "_id": "654ef63d6c43fc92ad1fec3b",
         "slideExtra": []
       }
     ]
@@ -8976,7 +9431,7 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": false
+              "spVisibility": true
             },
             "arr": [],
             "_id": "65964a9fd302e51ea0fd0513"
@@ -9005,7 +9460,7 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": false
+              "spVisibility": true
             },
             "arr": [],
             "_id": "659645d673f6fd4c9322944b"
@@ -9036,8 +9491,8 @@ export const syllabus = [
             "_id": "659645d673f6fd4c9322944c"
           }
         ],
-        "_id": "654ef6a56c43fc92ad20070e",
-        "slideExtra": []
+        "slideExtra": [],
+        "_id": "654ef6a56c43fc92ad20070e"
       }
     ]
   },
@@ -9182,7 +9637,7 @@ export const syllabus = [
             "extra": {
               "type": "code",
               "step": 1,
-              "code": "=\\begin{bmatrix} 1& 2& 3\\\\2& 3& 1\\\\ 3&1&2\\end{bmatrix}+\\begin{bmatrix} 1& 0& -2\\\\-2 & -1& 0\\\\ 0&2&-1\\end{bmatrix}",
+              "code": "=\\begin{bmatrix} 1& 2& 3\\\\2& 3& 1\\\\ 3&1&2\\end{bmatrix}+\\begin{bmatrix} 1& 0& (-2)\\\\-2 & -1& 0\\\\ 0&2&-1\\end{bmatrix}",
               "startTime": 24,
               "endTime": 25,
               "fsStartTime": null,
@@ -9207,7 +9662,7 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": false
+              "spVisibility": true
             },
             "arr": [],
             "_id": "654ef6a66c43fc92ad200730"
@@ -9232,7 +9687,7 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": false
+              "spVisibility": true
             },
             "arr": [],
             "_id": "65964a71d302e51ea0fd04ff"
@@ -9257,7 +9712,7 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": false
+              "spVisibility": true
             },
             "arr": [],
             "_id": "659662fe4588ac7456305542"
@@ -9288,8 +9743,8 @@ export const syllabus = [
             "_id": "65964a71d302e51ea0fd0500"
           }
         ],
-        "_id": "654ef6a66c43fc92ad20072e",
-        "slideExtra": []
+        "slideExtra": [],
+        "_id": "654ef6a66c43fc92ad20072e"
       }
     ]
   },
