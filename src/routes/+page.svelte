@@ -27,11 +27,11 @@ cls = cls;
 <!-- <a href="/graph/index.html">Graph</a> -->
 
     <Centre>
-        <HdgWithIcon bgColor='bg-stone-600' icon={Icons.TEST}>taleem.help</HdgWithIcon>
+        <HdgWithIcon bgColor='bg-stone-600' icon={Icons.BOOKS}> Your Online Home Tutor</HdgWithIcon>
     </Centre>
-    <Centre>
+    <!-- <Centre>
         <HdgWithIcon bgColor='bg-stone-600' icon={Icons.BOOKS}>Your Online Home Tutor</HdgWithIcon>
-    </Centre>
+    </Centre> -->
 
 <Centre>
 <div class="bg-gray-700 rounded-md w-full mx-8">
