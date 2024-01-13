@@ -23,6 +23,13 @@ $:{
 
 $: totalExQuestion = questions.filter(question => question.exercise === selectedEx).length
 
+function getTitle(question){
+if (question.name && question.name !== ''){
+return `Ex ${question.exercise} ${question.name} `;
+}else {
+return `Ex ${question.exercise} Q-${question.questionNo} pt ${question.part}`;
+}
+}
 </script>
 <!-- ///////////////// -->
 <div class="bg-gray-700 p-2 m-2 rounded-md">
@@ -40,7 +47,7 @@ $: totalExQuestion = questions.filter(question => question.exercise === selected
             <div class='w-3/12'>
         {#if question.questionType == 'paid' }
             <Card
-            title = {`Ex ${question.exercise} Q-${question.questionNo} pt ${question.part}`}
+            title = {getTitle(question)}
             icon={Icons.RECYCLE}
             url = {`/player?tcode=fbise9math&id=${question._id}`}
             >

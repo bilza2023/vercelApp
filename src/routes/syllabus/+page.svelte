@@ -7,10 +7,11 @@ import MainNav from '$lib/appComp/MainNav.svelte';
 import Dd from "./Dd.svelte";
 import ExerciseQs from "./ExerciseQs.svelte";
 import Exercises from "./Exercises.svelte";
-import {syllabus} from '$lib/data/syllabus.js';
+import getSyllabus from '$lib/data/getSyllabus.js';
 
 /////////////////////////////////
 let questions;
+let tcode;
 let selectedEx ="1.1";
 let selectedChapter = 1;
 let chapterTotalQuestions = 0;
@@ -34,8 +35,9 @@ function getUrl(question){
 
 onMount(async () => {
 try{
-// debugger;
-questions = syllabus;  
+debugger;
+tcode = new URLSearchParams(location.search).get("tcode");
+questions = await getSyllabus(tcode);  
 
   } catch (e) {
        toast.push('System error');

@@ -226,7 +226,7 @@ const r = sound.seek();
 
 {#if currentSlide && state=='loaded' }
   <!-- <div>{bufferPercentage}</div> -->
-    <Presentation {currentSlide} {theme} {pulse} {setPulse}/>
+    <Presentation {currentSlide} {theme} {pulse} {setPulse} {tcode}/>
 {/if}
 
 </div><!--page wrapper-->

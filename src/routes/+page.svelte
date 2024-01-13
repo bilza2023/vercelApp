@@ -36,7 +36,7 @@ cls = cls;
 <Centre>
 <div class="bg-gray-700 rounded-md w-full mx-8">
 <div class='flex  justify-center gap-1   p-2 m-2'>
-<BooksImages {board} {cls} />
+<BooksImages tcode='fbise9math' />
 </div>
 
 <div class="flex w-full justify-between ">
