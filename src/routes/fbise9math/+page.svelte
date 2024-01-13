@@ -34,6 +34,7 @@ function getUrl(question){
 
 onMount(async () => {
 try{
+// debugger;
 questions = syllabus;  
 
   } catch (e) {

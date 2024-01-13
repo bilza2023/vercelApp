@@ -40,7 +40,7 @@ let returnSlides  = await readSlides(id);
 //  debugger;
   slides = returnSlides.slides;
   //I can use different tcode (different tables) for the same eq-player. the files should be in static/tcode/exercise/filename.mp3
-  soundFile = tcode + '/' + returnSlides.partNo.exercise  + '/' + returnSlides.filename + '.mp3';
+  soundFile = tcode + '/' + returnSlides.exercise  + '/' + returnSlides.filename + '.mp3';
   fixEndTime(slides);
   getStopTime(slides);
   currentSlide = slides[0];
