@@ -39,10 +39,10 @@ tcode = new URLSearchParams(location.search).get("tcode");
 let returnSlides  = await readSlides(id,tcode);
    
  if (returnSlides){
-//  debugger;
+ debugger;
   slides = returnSlides.slides;
   //I can use different tcode (different tables) for the same eq-player. the files should be in static/tcode/exercise/filename.mp3
-  soundFile = tcode + '/' + returnSlides.exercise  + '/' + returnSlides.filename + '.mp3';
+  soundFile =  '/' + tcode + '/' + returnSlides.exercise  + '/' + returnSlides.filename + '.mp3';
   fixEndTime(slides); ///check why i need this?
   getStopTime(slides);
   currentSlide = slides[0];
