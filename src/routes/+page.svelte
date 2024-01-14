@@ -29,9 +29,7 @@ import BooksImages from '$lib/homePage/BooksImages.svelte';
     <Centre>
         <HdgWithIcon bgColor='bg-stone-600' icon={Icons.BOOKS}> Your Online Home Tutor</HdgWithIcon>
     </Centre>
-    <!-- <Centre>
-        <HdgWithIcon bgColor='bg-stone-600' icon={Icons.BOOKS}>Your Online Home Tutor</HdgWithIcon>
-    </Centre> -->
+
 
 <Centre>
 <div class="bg-gray-700 rounded-md w-full mx-8">
