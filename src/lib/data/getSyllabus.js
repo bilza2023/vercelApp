@@ -2,7 +2,8 @@
 
 export default async function getSyllabus(tcode){
  try{
-   const modulePath = `./${tcode}/${tcode}.js`;
+  debugger;
+   const modulePath = `/${tcode}/${tcode}.js`;
     const { syllabus } = await import(modulePath);
 
   if(syllabus){
