@@ -9,6 +9,7 @@
   export let callback;
   export let isPlaying;
   export let isPaused;
+  export let setVolume;
 function home(){
 stop();
 goto('/');
@@ -37,6 +38,8 @@ goto('/');
     <button class="p-1 rounded-sm bg-red-800 text-white text-sm" 
     on:click={stop}>■ Stop</button>
  
+ <input type="range" min="0" max="1" step='0.1' value="0.8" on:input={(e)=>setVolume(e.target.value)} />
+
 
     <ThemeDD {callback}/>
 

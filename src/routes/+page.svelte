@@ -6,17 +6,17 @@ import {Icons} from '$lib/util';
 import MainNav from '$lib/appComp/MainNav.svelte';
 import BooksImages from '$lib/homePage/BooksImages.svelte';
 
-let board  = "FBISE";
-let cls  = "Class 9th";
+// let board  = "FBISE";
+// let cls  = "Class 9th";
 
-function setBoard(brd){
-board = brd;
-board = board;
-}
-function setClass(incomming){
-cls = incomming;
-cls = cls;
-}
+// function setBoard(brd){
+// board = brd;
+// board = board;
+// }
+// function setClass(incomming){
+// cls = incomming;
+// cls = cls;
+// }
 
 
 </script>
@@ -36,7 +36,11 @@ cls = cls;
 <Centre>
 <div class="bg-gray-700 rounded-md w-full mx-8">
 <div class='flex  justify-center gap-1   p-2 m-2'>
+<BooksImages tcode='fbise8math' />
 <BooksImages tcode='fbise9math' />
+<BooksImages tcode='fbise9english' />
+<BooksImages tcode='fbise10math' />
+<BooksImages tcode='experimental' />
 </div>
 
 <div class="flex w-full justify-between ">

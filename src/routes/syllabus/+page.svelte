@@ -29,13 +29,13 @@ function setChapter(newChapter){
 selectedChapter = newChapter;
 }
 /////////////////-----on-mount
-function getUrl(question){
- return `/player?tcode=fbise9math&?id=${question._id}`;
-} 
+// function getUrl(question){
+//  return `/player?tcode=fbise9math&?id=${question._id}`;
+// } 
 
 onMount(async () => {
 try{
-debugger;
+// debugger;
 tcode = new URLSearchParams(location.search).get("tcode");
 questions = await getSyllabus(tcode);  
 
@@ -50,7 +50,7 @@ questions = await getSyllabus(tcode);
 <PageWrapper>
 
 <div class='flex justify-center   p-2 '>
- <HdgWithIcon bgColor='bg-stone-600' icon={Icons.TEST}>FBISE 9th Math</HdgWithIcon>
+ <HdgWithIcon bgColor='bg-stone-600' icon={Icons.TEST}>{tcode}</HdgWithIcon>
 </div>
 {#if questions}
 
@@ -65,7 +65,7 @@ questions = await getSyllabus(tcode);
 {`Total Chapter Questions: ${chapterTotalQuestions}`}
 </div>
 
-<ExerciseQs {questions} {selectedEx} {getUrl}/>
+<ExerciseQs {questions} {selectedEx} {tcode}/>
 <br/>
 {/if}
 <br>

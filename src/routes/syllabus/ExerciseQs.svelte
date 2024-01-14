@@ -2,6 +2,7 @@
 //@ts-nocheck
 import { Card } from '$lib/cmp';
 import {Icons } from '$lib/util';
+export let tcode;
 export let questions;
 export let selectedEx;
 
@@ -49,7 +50,7 @@ return `Ex ${question.exercise} Q-${question.questionNo} pt ${question.part}`;
             <Card
             title = {getTitle(question)}
             icon={Icons.RECYCLE}
-            url = {`/player?tcode=fbise9math&id=${question._id}`}
+            url = {`/player?tcode=${tcode}&id=${question._id}`}
             >
                       
             </Card>

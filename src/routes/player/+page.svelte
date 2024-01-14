@@ -6,10 +6,11 @@
 /**
  6-Nov-2023 : If the core data-structure of a software is decided the software is decided.
 */
+//  import { onDestroy } from 'svelte';
 import {onMount,toast} from '$lib/util'
 import { themes ,Presentation} from '$lib/Presentation';
 import PlayButtons from './PlayButtons.svelte';
-import readSlides from '$lib/tdf/readSlides';
+import readSlides from '$lib/data/readSlides';
 import Slider from './Slider.svelte';
 import { Howl } from 'howler';
 let  sound;
@@ -31,17 +32,18 @@ let currentSlide = null;
 
 
 onMount(async ()=>{  
+// debugger;
 id = new URLSearchParams(location.search).get("id");
 tcode = new URLSearchParams(location.search).get("tcode");
 
-let returnSlides  = await readSlides(id);
+let returnSlides  = await readSlides(id,tcode);
    
  if (returnSlides){
 //  debugger;
   slides = returnSlides.slides;
   //I can use different tcode (different tables) for the same eq-player. the files should be in static/tcode/exercise/filename.mp3
   soundFile = tcode + '/' + returnSlides.exercise  + '/' + returnSlides.filename + '.mp3';
-  fixEndTime(slides);
+  fixEndTime(slides); ///check why i need this?
   getStopTime(slides);
   currentSlide = slides[0];
          await loadSound();
@@ -49,6 +51,7 @@ let returnSlides  = await readSlides(id);
  }
 else {throw new Error('Failed to load');}
 });
+ 
 async function fixEndTime(slides) {
     for (let i = 0; i < slides.length; i++) {
         const slide = slides[i];
@@ -67,7 +70,15 @@ async function fixEndTime(slides) {
         }
     }
 }
-
+async function checkFileExists(file) {
+  try {
+    const response = await fetch(file);
+    return response.ok;
+  } catch (error) {
+    console.error('Error checking file existence:', error);
+    return false;
+  }
+}
 async function   getStopTime(slides){
  if(slides.length > 0){
     if (slides[slides.length -1].endTime 
@@ -78,7 +89,9 @@ async function   getStopTime(slides){
     }
  }
 }
-
+function setVolume(volumeLevel) {
+  sound.volume(volumeLevel);
+}
 function setPulse(time){
 sound.seek(time);
 pulse = time;
@@ -132,6 +145,11 @@ function updateTimeDiff() {
 }
 async function loadSound() {
   try {
+  // debugger;
+    const primarySoundExists = await checkFileExists(soundFile);
+    if(!primarySoundExists){
+      soundFile = './sounds/music.mp3';
+    }
     sound = new Howl({
       src: [soundFile],
       volume: 1.0,
@@ -149,46 +167,6 @@ async function loadSound() {
     toast.push('failed to load sound');
   }
 }
-
-// let bufferPercentage = 0;
-
-// async function loadSound() {
-//   try {
-//     sound = new Howl({
-//       src: [soundFile],
-//       volume: 1.0,
-//       onload: function () {
-//         maxSliderValue = sound.duration();
-//         state = 'loaded';
-//       },
-//       onloaderror: function (id, error) {
-//         state = 'error';
-//       },
-//       onplayerror: function (id, error) {
-//         state = 'error';
-//       },
-//       // onplay: function () {
-//       //   isPlaying = true;
-//       //   interval = setInterval(updateTimeDiff, 500);
-//       // },
-//       // onpause: function () {
-//       //   isPaused = !isPaused;
-//       // },
-//       // onend: function () {
-//       //   isPlaying = false;
-//       //   isPaused = false;
-//       //   clearInterval(interval);
-//       //   pulse = 0;
-//       // },
-//       onloadprogress: function (id, loaded, total) {
-//         bufferPercentage = (loaded / total) * 100;
-//         console.log("bufferPercentage", bufferPercent);
-//       },
-//     });
-//   } catch (e) {
-//     toast.push('failed to load sound');
-//   }
-// }
 
 function setCurrentSlide(){
 //  debugger;
@@ -208,7 +186,7 @@ const r = sound.seek();
 <div class='bg-gray-800 text-white w-full min-h-screen' style='position: fixed; top: 0;'>
 
 <div class='flex justify-start sticky top-0 w-full p-1 m-0 bg-gray-700'>
-<PlayButtons   {start} {stop} callback={applyTheme} {pause} {isPlaying} {isPaused}/>
+<PlayButtons   {start} {stop} callback={applyTheme} {pause} {isPlaying} {isPaused} {setVolume}/>
 
 {#if currentSlide}
 <Slider  {slides} {pulse} {setPulse}/>

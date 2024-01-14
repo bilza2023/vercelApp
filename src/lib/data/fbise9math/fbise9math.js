@@ -1,4 +1,4 @@
-export const fbise9math = [
+export const syllabus = [
   {
     "_id": "659e87f992faba116b079b43",
     "board": "FBISE",
