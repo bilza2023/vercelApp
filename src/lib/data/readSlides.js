@@ -5,7 +5,8 @@
 
 export default async function readSlides(id,tcode){
  try{
-   const modulePath = `./${tcode}/${tcode}.js`;
+  // use / for top level
+   const modulePath = `/${tcode}/${tcode}.js`;
     const { syllabus } = await import(modulePath);
 
   let data;
