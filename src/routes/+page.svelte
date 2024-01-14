@@ -39,6 +39,7 @@ import BooksImages from '$lib/homePage/BooksImages.svelte';
 <BooksImages tcode='fbise9english' />
 <BooksImages tcode='fbise10math' />
 <BooksImages tcode='experimental' />
+<BooksImages tcode='matrices' />
 </div>
 
 <div class="flex w-full justify-between ">
