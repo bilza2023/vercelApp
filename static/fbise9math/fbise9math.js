@@ -5541,6 +5541,552 @@ export const syllabus = [
     "__v": 0
   },
   {
+    "_id": "659e880f92faba116b079e41",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "exercise": "1.4",
+    "questionNo": 5,
+    "part": 2,
+    "name": "",
+    "sortOrder": 0,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.4_q_5_pt_2",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 6,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.4 Q 5 Part (ii)",
+            "_id": "6594e8e5a60c80e6eec30d57"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "6594e8e5a60c80e6eec30d58"
+          }
+        ],
+        "_id": "6594e8e5a60c80e6eec30d56"
+      },
+      {
+        "startTime": 6,
+        "endTime": 653,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 0,
+              "startTime": "6",
+              "endTime": 17,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Prove that A(BC)=(AB)C",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} -1 & 3 \\\\ 2&0   \\\\  \\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "B=\\begin{bmatrix} 1 & 2 \\\\ -3&-5   \\\\  \\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "C=\\begin{bmatrix} 2 & 1 \\\\ 1&3   \\\\  \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "6594e8e5a60c80e6eec30d5c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 1,
+              "code": "L.H.S = A(BC)",
+              "startTime": 34,
+              "endTime": 27,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6496c43fc92ad1feef3"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 41,
+              "endTime": 37,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -1 & 3 \\\\ 2&0   \\\\  \\end{bmatrix}\n\\Big (\n\\begin{bmatrix} 1 & 2 \\\\ -3&-5   \\\\  \\end{bmatrix}\\begin{bmatrix} 2 & 1 \\\\ 1&3   \\\\  \\end{bmatrix} \n\\Big)",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "659b787e342833732812b573"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 48,
+              "endTime": 47,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "\\Big (\n\\begin{bmatrix} 1 *2+2*1& 1*1+2*3 \\\\ (-3)*2+(-5)*1&(-3)*1+(-5)*3   \\\\  \\end{bmatrix}\n\\Big)",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "We have removed matrix A to focus on (BC)",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659921fa52efa3a799db0cf1"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 117,
+              "endTime": 57,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -1 & 3 \\\\ 2&0   \\\\  \\end{bmatrix}\n\\Big (\n\\begin{bmatrix} 2+2& 1+6 \\\\ -6-5&-3-15   \\\\  \\end{bmatrix}\n\\Big)",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659921fa52efa3a799db0cf2"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 181,
+              "endTime": 67,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -1 & 3 \\\\ 2&0   \\\\  \\end{bmatrix}\\begin{bmatrix} 4 & 7\\\\ -11&-18   \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "No need for brackets now",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659921fa52efa3a799db0cf4"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 6,
+              "startTime": 213,
+              "endTime": 77,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Now we Multiply A with BC",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65a5edefba8dda8bfb1ff4b8"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 7,
+              "startTime": 221,
+              "endTime": 87,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} (-1)*4+3*(-11) &( -1)*7+3*(-18)\\\\ 2*4+0*(-11)&2*7+0*(-18)  \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659921fa52efa3a799db0cf5"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 8,
+              "startTime": 287,
+              "endTime": 97,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -4-33& -7-54\\\\ 8+0&14+0   \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659921fa52efa3a799db0cf6"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 9,
+              "startTime": 328,
+              "endTime": 107,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "A(BC)=\\begin{bmatrix} -37 & -61\\\\ 8&14   \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659921fa52efa3a799db0cf7"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 10,
+              "startTime": 363,
+              "endTime": 117,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Now R.H.S=(AB)C",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "A(BC)=\\begin{bmatrix} -37 & -61\\\\ 8&14   \\\\  \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "659b787e342833732812b57b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 11,
+              "code": "(AB)C=\\begin{bmatrix} -1 & 3 \\\\ 2&0   \\\\  \\end{bmatrix}\n\\left(\n\\begin{bmatrix} 1 & 2 \\\\ -3&-5   \\\\  \\end{bmatrix}\\begin{bmatrix} 2 & 1 \\\\ 1&3   \\\\  \\end{bmatrix}\n\\right)",
+              "startTime": 378,
+              "endTime": 127,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6496c43fc92ad1feef2"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 12,
+              "code": "First we find AB",
+              "startTime": 382,
+              "endTime": 137,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6496c43fc92ad1feef6"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 13,
+              "startTime": 391,
+              "endTime": 147,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "(AB)C=\\left(\n\\begin{bmatrix} -1 & 3 \\\\ 2&0   \\\\  \\end{bmatrix}\n\\begin{bmatrix} 1 & 2 \\\\ -3&-5   \\\\  \\end{bmatrix}\\right)\\begin{bmatrix} 2 & 1 \\\\ 1&3   \\\\  \\end{bmatrix}\n\n",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659920b152efa3a799db0ca0"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 14,
+              "startTime": 400,
+              "endTime": 157,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} (-1)*1+3*(-3) & -1*2+3*(-5)\\\\ 2*1+0*(-3)&2*2+0*(-5 ) \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659920b152efa3a799db0ca1"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 15,
+              "startTime": 439,
+              "endTime": 167,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -1-9 & -2-15 \\\\ 2+0&4+0   \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659920b152efa3a799db0ca2"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 16,
+              "startTime": 473,
+              "endTime": 177,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "AB=\\begin{bmatrix} -10& -17 \\\\ 2&4   \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659920b152efa3a799db0ca3"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "text",
+              "step": 17,
+              "code": "Now We Find AB(C)",
+              "startTime": 518,
+              "endTime": 187,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6496c43fc92ad1feef7"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 18,
+              "startTime": 528,
+              "endTime": 197,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": " AB(C)=\\begin{bmatrix} -10& -17 \\\\ 2&4   \\\\  \\end{bmatrix}\\begin{bmatrix} 2 & 1 \\\\ 1&3   \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659920b152efa3a799db0ca5"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 19,
+              "startTime": 537,
+              "endTime": 207,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} (-10)*2+(-17)*1& (-10)*1+(-17)*3 \\\\  2*2+4*1&2*1+4*3 \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659920b152efa3a799db0ca6"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 20,
+              "startTime": 581,
+              "endTime": 217,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -20-17& -10-51 \\\\ 4+4&2+12   \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659920b152efa3a799db0ca7"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 21,
+              "startTime": 615,
+              "endTime": 227,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -37& -61 \\\\ 8&14   \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659920b152efa3a799db0ca8"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 22,
+              "startTime": 643,
+              "endTime": 237,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Hence Proved A(BC)=(AB)C",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "A(BC)=(AB)C",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "659b787e342833732812b587"
+          }
+        ],
+        "_id": "654ef6496c43fc92ad1feeed",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
     "_id": "659e890892faba116b07b7c2",
     "board": "FBISE",
     "classNo": 9,
