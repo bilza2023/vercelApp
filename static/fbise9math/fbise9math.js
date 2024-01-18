@@ -8074,6 +8074,1261 @@ export const syllabus = [
     "__v": 0
   },
   {
+    "_id": "659e881192faba116b079ecd",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "exercise": "1.5",
+    "questionNo": 1,
+    "part": 0,
+    "name": "",
+    "sortOrder": 0,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.5_q_1_pt_0",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 7,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.5 Q 1 Part (i)",
+            "_id": "659b7cd8c4d8f35a2e0d4a42"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "659b7cd8c4d8f35a2e0d4a43"
+          }
+        ],
+        "_id": "659b7cd8c4d8f35a2e0d4a41"
+      },
+      {
+        "startTime": 7,
+        "endTime": 186,
+        "type": "Eqs",
+        "version": "",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 0,
+              "startTime": 7,
+              "endTime": 16,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Find the Determinant of the following matrices.",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e37939"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 1,
+              "startTime": 14,
+              "endTime": 26,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Part(i)",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} -1 & 1  \\\\ 2 & 0 \\\\ \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65a610a61ed99688004d3cc9"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 24,
+              "endTime": 36,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|A|=detA=\\left| \\begin{matrix} -1 & 1  \\\\ 2 & 0 \\\\ \\end{matrix}\\right|",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Determinant of Matrix A is calculated as",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e3793c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 52,
+              "endTime": 46,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=(-1)*0-2*1",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e3793d"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 70,
+              "endTime": 56,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|A|=0-2",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e3793e"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": "79",
+              "endTime": 66,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=-2",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e3793f"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 6,
+              "startTime": 87,
+              "endTime": 76,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": " Part:(ii)",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "B=\\begin{bmatrix} 1 & 3  \\\\ 2 & -2 \\\\ \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e37940"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 7,
+              "startTime": 96,
+              "endTime": 86,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": " |B|=detB=\\left|\\begin{matrix}1& 3  \\\\ 2 & -2 \\\\ \\end{matrix}\\right|",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Determinant of Matrix B is calculated as",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e37944"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 8,
+              "startTime": 104,
+              "endTime": 96,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|B|=1*(-2)-2*3",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e37945"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 9,
+              "startTime": 114,
+              "endTime": 106,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|B|=-2-6",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e37946"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 10,
+              "startTime": 118,
+              "endTime": 116,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=-8",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e37947"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 11,
+              "startTime": 120,
+              "endTime": 126,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Part:(iii)",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "C=\\begin{bmatrix} 3 & 2  \\\\ 3 & 2 \\\\ \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e37948"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 12,
+              "startTime": 130,
+              "endTime": 136,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": " |C|=detC=\\left|\\begin{matrix} 3 & 2  \\\\ 3 & 2 \\\\ \\end{matrix}\\right|",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Determinant of Matrix C is calculated as",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e3794b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 13,
+              "startTime": 135,
+              "endTime": 146,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|C|=3*2-3*2",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e3794c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 14,
+              "startTime": 143,
+              "endTime": 156,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|C|=6-6",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e3794d"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 15,
+              "startTime": 148,
+              "endTime": 166,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|C|=0",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e3794e"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 16,
+              "startTime": 163,
+              "endTime": 176,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Part:(iv)",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "D=\\begin{bmatrix} 3 & 2  \\\\ 1 & 4 \\\\ \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e3794f"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 17,
+              "startTime": 169,
+              "endTime": 186,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": " |D|=detD=\\left|\\begin{matrix} 3 & 2  \\\\ 1 & 4 \\\\ \\end{matrix}\\right|",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Determinant of Matrix D is calculated as",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e37952"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 18,
+              "startTime": "174",
+              "endTime": 196,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|D|=3*4-1*2",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e37953"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 19,
+              "startTime": 182,
+              "endTime": 206,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|D|=12-2",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e37954"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 20,
+              "startTime": "183",
+              "endTime": 216,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|D|=10",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef2e79a5b2eaa10e37955"
+          }
+        ],
+        "_id": "655ef2e79a5b2eaa10e37937",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
+    "_id": "659e881292faba116b079ef0",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "exercise": "1.5",
+    "questionNo": 2,
+    "part": 0,
+    "name": "",
+    "sortOrder": 0,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.5_q_2_pt_0",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 5,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.5 Q 2",
+            "_id": "659b7cafc4d8f35a2e0d4967"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "659b7cafc4d8f35a2e0d4968"
+          }
+        ],
+        "_id": "659b7cafc4d8f35a2e0d4966"
+      },
+      {
+        "startTime": 5,
+        "endTime": 190,
+        "type": "Eqs",
+        "version": "",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 0,
+              "startTime": 6,
+              "endTime": 16,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Find which of the following matrices are Singular or Non Singular.",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a49"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 1,
+              "startTime": 14,
+              "endTime": 26,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Solution:",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Singular Matrix:",
+                  "type": "heading"
+                },
+                {
+                  "code": "A Matrix is said to be Singular if its Determinant is equal to zero. i.e|A|=0",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a4a"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 32,
+              "endTime": 46,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "A=\\begin{bmatrix} 3 & 6 \\\\ 2 & 4  \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a4c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 38,
+              "endTime": 56,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Determinant of Matrix A is calculated as",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a4d"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 43,
+              "endTime": 66,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|A|=\\left|\\begin{matrix} 3 & 6 \\\\ 2 & 4  \\\\  \\end{matrix}\\right|",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a4e"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 52,
+              "endTime": 76,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=3*4-2*6",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a4f"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 6,
+              "startTime": 56,
+              "endTime": 86,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|A|=12-12",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a50"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 7,
+              "startTime": 63,
+              "endTime": 96,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|A|=0",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659b7cafc4d8f35a2e0d4972"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 8,
+              "startTime": 66,
+              "endTime": 106,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "As,Determinant of A is  equal to Zero, so A is  a Singular Matrix",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a51"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 9,
+              "startTime": 71,
+              "endTime": 116,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Part:(ii)",
+              "type": "text",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a52"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 10,
+              "startTime": 76,
+              "endTime": 126,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "B=\\begin{bmatrix} 4 & 1 \\\\ 3 & 2  \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a53"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 11,
+              "startTime": 79,
+              "endTime": 136,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Determinant of Matrix B is calculated as",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a54"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 12,
+              "startTime": 82,
+              "endTime": 156,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|B|=detB=\\left|\\begin{matrix} 4 & 1 \\\\ 3 & 2  \\\\  \\end{matrix}\\right|",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a56"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 13,
+              "startTime": 84,
+              "endTime": 166,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=4*2-3*1",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a57"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 14,
+              "startTime": 89,
+              "endTime": 176,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|B|=8-3",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a58"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 15,
+              "startTime": 91,
+              "endTime": 186,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|B|=5",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659b7cafc4d8f35a2e0d497b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 16,
+              "startTime": 94,
+              "endTime": 196,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|B|\\cancel{=}0",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a59"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 17,
+              "startTime": 95,
+              "endTime": 206,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "As,D,eterminant of B is  not equal to Zero so, B is  Non-Singular Matrix",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655f00ba033b0c7adfbaa839"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 18,
+              "startTime": 102,
+              "endTime": 216,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Part:(iii)",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a5a"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 19,
+              "startTime": 105,
+              "endTime": 226,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "C=\\begin{bmatrix} 7 & -9 \\\\ 3 & 5  \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a5b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 20,
+              "startTime": 108,
+              "endTime": 236,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Determinant of Matrix C is calculated as",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655f00ba033b0c7adfbaa83c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 21,
+              "startTime": 110,
+              "endTime": 256,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|C|=detC=\\left|\\begin{matrix} 7 & -9 \\\\ 3 & 5  \\\\  \\end{matrix}\\right|",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a5d"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 22,
+              "startTime": 113,
+              "endTime": 266,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=7*5-3(-9)",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a5e"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 23,
+              "startTime": 118,
+              "endTime": 276,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|C|=35+27",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a5f"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 24,
+              "startTime": 126,
+              "endTime": 286,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|C|=62\\cancel{=}0",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655f00ba033b0c7adfbaa841"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 25,
+              "startTime": 128,
+              "endTime": 296,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "As,Determinant of C is  not equal to Zero so, C is  Non-Singular Matrix",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655f00ba033b0c7adfbaa842"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 26,
+              "startTime": 135,
+              "endTime": 306,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Part:(iv)",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655ef8c19a5b2eaa10e37a60"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 27,
+              "startTime": 138,
+              "endTime": 316,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "D=\\begin{bmatrix} 5 & -10 \\\\ -2 & 4  \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655f00ba033b0c7adfbaa844"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 28,
+              "startTime": 141,
+              "endTime": 326,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Determinant of Matrix D is calculated as",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655f00ba033b0c7adfbaa845"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 29,
+              "startTime": 142,
+              "endTime": 346,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|D|=detD=\\left| \\begin{matrix} 5 & -10 \\\\ -2 & 4  \\\\  \\end{matrix}\\right|",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655f00ba033b0c7adfbaa847"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 30,
+              "startTime": 146,
+              "endTime": 356,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=5*4-(-2)*(-10)",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655f00ba033b0c7adfbaa848"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 31,
+              "startTime": 149,
+              "endTime": 366,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|D|=20-20",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655f00ba033b0c7adfbaa849"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 32,
+              "startTime": 183,
+              "endTime": 376,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|D|=0",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655f00ba033b0c7adfbaa84a"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 33,
+              "startTime": 185,
+              "endTime": 386,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "As,Determinant of D is  equal to Zero so, D is  a Singular Matrix",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "655f00ba033b0c7adfbaa84b"
+          }
+        ],
+        "_id": "655ef8c19a5b2eaa10e37a47",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
     "_id": "659e890892faba116b07b7c2",
     "board": "FBISE",
     "classNo": 9,
