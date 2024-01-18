@@ -2,7 +2,7 @@
 //@ts-nocheck
 import Katex from 'svelte-katex';
 export let eq;
-
+//ffffff
 </script>
 
 <div class='flex justify-center '>
