@@ -1,3 +1,9 @@
+<svelte:head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4279476755172786"
+     crossorigin="anonymous"></script>
+</svelte:head>
+
+
 <script>
 //@ts-nocheck
 import {PageWrapper,HdgWithIcon,Centre} from '$lib/cmp';
