@@ -34,11 +34,11 @@ import BooksImages from '$lib/homePage/BooksImages.svelte';
 <Centre>
 <div class="bg-gray-700 rounded-md w-full mx-8">
 <div class='flex  justify-center gap-1   p-2 m-2'>
-<BooksImages tcode='fbise8math' />
+<!-- <BooksImages tcode='fbise8math' /> -->
 <BooksImages tcode='fbise9math' />
-<BooksImages tcode='fbise9english' />
-<BooksImages tcode='fbise10math' />
-<BooksImages tcode='experimental' />
+<!-- <BooksImages tcode='fbise9english' /> -->
+<!-- <BooksImages tcode='fbise10math' /> -->
+<!-- <BooksImages tcode='experimental' /> -->
 <BooksImages tcode='matrices' />
 </div>
 
