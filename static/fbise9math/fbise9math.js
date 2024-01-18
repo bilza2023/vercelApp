@@ -7275,7 +7275,7 @@ export const syllabus = [
               "type": "code",
               "step": 1,
               "code": " ( AB)^t=B^tA^t",
-              "startTime": "28",
+              "startTime": "9",
               "endTime": 20,
               "fsStartTime": null,
               "fsEndTime": null,
@@ -7729,7 +7729,7 @@ export const syllabus = [
             "showAt": 0,
             "extra": {
               "step": 1,
-              "startTime": 11,
+              "startTime": "10",
               "endTime": 23,
               "fsStartTime": 0,
               "fsEndTime": 0,
