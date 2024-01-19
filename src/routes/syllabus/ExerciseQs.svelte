@@ -10,17 +10,13 @@ export let selectedEx;
     let sortedArray;
 
 $:{
- if(questions){
-    const sortOne = questions.filter(question =>question.exercise == selectedEx);
-    sortedArray = sortOne.sort((a, b) => {
-        const questionNoA = a.questionNo;
-        const questionNoB = b.questionNo;
-    return questionNoA - questionNoB;
-    });
-    console.log(sortedArray);
- }
+  selectedEx;  
+  if(questions){
+  let filteredQuestions = questions.filter(question => question.exercise === selectedEx);
+  sortedArray =  filteredQuestions.sort((a, b) =>  a.sortOrder - b.sortOrder );
+  }  
+//   console.log("sortedArray",sortedArray);
 }
-
 
 $: totalExQuestion = questions.filter(question => question.exercise === selectedEx).length
 
