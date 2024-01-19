@@ -21,6 +21,7 @@
 	"dependencies": {
 		"@zerodevx/svelte-toast": "^0.9.5",
 		"howler": "^2.2.4",
+		"mathjs": "^12.3.0",
 		"svelte-katex": "^0.1.2",
 		"taleemutil": "^0.0.1"
 	}

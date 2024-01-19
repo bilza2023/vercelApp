@@ -4,7 +4,7 @@
 export let icon="📜";
 export let title='The Title';
 export let url = 'https://google.com';
-export let titleCharsCount = 20;
+export let titleCharsCount = 25;
 //------------------
 function firstXChars(string) {
   return string.slice(0, titleCharsCount);

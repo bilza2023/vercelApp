@@ -24,9 +24,15 @@ $:{
 
 $: totalExQuestion = questions.filter(question => question.exercise === selectedEx).length
 
+function slugToName(variableName) {
+  return variableName.replace(/_/g, ' ')
+        .toLowerCase()
+        .replace(/(?:^|\s)\S/g, char => char.toUpperCase());
+}
+
 function getTitle(question){
 if (question.name && question.name !== ''){
-return `Ex ${question.exercise} ${question.name} `;
+return  slugToName(question.name);
 }else {
 return `Ex ${question.exercise} Q-${question.questionNo} pt ${question.part}`;
 }
