@@ -221,5 +221,135 @@ export const syllabus = [
     "teacherComments": "",
     "adminComments": "",
     "__v": 0
+  },
+  {
+    "_id": "65aa9f91d403c62292b316bd",
+    "chapter": 1,
+    "exercise": "1",
+    "questionNo": 2,
+    "part": 0,
+    "name": "matrix_multiplication",
+    "sortOrder": 0,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "matrices_ch_1_ex_1_q_2_pt_0_matrix_multiplication",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 50,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Matrix Multiplication\nThe CR rule for Matrix Multiplication\nCoulmn of First Matrix = Columns of 2nd Matrix",
+            "_id": "65a2744d08f47d00c9267a3f"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "65a2744d08f47d00c9267a40"
+          }
+        ],
+        "_id": "65a2744d08f47d00c9267a3e"
+      },
+      {
+        "startTime": 50,
+        "endTime": 120,
+        "type": "img",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "multiplication_step-0",
+            "showAt": 0,
+            "arr": [],
+            "_id": "65a2744d08f47d00c9267a42"
+          }
+        ],
+        "slideExtra": [],
+        "_id": "65a2744d08f47d00c9267a41"
+      },
+      {
+        "startTime": 120,
+        "endTime": 150,
+        "type": "img",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "multiplication_step-01",
+            "showAt": 0,
+            "arr": [],
+            "_id": "65a2744d08f47d00c9267a44"
+          }
+        ],
+        "slideExtra": [],
+        "_id": "65a2744d08f47d00c9267a43"
+      },
+      {
+        "startTime": 150,
+        "endTime": 185,
+        "type": "img",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "multiplication_step-02",
+            "showAt": 0,
+            "arr": [],
+            "_id": "65a2744d08f47d00c9267a46"
+          }
+        ],
+        "slideExtra": [],
+        "_id": "65a2744d08f47d00c9267a45"
+      },
+      {
+        "startTime": 185,
+        "endTime": 225,
+        "type": "img",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "multiplication_step-03",
+            "showAt": 0,
+            "arr": [],
+            "_id": "65a2744d08f47d00c9267a48"
+          }
+        ],
+        "slideExtra": [],
+        "_id": "65a2744d08f47d00c9267a47"
+      },
+      {
+        "startTime": 225,
+        "endTime": 270,
+        "type": "img",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "multiplication_step-04",
+            "showAt": 0,
+            "arr": [],
+            "_id": "65a2744d08f47d00c9267a4a"
+          }
+        ],
+        "slideExtra": [],
+        "_id": "65a2744d08f47d00c9267a49"
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
   }
 ];
