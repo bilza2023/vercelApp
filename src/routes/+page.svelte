@@ -12,17 +12,6 @@ import {Icons} from '$lib/util';
 import MainNav from '$lib/appComp/MainNav.svelte';
 import BooksImages from '$lib/homePage/BooksImages.svelte';
 
-// let board  = "FBISE";
-// let cls  = "Class 9th";
-
-// function setBoard(brd){
-// board = brd;
-// board = board;
-// }
-// function setClass(incomming){
-// cls = incomming;
-// cls = cls;
-// }
 
 
 </script>
