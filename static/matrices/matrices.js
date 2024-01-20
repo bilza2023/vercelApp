@@ -313,13 +313,685 @@ export const syllabus = [
     "__v": 0
   },
   {
+    "_id": "65ac2344fafdcb813d6369d2",
+    "chapter": 1,
+    "exercise": "1",
+    "questionNo": 3,
+    "part": 0,
+    "name": "Cramers_Rule",
+    "sortOrder": 20,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "matrices_ch_1_ex_1_q_3_pt_0_Cramers_Rule",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 68,
+        "type": "HdgPara",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "heading",
+            "content": "What is Cramer`s Rule",
+            "showAt": 0,
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff86b"
+          },
+          {
+            "name": "para",
+            "content": "Cramer’s rule is a specific formula used for solving a system of linear equations containing as many equations as unknowns. We use determinants while working with Cramer`s Rule",
+            "showAt": 0,
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff86c"
+          }
+        ],
+        "slideExtra": [],
+        "_id": "65ac4f709bcd2acb5d5ff86a"
+      },
+      {
+        "startTime": 68,
+        "endTime": 484,
+        "type": "Eqs",
+        "version": "",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 0,
+              "startTime": 68,
+              "endTime": 20,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "\\begin{matrix} 2x-2y=4 \\\\ 3x+2y=6\\  \\end{matrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "In Matrix Inversion Method we learnt that we can convert it into 3 matrices, The Coefficients Matrix, The variable Matrix and the Solution Matrix",
+                  "type": "text"
+                },
+                {
+                  "code": "Here we just need 2 matrices. The The Coefficients Matrix and the Solution Matrix",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff86e"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 1,
+              "startTime": 109,
+              "endTime": 30,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "A=\\begin{bmatrix} \n2 & -2\n\\\\\n 3 &  2\n\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff86f"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": "125",
+              "endTime": 40,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "B= \\begin{bmatrix} \n4\n\\\\\n 6\n\\end{bmatrix} ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff870"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 131,
+              "endTime": 50,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "x = \\frac {|A_x|}\n{|A|}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Cramer`s Formula",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff871"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 147,
+              "endTime": 60,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "y = \\frac {|A_y|}\n{|A|}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Cramer`s Formula",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff872"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 164,
+              "endTime": 70,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "How to find Ax",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff873"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 6,
+              "startTime": 171,
+              "endTime": 80,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Ax=\\begin{bmatrix} \n4 & -2\n\\\\\n 6 &  2\n\\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} \n2 & -2\n\\\\\n 3 &  2\n\\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "B= \\begin{bmatrix} \n4\n\\\\\n 6\n\\end{bmatrix} ",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff874"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 7,
+              "startTime": 222,
+              "endTime": 90,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "How to find Ay",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff875"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 8,
+              "startTime": "225",
+              "endTime": 100,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Ay=\\begin{bmatrix} \n2 & 4\n\\\\\n 3 &  6\n\\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} \n2 & -2\n\\\\\n 3 &  2\n\\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "B= \\begin{bmatrix} \n4\n\\\\\n 6\n\\end{bmatrix} ",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff876"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 9,
+              "startTime": 276,
+              "endTime": 110,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Lets find |A|",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff877"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 10,
+              "startTime": 280,
+              "endTime": 120,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|A| = 2*2 - 3* (-2)",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} \n2 & -2\n\\\\\n 3 &  2\n\\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff878"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 11,
+              "startTime": 290,
+              "endTime": 130,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|A| = 4 + 6 ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff879"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 12,
+              "startTime": 296,
+              "endTime": 140,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|A| = 10",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff87a"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 13,
+              "startTime": 302,
+              "endTime": 150,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Lets solve for x",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff87b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 14,
+              "startTime": 308,
+              "endTime": 160,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|Ax| = 4 * 2 - 6 * -2",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Ax=\\begin{bmatrix} \n4 & -2\n\\\\\n 6 &  2\n\\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff87c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 15,
+              "startTime": 341,
+              "endTime": 170,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|Ax| = 8 + 12 = 20",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff87d"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 16,
+              "startTime": 348,
+              "endTime": 180,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|Ax| = 20",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff87e"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 17,
+              "startTime": 352,
+              "endTime": 190,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Apply Cramer`s Rule ",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "x = \\frac {|Ax|}\n{|A|}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff87f"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 18,
+              "startTime": 372,
+              "endTime": 200,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "x = \\frac{20}{10}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff880"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 19,
+              "startTime": 379,
+              "endTime": 210,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "x=2",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff881"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 20,
+              "startTime": 383,
+              "endTime": 220,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Lets solve for y",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff882"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 21,
+              "startTime": 388,
+              "endTime": 230,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|Ay| = 2 * 6 - 3 * 4",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Ay=\\begin{bmatrix} \n2 & 4\n\\\\\n 3 &  6\n\\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff883"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 22,
+              "startTime": 414,
+              "endTime": 240,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|Ay| = 12 - 12",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff884"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 23,
+              "startTime": 416,
+              "endTime": 250,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|Ay| = 0",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff885"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 24,
+              "startTime": 421,
+              "endTime": 260,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "y = \\frac {|A_y|}\n{|A|}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff886"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 25,
+              "startTime": 429,
+              "endTime": 270,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": " y = \\frac {0} {10}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff887"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 26,
+              "startTime": 438,
+              "endTime": 280,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": " y = 0",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff888"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 27,
+              "startTime": 441,
+              "endTime": 0,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "x = 2 , y=0",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ac4f709bcd2acb5d5ff889"
+          }
+        ],
+        "_id": "65ac4f709bcd2acb5d5ff86d",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
     "_id": "65ac2a5ce9934ce11c2d5391",
     "chapter": 1,
     "exercise": "1",
     "questionNo": 1,
     "part": 0,
     "name": "Matrix_Inversion_Method",
-    "sortOrder": 0,
+    "sortOrder": 19,
     "questionType": "paid",
     "status": "final",
     "free": false,
