@@ -11963,7 +11963,7 @@ export const syllabus = [
                 }
               ],
               "fs": [],
-              "spVisibility": true,
+              "spVisibility": false,
               "fsVisibility": false
             },
             "arr": [],
@@ -12055,7 +12055,7 @@ export const syllabus = [
             "showAt": 0,
             "extra": {
               "step": 19,
-              "startTime": 133,
+              "startTime": "332",
               "endTime": 143,
               "fsStartTime": 0,
               "fsEndTime": 0,
@@ -12153,7 +12153,7 @@ export const syllabus = [
             "showAt": 0,
             "extra": {
               "step": 1,
-              "startTime": 19,
+              "startTime": "19",
               "endTime": 0,
               "fsStartTime": 0,
               "fsEndTime": 0,
@@ -12199,7 +12199,7 @@ export const syllabus = [
             "showAt": 0,
             "extra": {
               "step": 3,
-              "startTime": 27,
+              "startTime": "26",
               "endTime": 30,
               "fsStartTime": 0,
               "fsEndTime": 0,
@@ -12234,7 +12234,7 @@ export const syllabus = [
               "type": "hdg",
               "step": 4,
               "code": "Step:2",
-              "startTime": 75,
+              "startTime": 76,
               "endTime": 40,
               "fsStartTime": null,
               "fsEndTime": null,
@@ -12281,7 +12281,7 @@ export const syllabus = [
               "endTime": 70,
               "fsStartTime": 0,
               "fsEndTime": 0,
-              "code": "=2*5-6*1",
+              "code": "= (2*5) - (6*1)",
               "type": "code",
               "sp": [],
               "fs": [],
@@ -12296,8 +12296,26 @@ export const syllabus = [
             "content": "",
             "showAt": 0,
             "extra": {
-              "step": 8,
-              "startTime": 93,
+              "step": 0,
+              "startTime": 88,
+              "endTime": 0,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "= (10) - (6)",
+              "type": "code",
+              "sp": [],
+              "fs": []
+            },
+            "arr": [],
+            "_id": "65ac21099000b57d6cf9740b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 7,
+              "startTime": 89,
               "endTime": 90,
               "fsStartTime": 0,
               "fsEndTime": 0,
@@ -12316,8 +12334,8 @@ export const syllabus = [
             "content": "",
             "showAt": 0,
             "extra": {
-              "step": 9,
-              "startTime": 99,
+              "step": 8,
+              "startTime": 96,
               "endTime": 100,
               "fsStartTime": 0,
               "fsEndTime": 0,
@@ -12342,27 +12360,7 @@ export const syllabus = [
             "showAt": 0,
             "extra": {
               "step": 10,
-              "startTime": 103,
-              "endTime": 0,
-              "fsStartTime": 0,
-              "fsEndTime": 0,
-              "code": "Step:3",
-              "type": "hdg",
-              "sp": [],
-              "fs": [],
-              "fsVisibility": false,
-              "spVisibility": false
-            },
-            "arr": [],
-            "_id": "659bb5b026a8b688988009d5"
-          },
-          {
-            "name": "",
-            "content": "",
-            "showAt": 0,
-            "extra": {
-              "step": 11,
-              "startTime": 108,
+              "startTime": 105,
               "endTime": 0,
               "fsStartTime": 0,
               "fsEndTime": 0,
@@ -12381,8 +12379,8 @@ export const syllabus = [
             "content": "",
             "showAt": 0,
             "extra": {
-              "step": 12,
-              "startTime": 120,
+              "step": 11,
+              "startTime": 115,
               "endTime": 0,
               "fsStartTime": 0,
               "fsEndTime": 0,
@@ -12401,17 +12399,22 @@ export const syllabus = [
             "content": "",
             "showAt": 0,
             "extra": {
-              "step": 13,
-              "startTime": 139,
+              "step": 12,
+              "startTime": "139",
               "endTime": 0,
               "fsStartTime": 0,
               "fsEndTime": 0,
               "code": "=\\frac{1}{4}\\begin{bmatrix} 5 & -1 \\\\ -6& 2 \\\\  \\end{bmatrix}\\begin{bmatrix} 3  \\\\ 1\\\\  \\end{bmatrix}",
               "type": "code",
-              "sp": [],
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} 2 & 1 \\\\ 6& 5 \\\\  \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": false
+              "spVisibility": true
             },
             "arr": [],
             "_id": "659bb5b026a8b688988009d8"
@@ -12421,7 +12424,7 @@ export const syllabus = [
             "content": "",
             "showAt": 0,
             "extra": {
-              "step": 14,
+              "step": 13,
               "startTime": 180,
               "endTime": 0,
               "fsStartTime": 0,
@@ -12441,7 +12444,7 @@ export const syllabus = [
             "content": "",
             "showAt": 0,
             "extra": {
-              "step": 15,
+              "step": 14,
               "startTime": 188,
               "endTime": 0,
               "fsStartTime": 0,
@@ -12461,8 +12464,8 @@ export const syllabus = [
             "content": "",
             "showAt": 0,
             "extra": {
-              "step": 16,
-              "startTime": 197,
+              "step": 15,
+              "startTime": 196,
               "endTime": 0,
               "fsStartTime": 0,
               "fsEndTime": 0,
@@ -12481,8 +12484,8 @@ export const syllabus = [
             "content": "",
             "showAt": 0,
             "extra": {
-              "step": 17,
-              "startTime": 216,
+              "step": 16,
+              "startTime": 218,
               "endTime": 0,
               "fsStartTime": 0,
               "fsEndTime": 0,
@@ -12501,8 +12504,8 @@ export const syllabus = [
             "content": "",
             "showAt": 0,
             "extra": {
-              "step": 18,
-              "startTime": 230,
+              "step": 17,
+              "startTime": 232,
               "endTime": 0,
               "fsStartTime": 0,
               "fsEndTime": 0,
@@ -12526,7 +12529,7 @@ export const syllabus = [
             "content": "",
             "showAt": 0,
             "extra": {
-              "step": 19,
+              "step": 18,
               "startTime": 240,
               "endTime": 0,
               "fsStartTime": 0,
