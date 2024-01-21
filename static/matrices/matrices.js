@@ -206,7 +206,7 @@ export const syllabus = [
         "slideExtra": [
           {
             "key": "data",
-            "value": "Matrix Multiplication\nThe CR rule for Matrix Multiplication\nCoulmn of First Matrix = Columns of 2nd Matrix",
+            "value": "Matrix Multiplication\nThe CR rule for Matrix Multiplication\nCoulmn of First Matrix = Rows of 2nd Matrix",
             "_id": "65a2744d08f47d00c9267a3f"
           },
           {
