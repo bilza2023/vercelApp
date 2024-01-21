@@ -106,8 +106,8 @@ theme = themes[themeKey];
 async function start(){
 try{
 // debugger;
- if (isPaused == true){pause();return;}
  if (isPlaying == true){return;}
+ if (isPaused == true){pause();return;}
 //   await loadSound();
         sound.play();
         sound.on('play', function () {
