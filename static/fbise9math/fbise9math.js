@@ -15381,6 +15381,962 @@ export const syllabus = [
     "__v": 0
   },
   {
+    "_id": "659e881b92faba116b07a17e",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "exercise": "1.6",
+    "questionNo": 2,
+    "part": 1,
+    "name": "",
+    "sortOrder": 10,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.6_q_2_pt_1",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 6,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.6 Q 2 Part(i)",
+            "_id": "6595139b7cd10b2e8096d2ad"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "6595139b7cd10b2e8096d2ae"
+          }
+        ],
+        "_id": "6595139b7cd10b2e8096d2ac"
+      },
+      {
+        "startTime": 6,
+        "endTime": 267,
+        "type": "img",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "1.6q2",
+            "showAt": 0,
+            "arr": [],
+            "_id": "65adf4c8f645e1d634faacaa"
+          }
+        ],
+        "slideExtra": [],
+        "_id": "65adf4c8f645e1d634faaca9"
+      },
+      {
+        "startTime": 267,
+        "endTime": 701,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "text",
+              "step": 0,
+              "code": "The length of a rectangle is 4 times its width.The perimeter of the rectangle is 150cm.",
+              "startTime": 267,
+              "endTime": 26,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef66c6c43fc92ad1ffa8f"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 1,
+              "startTime": 273,
+              "endTime": 36,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "\\begin{matrix} x-4y=0  \n\\\\ \nx+y=75\\\\  \\end{matrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "According to the given conditions",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da59"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 277,
+              "endTime": 46,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "\\begin{bmatrix} 1& -4 \\\\ 1& 1\\\\  \\end{bmatrix}\\begin{bmatrix} x  \\\\ y\\\\  \\end{bmatrix}=\\begin{bmatrix} 0  \\\\ 75\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "By solving eq  (i) &(ii) we get",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da61"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 303,
+              "endTime": 56,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|A|=\\left|\\begin{matrix} 1 & -4 \\\\ 1& 1 \\\\  \\end{matrix}\\right|",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da63"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 310,
+              "endTime": 66,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=1*1-1*(-4)",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da64"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 318,
+              "endTime": 76,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|A|=1+4=5",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da65"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 6,
+              "startTime": 327,
+              "endTime": 86,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "The Co-efficient Matrix A is non singular 5 is not equal to zero",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65a8a546903ccbb68b13e0f1"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 7,
+              "startTime": 331,
+              "endTime": 0,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Matrix Inverse Method",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ae111ee4437fa896b27cb2"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 8,
+              "startTime": 335,
+              "endTime": 96,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "\\begin{bmatrix} x  \\\\ y\\\\  \\end{bmatrix}=A^-1\\begin{bmatrix} 0  \\\\ 75\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da66"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 9,
+              "startTime": 346,
+              "endTime": 106,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\frac{1}{|A|}AdjA\\begin{bmatrix} 0  \\\\ 75\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da67"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 10,
+              "startTime": 361,
+              "endTime": 116,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\frac{1}{|5|}\\begin{bmatrix} 1 & 4\\\\ -1& 1 \\\\  \\end{bmatrix}\\begin{bmatrix} 0  \\\\ 75\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "\\begin{bmatrix} 1& -4 \\\\ 1& 1\\\\  \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da68"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 11,
+              "startTime": 405,
+              "endTime": 126,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\frac{1}{|5|}\\begin{bmatrix} 1*0+4*75 \\\\ -1*0+1*75\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da69"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 12,
+              "startTime": 419,
+              "endTime": 136,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\frac{1}{|5|}\\begin{bmatrix} 0+300 \\\\ 0+75\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da6a"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 13,
+              "startTime": 431,
+              "endTime": 146,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\frac{1}{|5|}\\begin{bmatrix} 300 \\\\ 75\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da6b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 14,
+              "startTime": 442,
+              "endTime": 156,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} \\frac{300}{5}\\\\ \\frac{75}{5} \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da6c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 15,
+              "startTime": 452,
+              "endTime": 0,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 60\\\\ 15 \\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65ae111ee4437fa896b27cba"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 16,
+              "startTime": 458,
+              "endTime": 166,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "length=x=60cm",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da6d"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 17,
+              "startTime": 462,
+              "endTime": 176,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "width=y=15cm",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da6e"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 18,
+              "startTime": 466,
+              "endTime": 186,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Solution by Cramer's Rules",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "[[\"x-4y=4\"],[\"x+4y=8\"]]",
+                  "type": "tableCode"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da70"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 19,
+              "startTime": 476,
+              "endTime": 196,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "A=\\begin{bmatrix} 1& -4 \\\\ 1& 1\\\\  \\end{bmatrix}\n,\nB=\\begin{bmatrix} 0  \\\\ 75\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da71"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 20,
+              "startTime": 484,
+              "endTime": 206,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Find det A",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65adf4c8f645e1d634faacbe"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 21,
+              "startTime": 491,
+              "endTime": 216,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|A|=5\\cancel={0}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "We already know",
+                  "type": "heading"
+                },
+                {
+                  "code": "calculated above",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da76"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 22,
+              "startTime": 505,
+              "endTime": 226,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Find Ax and det Ax",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65adf4c8f645e1d634faacc0"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 23,
+              "startTime": 510,
+              "endTime": 236,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Ax=\\begin{bmatrix} 0 & -4 \\\\ 75& 1\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} 1& -4 \\\\ 1& 1\\\\  \\end{bmatrix}\n,\nB=\\begin{bmatrix} 0  \\\\ 75\\\\  \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da78"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 24,
+              "startTime": 541,
+              "endTime": 246,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|Ax|=\\left|\\begin{matrix} 0 & -4 \\\\ 75& 1\\\\  \\end{matrix}\\right|",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da79"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 25,
+              "startTime": 547,
+              "endTime": 256,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=0*1-75*(-4)",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da7a"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 26,
+              "startTime": 557,
+              "endTime": 266,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Ax=300",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da7b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 27,
+              "startTime": 569,
+              "endTime": 276,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Find Ay and det Ay",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65adf4c8f645e1d634faacc5"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 28,
+              "startTime": 572,
+              "endTime": 286,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Ay=\\begin{bmatrix}  1& 0 \\\\ 1& 75\\\\  \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} 1& -4 \\\\ 1& 1\\\\  \\end{bmatrix}\n,\nB=\\begin{bmatrix} 0  \\\\ 75\\\\  \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da7c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 29,
+              "startTime": 594,
+              "endTime": 296,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|Ay|=\\left|\\begin{matrix}  1& 0 \\\\ 1& 75\\\\  \\end{matrix}\\right|",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da7d"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 30,
+              "startTime": 598,
+              "endTime": 306,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=1*75-0*1",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da7e"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 31,
+              "startTime": 603,
+              "endTime": 316,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=75-0",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da7f"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 32,
+              "startTime": 605,
+              "endTime": 326,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "|Ay|=75",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da80"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 33,
+              "startTime": 615,
+              "endTime": 336,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Find x",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65adf4c8f645e1d634faaccb"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 34,
+              "startTime": 616,
+              "endTime": 346,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "x=\\frac{|Ax|}{|A|}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da81"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 35,
+              "startTime": 619,
+              "endTime": 356,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "x=\\frac{300}{5}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da82"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 36,
+              "startTime": 623,
+              "endTime": 366,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "x=60",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da83"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 37,
+              "startTime": 627,
+              "endTime": 376,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "y=\\frac{|Ay|}{|A|}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da84"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 38,
+              "startTime": 629,
+              "endTime": 386,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "y=\\frac{75}{5}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da85"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 39,
+              "startTime": 634,
+              "endTime": 396,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "y=15",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "[[\"lenght=x=60\"],[\"width=y=15\"]]",
+                  "type": "tableCode"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "659cc7e9f0d9006f6c26da86"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 40,
+              "startTime": 639,
+              "endTime": 406,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Proves Question Statement",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "Length is 4 times of Width",
+                  "type": "heading"
+                },
+                {
+                  "code": "15 x 4 = 60",
+                  "type": "text"
+                },
+                {
+                  "code": "Perimeter",
+                  "type": "heading"
+                },
+                {
+                  "code": "2x+2y = 150",
+                  "type": "code"
+                },
+                {
+                  "code": "2(60) + 15(2) = 150",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": true,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65adf4c8f645e1d634faacd2"
+          }
+        ],
+        "_id": "654ef66c6c43fc92ad1ffa8d",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
     "_id": "659e890892faba116b07b7c2",
     "board": "FBISE",
     "classNo": 9,
