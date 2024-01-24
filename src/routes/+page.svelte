@@ -63,13 +63,13 @@ import BooksImages from '$lib/homePage/BooksImages.svelte';
 
 <div class='flex justify-center flex-wrap gap-2 bg-gray-900 p-8 m-8 mt-1 rounded-md border-2 border-white'>
 
-    <MathCard url= {`https://skillzaa.com/player?tcode=fbise9math&id=659e87fa92faba116b079b76`} name='Ex 1.2 Q-2 pt 0'  />  
+    <MathCard url= {`https://taleem.help/player?tcode=fbise9math&id=659e87fa92faba116b079b76`} name='Ex 1.2 Q-2 pt 0'  />  
 
-    <MathCard url="https://skillzaa.com/player?tcode=fbise9math&id=659e880792faba116b079d96" name='Ex 1.4 Q-1 pt 0'  />  
+    <MathCard url="https://taleem.help/player?tcode=fbise9math&id=659e880792faba116b079d96" name='Ex 1.4 Q-1 pt 0'  />  
     
-    <MathCard url="https://skillzaa.com/player?tcode=fbise9math&id=659e881192faba116b079ecd" name='Ex 1.5 Q-1 pt 0'  />  
+    <MathCard url="https://taleem.help/player?tcode=fbise9math&id=659e881192faba116b079ecd" name='Ex 1.5 Q-1 pt 0'  />  
 
-    <MathCard url="https://skillzaa.com/player?tcode=matrices&id=65aa9f91d403c62292b316bd" name='Matrix Multiplication'  />  
+    <MathCard url="https://taleem.help/player?tcode=matrices&id=65aa9f91d403c62292b316bd" name='Matrix Multiplication'  />  
 
 </div>
 <br/>
