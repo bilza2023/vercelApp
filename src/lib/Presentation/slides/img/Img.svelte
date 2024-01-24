@@ -1,5 +1,6 @@
 <script>
 //@ts-nocheck
+import {RESOURCE_URL} from "$lib/util";
 export let pulse;
 export let tcode;
 export let items = [];
@@ -15,7 +16,8 @@ export let theme;
 >
 
   <div class="flex justify-center w-full  pb-4">
-    <img style="max-height: 85vh;  width: 100%;" src={`./${tcode}/images/${items[0].content}.png`} alt="">
+    <img style="max-height: 85vh;  width: 100%;" 
+    src={`${RESOURCE_URL}/${tcode}/images/${items[0].content}.png`} alt="">
   </div>
 
   <div class="flex justify-end w-full pr-10">

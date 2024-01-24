@@ -2,10 +2,12 @@
 //@ts-nocheck
 
 import { onMount } from 'svelte';
+import {RESOURCE_URL} from '$lib/util';
+export let tcode;
 export let items;
 export let slideExtra =[];
 export let theme;
-
+ 
 onMount(async()=>{
  //if i put push in mount it will push on ever page appear/load
 //  console.log("slide",slide);
@@ -43,7 +45,10 @@ onMount(async()=>{
           />
 </div> 
 
-<!-- <button on:click={()=>console.log(slide)}>dump</button> -->
+
+  <div class="flex justify-center w-full p-2 pb-4">
+    <img style="max-height: 75vh; width: auto; max-width: 90%;" src={`${RESOURCE_URL}/${tcode}/images/${items[1].content}.png`} alt="">
+  </div>
 
 
     

@@ -1,5 +1,7 @@
 <script>
 //@ts-nocheck
+import {RESOURCE_URL} from '$lib/util';
+export let tcode;
 export let pulse;
 export let items = [];
 export let slideExtra = [];
@@ -27,7 +29,7 @@ export let theme;
   </div>
 
   <div class="flex justify-center w-full p-2 pb-4">
-    <img style="max-height: 75vh; width: auto; max-width: 90%;" src={`mathImages/${items[1].content}.png`} alt="">
+    <img style="max-height: 75vh; width: auto; max-width: 90%;" src={`${RESOURCE_URL}/${tcode}/images/${items[1].content}.png`} alt="">
   </div>
 
   <div class="flex justify-end w-full pr-10">

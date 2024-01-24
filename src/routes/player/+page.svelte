@@ -7,7 +7,7 @@
  6-Nov-2023 : If the core data-structure of a software is decided the software is decided.
 */
 //  import { onDestroy } from 'svelte';
-import {onMount,toast} from '$lib/util'
+import {onMount,toast,RESOURCE_URL} from '$lib/util'
 import { themes ,Presentation} from '$lib/Presentation';
 import PlayButtons from './PlayButtons.svelte';
 import readSlides from '$lib/data/readSlides';
@@ -42,9 +42,10 @@ let returnSlides  = await readSlides(id,tcode);
  debugger;
   slides = returnSlides.slides;
   //I can use different tcode (different tables) for the same eq-player. the files should be in static/tcode/exercise/filename.mp3
-  soundFile =  '/' + tcode + '/' + returnSlides.exercise  + '/' + returnSlides.filename + '.mp3';
-  //AWS
-  //https://taleem.s3.ap-south-1.amazonaws.com/matrices_ch_1_ex_1_q_1_pt_0_Introduction.mp3
+  soundFile =  `${RESOURCE_URL}/${tcode}/${returnSlides.exercise}/${returnSlides.filename}.mp3`;
+  // soundFile =  '/' + tcode + '/' + returnSlides.exercise  + '/' + returnSlides.filename + '.mp3';
+  //https://taleem.s3.ap-south-1.amazonaws.com/static/fbise9math/1.1/fbise_cl_9_ch_1_ex_1.1_q_1_pt_0.mp3
+
   // soundFile =  `https://taleem.s3.ap-south-1.amazonaws.com/${returnSlides.filename}.mp3`;
 
   fixEndTime(slides); ///check why i need this?
@@ -156,7 +157,7 @@ async function loadSound() {
     // }
     sound = new Howl({
       src: [soundFile],
-      // src: ["https://taleem.s3.ap-south-1.amazonaws.com/matrices_ch_1_ex_1_q_1_pt_0_Introduction.mp3"],
+      // src: ["https://taleem.s3.ap-south-1.amazonaws.com/static/fbise9math/1.1/fbise_cl_9_ch_1_ex_1.1_q_1_pt_0.mp3"],
       volume: 1.0,
       html5: true,
       onload: function () {
