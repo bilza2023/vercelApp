@@ -39,10 +39,14 @@ tcode = new URLSearchParams(location.search).get("tcode");
 let returnSlides  = await readSlides(id,tcode);
    
  if (returnSlides){
-//  debugger;
+ debugger;
   slides = returnSlides.slides;
   //I can use different tcode (different tables) for the same eq-player. the files should be in static/tcode/exercise/filename.mp3
   soundFile =  '/' + tcode + '/' + returnSlides.exercise  + '/' + returnSlides.filename + '.mp3';
+  //AWS
+  //https://taleem.s3.ap-south-1.amazonaws.com/matrices_ch_1_ex_1_q_1_pt_0_Introduction.mp3
+  // soundFile =  `https://taleem.s3.ap-south-1.amazonaws.com/${returnSlides.filename}.mp3`;
+
   fixEndTime(slides); ///check why i need this?
   getStopTime(slides);
   currentSlide = slides[0];
@@ -146,12 +150,13 @@ function updateTimeDiff() {
 async function loadSound() {
   try {
   // debugger;
-    const primarySoundExists = await checkFileExists(soundFile);
-    if(!primarySoundExists){
-      soundFile = './sounds/music.mp3';
-    }
+    // const primarySoundExists = await checkFileExists(soundFile);
+    // if(!primarySoundExists){
+    //   soundFile = './sounds/music.mp3';
+    // }
     sound = new Howl({
       src: [soundFile],
+      // src: ["https://taleem.s3.ap-south-1.amazonaws.com/matrices_ch_1_ex_1_q_1_pt_0_Introduction.mp3"],
       volume: 1.0,
       html5: true,
       onload: function () {
