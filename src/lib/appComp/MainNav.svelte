@@ -37,7 +37,7 @@ onMount( async ()=>{
     <NavBtn title='Blog' icon ={Icons.BOOK} url='/blog'/>
     <NavBtn title='Pricing' icon ={Icons.ROCKET} url='/pricing'/>
     <NavBtn title='Login' icon ='🔑'  url='/login'/>
-    <NavBtn title='Signup' icon ='🔓'  url='/register'/>
+    <NavBtn title='Signup' icon ='🔓'  url='/signup'/>
     {/if}
     </div>
 </div><!--outer most div-->
