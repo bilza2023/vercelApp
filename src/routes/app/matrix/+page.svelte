@@ -3,13 +3,12 @@
 // @ts-nocheck
 import {toast} from '$lib/util';
 import {PageWrapper,HdgWithIcon} from '$lib/cmp';
-import Nav from '$lib/appComp/Nav.svelte';
+import MainNav from '$lib/appComp/MainNav.svelte';
 import Table from './Table.svelte';
 import { sqrt,det,transpose,inv } from 'mathjs';
 import VerticalBtnsTbl from './VerticalBtnsTbl.svelte';
 
 let isLogin = false;
-let isAdmin = false;
 
 let  data=[[4,1],[3,0]];
 let determinant = 0;
@@ -53,7 +52,7 @@ const delCol = () => {
 
 </script>
 
-<Nav {isLogin} {isAdmin}/>
+<MainNav/>
 <!-- ************** -->
 <PageWrapper>
 <div class='flex justify-center'>
