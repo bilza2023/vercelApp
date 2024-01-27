@@ -9,11 +9,11 @@
 //  import { onDestroy } from 'svelte';
 import {onMount,toast,RESOURCE_URL, ajaxPost,BASE_URL,chqLogin } from '$lib/util'
 import { themes ,Presentation} from '$lib/Presentation';
-import PlayButtons from './PlayButtons.svelte';
+
 import readSlides from '$lib/data/readSlides';
-import Slider from './Slider.svelte';
 import { Howl } from 'howler';
 import showPaidContent from './fn/showPaidContent';
+import Toolbar from './toolbar/Toolbar.svelte';
 
 let  sound;
 let  soundFile=null;
@@ -207,14 +207,7 @@ const r = sound.seek();
 
 <div class='bg-gray-800 text-white w-full min-h-screen' style='position: fixed; top: 0;'>
 
-<div class='flex justify-start sticky top-0 w-full p-1 m-0 bg-gray-700'>
-<PlayButtons   {start} {stop} callback={applyTheme} {pause} {isPlaying} {isPaused} {setVolume}/>
-
-{#if currentSlide}
-<Slider  {slides} {pulse} {setPulse}/>
-{/if}
-
-</div>
+<Toolbar {start} {stop} callback={applyTheme} {pause} {isPlaying} {isPaused} {setVolume} {currentSlide} {slides} {pulse} {setPulse}/>
 
  {#if state=='loading'}
     <h1>loading</h1>
@@ -226,10 +219,22 @@ const r = sound.seek();
 
 {#if currentSlide && state=='loaded' }
   {#if showContent }
+  <div id='displayDiv'>
     <Presentation {currentSlide} {theme} {pulse} {setPulse} {tcode}/>
+  </div> 
   {:else}
   <h1>{showContentMessage}</h1>    
   {/if}
 {/if}
 
 </div><!--page wrapper-->
+
+
+<style>
+#displayDiv {
+  background-color: brown;
+
+
+}
+
+</style>
