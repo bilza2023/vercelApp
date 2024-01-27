@@ -14,6 +14,7 @@ import { RESOURCE_URL } from './config';
 import { isLoginStore,isAdminStore } from './appStore';
 import Icons from './icons';
 import uuid from './uuid';
+import ajaxPost from './ajaxPost.js';
 import updateStoreArray from './updateStoreArray.js';
 // import chqLogin from './chqLogin';
 
@@ -21,6 +22,7 @@ import updateStoreArray from './updateStoreArray.js';
             isLoginStore,isAdminStore,
             BASE_URL,
             RESOURCE_URL,
+            ajaxPost,
                     onMount,
                     toast,
                     fade,

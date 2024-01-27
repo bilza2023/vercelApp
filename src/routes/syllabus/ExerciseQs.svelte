@@ -33,6 +33,13 @@ return  slugToName(question.name);
 return `Ex ${question.exercise} Q-${question.questionNo} pt ${question.part}`;
 }
 }
+
+function getIcon(status){
+// questionType ['paid', 'login' , 'free'],
+  if (status == 'free') {return Icons.RUN  }
+  if (status == 'login') {return Icons.PENCIL }
+  if (status == 'paid') {return '🔒' }
+}
 </script>
 <!-- ///////////////// -->
 <div class="bg-gray-700 p-2 m-2 rounded-md">
@@ -48,31 +55,14 @@ return `Ex ${question.exercise} Q-${question.questionNo} pt ${question.part}`;
 <div class='flex  w-full justify-center  flex-wrap  '>
 {#each sortedArray as question,index}    
             <div class='w-3/12'>
-        {#if question.questionType == 'paid' }
             <Card
             title = {getTitle(question)}
-            icon={Icons.RECYCLE}
+            icon={getIcon(question.questionType)}
             url = {`/player?tcode=${tcode}&id=${question._id}`}
             >
                       
             </Card>
-         {:else if question.questionType == 'login' }
-        <Card
-            title = {`Ex ${question.exercise} Q-${question.questionNo} pt ${question.part}`}
-            icon={Icons.LOCK }
-            url = {`/player?tcode=fbise9math&id=${question._id}`}
-            >
-                      
-            </Card>    
-        {:else if question.questionType == 'free'}
-        <Card
-            title = {`Ex ${question.exercise} Q-${question.questionNo} pt ${question.part}`}
-            icon={Icons.ROCKET }
-            url = {`/player?tcode=fbise9math&id=${question._id}`}
-            >
-                      
-            </Card>
-        {/if}
+       
             </div>
 {/each}
     </div>

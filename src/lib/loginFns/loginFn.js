@@ -1,52 +1,37 @@
 // @ts-nocheck
-import {isLoginStore , isAdminStore, goto,BASE_URL,toast} from '$lib/util';
+import { goto,BASE_URL,toast,ajaxPost} from '$lib/util';
 import validateString from "./validateString"
 import validateEmail from "./validateEmail"
 
+// updated on 27-jan-2023
 export default async function loginFn(email,password){
-
-  // event.preventDefault();
+debugger;
   const emailError = validateEmail(email);
     if (emailError.status !== "ok"){
           toast.push('Not a valid email');  
       return;
     }
 
-const passwordError = validateString(password,6,30);
+  const passwordError = validateString(password,6,30);
     if (passwordError.status !== "ok"){
-          toast.push('Not a valid password');  
+          toast.push('password must have 6 to 30 characters');  
       return;
     }
 
-const response = await fetch( `${BASE_URL}/be/teacher_login` ,{
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer 000`,
-      },
-      body: JSON.stringify( {email,password} )
-    });
+const response = await ajaxPost( `${BASE_URL}/auth/login` , {email,password});
 
-// const response = await ajaxPost( `${BASE_URL}/login` , {email,password});
     if (response.ok) {
         const data = await response.json();
         
         localStorage.setItem("token", data.token);
-        // localStorage.setItem("teacher_status", data.status);
-        localStorage.setItem("teacher_name", data.teacher_name);
-        isLoginStore.set(true);
-            if (data.status == 'admin'){
-              isAdminStore.set(true);
-              localStorage.setItem("teacher_status", 'admin');
-            }else {
-              isAdminStore.set(false);
-              localStorage.setItem("teacher_status", 'teacher');
-            }
+        localStorage.setItem("email", data.email);
+
         goto("/");
   } else {
-    isLoginStore.set(false);
-    isAdminStore.set(false);
     const data = await response.json();
+    if (data.errorcode == 'AccountNotVerified'){
+     goto('/verify')
+    }
     toast.push(data.message);
   } 
   }

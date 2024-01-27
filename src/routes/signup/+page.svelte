@@ -9,10 +9,10 @@ let email ="";
 let password =""; 
 let password2 =""; 
 //--nav is at a wrong place
-import Nav from '$lib/appComp/Nav.svelte';
+import MainNav from '$lib/appComp/MainNav.svelte';
 </script>
 
-<Nav/>
+<MainNav/>
 <PageWrapper>
 <br/><br/>
 

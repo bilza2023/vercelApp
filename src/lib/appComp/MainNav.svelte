@@ -2,13 +2,16 @@
 // @ts-nocheck
 import {NavBtn,NavBtn2} from '$lib/cmp';
 import Logo from './Logo.svelte';
-import logout from './logout';
-import {isLoginStore,onMount,Icons,chqLogin} from '$lib/util';
+import {onMount,Icons,chqLogin} from '$lib/util';
 
-$: isLogin = $isLoginStore;
+function logout(){
+  localStorage.removeItem("token");
+  localStorage.removeItem("email");
+}
 
+let isLogin = false;
 onMount( async ()=>{
-    chqLogin()
+    isLogin = chqLogin();
 });
 
 </script>
@@ -18,24 +21,21 @@ onMount( async ()=>{
 
     <div class='flex'>
     
-    {#if isLogin}
-    <Logo url='/' />
-    <!-- <NavBtn title='Sync' icon='♻️'/> -->
-    {:else}
-    <Logo url='/' />
-    {/if}
+    
+    <Logo />
     </div>
             <!-- ******************************** -->
             <!-- ******************************** -->
     <div class='flex'>
     {#if isLogin}
-    <NavBtn title='Blog' icon ={Icons.BOOK} url='/blog'/>
 
+    <NavBtn title='Payment' icon ={Icons.ROCKET} url='/payment'/>
+    <NavBtn title='Blog' icon ={Icons.BOOK} url='/blog'/>
       <NavBtn2 title='Logout' icon ='🚪' clk={logout}/>
     
     {:else}
     <NavBtn title='Blog' icon ={Icons.BOOK} url='/blog'/>
-    <NavBtn title='Pricing' icon ={Icons.ROCKET} url='/pricing'/>
+    <NavBtn title='Payment' icon ={Icons.ROCKET} url='/payment'/>
     <NavBtn title='Login' icon ='🔑'  url='/login'/>
     <NavBtn title='Signup' icon ='🔓'  url='/signup'/>
     {/if}

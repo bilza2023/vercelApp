@@ -7,12 +7,14 @@
  6-Nov-2023 : If the core data-structure of a software is decided the software is decided.
 */
 //  import { onDestroy } from 'svelte';
-import {onMount,toast,RESOURCE_URL} from '$lib/util'
+import {onMount,toast,RESOURCE_URL, ajaxPost,BASE_URL,chqLogin } from '$lib/util'
 import { themes ,Presentation} from '$lib/Presentation';
 import PlayButtons from './PlayButtons.svelte';
 import readSlides from '$lib/data/readSlides';
 import Slider from './Slider.svelte';
 import { Howl } from 'howler';
+import showPaidContent from './fn/showPaidContent';
+
 let  sound;
 let  soundFile=null;
 let  isPlaying=false;
@@ -25,28 +27,46 @@ let tcode;
 let theme = themes.basic;
 let stopTime = null;
 let isPaused = false;
-
+let showContent = false;
+let showContentMessage = 'Please note that some of our content is classified as Premium. This exclusive material is available for purchase to enhance your experience on our website.';
 let pulse=0;
 let state='loading';
 let currentSlide = null;
 
 
 onMount(async ()=>{  
-// debugger;
+debugger;
+//questionType ['paid', 'login' , 'free'],
 id = new URLSearchParams(location.search).get("id");
 tcode = new URLSearchParams(location.search).get("tcode");
+////////////////////////
+let questionData  = await readSlides(id,tcode);
+console.log('questionData.questionType' , questionData.questionType);
+    if(questionData.questionType=='free'){
+      showContent = true;  
+    }
+    if(questionData.questionType=='login'){
+      const lg = chqLogin(); 
+      if(lg==false){
+        showContentMessage = 'Please login to view this content.'
+      } else{
+       showContent =true;
+      }
+    }
+    if(questionData.questionType=='paid'){
+    // debugger;
+      showContent =  await showPaidContent(tcode); 
+    }
 
-let returnSlides  = await readSlides(id,tcode);
-   
- if (returnSlides){
- debugger;
-  slides = returnSlides.slides;
+ if (questionData){
+//  debugger;
+  slides = questionData.slides;
   //I can use different tcode (different tables) for the same eq-player. the files should be in static/tcode/exercise/filename.mp3
-  soundFile =  `${RESOURCE_URL}/${tcode}/${returnSlides.exercise}/${returnSlides.filename}.mp3`;
-  // soundFile =  '/' + tcode + '/' + returnSlides.exercise  + '/' + returnSlides.filename + '.mp3';
+  soundFile =  `${RESOURCE_URL}/${tcode}/${questionData.exercise}/${questionData.filename}.mp3`;
+  // soundFile =  '/' + tcode + '/' + questionData.exercise  + '/' + questionData.filename + '.mp3';
   //https://taleem.s3.ap-south-1.amazonaws.com/static/fbise9math/1.1/fbise_cl_9_ch_1_ex_1.1_q_1_pt_0.mp3
 
-  // soundFile =  `https://taleem.s3.ap-south-1.amazonaws.com/${returnSlides.filename}.mp3`;
+  // soundFile =  `https://taleem.s3.ap-south-1.amazonaws.com/${questionData.filename}.mp3`;
 
   fixEndTime(slides); ///check why i need this?
   getStopTime(slides);
@@ -209,8 +229,11 @@ const r = sound.seek();
     {/if}
 
 {#if currentSlide && state=='loaded' }
-  <!-- <div>{bufferPercentage}</div> -->
+  {#if showContent }
     <Presentation {currentSlide} {theme} {pulse} {setPulse} {tcode}/>
+  {:else}
+  <h1>{showContentMessage}</h1>    
+  {/if}
 {/if}
 
 </div><!--page wrapper-->
