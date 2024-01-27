@@ -1102,7 +1102,7 @@ export const syllabus = [
     "part": 0,
     "name": "",
     "sortOrder": 0,
-    "questionType": "paid",
+    "questionType": "free",
     "status": "final",
     "free": false,
     "filename": "fbise_cl_9_ch_1_ex_1.2_q_1_pt_0",
@@ -1382,7 +1382,7 @@ export const syllabus = [
     "part": 0,
     "name": "",
     "sortOrder": 0,
-    "questionType": "paid",
+    "questionType": "free",
     "status": "final",
     "free": false,
     "filename": "fbise_cl_9_ch_1_ex_1.2_q_2_pt_0",
@@ -2864,7 +2864,7 @@ export const syllabus = [
     "part": 0,
     "name": "",
     "sortOrder": 0,
-    "questionType": "paid",
+    "questionType": "free",
     "status": "final",
     "free": false,
     "filename": "fbise_cl_9_ch_1_ex_1.4_q_1_pt_0",
@@ -8083,7 +8083,7 @@ export const syllabus = [
     "part": 0,
     "name": "",
     "sortOrder": 0,
-    "questionType": "paid",
+    "questionType": "free",
     "status": "final",
     "free": false,
     "filename": "fbise_cl_9_ch_1_ex_1.5_q_1_pt_0",
@@ -8578,8 +8578,8 @@ export const syllabus = [
             "_id": "655ef2e79a5b2eaa10e37955"
           }
         ],
-        "_id": "655ef2e79a5b2eaa10e37937",
-        "slideExtra": []
+        "slideExtra": [],
+        "_id": "655ef2e79a5b2eaa10e37937"
       }
     ],
     "teacherComments": "",

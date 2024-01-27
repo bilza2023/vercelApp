@@ -190,7 +190,7 @@ export const syllabus = [
     "part": 0,
     "name": "matrix_multiplication",
     "sortOrder": 0,
-    "questionType": "paid",
+    "questionType": "free",
     "status": "final",
     "free": false,
     "filename": "matrices_ch_1_ex_1_q_2_pt_0_matrix_multiplication",

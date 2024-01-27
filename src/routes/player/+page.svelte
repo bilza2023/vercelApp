@@ -63,11 +63,7 @@ console.log('questionData.questionType' , questionData.questionType);
   slides = questionData.slides;
   //I can use different tcode (different tables) for the same eq-player. the files should be in static/tcode/exercise/filename.mp3
   soundFile =  `${RESOURCE_URL}/${tcode}/${questionData.exercise}/${questionData.filename}.mp3`;
-  // soundFile =  '/' + tcode + '/' + questionData.exercise  + '/' + questionData.filename + '.mp3';
-  //https://taleem.s3.ap-south-1.amazonaws.com/static/fbise9math/1.1/fbise_cl_9_ch_1_ex_1.1_q_1_pt_0.mp3
-
-  // soundFile =  `https://taleem.s3.ap-south-1.amazonaws.com/${questionData.filename}.mp3`;
-
+ 
   fixEndTime(slides); ///check why i need this?
   getStopTime(slides);
   currentSlide = slides[0];
