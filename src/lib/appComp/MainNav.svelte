@@ -11,6 +11,7 @@ function logout(){
 
 let isLogin = false;
 onMount( async ()=>{
+    // debugger;
     isLogin = chqLogin();
 });
 

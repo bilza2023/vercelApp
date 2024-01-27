@@ -41,7 +41,7 @@ id = new URLSearchParams(location.search).get("id");
 tcode = new URLSearchParams(location.search).get("tcode");
 ////////////////////////
 let questionData  = await readSlides(id,tcode);
-console.log('questionData.questionType' , questionData.questionType);
+// console.log('questionData.questionType' , questionData.questionType);
     if(questionData.questionType=='free'){
       showContent = true;  
     }
