@@ -208,7 +208,7 @@ const r = sound.seek();
 <div class='bg-gray-800 text-white w-full min-h-screen' style='position: fixed; top: 0;'>
 
 <Toolbar {start} {stop} callback={applyTheme} {pause} {isPlaying} {isPaused} {setVolume} {currentSlide} {slides} {pulse} {setPulse}/>
-
+     
  {#if state=='loading'}
     <h1>loading</h1>
     {/if}
