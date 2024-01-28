@@ -1763,6 +1763,318 @@ export const syllabus = [
     "__v": 0
   },
   {
+    "_id": "659e87fb92faba116b079b99",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "exercise": "1.2",
+    "questionNo": 3,
+    "part": 0,
+    "name": "",
+    "sortOrder": 0,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.2_q_3_pt_0",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 22,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch-1 Ex 1.2 Q-3\nDefine Diagonal; Scalar and Unit Matrices",
+            "_id": "658d2743aca2621894188860"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "658d2743aca2621894188861"
+          }
+        ],
+        "_id": "658d2743aca262189418885f"
+      },
+      {
+        "startTime": 22,
+        "endTime": 67,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Diagonal Matrix\nA diagonal matrix is a square matrix in which all the entries outside the main diagonal are zero. \nThe main diagonal entries can be either zero or non-zero",
+            "_id": "65b5b3c1a54cbf77bc4e9427"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "65b5b3c1a54cbf77bc4e9428"
+          }
+        ],
+        "_id": "65b5b3c1a54cbf77bc4e9426"
+      },
+      {
+        "startTime": 67,
+        "endTime": 94,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Scalar Matrix\nA scalar matrix is a type of diagonal matrix where all the diagonal elements are equal.",
+            "_id": "65b5b3c1a54cbf77bc4e942a"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "65b5b3c1a54cbf77bc4e942b"
+          }
+        ],
+        "_id": "65b5b3c1a54cbf77bc4e9429"
+      },
+      {
+        "startTime": 94,
+        "endTime": 119,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Unit Matrix\nA unit matrix, also known as an identity matrix, is a special type of scalar matrix where all the diagonal elements are equal to 1 and all other elements are zero",
+            "_id": "65b5b3c1a54cbf77bc4e942d"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "65b5b3c1a54cbf77bc4e942e"
+          }
+        ],
+        "_id": "65b5b3c1a54cbf77bc4e942c"
+      },
+      {
+        "startTime": 119,
+        "endTime": 153,
+        "type": "TblStr",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Matrix Type , Definition\nDiagonal Matrix, Entries outside the main diagonal are zero. Diagonal entries can be zero or non-zero\nScalar matrix,  A type of diagonal matrix where all the diagonal elements are equal\nUnit matrix, A special type of scalar matrix where all the diagonal elements are equal to 1 and all other elements are zero\n",
+            "_id": "65b5b3c1a54cbf77bc4e9430"
+          }
+        ],
+        "_id": "65b5b3c1a54cbf77bc4e942f"
+      },
+      {
+        "startTime": 153,
+        "endTime": 262,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 0,
+              "code": "Identify Diagonal, Scalar and Unit Matrices",
+              "startTime": "153",
+              "endTime": 55,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "\nIdentify Matrices",
+                  "type": "text",
+                  "_id": "653f4c64dc3cde4b84b7f2f1"
+                },
+                {
+                  "code": "From the following matrices identity diagonal ,scalar and unit (identity) matrices.",
+                  "type": "text"
+                },
+                {
+                  "code": "[[\"Identity (unit)\"],[\"Scalar\"],[\"Diagonal\"]]",
+                  "type": "table"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef5d26c43fc92ad1fe235"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 1,
+              "code": "A=\\begin{bmatrix} 4& 0  \\\\ 0& 4  \\\\ \\end{bmatrix}",
+              "startTime": 158,
+              "endTime": 65,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Matrix A is a scalar matrix because\nits diagonal entities are same.",
+                  "type": "text",
+                  "_id": "65389571f3fe2773a39d7a6e"
+                },
+                {
+                  "code": "A scalar matrix is a special type of square matrix in which all the elements of the principal diagonal are equal, and all other elements are zero.",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5d26c43fc92ad1fe236"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 2,
+              "code": "B=\\begin{bmatrix} 2& 0 \\\\ 0& -1 \\\\ \\end{bmatrix}",
+              "startTime": 184,
+              "endTime": 75,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Matrix B is a diagonal matrix because its diagonal entities are non-zero and non-diagonal entities are zero.",
+                  "type": "text",
+                  "_id": "65389571f3fe2773a39d7a70"
+                },
+                {
+                  "code": "A diagonal matrix is a type of square matrix in which all the elements outside the main diagonal are zero.",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5d26c43fc92ad1fe237"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 3,
+              "code": "C=\\begin{bmatrix} 1& 0 \\\\ 0& 1  \\\\ \\end{bmatrix}",
+              "startTime": 206,
+              "endTime": 85,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Matrix C is an identity matrix because its diagonal identities are 1.",
+                  "type": "text",
+                  "_id": "65389571f3fe2773a39d7a72"
+                },
+                {
+                  "code": "Please note that an identity matrix is a special case of a diagonal matrix where all the diagonal elements are 1",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5d26c43fc92ad1fe238"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 4,
+              "code": "D=\\begin{bmatrix}3 & 0 \\\\ 0 & 1 \\\\  \\end{bmatrix}",
+              "startTime": 222,
+              "endTime": 95,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Matrix D is a diagonal matrix because its Non diagonal entities are zero.",
+                  "type": "text",
+                  "_id": "65389571f3fe2773a39d7a74"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5d26c43fc92ad1fe239"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 5,
+              "code": "E=\\begin{bmatrix}5-3 & 0 \\\\ 0 & 1+1 \\\\ \\end{bmatrix}",
+              "startTime": 241,
+              "endTime": 105,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "E=\\begin{bmatrix}2 & 0 \\\\ 0 & 2 \\\\ \\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "Matrix E is a scalar matrix because its Non-diagonal entities are zero and diagonal entried are same i.e 2.",
+                  "type": "text",
+                  "_id": "65389571f3fe2773a39d7a76"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5d26c43fc92ad1fe23a"
+          }
+        ],
+        "_id": "654ef5d26c43fc92ad1fe234",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
     "_id": "659e87fd92faba116b079beb",
     "board": "FBISE",
     "classNo": 9,

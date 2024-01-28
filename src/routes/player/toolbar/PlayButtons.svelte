@@ -24,18 +24,18 @@ goto('/');
 
     {#if isPlaying}
         {#if isPaused}
-        <button class="p-1 rounded-sm bg-green-700 text-white text-sm" 
-        on:click={pause} style='background-color:gray'> || </button>
+        <button class="p-1 rounded-sm bg-green-700 text-white text-sm " 
+        on:click={pause} style='background-color:gray '> || </button>
       {:else}
-        <button class="p-1 rounded-sm bg-green-700 text-white text-sm" 
+        <button class="p-1 rounded-sm bg-green-700 text-white text-sm " 
         on:click={pause} style='background-color:#00A6ED'> || </button>
       {/if}
    {:else}
-   <button class="p-1 rounded-sm bg-green-700 text-white text-sm" 
-    on:click={start} style='background-color:#00A6ED'>▶ </button>
+   <button class="p-1 rounded-sm bg-green-700 text-white text-sm " 
+    on:click={start} style='background-color:#00A6ED '>▶ </button>
     {/if}
 
-    <button class="p-1 rounded-sm bg-red-800 text-white text-sm" 
+    <button class="p-1 rounded-sm bg-red-800 text-white text-sm " 
     on:click={stop}>■ </button>
  
  <input type="range" min="0" max="1" step='0.1' value="0.8" on:input={(e)=>setVolume(e.target.value)} />
