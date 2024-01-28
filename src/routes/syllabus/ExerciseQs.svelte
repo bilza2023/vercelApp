@@ -13,7 +13,7 @@ $:{
   selectedEx;  
   if(questions){
   let filteredQuestions = questions.filter(question => question.exercise === selectedEx);
-  sortedArray =  filteredQuestions.sort((a, b) =>  a.sortOrder - b.sortOrder );
+  sortedArray =  filteredQuestions.sort((a, b) =>  a.questionNo - b.questionNo );
   }  
 //   console.log("sortedArray",sortedArray);
 }
