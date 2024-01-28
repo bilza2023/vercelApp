@@ -2113,7 +2113,7 @@ export const syllabus = [
       },
       {
         "startTime": 5,
-        "endTime": 50,
+        "endTime": 88,
         "type": "Eqs",
         "version": "0.0.0",
         "template": "",
@@ -2143,7 +2143,7 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": true
+              "spVisibility": false
             },
             "arr": [],
             "_id": "654ef5dc6c43fc92ad1fe28b"
@@ -2205,7 +2205,7 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": true
+              "spVisibility": false
             },
             "arr": [],
             "_id": "654ef5dc6c43fc92ad1fe28e"
@@ -2230,7 +2230,7 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": true
+              "spVisibility": false
             },
             "arr": [],
             "_id": "654ef5dc6c43fc92ad1fe290"
@@ -2255,7 +2255,7 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": true
+              "spVisibility": false
             },
             "arr": [],
             "_id": "654ef5dc6c43fc92ad1fe292"
@@ -2280,7 +2280,7 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": true
+              "spVisibility": false
             },
             "arr": [],
             "_id": "654ef5dc6c43fc92ad1fe294"
