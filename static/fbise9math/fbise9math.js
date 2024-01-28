@@ -3777,7 +3777,7 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": true
+              "spVisibility": false
             },
             "arr": [],
             "_id": "654ef60e6c43fc92ad1fe624"
@@ -3797,7 +3797,7 @@ export const syllabus = [
               "sp": [],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": true
+              "spVisibility": false
             },
             "arr": [],
             "_id": "659686c182e388f04923bac4"
@@ -3821,7 +3821,7 @@ export const syllabus = [
                 }
               ],
               "fs": [],
-              "spVisibility": true,
+              "spVisibility": false,
               "fsVisibility": false
             },
             "arr": [],
@@ -3842,7 +3842,7 @@ export const syllabus = [
               "sp": [],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": true
+              "spVisibility": false
             },
             "arr": [],
             "_id": "6596541ac144543a7678982a"
@@ -3862,7 +3862,7 @@ export const syllabus = [
               "sp": [],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": true
+              "spVisibility": false
             },
             "arr": [],
             "_id": "6596541ac144543a7678982b"
@@ -3892,7 +3892,7 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": true
+              "spVisibility": false
             },
             "arr": [],
             "_id": "654ef60e6c43fc92ad1fe629"
@@ -3912,7 +3912,7 @@ export const syllabus = [
               "sp": [],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": true
+              "spVisibility": false
             },
             "arr": [],
             "_id": "6596541ac144543a7678982e"
@@ -3941,7 +3941,7 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": true
+              "spVisibility": false
             },
             "arr": [],
             "_id": "6596541ac144543a7678982f"
@@ -3978,14 +3978,14 @@ export const syllabus = [
               ],
               "fs": [],
               "fsVisibility": false,
-              "spVisibility": true
+              "spVisibility": false
             },
             "arr": [],
             "_id": "654ef60e6c43fc92ad1fe62c"
           }
         ],
-        "slideExtra": [],
-        "_id": "654ef60e6c43fc92ad1fe61f"
+        "_id": "654ef60e6c43fc92ad1fe61f",
+        "slideExtra": []
       }
     ],
     "teacherComments": "",
