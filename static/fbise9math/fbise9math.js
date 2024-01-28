@@ -3993,6 +3993,1037 @@ export const syllabus = [
     "__v": 0
   },
   {
+    "_id": "659e87ff92faba116b079c33",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "exercise": "1.3",
+    "questionNo": 5,
+    "part": 2,
+    "name": "",
+    "sortOrder": 0,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_5_pt_2",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 6,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.3 Q 5 Part(ii)",
+            "_id": "65926b30bc754d5f24ed8139"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "65926b30bc754d5f24ed813a"
+          }
+        ],
+        "_id": "65926b30bc754d5f24ed8138"
+      },
+      {
+        "startTime": 6,
+        "endTime": 287,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 0,
+              "startTime": 6,
+              "endTime": 15,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Prove that A+B = B+A for the given Matrices",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} 1& 2 & 3 \\\\\n 2 & 3 & 1\\\\ \n0 & 2 & -1 \\end{bmatrix}  ",
+                  "type": "code"
+                },
+                {
+                  "code": "B=\\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "65926b30bc754d5f24ed813c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 1,
+              "startTime": 52,
+              "endTime": 25,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "L.H.S = A+B",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65b6b5435f4edfa33b66f9e3"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": "54",
+              "endTime": 35,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "A+B=\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ \n0& 2& -1\\end{bmatrix}  +\\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965173c144543a76789703"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 60,
+              "endTime": 45,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 1+1& 2+(-1) & 3+1 \\\\ 2+2 & 3+(-2) & 1+2\\\\ 0+3 & 2+1 &  (-1)+3\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965173c144543a76789704"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 138,
+              "endTime": 55,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2& 1& 4 \\\\ 4 & 1 & 3\\\\ 3& 3& 2\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965173c144543a76789705"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 198,
+              "endTime": 65,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "R.H.S = B+A",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "=\\begin{bmatrix} 2& 1& 4 \\\\ 4 & 1 & 3\\\\ 3& 3& 2\\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65965173c144543a76789706"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 6,
+              "startTime": "202",
+              "endTime": 75,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "B+A=\\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}+\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0& 2 & -1 \\end{bmatrix}  ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965173c144543a76789708"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 7,
+              "startTime": 208,
+              "endTime": 85,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 1 +1& (-1)+2 & 1+3\\\\ 2 +2& (-2)+3 & 2+1 \\\\ 3+0 & 1 +2& 3+(-1)\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965173c144543a76789709"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 8,
+              "startTime": 233,
+              "endTime": 95,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2& 1& 4 \\\\ 4 & 1 & 3\\\\ 3& 3& 2\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965173c144543a7678970a"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 9,
+              "code": "Hence proved L.H.S=R.H.S",
+              "startTime": 280,
+              "endTime": 105,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "A+B=B+A",
+                  "type": "text"
+                },
+                {
+                  "code": "Answer",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6126c43fc92ad1fe6b6"
+          }
+        ],
+        "_id": "654ef6126c43fc92ad1fe6aa",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
+    "_id": "659e880092faba116b079c58",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "exercise": "1.3",
+    "questionNo": 5,
+    "part": 4,
+    "name": "",
+    "sortOrder": 0,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_5_pt_4",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 5,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.3 Q 5 Part(iv)",
+            "_id": "659270f91829271bd47a1cb4"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "659270f91829271bd47a1cb5"
+          }
+        ],
+        "_id": "659270f91829271bd47a1cb3"
+      },
+      {
+        "startTime": 5,
+        "endTime": 326,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 0,
+              "code": "Prove A+(B+A)=2A+B",
+              "startTime": "5",
+              "endTime": 12,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0 & 2& -1 \\end{bmatrix}  ",
+                  "type": "code"
+                },
+                {
+                  "code": "B=\\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6186c43fc92ad1fe7ad"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 1,
+              "code": "L.H.S =  A+(B+A)",
+              "startTime": 49,
+              "endTime": 22,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "A+(B+A)=2A+B",
+                  "type": "heading",
+                  "_id": "654363a895098b33cb16565e"
+                },
+                {
+                  "code": "L.H.S=A+(B+A)",
+                  "type": "heading",
+                  "_id": "654363a895098b33cb16565f"
+                },
+                {
+                  "code": "=\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0& 2 & -1 \\end{bmatrix}\n  +\n\\left( \n\\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}\n\n+\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0 & 2 & -1 \\end{bmatrix}\n\\right)  ",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6186c43fc92ad1fe7b0"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 2,
+              "code": "=\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0& 2 & -1 \\end{bmatrix}\n  +\n\\left( \n\\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}\n\n+\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0 & 2 & -1 \\end{bmatrix}\n\\right)  ",
+              "startTime": 58,
+              "endTime": 32,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6186c43fc92ad1fe7b1"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 65,
+              "endTime": 42,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=A\n  +\n\\left( \n\\begin{bmatrix} 1+1 & (-1)+2 & 1+3\\\\ 2+2 &( -2) +3& 2 +1\\\\ 3+0 & 1+2 & 3+(-1)\\end{bmatrix}\n\\right)  ",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Removed A to save space",
+                  "type": "heading"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659656e6c144543a767898be"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 113,
+              "endTime": 52,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0& 2 & -1 \\end{bmatrix}\n  +\n\n\\begin{bmatrix} 2 & 1 & 4\\\\ 4 & 1 &3\\\\ 3& 3 & 2\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659656e6c144543a767898bf"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 168,
+              "endTime": 62,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 1+2& 2+1 & 3+4 \\\\ 2+4 & 3+1 & 1+3\\\\ 0+3& 2+3 & (-1)+2 \\end{bmatrix}\n  \n  ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659656e6c144543a767898c0"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 6,
+              "startTime": 180,
+              "endTime": 72,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 3& 3 & 7\\\\ 6& 4 & 4\\\\3& 5& 1 \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "659656e6c144543a767898c1"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 7,
+              "code": "R.H.S = 2A+B",
+              "startTime": 193,
+              "endTime": 82,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "R.H.S=2A+B",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6186c43fc92ad1fe7b4"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 8,
+              "code": "=2\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0& 2 & -1 \\end{bmatrix}+\\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}",
+              "startTime": 233,
+              "endTime": 92,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "DMAS Rule",
+                  "type": "heading",
+                  "_id": "654363a895098b33cb16566a"
+                },
+                {
+                  "code": "Division  , Multiplication , Addition , Subtraction",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6186c43fc92ad1fe7b5"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 9,
+              "startTime": 252,
+              "endTime": 102,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2*1& 2*2 & 2*3 \\\\ 2*2 & 2*3 & 2*1\\\\ 2*0 & 2*2 & 2*-1\\end{bmatrix}+\\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659656e6c144543a767898c5"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 10,
+              "startTime": 255,
+              "endTime": 112,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2 & 4 & 6\\\\ 4 & 6& 2 \\\\ 0 & 4 & -2\\end{bmatrix}+\\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659656e6c144543a767898c6"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 11,
+              "startTime": 283,
+              "endTime": 122,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2+1 & 4+(-1) & 6+1\\\\ 4+2 & 6+(-2)& 2+2 \\\\ 0+3 & 4 +1& (-2)+3\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659656e6c144543a767898c7"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 12,
+              "startTime": 312,
+              "endTime": 132,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 3 & 3 & 7\\\\ 6& 4& 4 \\\\ 3 & 5 & 1\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "659656e6c144543a767898c8"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 13,
+              "code": "A+(B+A)=2A+B",
+              "startTime": 318,
+              "endTime": 142,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "\\begin{bmatrix} 3 & 3 & 7\\\\ 6& 4& 4 \\\\ 3 & 5 & 1\\end{bmatrix}=\\begin{bmatrix} 3 & 3 & 7\\\\ 6& 4& 4 \\\\ 3 & 5 & 1\\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6186c43fc92ad1fe7bc"
+          }
+        ],
+        "_id": "654ef6186c43fc92ad1fe7ac",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
+    "_id": "659e880092faba116b079c72",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "exercise": "1.3",
+    "questionNo": 5,
+    "part": 5,
+    "name": "",
+    "sortOrder": 0,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_5_pt_5",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 6,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.3 Q.5 Part (v)",
+            "_id": "659286f7e1f36f836238ca47"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "659286f7e1f36f836238ca48"
+          }
+        ],
+        "_id": "659286f7e1f36f836238ca46"
+      },
+      {
+        "startTime": 6,
+        "endTime": 539,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 0,
+              "code": "Prove (C-B)+A = C+ (A-B)",
+              "startTime": "6",
+              "endTime": 15,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0 & 2& -1 \\end{bmatrix}  ",
+                  "type": "code"
+                },
+                {
+                  "code": "B=\\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}\n",
+                  "type": "code"
+                },
+                {
+                  "code": "C=\\begin{bmatrix} -1 & 0 & 0\\\\ 0 & -2 & 3 \\\\ 1 & 1 & 2\\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6336c43fc92ad1fe841"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 1,
+              "startTime": 15,
+              "endTime": 25,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "L.H.S=(C-B)+A",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65965938c144543a76789972"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 25,
+              "endTime": 35,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\n\\left(\\begin{bmatrix} -1 & 0 & 0\\\\ 0 & -2 & 3 \\\\ 1 & 1 & 2\\end{bmatrix}-\n\n\\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}\n\n\\right)+\nA",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965938c144543a76789973"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 35,
+              "endTime": 45,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} (-1)- 1 & 0-(-1) & 0-1\\\\ 0-2 & (-2)-(-2 )& 3-2 \\\\ 1-3 & 1-1 & 2-3\\end{bmatrix}+A",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965938c144543a76789974"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 45,
+              "endTime": 55,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -2 & 1 & -1\\\\ -2& 0 & 1 \\\\ -2 & 0 & -1\\end{bmatrix}+\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0 & 2& -1 \\end{bmatrix}  ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965938c144543a76789975"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 55,
+              "endTime": 65,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix}(-2)+ 1&1+ 2 &(-1)+ 3 \\\\(-2)+ 2 &0+ 3 & 1+1\\\\ (-2)+0 & 0+2& (-1)+(-1)\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965938c144543a76789976"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 6,
+              "startTime": 65,
+              "endTime": 75,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -1& 3& 2 \\\\ 0 & 3 & 2\\\\ -2 & 2 & -2\\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "L.H.S=(C-B)+A",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65965938c144543a76789977"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 7,
+              "startTime": 75,
+              "endTime": 85,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "R.H.S = C+( A - B )",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0 & 2& -1 \\end{bmatrix}  ",
+                  "type": "code"
+                },
+                {
+                  "code": "B=\\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}\n",
+                  "type": "code"
+                },
+                {
+                  "code": "C=\\begin{bmatrix} -1 & 0 & 0\\\\ 0 & -2 & 3 \\\\ 1 & 1 & 2\\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "65b6be348d2edfb369d24044"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 8,
+              "startTime": 85,
+              "endTime": 95,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -1 & 0 & 0\\\\ 0 & -2 & 3 \\\\ 1 & 1 & 2\\end{bmatrix}+\n\n\\left(\n\n\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0 &2 & -1\\end{bmatrix}- \n\n \\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}\n\n\\right)",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965938c144543a76789979"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 9,
+              "startTime": 95,
+              "endTime": 105,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=C+\\begin{bmatrix} 1-1& 2 -(-1)& 3-1 \\\\ 2-2 & 3-(-2) & 1-2\\\\ 0-3 & 2-1 & (-1)-3\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965938c144543a7678997a"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 10,
+              "startTime": 105,
+              "endTime": 115,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -1 & 0 & 0\\\\ 0 & -2 & 3 \\\\ 1 & 1 & 2\\end{bmatrix}+\\begin{bmatrix} 0 & 3& 2\\\\ 0 & 5 & -1 \\\\ -3 & 1 & -4\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965938c144543a7678997b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 11,
+              "startTime": 115,
+              "endTime": 125,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -1+0 & 0+3 & 0+2\\\\ 0+0 & -2+5 & 3 +(-1)\\\\ 1 +(-3)& 1+1 & 2+(-4)\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965938c144543a7678997c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 12,
+              "startTime": 125,
+              "endTime": 135,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} -1 & 3 & 2\\\\ 0 & 3 & 2 \\\\ -2 & 2 & -2\\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65965938c144543a7678997d"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 13,
+              "code": "(C-B)+A=C+(A-B)",
+              "startTime": 135,
+              "endTime": 145,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "\\begin{bmatrix} -1 & 3 & 2\\\\ 0 & 3 & 2 \\\\ -2 & 2 & -2\\end{bmatrix}=\\begin{bmatrix} -1 & 3 & 2\\\\ 0 & 3 & 2 \\\\ -2 & 2 & -2\\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "Answer",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6336c43fc92ad1fe851"
+          }
+        ],
+        "_id": "654ef6336c43fc92ad1fe840",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
     "_id": "659e880792faba116b079d96",
     "board": "FBISE",
     "classNo": 9,
