@@ -4,7 +4,8 @@ import { toast, ajaxPost,BASE_URL } from '$lib/util'
 
 export default async function showPaidContent(tcode){
 
-    const email = localStorage.getItem("teacher_name");
+    const email = localStorage.getItem("email");
+    if(!email){toast.push('You may not be logged in or the course has not been purchase');return false;}
     const resp = await ajaxPost(`${BASE_URL}/auth/ispaid` ,{email,tcode})  
     // console.log('resp',resp);
    if(resp.ok){
