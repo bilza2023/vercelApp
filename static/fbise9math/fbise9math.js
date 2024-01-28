@@ -2075,6 +2075,832 @@ export const syllabus = [
     "__v": 0
   },
   {
+    "_id": "659e87fb92faba116b079ba5",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "exercise": "1.2",
+    "questionNo": 4,
+    "part": 0,
+    "name": "",
+    "sortOrder": 0,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.2_q_4_pt_0",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 5,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch1 Ex 1.2 Q : 4",
+            "_id": "658d2abaaca2621894188905"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "658d2abaaca2621894188906"
+          }
+        ],
+        "_id": "658d2abaaca2621894188904"
+      },
+      {
+        "startTime": 5,
+        "endTime": 50,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 0,
+              "code": "Find Negative of Matrices",
+              "startTime": "5",
+              "endTime": 10,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Find Negative of  Matrices",
+                  "type": "heading"
+                },
+                {
+                  "code": "Negative of a matrix is obtained by inverting (changing) the sign of all entities.",
+                  "type": "text",
+                  "_id": "653f4eb22852bd3ad297db6e"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5dc6c43fc92ad1fe28b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 1,
+              "code": "A=\\begin{bmatrix} 1  \\\\ 0 \\\\ -1 \\end{bmatrix}",
+              "startTime": 22,
+              "endTime": 20,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Negative of a matrix is obtained by inverting (changing) the sign of all entities.",
+                  "type": "heading"
+                },
+                {
+                  "code": "-A=\\begin{bmatrix} -1  \\\\ 0 \\\\ +1 \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef5dc6c43fc92ad1fe28c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 2,
+              "code": "B=\\begin{bmatrix} 3 & -1  \\\\ 2& 1 \\end{bmatrix}",
+              "startTime": 46,
+              "endTime": 40,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Changing the sign",
+                  "type": "heading"
+                },
+                {
+                  "code": "Negative of a matrix is obtained by inverting (changing) the sign of all entities.",
+                  "type": "text"
+                },
+                {
+                  "code": "-B=\\begin{bmatrix} -3 & +1  \\\\ -2& -1 \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5dc6c43fc92ad1fe28e"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 3,
+              "code": "c=\\begin{bmatrix}2 & 6 \\\\ 3& 2 \\end{bmatrix}",
+              "startTime": 65,
+              "endTime": 60,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "-c=\\begin{bmatrix}-2 &- 6 \\\\ -3& -2 \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5dc6c43fc92ad1fe290"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 4,
+              "code": "D=\\begin{bmatrix} -3 & 2  \\\\-4& 5\\end{bmatrix}",
+              "startTime": 71,
+              "endTime": 80,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "-D=\\begin{bmatrix} 3 & -2  \\\\4& -5\\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5dc6c43fc92ad1fe292"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 5,
+              "code": "E=\\begin{bmatrix} 1& -5 \\\\ 2 & 3  \\\\ \\end{bmatrix}",
+              "startTime": 80,
+              "endTime": 100,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "-E=\\begin{bmatrix} -1& 5 \\\\ -2 & -3  \\\\ \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5dc6c43fc92ad1fe294"
+          }
+        ],
+        "_id": "654ef5dc6c43fc92ad1fe28a",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
+    "_id": "659e87fc92faba116b079bb6",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "exercise": "1.2",
+    "questionNo": 5,
+    "part": 0,
+    "name": "",
+    "sortOrder": 0,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.2_q_5_pt_0",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 4,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.2 Q 4",
+            "_id": "658d31026449dcf91c25505d"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "658d31026449dcf91c25505e"
+          }
+        ],
+        "_id": "658d31026449dcf91c25505c"
+      },
+      {
+        "startTime": 4,
+        "endTime": 100,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 0,
+              "code": " Find Transpose of Matrices\n",
+              "startTime": 4,
+              "endTime": 10,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Transpose of a matrix ",
+                  "type": "heading"
+                },
+                {
+                  "code": "Transpose of a matrices is obtained by converting all the columns of the matrix to the rows and all the rows to the columns.",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef5e16c43fc92ad1fe301"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 1,
+              "code": "A=\\begin{bmatrix}0\\\\ 1\\\\-2  \\end{bmatrix}",
+              "startTime": 34,
+              "endTime": 20,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "A'=\\begin{bmatrix}0&1&-2\\\\\\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5e16c43fc92ad1fe302"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 2,
+              "code": "B=\\begin{bmatrix} 5 &1&-6\\\\  \\end{bmatrix}",
+              "startTime": 50,
+              "endTime": 40,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "B'=\\begin{bmatrix} 5 \\\\ 1\\\\ -6 \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5e16c43fc92ad1fe304"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 3,
+              "code": "c=\\begin{bmatrix} 1 & 2  \\\\ 2& -1\\\\ 3& 0\\\\ \\end{bmatrix}",
+              "startTime": 60,
+              "endTime": 60,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "c'=\\begin{bmatrix} 1 & 2&3  \\\\ 2& -1&0\\\\ \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5e16c43fc92ad1fe306"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 4,
+              "code": "D=\\begin{bmatrix}2 & 3\\\\0&5  \\\\ \\end{bmatrix}",
+              "startTime": 72,
+              "endTime": 80,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "D'=\\begin{bmatrix}2 & 0\\\\3&5  \\\\ \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5e16c43fc92ad1fe308"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 5,
+              "code": "E=\\begin{bmatrix}2 &3 \\\\ -4 & 5 \\\\ \\end{bmatrix}",
+              "startTime": 80,
+              "endTime": 100,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "E'=\\begin{bmatrix}2 &-4 \\\\ 3 & 5 \\\\ \\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5e16c43fc92ad1fe30a"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 6,
+              "code": "F=\\begin{bmatrix} 1& 2\\\\ 3& 4 \\\\\\end{bmatrix}",
+              "startTime": 90,
+              "endTime": 120,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "F'=\\begin{bmatrix} 1& 3\\\\ 2& 4\\\\\\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "654ef5e16c43fc92ad1fe30c"
+          }
+        ],
+        "_id": "654ef5e16c43fc92ad1fe300",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
+    "_id": "659e87fd92faba116b079bc9",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "exercise": "1.2",
+    "questionNo": 6,
+    "part": 0,
+    "name": "",
+    "sortOrder": 0,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.2_q_6_pt_0",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 5,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.2 Q 6\nMatrix Transpose",
+            "_id": "658d34c0bdabbc2d922b2339"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "658d34c0bdabbc2d922b233a"
+          }
+        ],
+        "_id": "658d34c0bdabbc2d922b2338"
+      },
+      {
+        "startTime": 5,
+        "endTime": 141,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 0,
+              "startTime": "5",
+              "endTime": 20,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Verify   that",
+              "type": "hdg",
+              "sp": [
+                {
+                  "code": "Transpose Definition",
+                  "type": "heading"
+                },
+                {
+                  "code": "Transpose of a Matrix means to convert rows into columns and columns into rows",
+                  "type": "text"
+                },
+                {
+                  "code": "(A^t)^t=A",
+                  "type": "code"
+                },
+                {
+                  "code": "(B^t)^t=B",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": true
+            },
+            "arr": [],
+            "_id": "6554457f57df4553ad15c240"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 1,
+              "code": " A=\\begin{bmatrix} 1& 2 \\\\ 0 & 1  \\\\ \\end{bmatrix}\n,\nB=\\begin{bmatrix} 1& 1 \\\\ 2 & 0  \\\\ \\end{bmatrix}\n\n",
+              "startTime": 29,
+              "endTime": 30,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef5ef6c43fc92ad1fe379"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 63,
+              "endTime": 0,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Part i",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65b5d787a47ed9b906abd055"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 66,
+              "endTime": 0,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": " A=\\begin{bmatrix} 1& 2 \\\\ 0 & 1  \\\\ \\end{bmatrix}\n\n\n\n\n\n\n",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "658e4510cff60414318c2dfc"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 4,
+              "code": "A^t=\\begin{bmatrix} 1& 0 \\\\ 2 & 1  \\\\ \\end{bmatrix}",
+              "startTime": 73,
+              "endTime": 50,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Taking Transpose of  A' we will get",
+                  "type": "text",
+                  "_id": "653f5dd212e4156ed68b8337"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef5ef6c43fc92ad1fe37c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 84,
+              "endTime": 0,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "(A^t)^t=\\begin{bmatrix} 1& 2 \\\\ 0 & 1  \\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65b5d787a47ed9b906abd058"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 6,
+              "startTime": 101,
+              "endTime": 60,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Hence: \\quad (A^t)^t=A",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6554457f57df4553ad15c244"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 7,
+              "startTime": 106,
+              "endTime": 0,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Part :(ii)",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "658e4a9db2b15e3875331a82"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 8,
+              "startTime": 109,
+              "endTime": 0,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Prove \\quad (B^t)^t=B",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "658e4a9db2b15e3875331a83"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 9,
+              "startTime": 111,
+              "endTime": 160,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": " B=\\begin{bmatrix} 1& 1 \\\\ 2 & 0  \\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "Transpose Definition",
+                  "type": "heading"
+                },
+                {
+                  "code": "Transpose all the column of that  of a matrix is obtained by converting all the  columns of that matrix to the Rows and all Rows in to columns.        ",
+                  "type": "text"
+                },
+                {
+                  "code": "[[\"B^t\"]]",
+                  "type": "tableCode"
+                },
+                {
+                  "code": "Taking Transpose of B^t ,we will get",
+                  "type": "text"
+                },
+                {
+                  "code": "[[\"1\",\"1\"],[\"2\",\"0\"]]",
+                  "type": "tableCode"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "6554457f57df4553ad15c24e"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 10,
+              "code": "   B^t=\\begin{bmatrix} 1& 2 \\\\ 1 & 0 \\\\ \\end{bmatrix}",
+              "startTime": 117,
+              "endTime": 210,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Taking transpose of [ B^t }^twe will get",
+                  "type": "text",
+                  "_id": "653fc8223880a55696d54603"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef5ef6c43fc92ad1fe380"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 11,
+              "code": "   (B^t)^t=\\begin{bmatrix} 1& 1 \\\\ 2 & 0  \\\\ \\end{bmatrix}",
+              "startTime": 126,
+              "endTime": 230,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "Hence proved:  (B^t)^t=B",
+                  "type": "text",
+                  "_id": "653fc8223880a55696d54605"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef5ef6c43fc92ad1fe381"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 12,
+              "startTime": 136,
+              "endTime": 240,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Hence: \\quad  (B^t)^t=B",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "6554457f57df4553ad15c256"
+          }
+        ],
+        "_id": "654ef5ef6c43fc92ad1fe377",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
     "_id": "659e87fd92faba116b079beb",
     "board": "FBISE",
     "classNo": 9,
