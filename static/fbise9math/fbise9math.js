@@ -1772,7 +1772,7 @@ export const syllabus = [
     "part": 0,
     "name": "",
     "sortOrder": 0,
-    "questionType": "paid",
+    "questionType": "free",
     "status": "final",
     "free": false,
     "filename": "fbise_cl_9_ch_1_ex_1.2_q_3_pt_0",
@@ -2066,8 +2066,8 @@ export const syllabus = [
             "_id": "654ef5d26c43fc92ad1fe23a"
           }
         ],
-        "_id": "654ef5d26c43fc92ad1fe234",
-        "slideExtra": []
+        "slideExtra": [],
+        "_id": "654ef5d26c43fc92ad1fe234"
       }
     ],
     "teacherComments": "",
