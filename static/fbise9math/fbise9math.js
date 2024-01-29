@@ -7452,6 +7452,388 @@ export const syllabus = [
     "__v": 0
   },
   {
+    "_id": "659e880592faba116b079d09",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "exercise": "1.3",
+    "questionNo": 6,
+    "part": 2,
+    "name": "",
+    "sortOrder": 0,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_6_pt_2",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 7,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.3 Q 6 Part (ii)",
+            "_id": "6593aa4a5855b851ffe014c0"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "6593aa4a5855b851ffe014c1"
+          }
+        ],
+        "_id": "6593aa4a5855b851ffe014bf"
+      },
+      {
+        "startTime": 7,
+        "endTime": 237,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 0,
+              "code": "Find: 2A^t-3B^t",
+              "startTime": 7,
+              "endTime": 15,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} 1& -2\\\\3& 4\\\\ \\end{bmatrix}  ",
+                  "type": "code"
+                },
+                {
+                  "code": "B=\\begin{bmatrix} 0& 7\\\\-3& 8\\\\ \\end{bmatrix} ",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef63a6c43fc92ad1febd5"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 1,
+              "startTime": 33,
+              "endTime": 0,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "Find 2A Transpose",
+              "type": "hdg",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "65b6edeaeffb45f06ffe0cff"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 2,
+              "code": "A=\\begin{bmatrix} 1& -2\\\\3& 4\\\\ \\end{bmatrix}  ",
+              "startTime": 41,
+              "endTime": 55,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef63a6c43fc92ad1febd9"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 49,
+              "endTime": 65,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "A^t=\\begin{bmatrix} 1& 3\\\\-2& 4\\\\ \\end{bmatrix}  ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6597a736bb868321edd5a729"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 67,
+              "endTime": 75,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "2A^t=2*\\begin{bmatrix} 1& 3\\\\-2& 4\\\\ \\end{bmatrix}  ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6597a736bb868321edd5a72a"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 74,
+              "endTime": 85,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "2A^t=\\begin{bmatrix} 2*1& 2*3\\\\2*(-2)& 2*4\\\\ \\end{bmatrix} ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6597a736bb868321edd5a72b"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 6,
+              "startTime": 85,
+              "endTime": 95,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "2A^t=\\begin{bmatrix} 2& 6\\\\-4& 8\\\\ \\end{bmatrix}  ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6597a736bb868321edd5a72c"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 7,
+              "code": "Find 3B Transpose",
+              "startTime": 108,
+              "endTime": 105,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef63a6c43fc92ad1febda"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 8,
+              "startTime": 115,
+              "endTime": 115,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "B=\\begin{bmatrix} 0& 7\\\\-3& 8\\\\ \\end{bmatrix} ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6597a736bb868321edd5a72e"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 9,
+              "startTime": 118,
+              "endTime": 125,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "B^t=\\begin{bmatrix} 0& -3\\\\7& 8\\\\ \\end{bmatrix} ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6597a736bb868321edd5a72f"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 10,
+              "startTime": 129,
+              "endTime": 135,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "3B^t=3*\\begin{bmatrix} 0& -3\\\\7& 8\\\\ \\end{bmatrix} ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6597a736bb868321edd5a730"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 11,
+              "startTime": 134,
+              "endTime": 145,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "3B^t=\\begin{bmatrix} 3*0& (-3)*3\\\\3*7& 3*8\\\\ \\end{bmatrix} ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6597a736bb868321edd5a731"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 12,
+              "startTime": 140,
+              "endTime": 155,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "3^t=\\begin{bmatrix} 0& -9\\\\21& 24\\\\ \\end{bmatrix} ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6597a736bb868321edd5a732"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 13,
+              "code": "2A^t-3B^t=\\begin{bmatrix} 2& 6\\\\-4& 8\\\\ \\end{bmatrix}-\\begin{bmatrix} 0& -9\\\\21& 24\\\\ \\end{bmatrix} ",
+              "startTime": 161,
+              "endTime": 165,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef63a6c43fc92ad1febdb"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 14,
+              "startTime": 175,
+              "endTime": 185,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2-0& 6-(-9)\\\\(-4)-21& 8-24\\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "6597a736bb868321edd5a735"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 15,
+              "startTime": 193,
+              "endTime": 195,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2& 15\\\\-25& -16\\\\ \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "6597a736bb868321edd5a736"
+          }
+        ],
+        "_id": "654ef63a6c43fc92ad1febd4",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
     "_id": "659e880792faba116b079d96",
     "board": "FBISE",
     "classNo": 9,
