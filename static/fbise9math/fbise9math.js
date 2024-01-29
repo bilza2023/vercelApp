@@ -6905,6 +6905,362 @@ export const syllabus = [
     "__v": 0
   },
   {
+    "_id": "659e880492faba116b079ce5",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "exercise": "1.3",
+    "questionNo": 5,
+    "part": 10,
+    "name": "",
+    "sortOrder": 0,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_5_pt_10",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 5,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex 1.3 Q 5 Part 10",
+            "_id": "65939792e883a61802be7135"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "65939792e883a61802be7136"
+          }
+        ],
+        "_id": "65939792e883a61802be7134"
+      },
+      {
+        "startTime": 5,
+        "endTime": 448,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 0,
+              "code": "Prove:2A+2B=2(A+B)",
+              "startTime": 5,
+              "endTime": 15,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0& 2& -1 \\end{bmatrix}  ",
+                  "type": "code",
+                  "_id": "6544b1f57e4d8908e13bac26"
+                },
+                {
+                  "code": "B=\\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}",
+                  "type": "code",
+                  "_id": "6544b1f57e4d8908e13bac27"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6396c43fc92ad1feb15"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 1,
+              "code": "L.H.S=2A+2B",
+              "startTime": 31,
+              "endTime": 45,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "2A+2B=2\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0& 2& -1 \\end{bmatrix} +2 \\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6396c43fc92ad1feb18"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 2,
+              "startTime": 42,
+              "endTime": 55,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "2A+2B=\\begin{bmatrix} 2*1&2* 2 &2* 3 \\\\2* 2 & 2*3 & 2*1\\\\ 2*0 & 2*2&2* -1 \\end{bmatrix}  +\\begin{bmatrix} 2*1& 2*(-1) & 2*1 \\\\ 2*2 & 2*(-2) & 2*2\\\\ 2*3 & 2*1& 2*3 \\end{bmatrix}  ",
+              "type": "code",
+              "sp": [
+                {
+                  "code": "DMAS Rule",
+                  "type": "heading"
+                },
+                {
+                  "code": "Division , Multiplication , Addition and Subtraction",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659796cdbfcc7486f10542a8"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 123,
+              "endTime": 65,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2& 4 & 6 \\\\ 4& 6 & 2\\\\ 0& 4& -2 \\end{bmatrix}  +\\begin{bmatrix} 2&- 2 & 2 \\\\ 4 & -4 & 4\\\\ 6 & 2& 6 \\end{bmatrix}  ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659796cdbfcc7486f10542a9"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 4,
+              "startTime": 148,
+              "endTime": 75,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 2+2& 4+(-2)& 6+2 \\\\ 4+4& 6+(-4) & 2+4\\\\ 0+6 & 4+2& (-2)+6 \\end{bmatrix}  ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659796cdbfcc7486f10542aa"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 5,
+              "startTime": 160,
+              "endTime": 85,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 4& 2 & 8\\\\ 8 & 2 & 6\\\\ 6 & 6& 4 \\end{bmatrix}  ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659796cdbfcc7486f10542ab"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 6,
+              "code": "R.H.S=2(A+B)",
+              "startTime": 169,
+              "endTime": 105,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "R.H.S=2(A+B)",
+                  "type": "heading"
+                },
+                {
+                  "code": "=2\\left(\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0 & 2& -1 \\end{bmatrix} + \\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}\\right)",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6396c43fc92ad1feb1e"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 7,
+              "startTime": 175,
+              "endTime": 115,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=2\\left(\\begin{bmatrix} 1& 2 & 3 \\\\ 2 & 3 & 1\\\\ 0 & 2& -1 \\end{bmatrix} + \\begin{bmatrix} 1 & -1 & 1\\\\ 2 & -2 & 2 \\\\ 3 & 1 & 3\\end{bmatrix}\\right)",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659796cdbfcc7486f10542ae"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 8,
+              "startTime": 201,
+              "endTime": 125,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=2\\begin{bmatrix} 1+1& 2+(-1)& 3+1 \\\\ 2 +2& 3+(-2) & 1+2\\\\ 0+3 & 2+1& (-1)+3 \\end{bmatrix} ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659796cdbfcc7486f10542af"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 9,
+              "startTime": 207,
+              "endTime": 135,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=2\\begin{bmatrix} 2& 1 & 4 \\\\ 4 & 1 & 3\\\\ 3 & 3& 2 \\end{bmatrix} ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659796cdbfcc7486f10542b0"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 10,
+              "startTime": 217,
+              "endTime": 145,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix}2* 2& 2*1 &2* 4 \\\\ 2*4 &2* 1 &2* 3\\\\ 2*3 & 2*3&2* 2 \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659796cdbfcc7486f10542b1"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 11,
+              "startTime": 226,
+              "endTime": 155,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 4& 2 & 8\\\\ 8 & 2 & 6\\\\ 6 & 6& 4 \\end{bmatrix}",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "659796cdbfcc7486f10542b2"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 12,
+              "code": "Proved:2A+2B=2(A+B)",
+              "startTime": 239,
+              "endTime": 175,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "=\\begin{bmatrix} 4& 2 & 8\\\\ 8 & 2 & 6\\\\ 6 & 6& 4 \\end{bmatrix}=\\begin{bmatrix} 4& 2 & 8\\\\ 8 & 2 & 6\\\\ 6 & 6& 4 \\end{bmatrix}",
+                  "type": "code"
+                },
+                {
+                  "code": "Answer",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef6396c43fc92ad1feb24"
+          }
+        ],
+        "_id": "654ef6396c43fc92ad1feb14",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
     "_id": "659e880792faba116b079d96",
     "board": "FBISE",
     "classNo": 9,
