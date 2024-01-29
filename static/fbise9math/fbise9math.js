@@ -7261,6 +7261,197 @@ export const syllabus = [
     "__v": 0
   },
   {
+    "_id": "659e880492faba116b079cfc",
+    "board": "FBISE",
+    "classNo": 9,
+    "chapter": 1,
+    "exercise": "1.3",
+    "questionNo": 6,
+    "part": 1,
+    "name": "",
+    "sortOrder": 0,
+    "questionType": "paid",
+    "status": "final",
+    "free": false,
+    "filename": "fbise_cl_9_ch_1_ex_1.3_q_6_pt_1",
+    "filledBy": "",
+    "slides": [
+      {
+        "startTime": 0,
+        "endTime": 8,
+        "type": "HdgList",
+        "version": "0.0.0",
+        "template": "",
+        "items": [],
+        "slideExtra": [
+          {
+            "key": "data",
+            "value": "Ch 1 Ex1.3 Q 6 Part (i)",
+            "_id": "6593a84a5855b851ffe0144e"
+          },
+          {
+            "key": "rows",
+            "value": "2",
+            "_id": "6593a84a5855b851ffe0144f"
+          }
+        ],
+        "_id": "6593a84a5855b851ffe0144d"
+      },
+      {
+        "startTime": 8,
+        "endTime": 160,
+        "type": "Eqs",
+        "version": "0.0.0",
+        "template": "",
+        "items": [
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "hdg",
+              "step": 0,
+              "code": "Find 3A-2B",
+              "startTime": "8",
+              "endTime": 15,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "A=\\begin{bmatrix} 1& -2\\\\3& 4\\\\ \\end{bmatrix}  ",
+                  "type": "code"
+                },
+                {
+                  "code": "B=\\begin{bmatrix} 0& 7\\\\-3& 8\\\\ \\end{bmatrix} ",
+                  "type": "code"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef63a6c43fc92ad1feb8f"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 1,
+              "startTime": 37,
+              "endTime": 35,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=3\\begin{bmatrix} 1& -2\\\\3& 4\\\\ \\end{bmatrix} - 2\\begin{bmatrix} 0& 7\\\\-3& 8\\\\ \\end{bmatrix} ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "6597a834bb868321edd5a76e"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 2,
+              "code": "=\\begin{bmatrix} 3*1&3* -2\\\\3*3& 3*4\\\\ \\end{bmatrix}-\\begin{bmatrix} 2*0& 2*7\\\\2*-3& 2*8\\\\ \\end{bmatrix} ",
+              "startTime": 48,
+              "endTime": 45,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef63a6c43fc92ad1feb91"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "step": 3,
+              "startTime": 71,
+              "endTime": 55,
+              "fsStartTime": 0,
+              "fsEndTime": 0,
+              "code": "=\\begin{bmatrix} 3& -6\\\\9& 12\\\\ \\end{bmatrix} - \\begin{bmatrix} 0& 14\\\\-6& 16\\\\ \\end{bmatrix} ",
+              "type": "code",
+              "sp": [],
+              "fs": [],
+              "spVisibility": false,
+              "fsVisibility": false
+            },
+            "arr": [],
+            "_id": "6597a834bb868321edd5a770"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 4,
+              "code": "=\\begin{bmatrix} 3-0& (-6)-(14)\\\\9-(-6)& 12-16\\\\ \\end{bmatrix} ",
+              "startTime": 106,
+              "endTime": 65,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef63a6c43fc92ad1feb92"
+          },
+          {
+            "name": "",
+            "content": "",
+            "showAt": 0,
+            "extra": {
+              "type": "code",
+              "step": 5,
+              "code": "=\\begin{bmatrix} 3&-20\\\\15&-4\\\\ \\end{bmatrix} ",
+              "startTime": 120,
+              "endTime": 75,
+              "fsStartTime": null,
+              "fsEndTime": null,
+              "sp": [
+                {
+                  "code": "3A-2B=\\begin{bmatrix} 3&-20\\\\15&-4\\\\ \\end{bmatrix} ",
+                  "type": "code"
+                },
+                {
+                  "code": "Answer",
+                  "type": "text"
+                }
+              ],
+              "fs": [],
+              "fsVisibility": false,
+              "spVisibility": false
+            },
+            "arr": [],
+            "_id": "654ef63a6c43fc92ad1feb93"
+          }
+        ],
+        "_id": "654ef63a6c43fc92ad1feb8e",
+        "slideExtra": []
+      }
+    ],
+    "teacherComments": "",
+    "adminComments": "",
+    "__v": 0
+  },
+  {
     "_id": "659e880792faba116b079d96",
     "board": "FBISE",
     "classNo": 9,
