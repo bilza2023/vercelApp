@@ -2217,7 +2217,7 @@ export const syllabus = [
             "extra": {
               "type": "code",
               "step": 3,
-              "code": "c=\\begin{bmatrix}2 & 6 \\\\ 3& 2 \\end{bmatrix}",
+              "code": "C=\\begin{bmatrix}2 & 6 \\\\ 3& 2 \\end{bmatrix}",
               "startTime": 65,
               "endTime": 60,
               "fsStartTime": null,
@@ -2286,8 +2286,8 @@ export const syllabus = [
             "_id": "654ef5dc6c43fc92ad1fe294"
           }
         ],
-        "_id": "654ef5dc6c43fc92ad1fe28a",
-        "slideExtra": []
+        "slideExtra": [],
+        "_id": "654ef5dc6c43fc92ad1fe28a"
       }
     ],
     "teacherComments": "",
