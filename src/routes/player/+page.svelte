@@ -35,7 +35,6 @@ let currentSlide = null;
 
 
 onMount(async ()=>{  
-debugger;
 //questionType ['paid', 'login' , 'free'],
 id = new URLSearchParams(location.search).get("id");
 tcode = new URLSearchParams(location.search).get("tcode");
@@ -59,10 +58,11 @@ let questionData  = await readSlides(id,tcode);
     }
 
  if (questionData){
-//  debugger;
   slides = questionData.slides;
   //I can use different tcode (different tables) for the same eq-player. the files should be in static/tcode/exercise/filename.mp3
-  soundFile =  `${RESOURCE_URL}/${tcode}/${questionData.exercise}/${questionData.filename}.mp3`;
+ debugger;
+
+  soundFile =  `https://taleem-media.blr1.digitaloceanspaces.com/${tcode}/${questionData.exercise}/${questionData.filename}.mp3`;
  
   fixEndTime(slides); ///check why i need this?
   getStopTime(slides);
@@ -173,7 +173,6 @@ async function loadSound() {
     // }
     sound = new Howl({
       src: [soundFile],
-      // src: ["https://taleem.s3.ap-south-1.amazonaws.com/static/fbise9math/1.1/fbise_cl_9_ch_1_ex_1.1_q_1_pt_0.mp3"],
       volume: 1.0,
       html5: true,
       onload: function () {
