@@ -82,4 +82,5 @@ import BooksImages from '$lib/homePage/BooksImages.svelte';
 <br/>
 
 <br/>
+<div class="text-xs">version 0.0.2</div>
 </PageWrapper>

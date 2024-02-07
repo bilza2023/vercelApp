@@ -25804,7 +25804,7 @@ export const syllabus = [
     "slides": [
       {
         "startTime": 0,
-        "endTime": 7,
+        "endTime": 6,
         "type": "HdgList",
         "version": "0.0.0",
         "template": "",
@@ -25824,8 +25824,8 @@ export const syllabus = [
         "_id": "658779ec411ada82fa8f0589"
       },
       {
-        "startTime": 7,
-        "endTime": 102,
+        "startTime": 6,
+        "endTime": 171,
         "type": "Eqs",
         "version": "0.0.0",
         "template": "",
@@ -25873,7 +25873,7 @@ export const syllabus = [
               "type": "code",
               "step": 1,
               "code": "\\begin{bmatrix} \n2 & 3 \\\\ \n-5 & 6 \\\\  \n\\end{bmatrix}",
-              "startTime": 27,
+              "startTime": 44,
               "endTime": 55,
               "fsStartTime": null,
               "fsEndTime": null,
@@ -25904,7 +25904,7 @@ export const syllabus = [
               "type": "code",
               "step": 2,
               "code": "\\begin{bmatrix} \n2 & 0 \\\\ \n3 & 5 \\\\  \n\\end{bmatrix}",
-              "startTime": 50,
+              "startTime": 66,
               "endTime": 63,
               "fsStartTime": null,
               "fsEndTime": null,
@@ -25935,7 +25935,7 @@ export const syllabus = [
               "type": "code",
               "step": 3,
               "code": "\\begin{bmatrix} \n2 & 4 \\\\ \n\\end{bmatrix}",
-              "startTime": 62,
+              "startTime": 99,
               "endTime": 71,
               "fsStartTime": null,
               "fsEndTime": null,
@@ -25966,7 +25966,7 @@ export const syllabus = [
               "type": "code",
               "step": 4,
               "code": "\\begin{bmatrix} \n4  \\\\ \n0  \\\\ \n6  \\\\ \n\\end{bmatrix}",
-              "startTime": 70,
+              "startTime": 113,
               "endTime": 77,
               "fsStartTime": null,
               "fsEndTime": null,
@@ -25997,7 +25997,7 @@ export const syllabus = [
               "type": "code",
               "step": 5,
               "code": "\\begin{bmatrix} \na & d  \\\\ \nb   & e\\\\ \nc   & f\\\\ \n\\end{bmatrix}",
-              "startTime": 77,
+              "startTime": 132,
               "endTime": 83,
               "fsStartTime": null,
               "fsEndTime": null,
@@ -26028,7 +26028,7 @@ export const syllabus = [
               "type": "code",
               "step": 6,
               "code": "\\begin{bmatrix} \n2\n\\end{bmatrix}",
-              "startTime": 83,
+              "startTime": 142,
               "endTime": 92,
               "fsStartTime": null,
               "fsEndTime": null,
@@ -26059,7 +26059,7 @@ export const syllabus = [
               "type": "code",
               "step": 7,
               "code": "\\begin{bmatrix} \n2 & 3  & 0\\\\ \n1 & 2 & 3 \\\\\n2 & 4 & 5 \\\\  \n\\end{bmatrix}",
-              "startTime": 91,
+              "startTime": 152,
               "endTime": 98,
               "fsStartTime": null,
               "fsEndTime": null,
@@ -26090,7 +26090,7 @@ export const syllabus = [
               "type": "code",
               "step": 8,
               "code": "\\begin{bmatrix} \n2 & 3  & 4\\\\ \n1 & 0 & 6 \\\\\n\\end{bmatrix}",
-              "startTime": 97,
+              "startTime": 161,
               "endTime": 102,
               "fsStartTime": null,
               "fsEndTime": null,
@@ -26114,8 +26114,8 @@ export const syllabus = [
             "_id": "654ef43afe61384591782861"
           }
         ],
-        "slideExtra": [],
-        "_id": "654ef43afe61384591782858"
+        "_id": "654ef43afe61384591782858",
+        "slideExtra": []
       }
     ],
     "teacherComments": "",

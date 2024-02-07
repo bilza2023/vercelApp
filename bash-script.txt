@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Step 1: Copy files
+# You can use scp (Secure Copy) or rsync to copy files from your local machine to the server
+# Replace user@localmachine:/path/to/local/directory with the path to the directory on your local machine
+# Replace /path/to/remote/directory with the path to the directory on your server where you want to copy the files
+# scp -r user@localmachine:/path/to/local/directory /path/to/remote/directory
+
+# Step 2: Install NVM and Node.js
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+source ~/.bashrc
+nvm install node
+
+# Step 3: Install and configure Nginx
+sudo apt update
+sudo apt install nginx
+sudo ufw allow 'Nginx HTTP'
+# Add the Nginx configuration here. You can echo the configuration into the file
+# For example:
+# echo "server {
+#     listen 80;
+#     server_name your_domain_or_IP;
+#     location / {
+#         proxy_pass http://localhost:3000;
+#         proxy_http_version 1.1;
+#         proxy_set_header Upgrade \$http_upgrade;
+#         proxy_set_header Connection 'upgrade';
+#         proxy_set_header Host \$host;
+#         proxy_cache_bypass \$http_upgrade;
+#     }
+# }" | sudo tee /etc/nginx/sites-available/mywebsite
+# sudo ln -s /etc/nginx/sites-available/mywebsite /etc/nginx/sites-enabled/
+# sudo nginx -t
+# sudo systemctl restart nginx
+
+# Step 4: Install pm2 and start your application
+npm install pm2 -g
+pm2 start /path/to/your/project/build/index.js
+pm2 save
+pm2 startup
+
+//////////////////////////////
+//////////////////////////////
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository universe
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install certbot python-certbot-nginx

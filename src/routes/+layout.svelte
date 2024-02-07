@@ -1,8 +1,8 @@
 <script>
-  import { SvelteToast } from '@zerodevx/svelte-toast'
   import "../app.css";
+  import { SvelteToast } from '@zerodevx/svelte-toast'
    const options = {}
-  // export const prerender = true;
+ 
 </script>
 
 <SvelteToast {options} />

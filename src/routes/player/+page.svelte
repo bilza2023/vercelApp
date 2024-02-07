@@ -60,10 +60,10 @@ let questionData  = await readSlides(id,tcode);
  if (questionData){
   slides = questionData.slides;
   //I can use different tcode (different tables) for the same eq-player. the files should be in static/tcode/exercise/filename.mp3
- debugger;
+//  debugger;
 
-  soundFile =  `https://taleem-media.blr1.digitaloceanspaces.com/${tcode}/${questionData.exercise}/${questionData.filename}.mp3`;
- 
+   soundFile =  `${RESOURCE_URL}/mp3/${tcode}/${questionData.exercise}/${questionData.filename}.mp3`;
+  
   fixEndTime(slides); ///check why i need this?
   getStopTime(slides);
   currentSlide = slides[0];
